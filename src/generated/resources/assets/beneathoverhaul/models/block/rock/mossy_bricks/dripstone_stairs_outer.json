@@ -1,0 +1,10 @@
+{
+  "parent": "beneathoverhaul:block/overlay_outer_stairs",
+  "textures": {
+    "bottom": "beneathoverhaul:block/rock/mossy_bricks/dripstone",
+    "overlay": "beneathoverhaul:block/rock/mossy_bricks/overlay",
+    "particle": "beneathoverhaul:block/rock/mossy_bricks/dripstone",
+    "side": "beneathoverhaul:block/rock/mossy_bricks/dripstone",
+    "top": "beneathoverhaul:block/rock/mossy_bricks/dripstone"
+  }
+}

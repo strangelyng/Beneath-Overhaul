@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "minecraft:block/polished_blackstone_bricks",
+    "overlay": "beneathoverhaul:block/rock/mossy_bricks/overlay"
+  }
+}

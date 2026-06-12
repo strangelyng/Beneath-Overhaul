@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "beneathoverhaul:block/rock/mossy_bricks/dripstone",
+    "overlay": "beneathoverhaul:block/rock/mossy_bricks/overlay"
+  }
+}

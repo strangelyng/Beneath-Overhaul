@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "beneathoverhaul:block/rock/pressure_plate/deepslate"
+    },
+    "powered=true": {
+      "model": "beneathoverhaul:block/rock/pressure_plate/deepslate_down"
+    }
+  }
+}

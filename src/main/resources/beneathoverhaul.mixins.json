@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "net.strangelyng.beneathoverhaul.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+
+  ],
+  "client": [
+
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "beneathoverhaul:block/rock/aqueduct/dripstone/base"
+      }
+    },
+    {
+      "apply": {
+        "model": "beneathoverhaul:block/rock/aqueduct/dripstone/north"
+      },
+      "when": {
+        "north": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "beneathoverhaul:block/rock/aqueduct/dripstone/south"
+      },
+      "when": {
+        "south": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "beneathoverhaul:block/rock/aqueduct/dripstone/east"
+      },
+      "when": {
+        "east": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "beneathoverhaul:block/rock/aqueduct/dripstone/west"
+      },
+      "when": {
+        "west": "false"
+      }
+    }
+  ]
+}

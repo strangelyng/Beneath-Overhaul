@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "beneathoverhaul:block/rock/bricks/blackstone_slab"
+    },
+    "type=double": {
+      "model": "beneathoverhaul:block/rock/bricks/blackstone"
+    },
+    "type=top": {
+      "model": "beneathoverhaul:block/rock/bricks/blackstone_slab_top"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/rock/loose_igneous_intrusive_1",
+  "textures": {
+    "particle": "beneathoverhaul:block/rock/mossy_cobble/blackstone",
+    "texture": "beneathoverhaul:block/rock/mossy_cobble/blackstone"
+  }
+}

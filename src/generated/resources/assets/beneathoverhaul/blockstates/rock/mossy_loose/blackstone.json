@@ -1,0 +1,55 @@
+{
+  "variants": {
+    "count=1": [
+      {
+        "model": "beneathoverhaul:block/rock/mossy_loose/blackstone_1"
+      },
+      {
+        "model": "beneathoverhaul:block/rock/mossy_loose/blackstone_1",
+        "y": 90
+      },
+      {
+        "model": "beneathoverhaul:block/rock/mossy_loose/blackstone_1",
+        "y": 180
+      },
+      {
+        "model": "beneathoverhaul:block/rock/mossy_loose/blackstone_1",
+        "y": 270
+      }
+    ],
+    "count=2": [
+      {
+        "model": "beneathoverhaul:block/rock/mossy_loose/blackstone_2"
+      },
+      {
+        "model": "beneathoverhaul:block/rock/mossy_loose/blackstone_2",
+        "y": 90
+      },
+      {
+        "model": "beneathoverhaul:block/rock/mossy_loose/blackstone_2",
+        "y": 180
+      },
+      {
+        "model": "beneathoverhaul:block/rock/mossy_loose/blackstone_2",
+        "y": 270
+      }
+    ],
+    "count=3": [
+      {
+        "model": "beneathoverhaul:block/rock/mossy_loose/blackstone_3"
+      },
+      {
+        "model": "beneathoverhaul:block/rock/mossy_loose/blackstone_3",
+        "y": 90
+      },
+      {
+        "model": "beneathoverhaul:block/rock/mossy_loose/blackstone_3",
+        "y": 180
+      },
+      {
+        "model": "beneathoverhaul:block/rock/mossy_loose/blackstone_3",
+        "y": 270
+      }
+    ]
+  }
+}

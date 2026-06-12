@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/aqueduct/north",
+  "textures": {
+    "particle": "beneathoverhaul:block/rock/bricks/dripstone",
+    "texture": "beneathoverhaul:block/rock/bricks/dripstone"
+  }
+}

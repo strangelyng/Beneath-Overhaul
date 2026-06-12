@@ -1,0 +1,25 @@
+{
+  "values": [
+    "beneathoverhaul:rock/cobble/deepslate_wall",
+    "beneathoverhaul:rock/mossy_cobble/deepslate_wall",
+    "beneathoverhaul:rock/mossy_bricks/deepslate_wall",
+    "beneathoverhaul:rock/raw/deepslate_wall",
+    "beneathoverhaul:rock/bricks/deepslate_wall",
+    "beneathoverhaul:rock/cracked_bricks/deepslate_wall",
+    "beneathoverhaul:rock/smooth/deepslate_wall",
+    "beneathoverhaul:rock/cobble/blackstone_wall",
+    "beneathoverhaul:rock/mossy_cobble/blackstone_wall",
+    "beneathoverhaul:rock/mossy_bricks/blackstone_wall",
+    "beneathoverhaul:rock/raw/blackstone_wall",
+    "beneathoverhaul:rock/bricks/blackstone_wall",
+    "beneathoverhaul:rock/cracked_bricks/blackstone_wall",
+    "beneathoverhaul:rock/smooth/blackstone_wall",
+    "beneathoverhaul:rock/cobble/dripstone_wall",
+    "beneathoverhaul:rock/mossy_cobble/dripstone_wall",
+    "beneathoverhaul:rock/mossy_bricks/dripstone_wall",
+    "beneathoverhaul:rock/raw/dripstone_wall",
+    "beneathoverhaul:rock/bricks/dripstone_wall",
+    "beneathoverhaul:rock/cracked_bricks/dripstone_wall",
+    "beneathoverhaul:rock/smooth/dripstone_wall"
+  ]
+}

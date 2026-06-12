@@ -1,0 +1,13 @@
+{
+  "values": [
+    "beneathoverhaul:rock/gravel/deepslate",
+    "beneathoverhaul:rock/cobble/deepslate",
+    "beneathoverhaul:rock/mossy_cobble/deepslate",
+    "beneathoverhaul:rock/gravel/blackstone",
+    "beneathoverhaul:rock/cobble/blackstone",
+    "beneathoverhaul:rock/mossy_cobble/blackstone",
+    "beneathoverhaul:rock/gravel/dripstone",
+    "beneathoverhaul:rock/cobble/dripstone",
+    "beneathoverhaul:rock/mossy_cobble/dripstone"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "beneathoverhaul:block/rock/mossy_bricks/dripstone_slab"
+    },
+    "type=double": {
+      "model": "beneathoverhaul:block/rock/mossy_bricks/dripstone"
+    },
+    "type=top": {
+      "model": "beneathoverhaul:block/rock/mossy_bricks/dripstone_slab_top"
+    }
+  }
+}

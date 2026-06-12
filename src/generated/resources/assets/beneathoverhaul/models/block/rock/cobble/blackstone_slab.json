@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "beneathoverhaul:block/rock/cobble/blackstone",
+    "side": "beneathoverhaul:block/rock/cobble/blackstone",
+    "top": "beneathoverhaul:block/rock/cobble/blackstone"
+  }
+}

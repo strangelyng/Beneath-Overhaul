@@ -1,0 +1,8 @@
+{
+  "parent": "beneathoverhaul:block/overlay_template_wall_side_tall",
+  "textures": {
+    "overlay": "beneathoverhaul:block/rock/mossy_bricks/overlay",
+    "particle": "beneathoverhaul:block/rock/mossy_cobble/blackstone",
+    "wall": "beneathoverhaul:block/rock/mossy_cobble/blackstone"
+  }
+}

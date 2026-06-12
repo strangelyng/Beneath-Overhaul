@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "beneathoverhaul:block/rock/cracked_bricks/dripstone",
+    "side": "beneathoverhaul:block/rock/cracked_bricks/dripstone",
+    "top": "beneathoverhaul:block/rock/cracked_bricks/dripstone"
+  }
+}

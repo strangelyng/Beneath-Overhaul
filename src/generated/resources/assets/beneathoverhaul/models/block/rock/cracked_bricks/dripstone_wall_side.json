@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_wall_side",
+  "textures": {
+    "wall": "beneathoverhaul:block/rock/cracked_bricks/dripstone"
+  }
+}

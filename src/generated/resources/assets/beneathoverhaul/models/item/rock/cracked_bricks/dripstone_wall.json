@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "beneathoverhaul:block/rock/cracked_bricks/dripstone"
+  }
+}

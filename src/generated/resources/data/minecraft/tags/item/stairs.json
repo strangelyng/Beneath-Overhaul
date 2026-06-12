@@ -1,0 +1,25 @@
+{
+  "values": [
+    "beneathoverhaul:rock/cobble/deepslate_stairs",
+    "beneathoverhaul:rock/mossy_cobble/deepslate_stairs",
+    "beneathoverhaul:rock/mossy_bricks/deepslate_stairs",
+    "beneathoverhaul:rock/raw/deepslate_stairs",
+    "beneathoverhaul:rock/bricks/deepslate_stairs",
+    "beneathoverhaul:rock/cracked_bricks/deepslate_stairs",
+    "beneathoverhaul:rock/smooth/deepslate_stairs",
+    "beneathoverhaul:rock/cobble/blackstone_stairs",
+    "beneathoverhaul:rock/mossy_cobble/blackstone_stairs",
+    "beneathoverhaul:rock/mossy_bricks/blackstone_stairs",
+    "beneathoverhaul:rock/raw/blackstone_stairs",
+    "beneathoverhaul:rock/bricks/blackstone_stairs",
+    "beneathoverhaul:rock/cracked_bricks/blackstone_stairs",
+    "beneathoverhaul:rock/smooth/blackstone_stairs",
+    "beneathoverhaul:rock/cobble/dripstone_stairs",
+    "beneathoverhaul:rock/mossy_cobble/dripstone_stairs",
+    "beneathoverhaul:rock/mossy_bricks/dripstone_stairs",
+    "beneathoverhaul:rock/raw/dripstone_stairs",
+    "beneathoverhaul:rock/bricks/dripstone_stairs",
+    "beneathoverhaul:rock/cracked_bricks/dripstone_stairs",
+    "beneathoverhaul:rock/smooth/dripstone_stairs"
+  ]
+}

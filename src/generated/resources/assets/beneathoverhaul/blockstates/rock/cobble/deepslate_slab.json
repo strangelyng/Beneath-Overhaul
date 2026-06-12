@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "beneathoverhaul:block/rock/cobble/deepslate_slab"
+    },
+    "type=double": {
+      "model": "beneathoverhaul:block/rock/cobble/deepslate"
+    },
+    "type=top": {
+      "model": "beneathoverhaul:block/rock/cobble/deepslate_slab_top"
+    }
+  }
+}

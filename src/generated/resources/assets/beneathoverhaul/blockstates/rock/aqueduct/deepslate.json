@@ -1,0 +1,41 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "beneathoverhaul:block/rock/aqueduct/deepslate/base"
+      }
+    },
+    {
+      "apply": {
+        "model": "beneathoverhaul:block/rock/aqueduct/deepslate/north"
+      },
+      "when": {
+        "north": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "beneathoverhaul:block/rock/aqueduct/deepslate/south"
+      },
+      "when": {
+        "south": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "beneathoverhaul:block/rock/aqueduct/deepslate/east"
+      },
+      "when": {
+        "east": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "beneathoverhaul:block/rock/aqueduct/deepslate/west"
+      },
+      "when": {
+        "west": "false"
+      }
+    }
+  ]
+}

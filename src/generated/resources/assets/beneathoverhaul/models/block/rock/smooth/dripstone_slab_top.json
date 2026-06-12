@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "beneathoverhaul:block/rock/smooth/dripstone",
+    "side": "beneathoverhaul:block/rock/smooth/dripstone",
+    "top": "beneathoverhaul:block/rock/smooth/dripstone"
+  }
+}

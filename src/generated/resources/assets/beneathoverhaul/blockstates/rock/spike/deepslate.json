@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "part=base": {
+      "model": "beneathoverhaul:block/rock/spike/deepslate_base"
+    },
+    "part=middle": {
+      "model": "beneathoverhaul:block/rock/spike/deepslate_middle"
+    },
+    "part=tip": {
+      "model": "beneathoverhaul:block/rock/spike/deepslate_tip"
+    }
+  }
+}
