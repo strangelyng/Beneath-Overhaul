@@ -1,12 +1,16 @@
 package net.strangelyng.beneathoverhaul.datagen.providers;
 
 import net.dries007.tfc.common.TFCTags;
+import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
+import net.dries007.tfc.util.registry.RegistryRock;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.tags.TagsProvider;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -14,7 +18,9 @@ import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.strangelyng.beneathoverhaul.BeneathOverhaul;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulBlocks;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulRock;
+import net.strangelyng.beneathoverhaul.util.CategoryUtils;
 
+import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Stream;
 
@@ -28,6 +34,20 @@ public class BuiltInBlockTagProvider extends TagsProvider<Block> {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+        // Ore Blocks
+        Stream.of(BeneathOverhaulRock.VALUES).forEach(rock -> {
+            Stream.of(Ore.values()).forEach(ore -> {
+                if (ore.hasBlock()) {
+                    if (ore.isGraded()) {
+                        addGradedOreTags(BeneathOverhaulBlocks.BENEATH_ROCK_TFC_GRADED_ORES, ore, rock);
+                    } else {
+                        addOreTags(BeneathOverhaulBlocks.BENEATH_ROCK_TFC_ORES, ore, rock);
+                    }
+                }
+            });
+        });
+
+        // Rock Blocks
         Stream.of(BeneathOverhaulRock.VALUES).forEach(rock -> {
             Stream.of(Rock.BlockType.values()).forEach(type -> {
                 if (type != Rock.BlockType.GRAVEL) {
@@ -131,5 +151,31 @@ public class BuiltInBlockTagProvider extends TagsProvider<Block> {
             this.tag(BlockTags.STONE_BUTTONS).add(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.BUTTON).key());
             this.tag(BlockTags.BUTTONS).add(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.BUTTON).key());
         });
+    }
+
+    private <T1 extends RegistryRock, T2 extends Enum> void addOreTags(Map<T1, Map<T2, BeneathOverhaulBlocks.Id<Block>>> map, T2 ore, T1 rock) {
+        ResourceKey<Block> key = map.get(rock).get(ore).key();
+        this.tag(getOreTierTag(ore)).add(key);
+        this.tag(Tags.Blocks.ORES).add(key);
+        this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(key);
+        this.tag(TFCTags.Blocks.PROSPECTABLE).add(key);
+    }
+
+    private <T1 extends RegistryRock, T2 extends Enum, T3 extends Ore.Grade> void addGradedOreTags(Map<T1, Map<T2, Map<T3, BeneathOverhaulBlocks.Id<Block>>>> map, T2 ore, T1 rock) {
+        for (Ore.Grade grade : Ore.Grade.values()) {
+            ResourceKey<Block> key = map.get(rock).get(ore).get(grade).key();
+            this.tag(getOreTierTag(ore)).add(key);
+            this.tag(Tags.Blocks.ORES).add(key);
+            this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(key);
+            this.tag(TFCTags.Blocks.PROSPECTABLE).add(key);
+        }
+    }
+
+    private TagKey<Block> getOreTierTag(Enum ore) {
+        if (ore instanceof Ore) {
+            return CategoryUtils.Ores.TFC_ORES_TO_MINING_TIER_TAG.get(ore);
+        }
+
+        return null;
     }
 }

@@ -1,14 +1,12 @@
 {
-	"feature": "tfg:nether/surface/moss_patch_big",
+	"feature": "beneathoverhaul:nether/surface/moss_patch_big",
 	"placement": [
 		{
 			"type": "minecraft:count",
 			"count": {
 				"type": "minecraft:uniform",
-				"value": {
-					"max_inclusive": 200,
-					"min_inclusive": 150
-				}
+				"max_inclusive": 200,
+				"min_inclusive": 150
 			}
 		},
 		{

@@ -1,14 +1,12 @@
 {
-	"feature": "tfg:glow_lichen",
+	"feature": "beneathoverhaul:glow_lichen",
 	"placement": [
 		{
 			"type": "minecraft:count",
 			"count": {
 				"type": "minecraft:uniform",
-				"value": {
-					"max_inclusive": 157,
-					"min_inclusive": 104
-				}
+				"max_inclusive": 157,
+				"min_inclusive": 104
 			}
 		},
 		{

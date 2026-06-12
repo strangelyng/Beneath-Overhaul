@@ -24,23 +24,15 @@
         ],
         "with": [
           {
-            "block": "gtceu:gabbro_graphite_ore",
+            "block": "tfc:ore/graphite/gabbro",
             "weight": 45
           },
           {
-            "block": "gtceu:raw_graphite_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:gabbro_diamond_ore",
+            "block": "tfc:ore/diamond/gabbro",
             "weight": 40
           },
           {
-            "block": "gtceu:raw_diamond_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:gabbro_coal_ore",
+            "block": "tfc:bituminous_coal",
             "weight": 15
           }
         ]
@@ -51,23 +43,15 @@
         ],
         "with": [
           {
-            "block": "gtceu:gneiss_graphite_ore",
+            "block": "tfc:ore/graphite/gneiss",
             "weight": 45
           },
           {
-            "block": "gtceu:raw_graphite_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:gneiss_diamond_ore",
+            "block": "tfc:ore/diamond/gneiss",
             "weight": 40
           },
           {
-            "block": "gtceu:raw_diamond_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:gneiss_coal_ore",
+            "block": "tfc:bituminous_coal",
             "weight": 15
           }
         ]
@@ -78,23 +62,15 @@
         ],
         "with": [
           {
-            "block": "gtceu:diorite_graphite_ore",
+            "block": "tfc:ore/graphite/diorite",
             "weight": 45
           },
           {
-            "block": "gtceu:raw_graphite_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:diorite_diamond_ore",
+            "block": "tfc:ore/diamond/diorite",
             "weight": 40
           },
           {
-            "block": "gtceu:raw_diamond_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:diorite_coal_ore",
+            "block": "tfc:bituminous_coal",
             "weight": 15
           }
         ]
@@ -105,23 +81,15 @@
         ],
         "with": [
           {
-            "block": "gtceu:schist_graphite_ore",
+            "block": "tfc:ore/graphite/schist",
             "weight": 45
           },
           {
-            "block": "gtceu:raw_graphite_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:schist_diamond_ore",
+            "block": "tfc:ore/diamond/schist",
             "weight": 40
           },
           {
-            "block": "gtceu:raw_diamond_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:schist_coal_ore",
+            "block": "tfc:bituminous_coal",
             "weight": 15
           }
         ]
@@ -132,75 +100,39 @@
         ],
         "with": [
           {
-            "block": "gtceu:granite_graphite_ore",
+            "block": "tfc:ore/graphite/granite",
             "weight": 45
           },
           {
-            "block": "gtceu:raw_graphite_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:granite_diamond_ore",
+            "block": "tfc:ore/diamond/granite",
             "weight": 40
           },
           {
-            "block": "gtceu:raw_diamond_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:granite_coal_ore",
+            "block": "tfc:bituminous_coal",
             "weight": 15
           }
         ]
       },
       {
         "replace": [
-          "minecraft:blackstone",
+          "beneathoverhaul:rock/raw/blackstone",
           "minecraft:magma_block"
         ],
         "with": [
           {
-            "block": "gtceu:pyroxenite_graphite_ore",
+            "block": "beneathoverhaul:ore/graphite/blackstone",
             "weight": 45
           },
           {
-            "block": "gtceu:raw_graphite_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:pyroxenite_diamond_ore",
+            "block": "beneathoverhaul:ore/diamond/blackstone",
             "weight": 40
           },
           {
-            "block": "gtceu:raw_diamond_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:pyroxenite_coal_ore",
+            "block": "tfc:bituminous_coal",
             "weight": 15
           }
         ]
       }
-    ],
-    "indicator": {
-      "rarity": 15,
-      "depth": 1,
-      "underground_rarity": 40,
-      "underground_count": 200,
-      "blocks": [
-        {
-          "block": "gtceu:graphite_indicator",
-          "weight": 45
-        },
-        {
-          "block": "gtceu:coal_bud_indicator",
-          "weight": 15
-        },
-        {
-          "block": "gtceu:diamond_bud_indicator",
-          "weight": 40
-        }
-      ]
-    }
+    ]
   }
 }

@@ -32,5 +32,10 @@ public class ClientEventHandler {
             ItemBlockRenderTypes.setRenderLayer(map.get(Rock.BlockType.MOSSY_COBBLE).slab().get(), cutout);
             ItemBlockRenderTypes.setRenderLayer(map.get(Rock.BlockType.MOSSY_COBBLE).wall().get(), cutout);
         });
+
+        BeneathOverhaulBlocks.BENEATH_ROCK_TFC_ORES.values().forEach(map -> map.values().forEach(reg ->
+                ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout)));
+        BeneathOverhaulBlocks.BENEATH_ROCK_TFC_GRADED_ORES.values().forEach(map -> map.values().forEach(inner ->
+                inner.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout))));
     }
 }

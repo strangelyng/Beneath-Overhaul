@@ -1,5 +1,5 @@
 {
-	"feature": "tfg:nether/terrain/mud_pool",
+	"feature": "beneathoverhaul:nether/terrain/mud_pool",
 	"placement": [
 		{
 			"type": "minecraft:count",

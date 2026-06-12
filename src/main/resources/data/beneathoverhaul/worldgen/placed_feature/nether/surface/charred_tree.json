@@ -1,5 +1,5 @@
 {
-	"feature": "tfg:nether/surface/charred_tree",
+	"feature": "beneathoverhaul:nether/surface/charred_tree",
 	"placement": [
 		{
 			"type": "minecraft:count",
@@ -30,8 +30,8 @@
 					0
 				],
 				"blocks": [
-					"minecraft:deepslate",
-					"minecraft:blackstone",
+					"beneathoverhaul:rock/raw/deepslate",
+					"beneathoverhaul:rock/raw/blackstone",
 					"minecraft:magma_block"
 				]
 			}

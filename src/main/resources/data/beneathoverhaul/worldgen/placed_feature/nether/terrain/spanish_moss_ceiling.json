@@ -1,5 +1,5 @@
 {
-	"feature": "tfg:nether/terrain/spanish_moss_ceiling",
+	"feature": "beneathoverhaul:nether/terrain/spanish_moss_ceiling",
 	"placement": [
 		{
 			"type": "minecraft:count",

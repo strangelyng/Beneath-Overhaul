@@ -7,23 +7,21 @@
 		"ground_state": {
 			"type": "minecraft:simple_state_provider",
 			"state": {
-				"Name": "tfc:clay_grass/silt"
+				"Name": "tfc:clay_grass/andisol"
 			}
 		},
-		"replaceable": "#tfg:lush_ground_replaceable",
+		"replaceable": "#beneathoverhaul:lush_ground_replaceable",
 		"surface": "floor",
 		"vegetation_chance": 0.6,
 		"vegetation_feature": {
-			"feature": "tfg:nether/terrain/clay_patch_vegetation",
+			"feature": "beneathoverhaul:nether/terrain/clay_patch_vegetation",
 			"placement": []
 		},
 		"vertical_range": 2,
 		"xz_radius": {
 			"type": "minecraft:uniform",
-			"value": {
-				"max_inclusive": 5,
-				"min_inclusive": 3
-			}
+			"max_inclusive": 5,
+			"min_inclusive": 3
 		}
 	}
 }

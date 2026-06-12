@@ -1,5 +1,5 @@
 {
-	"feature": "tfg:nether/spikes/diorite_spikes",
+	"feature": "beneathoverhaul:nether/spikes/diorite_spikes",
 	"placement": [
 		{
 			"type": "minecraft:count",
@@ -36,7 +36,7 @@
 					{
 						"type": "minecraft:matching_block_tag",
 						"offset": [ 0, -1, 0 ],
-						"tag": "forge:stone"
+						"tag": "c:stone"
 					}
 				]
 			}

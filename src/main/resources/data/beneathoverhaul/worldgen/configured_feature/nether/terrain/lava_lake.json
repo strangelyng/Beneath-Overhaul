@@ -4,7 +4,7 @@
 		"barrier": {
 			"type": "minecraft:simple_state_provider",
 			"state": {
-				"Name": "tfg:rock/hardened_blackstone"
+				"Name": "beneathoverhaul:rock/hardened/blackstone"
 			}
 		},
 		"fluid": {

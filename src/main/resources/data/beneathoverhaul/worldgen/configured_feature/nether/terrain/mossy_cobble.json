@@ -6,34 +6,34 @@
 		"targets": [
 			{
 				"state": {
-					"Name": "tfg:rock/mossy_cobble_deepslate"
+					"Name": "beneathoverhaul:rock/mossy_cobble/deepslate"
 				},
 				"target": {
 					"predicate_type": "minecraft:block_match",
-					"block": "minecraft:deepslate"
+					"block": "beneathoverhaul:rock/raw/deepslate"
 				}
 			},
 			{
 				"state": {
-					"Name": "tfg:rock/mossy_cobble_blackstone"
+					"Name": "beneathoverhaul:rock/mossy_cobble/blackstone"
 				},
 				"target": {
 					"predicate_type": "minecraft:block_match",
-					"block": "minecraft:blackstone"
+					"block": "beneathoverhaul:rock/raw/blackstone"
 				}
 			},
 			{
 				"state": {
-					"Name": "tfg:rock/mossy_cobble_dripstone"
+					"Name": "beneathoverhaul:rock/mossy_cobble/dripstone"
 				},
 				"target": {
 					"predicate_type": "minecraft:block_match",
-					"block": "minecraft:dripstone_block"
+					"block": "beneathoverhaul:rock/raw/dripstone"
 				}
 			},
 			{
 				"state": {
-					"Name": "tfg:rock/mossy_cobble_crackrack"
+					"Name": "minecraft:mossy_cobblestone"
 				},
 				"target": {
 					"predicate_type": "minecraft:block_match",

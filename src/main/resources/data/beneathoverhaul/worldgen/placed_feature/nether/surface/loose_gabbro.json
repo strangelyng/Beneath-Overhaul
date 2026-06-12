@@ -1,5 +1,5 @@
 {
-	"feature": "tfg:nether/surface/loose_gabbro",
+	"feature": "beneathoverhaul:nether/surface/loose_gabbro",
 	"placement": [
 		{
 			"type": "minecraft:count",

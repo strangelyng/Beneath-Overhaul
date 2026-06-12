@@ -1,5 +1,5 @@
 {
-	"feature": "tfg:nether/surface/bone_patch",
+	"feature": "beneathoverhaul:nether/surface/bone_patch",
 	"placement": [
 		{
 			"type": "minecraft:rarity_filter",

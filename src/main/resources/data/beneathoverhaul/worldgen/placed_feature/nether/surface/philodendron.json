@@ -1,14 +1,12 @@
 {
-	"feature": "tfg:nether/surface/philodendron",
+	"feature": "beneathoverhaul:nether/surface/philodendron",
 	"placement": [
 		{
 			"type": "minecraft:count",
 			"count": {
 				"type": "minecraft:uniform",
-				"value": {
-					"max_inclusive": 157,
-					"min_inclusive": 100
-				}
+				"max_inclusive": 157,
+				"min_inclusive": 100
 			}
 		},
 		{

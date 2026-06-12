@@ -15,140 +15,68 @@
     "blocks": [
       {
         "replace": [
-          "minecraft:deepslate",
-          "tfc:mud/silty_loam",
+          "beneathoverhaul:rock/raw/deepslate",
+          "tfc:mud/andisol",
           "beneath:soul_clay",
-          "tfc:dirt/loam",
-          "tfc:mud/loam",
+          "tfc:dirt/alfisol",
+          "tfc:mud/alfisol",
           "tfc:peat",
-          "tfc:dirt/silty_loam"
+          "tfc:dirt/andisol"
         ],
         "with": [
           {
-            "block": "gtceu:deepslate_borax_ore",
+            "block": "beneathoverhaul:ore/borax/deepslate",
             "weight": 20
           },
           {
-            "block": "gtceu:raw_borax_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:deepslate_calcite_ore",
-            "weight": 30
-          },
-          {
-            "block": "gtceu:raw_calcite_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:deepslate_fullers_earth_ore",
+            "block": "minecraft:calcite",
             "weight": 15
           },
           {
-            "block": "gtceu:deepslate_gypsum_ore",
-            "weight": 35
-          },
-          {
-            "block": "gtceu:raw_gypsum_block",
-            "weight": 1
+            "block": "beneathoverhaul:ore/gypsum/deepslate",
+            "weight": 50
           }
         ]
       },
       {
         "replace": [
-          "minecraft:dripstone_block"
+          "beneathoverhaul:rock/raw/dripstone"
         ],
         "with": [
           {
-            "block": "gtceu:dripstone_borax_ore",
+            "block": "beneathoverhaul:ore/borax/dripstone",
             "weight": 20
           },
           {
-            "block": "gtceu:raw_borax_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:dripstone_calcite_ore",
-            "weight": 30
-          },
-          {
-            "block": "gtceu:raw_calcite_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:dripstone_fullers_earth_ore",
+            "block": "minecraft:calcite",
             "weight": 15
           },
           {
-            "block": "gtceu:dripstone_gypsum_ore",
-            "weight": 35
-          },
-          {
-            "block": "gtceu:raw_gypsum_block",
-            "weight": 1
+            "block": "beneathoverhaul:ore/gypsum/dripstone",
+            "weight": 50
           }
         ]
       },
       {
         "replace": [
-          "minecraft:blackstone",
+          "beneathoverhaul:rock/raw/blackstone",
           "minecraft:magma_block"
         ],
         "with": [
           {
-            "block": "gtceu:pyroxenite_borax_ore",
+            "block": "beneathoverhaul:ore/borax/blackstone",
             "weight": 20
           },
           {
-            "block": "gtceu:raw_borax_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:pyroxenite_calcite_ore",
-            "weight": 30
-          },
-          {
-            "block": "gtceu:raw_calcite_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:pyroxenite_fullers_earth_ore",
+            "block": "minecraft:calcite",
             "weight": 15
           },
           {
-            "block": "gtceu:pyroxenite_gypsum_ore",
-            "weight": 35
-          },
-          {
-            "block": "gtceu:raw_gypsum_block",
-            "weight": 1
+            "block": "beneathoverhaul:ore/gypsum/blackstone",
+            "weight": 50
           }
         ]
       }
-    ],
-    "indicator": {
-      "rarity": 15,
-      "depth": 1,
-      "underground_rarity": 40,
-      "underground_count": 150,
-      "blocks": [
-        {
-          "block": "gtceu:borax_indicator",
-          "weight": 20
-        },
-        {
-          "block": "gtceu:calcite_indicator",
-          "weight": 30
-        },
-        {
-          "block": "gtceu:fullers_earth_indicator",
-          "weight": 15
-        },
-        {
-          "block": "gtceu:gypsum_indicator",
-          "weight": 35
-        }
-      ]
-    }
+    ]
   }
 }

@@ -18,23 +18,19 @@
         ],
         "with": [
           {
-            "block": "gtceu:granite_cassiterite_ore",
-            "weight": 40
+            "block": "tfc:ore/poor_cassiterite/granite",
+            "weight": 10
           },
           {
-            "block": "gtceu:raw_cassiterite_block",
-            "weight": 2
+            "block": "tfc:ore/rich_cassiterite/granite",
+            "weight": 10
           },
           {
-            "block": "gtceu:granite_tin_ore",
+            "block": "tfc:ore/normal_cassiterite/granite",
             "weight": 60
           },
           {
-            "block": "gtceu:raw_tin_block",
-            "weight": 2
-          },
-          {
-            "block": "gtceu:granite_saltpeter_ore",
+            "block": "tfc:ore/saltpeter/granite",
             "weight": 10
           }
         ]
@@ -45,23 +41,19 @@
         ],
         "with": [
           {
-            "block": "gtceu:diorite_cassiterite_ore",
-            "weight": 40
+            "block": "tfc:ore/poor_cassiterite/diorite",
+            "weight": 30
           },
           {
-            "block": "gtceu:raw_cassiterite_block",
-            "weight": 2
+            "block": "tfc:ore/rich_cassiterite/diorite",
+            "weight": 10
           },
           {
-            "block": "gtceu:diorite_tin_ore",
+            "block": "tfc:ore/normal_cassiterite/diorite",
             "weight": 60
           },
           {
-            "block": "gtceu:raw_tin_block",
-            "weight": 2
-          },
-          {
-            "block": "gtceu:diorite_saltpeter_ore",
+            "block": "tfc:ore/saltpeter/granite",
             "weight": 10
           }
         ]
@@ -72,23 +64,19 @@
         ],
         "with": [
           {
-            "block": "gtceu:gabbro_cassiterite_ore",
-            "weight": 40
+            "block": "tfc:ore/poor_cassiterite/gabbro",
+            "weight": 10
           },
           {
-            "block": "gtceu:raw_cassiterite_block",
-            "weight": 2
+            "block": "tfc:ore/rich_cassiterite/gabbro",
+            "weight": 10
           },
           {
-            "block": "gtceu:gabbro_tin_ore",
+            "block": "tfc:ore/normal_cassiterite/gabbro",
             "weight": 60
           },
           {
-            "block": "gtceu:raw_tin_block",
-            "weight": 2
-          },
-          {
-            "block": "gtceu:gabbro_saltpeter_ore",
+            "block": "tfc:ore/saltpeter/gabbro",
             "weight": 10
           }
         ]
@@ -99,23 +87,19 @@
         ],
         "with": [
           {
-            "block": "gtceu:gneiss_cassiterite_ore",
-            "weight": 40
+            "block": "tfc:ore/poor_cassiterite/gneiss",
+            "weight": 10
           },
           {
-            "block": "gtceu:raw_cassiterite_block",
-            "weight": 2
+            "block": "tfc:ore/rich_cassiterite/gneiss",
+            "weight": 10
           },
           {
-            "block": "gtceu:gneiss_tin_ore",
+            "block": "tfc:ore/normal_cassiterite/gneiss",
             "weight": 60
           },
           {
-            "block": "gtceu:raw_tin_block",
-            "weight": 2
-          },
-          {
-            "block": "gtceu:gneiss_saltpeter_ore",
+            "block": "tfc:ore/saltpeter/gneiss",
             "weight": 10
           }
         ]
@@ -126,51 +110,43 @@
         ],
         "with": [
           {
-            "block": "gtceu:schist_cassiterite_ore",
-            "weight": 40
+            "block": "tfc:ore/poor_cassiterite/schist",
+            "weight": 10
           },
           {
-            "block": "gtceu:raw_cassiterite_block",
-            "weight": 2
+            "block": "tfc:ore/rich_cassiterite/schist",
+            "weight": 10
           },
           {
-            "block": "gtceu:schist_tin_ore",
+            "block": "tfc:ore/normal_cassiterite/schist",
             "weight": 60
           },
           {
-            "block": "gtceu:raw_tin_block",
-            "weight": 2
-          },
-          {
-            "block": "gtceu:schist_saltpeter_ore",
+            "block": "tfc:ore/saltpeter/schist",
             "weight": 10
           }
         ]
       },
       {
         "replace": [
-          "minecraft:blackstone",
+          "beneathoverhaul:rock/raw/blackstone",
           "minecraft:magma_block"
         ],
         "with": [
           {
-            "block": "gtceu:pyroxenite_cassiterite_ore",
-            "weight": 40
+            "block": "beneathoverhaul:ore/poor_cassiterite/blackstone",
+            "weight": 10
           },
           {
-            "block": "gtceu:raw_cassiterite_block",
-            "weight": 2
+            "block": "beneathoverhaul:ore/rich_cassiterite/blackstone",
+            "weight": 10
           },
           {
-            "block": "gtceu:pyroxenite_tin_ore",
+            "block": "beneathoverhaul:ore/normal_cassiterite/blackstone",
             "weight": 60
           },
           {
-            "block": "gtceu:raw_tin_block",
-            "weight": 2
-          },
-          {
-            "block": "gtceu:pyroxenite_saltpeter_ore",
+            "block": "beneathoverhaul:ore/saltpeter/blackstone",
             "weight": 10
           }
         ]
@@ -183,12 +159,7 @@
       "underground_count": 150,
       "blocks": [
         {
-          "block": "tfc:ore/small_cassiterite",
-          "weight": 90
-        },
-        {
-          "block": "gtceu:saltpeter_indicator",
-          "weight": 10
+          "block": "tfc:ore/small_cassiterite"
         }
       ]
     }

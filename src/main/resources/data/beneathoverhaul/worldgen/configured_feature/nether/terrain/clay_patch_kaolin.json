@@ -10,20 +10,18 @@
 				"Name": "tfc:kaolin_clay_grass"
 			}
 		},
-		"replaceable": "#tfg:lush_ground_replaceable",
+		"replaceable": "#beneathoverhaul:lush_ground_replaceable",
 		"surface": "floor",
 		"vegetation_chance": 0.6,
 		"vegetation_feature": {
-			"feature": "tfg:nether/terrain/clay_patch_kaolin_vegetation",
+			"feature": "beneathoverhaul:nether/terrain/clay_patch_kaolin_vegetation",
 			"placement": []
 		},
 		"vertical_range": 3,
 		"xz_radius": {
 			"type": "minecraft:uniform",
-			"value": {
-				"max_inclusive": 6,
-				"min_inclusive": 4
-			}
+			"max_inclusive": 6,
+			"min_inclusive": 4
 		}
 	}
 }

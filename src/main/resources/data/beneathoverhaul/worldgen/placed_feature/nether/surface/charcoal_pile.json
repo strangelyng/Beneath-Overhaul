@@ -1,5 +1,5 @@
 {
-	"feature": "tfg:nether/surface/charcoal_pile",
+	"feature": "beneathoverhaul:nether/surface/charcoal_pile",
 	"placement": [
 		{
 			"type": "minecraft:count",

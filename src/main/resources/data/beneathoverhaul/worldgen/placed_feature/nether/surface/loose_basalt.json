@@ -1,5 +1,5 @@
 {
-	"feature": "tfg:nether/surface/loose_basalt",
+	"feature": "beneathoverhaul:nether/surface/loose_basalt",
 	"placement": [
 		{
 			"type": "minecraft:count",

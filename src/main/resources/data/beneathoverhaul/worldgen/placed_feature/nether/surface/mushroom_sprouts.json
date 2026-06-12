@@ -1,5 +1,5 @@
 {
-	"feature": "tfg:nether/surface/mushroom_sprouts",
+	"feature": "beneathoverhaul:nether/surface/mushroom_sprouts",
 	"placement": [
 		{
 			"type": "minecraft:count_on_every_layer",

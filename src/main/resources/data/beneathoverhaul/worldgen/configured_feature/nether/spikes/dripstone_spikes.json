@@ -1,8 +1,8 @@
 {
 	"type": "beneath:nether_spikes",
 	"config": {
-		"raw": "tfg:rock/hardened_dripstone",
-		"spike": "tfg:spike/dripstone_spike",
+		"raw": "beneathoverhaul:rock/hardened/dripstone",
+		"spike": "beneathoverhaul:rock/spike/dripstone",
 		"anchor_blocks": "minecraft:base_stone_nether"
 	}
 }

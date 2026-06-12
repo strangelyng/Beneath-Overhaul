@@ -1,5 +1,5 @@
 {
-	"type": "tfg:the_nether",
+	"type": "beneathoverhaul:the_nether",
 	"generator": {
 		"type": "kubejs_tfc:wrapped",
 		"event_key": "nether",
@@ -11,17 +11,19 @@
 			"temperature_scale": 2000,
 			"rainfall_scale": 2000,
 			"continentalness": -0.5,
+			"grass_density": 0,
+			"finite_continents": false,
 			"rock_layer_settings": {
 				"rocks": {
 					"deepslate": {
-						"raw": "minecraft:deepslate",
-						"hardened": "tfg:rock/hardened_deepslate",
-						"gravel": "tfg:rock/gravel_deepslate",
-						"cobble": "minecraft:cobbled_deepslate",
+						"raw": "beneathoverhaul:rock/raw/deepslate",
+						"hardened": "beneathoverhaul:rock/hardened/deepslate",
+						"gravel": "beneathoverhaul:rock/gravel/deepslate",
+						"cobble": "beneathoverhaul:rock/cobble/deepslate",
 						"sand": "tfc:sand/black",
 						"sandstone": "tfc:raw_sandstone/black",
-						"spike": "tfg:spike/deepslate_spike",
-						"loose": "tfg:loose/deepslate"
+						"spike": "beneathoverhaul:rock/spike/deepslate",
+						"loose": "beneathoverhaul:rock/loose/deepslate"
 					}
 				},
 				"layers": [],
@@ -44,12 +46,12 @@
 		},
 		"generator": {
 			"type": "minecraft:noise",
-			"settings": "tfg:nether_noise",
+			"settings": "beneathoverhaul:nether_noise",
 			"biome_source": {
 				"type": "minecraft:multi_noise",
 				"biomes": [
 					{
-						"biome": "tfg:nether/decaying_caverns",
+						"biome": "beneathoverhaul:nether/decaying_caverns",
 						"parameters": {
 							"continentalness": [ 0.2, 1 ],
 							"depth": [ -0.5, 0 ],
@@ -61,7 +63,7 @@
 						}
 					},
 					{
-						"biome": "tfg:nether/lava_floes",
+						"biome": "beneathoverhaul:nether/lava_floes",
 						"parameters": {
 							"continentalness": [ 0.2, 1 ],
 							"depth": [ 0, 1 ],
@@ -73,7 +75,7 @@
 						}
 					},
 					{
-						"biome": "tfg:nether/decaying_caverns",
+						"biome": "beneathoverhaul:nether/decaying_caverns",
 						"parameters": {
 							"continentalness": [ 0.2, 1 ],
 							"depth": [ -0.5, 0 ],
@@ -85,7 +87,7 @@
 						}
 					},
 					{
-						"biome": "tfg:nether/granite_caves",
+						"biome": "beneathoverhaul:nether/granite_caves",
 						"parameters": {
 							"continentalness": [ 0.2, 1 ],
 							"depth": [ 0, 1 ],
@@ -97,7 +99,7 @@
 						}
 					},
 					{
-						"biome": "tfg:nether/diorite_caves",
+						"biome": "beneathoverhaul:nether/diorite_caves",
 						"parameters": {
 							"continentalness": [ 0.2, 1 ],
 							"depth": [ -0.5, 0 ],
@@ -109,7 +111,7 @@
 						}
 					},
 					{
-						"biome": "tfg:nether/lava_floes",
+						"biome": "beneathoverhaul:nether/lava_floes",
 						"parameters": {
 							"continentalness": [ 0.2, 1 ],
 							"depth": [ 0, 1 ],
@@ -121,7 +123,7 @@
 						}
 					},
 					{
-						"biome": "tfg:nether/diorite_caves",
+						"biome": "beneathoverhaul:nether/diorite_caves",
 						"parameters": {
 							"continentalness": [ 0.2, 1 ],
 							"depth": [ -0.5, 0 ],
@@ -133,7 +135,7 @@
 						}
 					},
 					{
-						"biome": "tfg:nether/granite_caves",
+						"biome": "beneathoverhaul:nether/granite_caves",
 						"parameters": {
 							"continentalness": [ 0.2, 1 ],
 							"depth": [ 0, 1 ],
@@ -148,7 +150,7 @@
 
 
 					{
-						"biome": "tfg:nether/lush_hollow",
+						"biome": "beneathoverhaul:nether/lush_hollow",
 						"parameters": {
 							"continentalness": [ -0.2, 0.2 ],
 							"depth": [ -0.5, 0 ],
@@ -160,7 +162,7 @@
 						}
 					},
 					{
-						"biome": "tfg:nether/ash_forest",
+						"biome": "beneathoverhaul:nether/ash_forest",
 						"parameters": {
 							"continentalness": [ -0.2, 0.2 ],
 							"depth": [ 0, 1 ],
@@ -172,7 +174,7 @@
 						}
 					},
 					{
-						"biome": "tfg:nether/lush_hollow",
+						"biome": "beneathoverhaul:nether/lush_hollow",
 						"parameters": {
 							"continentalness": [ -0.2, 0.2 ],
 							"depth": [ -0.5, 0 ],
@@ -184,7 +186,7 @@
 						}
 					},
 					{
-						"biome": "tfg:nether/schist_caves",
+						"biome": "beneathoverhaul:nether/schist_caves",
 						"parameters": {
 							"continentalness": [ -0.2, 0.2 ],
 							"depth": [ 0, 1 ],
@@ -196,7 +198,7 @@
 						}
 					},
 					{
-						"biome": "tfg:nether/gabbro_caves",
+						"biome": "beneathoverhaul:nether/gabbro_caves",
 						"parameters": {
 							"continentalness": [ -0.2, 0.2 ],
 							"depth": [ -0.5, 0 ],
@@ -208,7 +210,7 @@
 						}
 					},
 					{
-						"biome": "tfg:nether/ash_forest",
+						"biome": "beneathoverhaul:nether/ash_forest",
 						"parameters": {
 							"continentalness": [ -0.2, 0.2 ],
 							"depth": [ 0, 1 ],
@@ -220,7 +222,7 @@
 						}
 					},
 					{
-						"biome": "tfg:nether/gabbro_caves",
+						"biome": "beneathoverhaul:nether/gabbro_caves",
 						"parameters": {
 							"continentalness": [ -0.2, 0.2 ],
 							"depth": [ -0.5, 0 ],
@@ -232,7 +234,7 @@
 						}
 					},
 					{
-						"biome": "tfg:nether/schist_caves",
+						"biome": "beneathoverhaul:nether/schist_caves",
 						"parameters": {
 							"continentalness": [ -0.2, 0.2 ],
 							"depth": [ 0, 1 ],
@@ -246,7 +248,7 @@
 
 
 					{
-						"biome": "tfg:nether/webbed_lair",
+						"biome": "beneathoverhaul:nether/webbed_lair",
 						"parameters": {
 							"continentalness": [ -1, -0.2 ],
 							"depth": [ -0.5, 0 ],
@@ -258,7 +260,7 @@
 						}
 					},
 					{
-						"biome": "tfg:nether/basalt_deltas",
+						"biome": "beneathoverhaul:nether/basalt_deltas",
 						"parameters": {
 							"continentalness": [ -1, -0.2 ],
 							"depth": [ 0, 1 ],
@@ -270,7 +272,7 @@
 						}
 					},
 					{
-						"biome": "tfg:nether/webbed_lair",
+						"biome": "beneathoverhaul:nether/webbed_lair",
 						"parameters": {
 							"continentalness": [ -1, -0.2 ],
 							"depth": [ -0.5, 0 ],
@@ -282,7 +284,7 @@
 						}
 					},
 					{
-						"biome": "tfg:nether/granite_caves",
+						"biome": "beneathoverhaul:nether/granite_caves",
 						"parameters": {
 							"continentalness": [ -1, -0.2 ],
 							"depth": [ 0, 1 ],
@@ -294,7 +296,7 @@
 						}
 					},
 					{
-						"biome": "tfg:nether/gneiss_caves",
+						"biome": "beneathoverhaul:nether/gneiss_caves",
 						"parameters": {
 							"continentalness": [ -1, -0.2 ],
 							"depth": [ -0.5, 0 ],
@@ -306,7 +308,7 @@
 						}
 					},
 					{
-						"biome": "tfg:nether/basalt_deltas",
+						"biome": "beneathoverhaul:nether/basalt_deltas",
 						"parameters": {
 							"continentalness": [ -1, -0.2 ],
 							"depth": [ 0, 1 ],
@@ -318,7 +320,7 @@
 						}
 					},
 					{
-						"biome": "tfg:nether/gneiss_caves",
+						"biome": "beneathoverhaul:nether/gneiss_caves",
 						"parameters": {
 							"continentalness": [ -1, -0.2 ],
 							"depth": [ -0.5, 0 ],
@@ -330,7 +332,7 @@
 						}
 					},
 					{
-						"biome": "tfg:nether/granite_caves",
+						"biome": "beneathoverhaul:nether/granite_caves",
 						"parameters": {
 							"continentalness": [ -1, -0.2 ],
 							"depth": [ 0, 1 ],

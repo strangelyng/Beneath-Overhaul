@@ -18,28 +18,16 @@
         ],
         "with": [
           {
-            "block": "gtceu:granite_galena_ore",
-            "weight": 30
-          },
-          {
-            "block": "gtceu:raw_galena_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:granite_silver_ore",
+            "block": "tfc:ore/normal_native_silver/granite",
             "weight": 35
           },
           {
-            "block": "gtceu:raw_silver_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:granite_lead_ore",
+            "block": "tfc:ore/poor_native_silver/granite",
             "weight": 35
           },
           {
-            "block": "gtceu:raw_lead_block",
-            "weight": 1
+            "block": "tfc:ore/rich_native_silver/granite",
+            "weight": 35
           }
         ]
       },
@@ -49,60 +37,36 @@
         ],
         "with": [
           {
-            "block": "gtceu:gneiss_galena_ore",
-            "weight": 30
-          },
-          {
-            "block": "gtceu:raw_galena_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:gneiss_silver_ore",
+            "block": "tfc:ore/normal_native_silver/gneiss",
             "weight": 35
           },
           {
-            "block": "gtceu:raw_silver_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:gneiss_lead_ore",
+            "block": "tfc:ore/poor_native_silver/gneiss",
             "weight": 35
           },
           {
-            "block": "gtceu:raw_lead_block",
-            "weight": 1
+            "block": "tfc:ore/rich_native_silver/gneiss",
+            "weight": 35
           }
         ]
       },
       {
         "replace": [
-          "minecraft:blackstone",
+          "beneathoverhaul:rock/raw/blackstone",
           "minecraft:magma_block"
         ],
         "with": [
           {
-            "block": "gtceu:pyroxenite_galena_ore",
-            "weight": 30
-          },
-          {
-            "block": "gtceu:raw_galena_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:pyroxenite_silver_ore",
+            "block": "beneathoverhaul:ore/normal_native_silver/blackstone",
             "weight": 35
           },
           {
-            "block": "gtceu:raw_silver_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:pyroxenite_lead_ore",
+            "block": "beneathoverhaul:ore/poor_native_silver/blackstone",
             "weight": 35
           },
           {
-            "block": "gtceu:raw_lead_block",
-            "weight": 1
+            "block": "beneathoverhaul:ore/rich_native_silver/blackstone",
+            "weight": 35
           }
         ]
       }
@@ -114,16 +78,7 @@
       "underground_count": 150,
       "blocks": [
         {
-          "block": "gtceu:galena_indicator",
-          "weight": 30
-        },
-        {
-          "block": "tfc:ore/small_native_silver",
-          "weight": 35
-        },
-        {
-          "block": "gtceu:lead_indicator",
-          "weight": 35
+          "block": "tfc:ore/small_native_silver"
         }
       ]
     }

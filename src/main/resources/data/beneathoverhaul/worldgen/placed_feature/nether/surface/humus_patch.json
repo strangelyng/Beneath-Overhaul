@@ -1,5 +1,5 @@
 {
-	"feature": "tfg:nether/surface/humus_patch",
+	"feature": "beneathoverhaul:nether/surface/humus_patch",
 	"placement": [
 		{
 			"type": "minecraft:rarity_filter",

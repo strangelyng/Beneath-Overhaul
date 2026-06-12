@@ -1,8 +1,8 @@
 {
 	"type": "beneath:nether_spikes",
 	"config": {
-		"raw": "tfg:rock/hardened_deepslate",
-		"spike": "tfg:spike/deepslate_spike",
+		"raw": "beneathoverhaul:rock/hardened/deepslate",
+		"spike": "beneathoverhaul:rock/spike/deepslate",
 		"anchor_blocks": "minecraft:base_stone_nether"
 	}
 }

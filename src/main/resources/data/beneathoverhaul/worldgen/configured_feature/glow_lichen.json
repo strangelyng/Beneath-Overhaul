@@ -3,11 +3,7 @@
 	"config": {
 		"block": "minecraft:glow_lichen",
 		"can_be_placed_on": [
-			"minecraft:dripstone_block",
 			"minecraft:calcite",
-			"minecraft:tuff",
-			"minecraft:deepslate",
-			"minecraft:blackstone",
 			"tfc:rock/raw/gabbro",
 			"tfc:rock/hardened/gabbro",
 			"tfc:rock/raw/schist",
@@ -48,7 +44,14 @@
 			"tfc:rock/hardened/andesite",
 			"tfc:rock/raw/dacite",
 			"tfc:rock/hardened/dacite",
-			"tfg:rock/hardened_deepslate"
+			"tfc:rock/raw/tuff",
+			"tfc:rock/hardened/tuff",
+			"beneathoverhaul:rock/raw/deepslate",
+			"beneathoverhaul:rock/hardened/deepslate",
+			"beneathoverhaul:rock/raw/blackstone",
+			"beneathoverhaul:rock/hardened/blackstone",
+			"beneathoverhaul:rock/raw/dripstone",
+			"beneathoverhaul:rock/hardened/dripstone"
 		],
 		"can_place_on_ceiling": true,
 		"can_place_on_floor": false,

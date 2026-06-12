@@ -14,61 +14,37 @@
     "blocks": [
       {
         "replace": [
-          "minecraft:deepslate",
-          "tfc:mud/silty_loam",
+          "beneathoverhaul:rock/raw/deepslate",
+          "tfc:mud/andisol",
           "beneath:soul_clay",
-          "tfc:dirt/loam",
-          "tfc:mud/loam",
+          "tfc:dirt/alfisol",
+          "tfc:mud/alfisol",
           "tfc:peat",
-          "tfc:dirt/silty_loam"
+          "tfc:dirt/andisol"
         ],
         "with": [
           {
-            "block": "gtceu:deepslate_tetrahedrite_ore",
-            "weight": 50
+            "block": "beneathoverhaul:ore/normal_tetrahedrite/deepslate",
+            "weight": 60
           },
           {
-            "block": "gtceu:raw_tetrahedrite_block",
-            "weight": 2
-          },
-          {
-            "block": "gtceu:deepslate_copper_ore",
-            "weight": 30
-          },
-          {
-            "block": "minecraft:raw_copper_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:deepslate_stibnite_ore",
-            "weight": 20
+            "block": "beneathoverhaul:ore/normal_native_copper/deepslate",
+            "weight": 40
           }
         ]
       },
       {
         "replace": [
-          "minecraft:dripstone_block"
+          "beneathoverhaul:rock/raw/dripstone"
         ],
         "with": [
           {
-            "block": "gtceu:dripstone_tetrahedrite_ore",
-            "weight": 50
+            "block": "beneathoverhaul:ore/normal_tetrahedrite/dripstone",
+            "weight": 60
           },
           {
-            "block": "gtceu:raw_tetrahedrite_block",
-            "weight": 2
-          },
-          {
-            "block": "gtceu:dripstone_copper_ore",
-            "weight": 30
-          },
-          {
-            "block": "minecraft:raw_copper_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:dripstone_stibnite_ore",
-            "weight": 20
+            "block": "beneathoverhaul:ore/normal_native_copper/dripstone",
+            "weight": 40
           }
         ]
       },
@@ -78,24 +54,12 @@
         ],
         "with": [
           {
-            "block": "gtceu:schist_tetrahedrite_ore",
-            "weight": 50
+            "block": "tfc:ore/normal_tetrahedrite/schist",
+            "weight": 60
           },
           {
-            "block": "gtceu:raw_tetrahedrite_block",
-            "weight": 2
-          },
-          {
-            "block": "gtceu:schist_copper_ore",
-            "weight": 30
-          },
-          {
-            "block": "minecraft:raw_copper_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:schist_stibnite_ore",
-            "weight": 20
+            "block": "tfc:ore/normal_native_copper/schist",
+            "weight": 40
           }
         ]
       },
@@ -105,52 +69,28 @@
         ],
         "with": [
           {
-            "block": "gtceu:gneiss_tetrahedrite_ore",
-            "weight": 50
+            "block": "tfc:ore/normal_tetrahedrite/gneiss",
+            "weight": 60
           },
           {
-            "block": "gtceu:raw_tetrahedrite_block",
-            "weight": 2
-          },
-          {
-            "block": "gtceu:gneiss_copper_ore",
-            "weight": 30
-          },
-          {
-            "block": "minecraft:raw_copper_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:gneiss_stibnite_ore",
-            "weight": 20
+            "block": "tfc:ore/normal_native_copper/gneiss",
+            "weight": 40
           }
         ]
       },
       {
         "replace": [
-          "minecraft:blackstone",
+          "beneathoverhaul:rock/raw/blackstone",
           "minecraft:magma_block"
         ],
         "with": [
           {
-            "block": "gtceu:pyroxenite_tetrahedrite_ore",
-            "weight": 50
+            "block": "beneathoverhaul:ore/normal_tetrahedrite/blackstone",
+            "weight": 60
           },
           {
-            "block": "gtceu:raw_tetrahedrite_block",
-            "weight": 2
-          },
-          {
-            "block": "gtceu:pyroxenite_copper_ore",
-            "weight": 30
-          },
-          {
-            "block": "minecraft:raw_copper_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:pyroxenite_stibnite_ore",
-            "weight": 20
+            "block": "beneathoverhaul:ore/normal_native_copper/blackstone",
+            "weight": 40
           }
         ]
       }
@@ -163,15 +103,11 @@
       "blocks": [
         {
           "block": "tfc:ore/small_tetrahedrite",
-          "weight": 50
+          "weight": 60
         },
         {
           "block": "tfc:ore/small_native_copper",
-          "weight": 30
-        },
-        {
-          "block": "gtceu:stibnite_indicator",
-          "weight": 20
+          "weight": 40
         }
       ]
     }

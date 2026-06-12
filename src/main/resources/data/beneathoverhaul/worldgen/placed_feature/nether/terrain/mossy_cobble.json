@@ -1,5 +1,5 @@
 {
-	"feature": "tfg:nether/terrain/mossy_cobble",
+	"feature": "beneathoverhaul:nether/terrain/mossy_cobble",
 	"placement": [
 		{
 			"type": "minecraft:count",

@@ -1,5 +1,5 @@
 {
-	"feature": "tfg:nether/terrain/spring_lava",
+	"feature": "beneathoverhaul:nether/terrain/spring_lava",
 	"placement": [
 		{
 			"type": "minecraft:count",

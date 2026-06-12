@@ -1,5 +1,5 @@
 {
-	"feature": "tfg:nether/surface/big_mushrooms",
+	"feature": "beneathoverhaul:nether/surface/big_mushrooms",
 	"placement": [
 		{
 			"type": "minecraft:count",
@@ -30,16 +30,16 @@
 					0
 				],
 				"blocks": [
-					"minecraft:deepslate",
-					"minecraft:blackstone",
+					"beneathoverhaul:rock/raw/deepslate",
+					"beneathoverhaul:rock/raw/blackstone",
 					"beneath:soul_clay",
-					"tfc:dirt/silty_loam",
-					"tfc:dirt/loam",
-					"tfc:mud/silty_loam",
-					"tfc:mud/loam",
-					"tfc:muddy_roots/silty_loam",
+					"tfc:dirt/andisol",
+					"tfc:dirt/alfisol",
+					"tfc:mud/andisol",
+					"tfc:mud/alfisol",
+					"tfc:muddy_roots/andisol",
 					"tfc:peat",
-					"tfg:rock/hardened_deepslate"
+					"beneathoverhaul:rock/hardened/deepslate"
 				]
 			}
 		},

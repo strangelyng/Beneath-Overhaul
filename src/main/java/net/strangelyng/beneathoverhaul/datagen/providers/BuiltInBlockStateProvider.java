@@ -1,6 +1,7 @@
 package net.strangelyng.beneathoverhaul.datagen.providers;
 
 import net.dries007.tfc.common.blocks.rock.*;
+import net.dries007.tfc.util.registry.RegistryRock;
 import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -36,6 +37,21 @@ public class BuiltInBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+        // Ore Blocks
+        Stream.of(BeneathOverhaulRock.VALUES).forEach(rock -> {
+            Stream.of(Ore.values()).forEach(ore -> {
+                if (!ore.isGraded() && ore.hasBlock()) {
+                    simpleOre(BeneathOverhaulBlocks.BENEATH_ROCK_TFC_ORES.get(rock).get(ore).holder(), rock, ore);
+                }
+
+                Stream.of(Ore.Grade.values()).forEach(grade -> {
+                    if (ore.isGraded()) {
+                        simpleOre(BeneathOverhaulBlocks.BENEATH_ROCK_TFC_GRADED_ORES.get(rock).get(ore).get(grade).holder(), rock, ore, grade);
+                    }
+                });
+            });
+        });
+
         // Rock Blocks
         Stream.of(BeneathOverhaulRock.VALUES).forEach(rock -> {
             Stream.of(Rock.BlockType.values()).forEach(type -> {
@@ -71,6 +87,18 @@ public class BuiltInBlockStateProvider extends BlockStateProvider {
             pressurePlateBlock(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.PRESSURE_PLATE).holder(), TextureUtils.getRockTexture(rock, Rock.BlockType.PRESSURE_PLATE));
             buttonBlock(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.BUTTON).holder(), TextureUtils.getRockTexture(rock, Rock.BlockType.BUTTON));
         });
+    }
+
+    private void simpleOre(DeferredHolder<Block, Block> block, RegistryRock rock, Ore ore) {
+        String allTexture = TextureUtils.getRawRockTexture(rock);
+        String oreTexture = TextureUtils.getOreTexture(ore);
+        simpleBlock(block.get(), ConfiguredModel.builder().modelFile(createOverlayModel(block.getId().getPath(), allTexture, oreTexture)).buildLast());
+    }
+
+    private void simpleOre(DeferredHolder<Block, Block> block, RegistryRock rock, Ore ore, Ore.Grade grade) {
+        String allTexture = TextureUtils.getRawRockTexture(rock);
+        String oreTexture = TextureUtils.getOreTexture(ore, grade);
+        simpleBlock(block.get(), ConfiguredModel.builder().modelFile(createOverlayModel(block.getId().getPath(), allTexture, oreTexture)).buildLast());
     }
 
     private BlockModelBuilder createOverlayModel(String name, String allTexture, String overlayTexture) {

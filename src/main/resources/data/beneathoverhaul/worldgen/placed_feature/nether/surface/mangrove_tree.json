@@ -1,5 +1,5 @@
 {
-	"feature": "tfg:nether/surface/mangrove_tree",
+	"feature": "beneathoverhaul:nether/surface/mangrove_tree",
 	"placement": [
 		{
 			"type": "minecraft:count",

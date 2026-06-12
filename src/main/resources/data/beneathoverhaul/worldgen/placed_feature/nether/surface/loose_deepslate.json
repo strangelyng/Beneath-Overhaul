@@ -1,5 +1,5 @@
 {
-	"feature": "tfg:nether/surface/loose_deepslate",
+	"feature": "beneathoverhaul:nether/surface/loose_deepslate",
 	"placement": [
 		{
 			"type": "minecraft:count",

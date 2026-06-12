@@ -1,5 +1,5 @@
 {
-	"feature": "tfg:earth/geode/amethyst",
+	"feature": "beneathoverhaul:nether/geode/amethyst",
 	"placement": [
 		{
 			"type": "minecraft:rarity_filter",
@@ -11,7 +11,7 @@
 		{
 			"type": "minecraft:height_range",
 			"height": {
-				"type": "uniform",
+				"type": "minecraft:uniform",
 				"min_inclusive": {
 					"absolute": -48
 				},

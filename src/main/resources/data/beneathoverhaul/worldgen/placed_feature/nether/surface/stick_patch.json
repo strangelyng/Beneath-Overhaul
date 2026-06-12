@@ -1,5 +1,5 @@
 {
-	"feature": "tfg:nether/surface/stick_patch",
+	"feature": "beneathoverhaul:nether/surface/stick_patch",
 	"placement": [
 		{
 			"type": "minecraft:height_range",

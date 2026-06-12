@@ -8,21 +8,17 @@
 			}
 		},
 		"rim": {
-			"Name": "minecraft:dripstone_block"
+			"Name": "beneathoverhaul:rock/raw/dripstone"
 		},
 		"rim_size": {
 			"type": "minecraft:uniform",
-			"value": {
-				"max_inclusive": 2,
-				"min_inclusive": 0
-			}
+			"max_inclusive": 2,
+			"min_inclusive": 0
 		},
 		"size": {
 			"type": "minecraft:uniform",
-			"value": {
-				"max_inclusive": 7,
-				"min_inclusive": 3
-			}
+			"max_inclusive": 7,
+			"min_inclusive": 3
 		}
 	}
 }

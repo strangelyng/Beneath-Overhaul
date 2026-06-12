@@ -8,20 +8,20 @@
 		"mood_sound": {
 			"block_search_extent": 8,
 			"offset": 2,
-			"sound": "tfg:ambient.upper_nether.mood",
+			"sound": "minecraft:ambient.warped_forest.mood",
 			"tick_delay": 6000
 		},
+		"ambient_sound": "minecraft:ambient.warped_forest.loop",
 		"additions_sound": {
-			"sound": "tfg:ambient.upper_nether.additions",
+			"sound": "minecraft:ambient.warped_forest.additions",
 			"tick_chance": 0.0015
 		},
-		"ambient_sound": "tfg:ambient.upper_nether_lush.loop",
 		"music": {
 			"max_delay": 24000,
 			"min_delay": 12000,
 			"replace_current_music": false,
 			"sound": {
-				"sound_id": "tfg:music.nether"
+				"sound_id": "minecraft:music.nether.warped_forest"
 			}
 		},
 		"sky_color": 5799235,
@@ -39,47 +39,47 @@
 	"features": [
 		[],
 		[
-			"tfg:nether/terrain/lava_lake",
-			"tfg:nether/terrain/spring_water_lake"
+			"beneathoverhaul:nether/terrain/lava_lake",
+			"beneathoverhaul:nether/terrain/spring_water_lake"
 		],
 		[
 			"minecraft:basalt_pillar",
-			"tfg:earth/geode/amethyst"
+			"beneathoverhaul:nether/geode/amethyst"
 		],
 		[],
 		[
-			"tfg:nether/terrain/glowstone_ceiling"
+			"beneathoverhaul:nether/terrain/glowstone_ceiling"
 		],
 		[],
-		"#tfg:nether_veins",
-		"#tfg:nether_underground_decoration",
+		"#beneathoverhaul:nether_veins",
+		"#beneathoverhaul:nether_underground_decoration",
 		[
-			"tfg:nether/terrain/mossy_cobble"
+			"beneathoverhaul:nether/terrain/mossy_cobble"
 		],
 		[
 			"beneath:blackstone_boulders",
-			"tfg:nether/surface/loose_deepslate",
-			"tfg:nether/surface/philodendron",
-			"tfg:nether/surface/moss_patch_small",
-			"tfg:nether/surface/mangrove_tree",
-			"tfg:nether/terrain/lush_caves_ceiling",
-			"tfg:nether/terrain/lush_caves_clay",
-			"tfg:nether/terrain/lush_caves_vegetation",
+			"beneathoverhaul:nether/surface/loose_deepslate",
+			"beneathoverhaul:nether/surface/philodendron",
+			"beneathoverhaul:nether/surface/moss_patch_small",
+			"beneathoverhaul:nether/surface/mangrove_tree",
+			"beneathoverhaul:nether/terrain/lush_caves_ceiling",
+			"beneathoverhaul:nether/terrain/lush_caves_clay",
+			"beneathoverhaul:nether/terrain/lush_caves_vegetation",
 			"minecraft:spore_blossom",
 			"beneath:burpflower_patch",
 			"beneath:gleamflower_patch",
 			"beneath:sulfur_patch",
-			"tfg:nether/surface/pumice_patch",
-			"tfg:nether/surface/beneath_mushrooms",
-			"tfg:nether/surface/guano_patch",
-			"tfg:nether/surface/stick_patch",
-			"tfg:glow_lichen"
+			"beneathoverhaul:nether/surface/pumice_patch",
+			"beneathoverhaul:nether/surface/beneath_mushrooms",
+			"beneathoverhaul:nether/surface/guano_patch",
+			"beneathoverhaul:nether/surface/stick_patch",
+			"beneathoverhaul:glow_lichen"
 		],
 		[
 			"beneath:glowstone_spikes",
-			"tfg:nether/spikes/deepslate_spikes",
-			"tfg:nether/spikes/blackstone_spikes",
-			"tfg:nether/hardening"
+			"beneathoverhaul:nether/spikes/deepslate_spikes",
+			"beneathoverhaul:nether/spikes/blackstone_spikes",
+			"beneathoverhaul:nether/hardening"
 		]
 	],
 	"has_precipitation": false,
@@ -130,12 +130,6 @@
 				"weight": 50
 			},
 			{
-				"type": "primitive_creatures:tfc",
-				"maxCount": 4,
-				"minCount": 1,
-				"weight": 100
-			},
-			{
 				"type": "minecraft:zombie",
 				"maxCount": 4,
 				"minCount": 1,
@@ -164,12 +158,6 @@
 				"maxCount": 2,
 				"minCount": 1,
 				"weight": 10
-			},
-			{
-				"type": "endermanoverhaul:swamp_enderman",
-				"maxCount": 2,
-				"minCount": 1,
-				"weight": 100
 			}
 		],
 		"underground_water_creature": [

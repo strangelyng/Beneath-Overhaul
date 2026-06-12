@@ -18,35 +18,19 @@
         ],
         "with": [
           {
-            "block": "gtceu:gabbro_garnierite_ore",
+            "block": "tfc:ore/rich_garnierite/gabbro",
             "weight": 25
           },
           {
-            "block": "gtceu:raw_garnierite_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:gabbro_nickel_ore",
+            "block": "tfc:ore/normal_garnierite/gabbro",
             "weight": 20
           },
           {
-            "block": "gtceu:gabbro_cobaltite_ore",
-            "weight": 20
-          },
-          {
-            "block": "gtceu:raw_cobaltite_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:gabbro_pentlandite_ore",
+            "block": "tfc:ore/poor_garnierite/gabbro",
             "weight": 25
           },
           {
-            "block": "gtceu:raw_pentlandite_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:gabbro_cobalt_ore",
+            "block": "tfc:ore/sulfur/gabbro",
             "weight": 15
           }
         ]
@@ -57,75 +41,43 @@
         ],
         "with": [
           {
-            "block": "gtceu:diorite_garnierite_ore",
+            "block": "tfc:ore/rich_garnierite/diorite",
             "weight": 25
           },
           {
-            "block": "gtceu:raw_garnierite_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:diorite_nickel_ore",
+            "block": "tfc:ore/normal_garnierite/diorite",
             "weight": 20
           },
           {
-            "block": "gtceu:diorite_cobaltite_ore",
-            "weight": 20
-          },
-          {
-            "block": "gtceu:raw_cobaltite_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:diorite_pentlandite_ore",
+            "block": "tfc:ore/poor_garnierite/diorite",
             "weight": 25
           },
           {
-            "block": "gtceu:raw_pentlandite_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:diorite_cobalt_ore",
+            "block": "tfc:ore/sulfur/diorite",
             "weight": 15
           }
         ]
       },
       {
         "replace": [
-          "minecraft:blackstone",
+          "beneathoverhaul:rock/raw/blackstone",
           "minecraft:magma_block"
         ],
         "with": [
           {
-            "block": "gtceu:pyroxenite_garnierite_ore",
+            "block": "beneathoverhaul:ore/rich_garnierite/blackstone",
             "weight": 25
           },
           {
-            "block": "gtceu:raw_garnierite_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:pyroxenite_nickel_ore",
+            "block": "beneathoverhaul:ore/normal_garnierite/blackstone",
             "weight": 20
           },
           {
-            "block": "gtceu:pyroxenite_cobaltite_ore",
-            "weight": 20
-          },
-          {
-            "block": "gtceu:raw_cobaltite_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:pyroxenite_pentlandite_ore",
+            "block": "beneathoverhaul:ore/poor_garnierite/blackstone",
             "weight": 25
           },
           {
-            "block": "gtceu:raw_pentlandite_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:pyroxenite_cobalt_ore",
+            "block": "beneathoverhaul:ore/sulfur/blackstone",
             "weight": 15
           }
         ]
@@ -138,24 +90,7 @@
       "underground_count": 150,
       "blocks": [
         {
-          "block": "tfc:ore/small_garnierite",
-          "weight": 25
-        },
-        {
-          "block": "tfc:ore/small_garnierite",
-          "weight": 20
-        },
-        {
-          "block": "gtceu:cobaltite_indicator",
-          "weight": 20
-        },
-        {
-          "block": "gtceu:pentlandite_indicator",
-          "weight": 25
-        },
-        {
-          "block": "gtceu:cobalt_indicator",
-          "weight": 15
+          "block": "tfc:ore/small_garnierite"
         }
       ]
     }

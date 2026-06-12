@@ -2,12 +2,14 @@ package net.strangelyng.beneathoverhaul.util;
 
 import com.google.common.collect.ImmutableMap;
 import net.dries007.tfc.TerraFirmaCraft;
+import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.util.registry.RegistryRock;
 import net.minecraft.resources.ResourceLocation;
 import net.strangelyng.beneathoverhaul.BeneathOverhaul;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulRock;
 
+import java.util.Locale;
 import java.util.Map;
 
 public class TextureUtils {
@@ -136,6 +138,25 @@ public class TextureUtils {
 
     private static String getRawRockTexture(Rock rock) {
         return TerraFirmaCraft.MOD_ID + ":block/rock/raw/" + rock.getSerializedName();
+    }
+
+    public static String getOreTexture(Ore ore) {
+        return TerraFirmaCraft.MOD_ID + ":block/ore/" + ore.name().toLowerCase(Locale.ROOT);
+    }
+
+    public static String getOreTexture(Ore ore, Ore.Grade grade) {
+        switch (grade) {
+            case RICH -> {
+                return TerraFirmaCraft.MOD_ID + ":block/ore/rich_" + ore.name().toLowerCase(Locale.ROOT);
+            }
+            case NORMAL -> {
+                return TerraFirmaCraft.MOD_ID + ":block/ore/normal_" + ore.name().toLowerCase(Locale.ROOT);
+            }
+            case POOR -> {
+                return TerraFirmaCraft.MOD_ID + ":block/ore/poor_" + ore.name().toLowerCase(Locale.ROOT);
+            }
+            case null -> throw new AssertionError("Invalid grade");
+        }
     }
 
     public static ResourceLocation getRockTexture(BeneathOverhaulRock rock, Rock.BlockType type) {

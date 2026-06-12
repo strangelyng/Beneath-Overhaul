@@ -14,78 +14,54 @@
     "blocks": [
       {
         "replace": [
-          "minecraft:deepslate",
-          "tfc:mud/silty_loam",
+          "beneathoverhaul:rock/raw/deepslate",
+          "tfc:mud/andisol",
           "beneath:soul_clay",
-          "tfc:dirt/loam",
-          "tfc:mud/loam",
+          "tfc:dirt/alfisol",
+          "tfc:mud/alfisol",
           "tfc:peat",
-          "tfc:dirt/silty_loam"
+          "tfc:dirt/andisol"
         ],
         "with": [
           {
-            "block": "gtceu:deepslate_chalcopyrite_ore",
+            "block": "beneathoverhaul:ore/rich_native_copper/deepslate",
             "weight": 20
           },
           {
-            "block": "gtceu:raw_chalcopyrite_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:deepslate_hematite_ore",
+            "block": "beneathoverhaul:ore/normal_hematite/deepslate",
             "weight": 5
           },
           {
-            "block": "gtceu:deepslate_pyrite_ore",
+            "block": "beneathoverhaul:ore/pyrite/deepslate",
             "weight": 10
           },
           {
-            "block": "gtceu:raw_pyrite_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:deepslate_copper_ore",
+            "block": "beneathoverhaul:ore/normal_native_copper/deepslate",
             "weight": 65
-          },
-          {
-            "block": "minecraft:raw_copper_block",
-            "weight": 2
           }
         ]
       },
       {
         "replace": [
-          "minecraft:blackstone",
+          "beneathoverhaul:rock/raw/blackstone",
           "minecraft:magma_block"
         ],
         "with": [
           {
-            "block": "gtceu:pyroxenite_chalcopyrite_ore",
+            "block": "beneathoverhaul:ore/rich_native_copper/blackstone",
             "weight": 20
           },
           {
-            "block": "gtceu:raw_chalcopyrite_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:pyroxenite_hematite_ore",
+            "block": "beneathoverhaul:ore/normal_hematite/blackstone",
             "weight": 5
           },
           {
-            "block": "gtceu:pyroxenite_pyrite_ore",
+            "block": "beneathoverhaul:ore/pyrite/blackstone",
             "weight": 10
           },
           {
-            "block": "gtceu:raw_pyrite_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:pyroxenite_copper_ore",
+            "block": "beneathoverhaul:ore/normal_native_copper/blackstone",
             "weight": 65
-          },
-          {
-            "block": "minecraft:raw_copper_block",
-            "weight": 2
           }
         ]
       },
@@ -96,67 +72,43 @@
         ],
         "with": [
           {
-            "block": "gtceu:basalt_chalcopyrite_ore",
+            "block": "tfc:ore/rich_native_copper/basalt",
             "weight": 20
           },
           {
-            "block": "gtceu:raw_chalcopyrite_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:basalt_hematite_ore",
+            "block": "tfc:ore/normal_hematite/basalt",
             "weight": 5
           },
           {
-            "block": "gtceu:basalt_pyrite_ore",
+            "block": "tfc:ore/pyrite/basalt",
             "weight": 10
           },
           {
-            "block": "gtceu:raw_pyrite_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:basalt_copper_ore",
+            "block": "tfc:ore/normal_native_copper/basalt",
             "weight": 65
-          },
-          {
-            "block": "minecraft:raw_copper_block",
-            "weight": 2
           }
         ]
       },
       {
         "replace": [
-          "minecraft:dripstone_block"
+          "beneathoverhaul:rock/raw/dripstone"
         ],
         "with": [
           {
-            "block": "gtceu:dripstone_chalcopyrite_ore",
+            "block": "beneathoverhaul:ore/rich_native_copper/dripstone",
             "weight": 20
           },
           {
-            "block": "gtceu:raw_chalcopyrite_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:dripstone_hematite_ore",
+            "block": "beneathoverhaul:ore/normal_hematite/dripstone",
             "weight": 5
           },
           {
-            "block": "gtceu:dripstone_pyrite_ore",
+            "block": "beneathoverhaul:ore/pyrite/dripstone",
             "weight": 10
           },
           {
-            "block": "gtceu:raw_pyrite_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:dripstone_copper_ore",
+            "block": "beneathoverhaul:ore/normal_native_copper/dripstone",
             "weight": 65
-          },
-          {
-            "block": "minecraft:raw_copper_block",
-            "weight": 2
           }
         ]
       }
@@ -168,20 +120,12 @@
       "underground_count": 150,
       "blocks": [
         {
-          "block": "gtceu:chalcopyrite_indicator",
-          "weight": 20
-        },
-        {
           "block": "tfc:ore/small_hematite",
           "weight": 5
         },
         {
-          "block": "gtceu:pyrite_indicator",
-          "weight": 10
-        },
-        {
           "block": "tfc:ore/small_native_copper",
-          "weight": 65
+          "weight": 95
         }
       ]
     }

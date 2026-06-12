@@ -1,9 +1,13 @@
 package net.strangelyng.beneathoverhaul.datagen.providers;
 
+import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
+import net.dries007.tfc.common.items.Powder;
+import net.dries007.tfc.common.items.TFCItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulBlocks;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulRock;
@@ -24,6 +28,10 @@ public class BuiltInBlockLootTableProvider extends BlockLootSubProvider {
                 .stream().map(e -> (Block) e.value()).toList();
     }
 
+    private void addOreTable(Block oreBlock, Item oreItem) {
+        this.add(oreBlock, LootTableBuilders.createOreTable(oreBlock, oreItem));
+    }
+
     private void addRockBlockLootTable(BeneathOverhaulRock rock, Rock.BlockType type) {
         switch (type) {
             case LOOSE, MOSSY_LOOSE -> this.add(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(type).get(), LootTableBuilders.createLooseRockDropTable(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(type).get()));
@@ -39,10 +47,32 @@ public class BuiltInBlockLootTableProvider extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
+        generateOres();
         generateRocks();
+        generateMisc();
     }
 
-    private void generateRocks(){
+    private void generateOres() {
+        BeneathOverhaulBlocks.BENEATH_ROCK_TFC_ORES.values().forEach(map -> {
+            Stream.of(Ore.values()).forEach(ore -> {
+                if (!ore.isGraded() && ore.hasBlock()) {
+                    addOreTable(map.get(ore).get(), TFCItems.ORES.get(ore).get());
+                }
+            });
+        });
+
+        Stream.of(Ore.Grade.values()).forEach(grade -> {
+            BeneathOverhaulBlocks.BENEATH_ROCK_TFC_GRADED_ORES.values().forEach(map -> {
+                Stream.of(Ore.values()).forEach(ore -> {
+                    if (ore.isGraded()) {
+                        addOreTable(map.get(ore).get(grade).get(), TFCItems.GRADED_ORES.get(ore).get(getTFCGrade(grade)).get());
+                    }
+                });
+            });
+        });
+    }
+
+    private void generateRocks() {
         Stream.of(BeneathOverhaulRock.VALUES).forEach(rock -> {
             Stream.of(Rock.BlockType.values()).forEach(type -> {
                 addRockBlockLootTable(rock, type);
@@ -53,5 +83,33 @@ public class BuiltInBlockLootTableProvider extends BlockLootSubProvider {
                 }
             });
         });
+    }
+
+    private void generateMisc() {
+        this.dropSelf(BeneathOverhaulBlocks.CHARRED_LOG.get());
+        this.dropSelf(BeneathOverhaulBlocks.MUSHROOM_ROOTS.get());
+        this.dropSelf(BeneathOverhaulBlocks.MUSHROOM_SPROUTS.get());
+
+        this.dropSelf(BeneathOverhaulBlocks.ASH_LAYER_BLOCK.get());
+
+        this.add(BeneathOverhaulBlocks.ASH_LAYER_BLOCK.get(),
+                LootTableBuilders.createLayerBlockDropTable(BeneathOverhaulBlocks.ASH_LAYER_BLOCK.get(), TFCItems.POWDERS.get(Powder.WOOD_ASH).get()));
+    }
+
+    public static Ore.Grade getTFCGrade(Ore.Grade grade) {
+        switch (grade) {
+            case POOR -> {
+                return Ore.Grade.POOR;
+            }
+            case NORMAL -> {
+                return Ore.Grade.NORMAL;
+            }
+            case RICH -> {
+                return Ore.Grade.RICH;
+            }
+            default -> {
+                return Ore.Grade.NORMAL;
+            }
+        }
     }
 }

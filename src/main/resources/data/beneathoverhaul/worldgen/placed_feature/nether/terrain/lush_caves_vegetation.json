@@ -1,5 +1,5 @@
 {
-	"feature": "tfg:nether/terrain/moss_patch_floor",
+	"feature": "beneathoverhaul:nether/terrain/moss_patch_floor",
 	"placement": [
 		{
 			"type": "minecraft:count",

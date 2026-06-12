@@ -1,5 +1,5 @@
 {
-	"feature": "tfg:nether/terrain/magma_blob",
+	"feature": "beneathoverhaul:nether/terrain/magma_blob",
 	"placement": [
 		{
 			"type": "minecraft:rarity_filter",
@@ -15,7 +15,7 @@
 		{
 			"type": "minecraft:height_range",
 			"height": {
-				"type": "uniform",
+				"type": "minecraft:uniform",
 				"min_inclusive": {
 					"absolute": 27
 				},

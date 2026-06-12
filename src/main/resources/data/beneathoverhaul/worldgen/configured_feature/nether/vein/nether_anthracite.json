@@ -15,13 +15,13 @@
     "blocks": [
       {
         "replace": [
-          "minecraft:deepslate",
-          "tfc:mud/silty_loam",
+          "beneathoverhaul:rock/raw/deepslate",
+          "tfc:mud/andisol",
           "beneath:soul_clay",
-          "tfc:dirt/loam",
-          "tfc:mud/loam",
+          "tfc:dirt/alfisol",
+          "tfc:mud/alfisol",
           "tfc:peat",
-          "tfc:dirt/silty_loam"
+          "tfc:dirt/andisol"
         ],
         "with": [
           {
@@ -30,18 +30,6 @@
           }
         ]
       }
-    ],
-    "indicator": {
-      "rarity": 15,
-      "depth": 1,
-      "underground_rarity": 40,
-      "underground_count": 100,
-      "blocks": [
-        {
-          "block": "gtceu:coal_bud_indicator",
-          "weight": 100
-        }
-      ]
-    }
+    ]
   }
 }

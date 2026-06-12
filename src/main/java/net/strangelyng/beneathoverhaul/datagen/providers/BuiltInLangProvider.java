@@ -1,8 +1,10 @@
 package net.strangelyng.beneathoverhaul.datagen.providers;
 
+import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.minecraft.data.PackOutput;
 import net.minecraft.util.StringRepresentable;
+import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.LanguageProvider;
 import net.strangelyng.beneathoverhaul.BeneathOverhaul;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulBlocks;
@@ -10,6 +12,7 @@ import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulRock;
 import net.strangelyng.beneathoverhaul.common.items.BeneathOverhaulItems;
 import net.strangelyng.beneathoverhaul.util.TextUtils;
 
+import java.util.function.Supplier;
 import java.util.stream.Stream;
 
 public class BuiltInLangProvider extends LanguageProvider {
@@ -19,6 +22,28 @@ public class BuiltInLangProvider extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
+        // Misc Lang
+        addBlock(BeneathOverhaulBlocks.CHARRED_LOG, "Charred Log");
+        addBlock(BeneathOverhaulBlocks.MUSHROOM_ROOTS, "Mushroom ROots");
+        addBlock(BeneathOverhaulBlocks.MUSHROOM_SPROUTS, "Mushroom Sprouts");
+        addBlock(BeneathOverhaulBlocks.ASH_LAYER_BLOCK, "Ash Pile");
+
+        // Ore Blocks
+        Stream.of(Ore.values()).forEach(ore -> {
+            if (ore.hasBlock()) {
+                Stream.of(BeneathOverhaulRock.VALUES).forEach(rock -> {
+                    if (ore.isGraded()) {
+                        Stream.of(Ore.Grade.values()).forEach(grade -> {
+                            createOreKey(BeneathOverhaulBlocks.BENEATH_ROCK_TFC_GRADED_ORES.get(rock).get(ore).get(grade), getName(grade.name()) + " " + getName(rock), getName(ore.name()));
+                        });
+                    } else {
+                        createOreKey(BeneathOverhaulBlocks.BENEATH_ROCK_TFC_ORES.get(rock).get(ore), getName(rock), getName(ore.name()));
+                    }
+                });
+            }
+        });
+
+        // Rock Blocks
         Stream.of(BeneathOverhaulRock.VALUES).forEach(rock -> {
             Stream.of(Rock.BlockType.values()).forEach(type -> {
                 if (type.hasVariants()) {
@@ -70,6 +95,22 @@ public class BuiltInLangProvider extends LanguageProvider {
 
             addItem(BeneathOverhaulItems.BRICKS.get(rock), getName(rock) + " Brick");
         });
+    }
+
+    private void createOreKey(Supplier<Block> block, String rock, String ore) {
+        addBlock(block, rock + " " + ore);
+
+        if (ore.equals("Pyrite")) {
+            ore = "Native Gold?";
+        }
+
+        add(block.get().getDescriptionId() + ".prospected", ore);
+    }
+
+    private void createOreKey(Supplier<Block> block, String ore) {
+        addBlock(block, ore);
+
+        add(block.get().getDescriptionId() + ".prospected", ore);
     }
 
     private String getName(String string){

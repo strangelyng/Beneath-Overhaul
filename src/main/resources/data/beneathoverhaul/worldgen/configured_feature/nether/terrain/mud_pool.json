@@ -7,7 +7,7 @@
 		"ground_state": {
 			"type": "minecraft:simple_state_provider",
 			"state": {
-				"Name": "tfc:muddy_roots/silty_loam"
+				"Name": "tfc:muddy_roots/andisol"
 			}
 		},
 		"replaceable": "#minecraft:lush_ground_replaceable",
@@ -20,10 +20,8 @@
 		"vertical_range": 5,
 		"xz_radius": {
 			"type": "minecraft:uniform",
-			"value": {
-				"max_inclusive": 4,
-				"min_inclusive": 2
-			}
+			"max_inclusive": 4,
+			"min_inclusive": 2
 		}
 	}
 }

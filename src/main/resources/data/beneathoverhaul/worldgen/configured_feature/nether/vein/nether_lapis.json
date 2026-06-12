@@ -14,140 +14,56 @@
     "blocks": [
       {
         "replace": [
-          "minecraft:deepslate",
-          "tfc:mud/silty_loam",
+          "beneathoverhaul:rock/raw/deepslate",
+          "tfc:mud/andisol",
           "beneath:soul_clay",
-          "tfc:dirt/loam",
-          "tfc:mud/loam",
+          "tfc:dirt/alfisol",
+          "tfc:mud/alfisol",
           "tfc:peat",
-          "tfc:dirt/silty_loam"
+          "tfc:dirt/andisol"
         ],
         "with": [
           {
-            "block": "gtceu:deepslate_lazurite_ore",
-            "weight": 35
+            "block": "beneathoverhaul:ore/lapis_lazuli/deepslate",
+            "weight": 70
           },
           {
-            "block": "gtceu:raw_lazurite_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:deepslate_sodalite_ore",
-            "weight": 25
-          },
-          {
-            "block": "gtceu:raw_sodalite_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:deepslate_lapis_ore",
-            "weight": 25
-          },
-          {
-            "block": "gtceu:raw_lapis_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:deepslate_calcite_ore",
+            "block": "minecraft:calcite",
             "weight": 15
           }
         ]
       },
       {
         "replace": [
-          "minecraft:dripstone_block"
+          "beneathoverhaul:rock/raw/dripstone"
         ],
         "with": [
           {
-            "block": "gtceu:dripstone_lazurite_ore",
-            "weight": 35
+            "block": "beneathoverhaul:ore/lapis_lazuli/dripstone",
+            "weight": 70
           },
           {
-            "block": "gtceu:raw_lazurite_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:dripstone_sodalite_ore",
-            "weight": 25
-          },
-          {
-            "block": "gtceu:raw_sodalite_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:dripstone_lapis_ore",
-            "weight": 25
-          },
-          {
-            "block": "gtceu:raw_lapis_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:dripstone_calcite_ore",
+            "block": "minecraft:calcite",
             "weight": 15
           }
         ]
       },
       {
         "replace": [
-          "minecraft:blackstone",
+          "beneathoverhaul:rock/raw/blackstone",
           "minecraft:magma_block"
         ],
         "with": [
           {
-            "block": "gtceu:pyroxenite_lazurite_ore",
-            "weight": 35
+            "block": "beneathoverhaul:ore/lapis_lazuli/blackstone",
+            "weight": 70
           },
           {
-            "block": "gtceu:raw_lazurite_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:pyroxenite_sodalite_ore",
-            "weight": 25
-          },
-          {
-            "block": "gtceu:raw_sodalite_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:pyroxenite_lapis_ore",
-            "weight": 25
-          },
-          {
-            "block": "gtceu:raw_lapis_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:pyroxenite_calcite_ore",
+            "block": "minecraft:calcite",
             "weight": 15
           }
         ]
       }
-    ],
-    "indicator": {
-      "rarity": 15,
-      "depth": 1,
-      "underground_rarity": 40,
-      "underground_count": 150,
-      "blocks": [
-        {
-          "block": "gtceu:lazurite_bud_indicator",
-          "weight": 35
-        },
-        {
-          "block": "gtceu:sodalite_bud_indicator",
-          "weight": 25
-        },
-        {
-          "block": "gtceu:lapis_bud_indicator",
-          "weight": 25
-        },
-        {
-          "block": "gtceu:calcite_indicator",
-          "weight": 15
-        }
-      ]
-    }
+    ]
   }
 }

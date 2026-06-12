@@ -1,7 +1,7 @@
 {
 	"aquifers_enabled": false,
 	"default_block": {
-		"Name": "minecraft:deepslate"
+		"Name": "beneathoverhaul:rock/raw/deepslate"
 	},
 	"default_fluid": {
 		"Name": "minecraft:lava"
@@ -172,7 +172,7 @@
 								"type": "minecraft:condition",
 								"if_true": {
 									"type": "minecraft:noise_threshold",
-									"noise": "tfg:nether_cracks",
+									"noise": "beneathoverhaul:nether_cracks",
 									"min_threshold": -1,
 									"max_threshold": 1
 								},
@@ -187,7 +187,7 @@
 								"type": "minecraft:condition",
 								"if_true": {
 									"type": "minecraft:noise_threshold",
-									"noise": "tfg:nether_cracks",
+									"noise": "beneathoverhaul:nether_cracks",
 									"min_threshold": -2,
 									"max_threshold": 2
 								},
@@ -201,7 +201,7 @@
 							{
 								"type": "minecraft:block",
 								"result_state": {
-									"Name": "minecraft:blackstone"
+									"Name": "beneathoverhaul:rock/raw/blackstone"
 								}
 							}
 						]
@@ -213,7 +213,7 @@
 				"if_true": {
 					"type": "minecraft:biome",
 					"biome_is": [
-						"tfg:nether/basalt_deltas"
+						"beneathoverhaul:nether/basalt_deltas"
 					]
 				},
 				"then_run": {
@@ -305,7 +305,7 @@
 									{
 										"type": "minecraft:block",
 										"result_state": {
-											"Name": "minecraft:blackstone"
+											"Name": "beneathoverhaul:rock/raw/blackstone"
 										}
 									}
 								]
@@ -319,7 +319,7 @@
 				"if_true": {
 					"type": "minecraft:biome",
 					"biome_is": [
-						"tfg:nether/decaying_caverns"
+						"beneathoverhaul:nether/decaying_caverns"
 					]
 				},
 				"then_run": {
@@ -346,7 +346,7 @@
 								"then_run": {
 									"type": "minecraft:block",
 									"result_state": {
-										"Name": "tfg:rock/hardened_deepslate"
+										"Name": "beneathoverhaul:rock/hardened/deepslate"
 									}
 								}
 							},
@@ -361,7 +361,7 @@
 								"then_run": {
 									"type": "minecraft:block",
 									"result_state": {
-										"Name": "tfc:mud/silty_loam"
+										"Name": "tfc:mud/andisol"
 									}
 								}
 							},
@@ -391,7 +391,7 @@
 								"then_run": {
 									"type": "minecraft:block",
 									"result_state": {
-										"Name": "tfc:dirt/loam"
+										"Name": "tfc:dirt/alfisol"
 									}
 								}
 							},
@@ -406,7 +406,7 @@
 								"then_run": {
 									"type": "minecraft:block",
 									"result_state": {
-										"Name": "tfc:mud/loam"
+										"Name": "tfc:mud/alfisol"
 									}
 								}
 							},
@@ -428,7 +428,7 @@
 							{
 								"type": "minecraft:block",
 								"result_state": {
-									"Name": "tfc:dirt/silty_loam"
+									"Name": "tfc:dirt/andisol"
 								}
 							}
 						]
@@ -440,7 +440,7 @@
 				"if_true": {
 					"type": "minecraft:biome",
 					"biome_is": [
-						"tfg:nether/lava_floes"
+						"beneathoverhaul:nether/lava_floes"
 					]
 				},
 				"then_run": {
@@ -593,14 +593,14 @@
 							"then_run": {
 								"type": "minecraft:block",
 								"result_state": {
-									"Name": "tfg:rock/hardened_blackstone"
+									"Name": "beneathoverhaul:rock/hardened/blackstone"
 								}
 							}
 						},
 						{
 							"type": "minecraft:block",
 							"result_state": {
-								"Name": "minecraft:blackstone"
+								"Name": "beneathoverhaul:rock/raw/blackstone"
 							}
 						}
 					]
@@ -633,14 +633,14 @@
 							"then_run": {
 								"type": "minecraft:block",
 								"result_state": {
-									"Name": "tfg:rock/hardened_blackstone"
+									"Name": "beneathoverhaul:rock/hardened/blackstone"
 								}
 							}
 						},
 						{
 							"type": "minecraft:block",
 							"result_state": {
-								"Name": "minecraft:blackstone"
+								"Name": "beneathoverhaul:rock/raw/blackstone"
 							}
 						}
 					]
@@ -651,7 +651,7 @@
 				"if_true": {
 					"type": "minecraft:biome",
 					"biome_is": [
-						"tfg:nether/gneiss_caves"
+						"beneathoverhaul:nether/gneiss_caves"
 					]
 				},
 				"then_run": {
@@ -687,7 +687,7 @@
 				"if_true": {
 					"type": "minecraft:biome",
 					"biome_is": [
-						"tfg:nether/gabbro_caves"
+						"beneathoverhaul:nether/gabbro_caves"
 					]
 				},
 				"then_run": {
@@ -723,7 +723,7 @@
 				"if_true": {
 					"type": "minecraft:biome",
 					"biome_is": [
-						"tfg:nether/diorite_caves"
+						"beneathoverhaul:nether/diorite_caves"
 					]
 				},
 				"then_run": {
@@ -759,7 +759,7 @@
 				"if_true": {
 					"type": "minecraft:biome",
 					"biome_is": [
-						"tfg:nether/granite_caves"
+						"beneathoverhaul:nether/granite_caves"
 					]
 				},
 				"then_run": {
@@ -795,7 +795,7 @@
 				"if_true": {
 					"type": "minecraft:biome",
 					"biome_is": [
-						"tfg:nether/schist_caves"
+						"beneathoverhaul:nether/schist_caves"
 					]
 				},
 				"then_run": {
@@ -838,14 +838,14 @@
 				"then_run": {
 					"type": "minecraft:block",
 					"result_state": {
-						"Name": "tfg:rock/hardened_deepslate"
+						"Name": "beneathoverhaul:rock/hardened/deepslate"
 					}
 				}
 			},
 			{
 				"type": "minecraft:block",
 				"result_state": {
-					"Name": "minecraft:deepslate"
+					"Name": "beneathoverhaul:rock/raw/deepslate"
 				}
 			}
 		]

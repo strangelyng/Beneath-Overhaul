@@ -6,14 +6,14 @@
 	"effects": {
 		"fog_color": 6641752,
 		"additions_sound": {
-			"sound": "tfg:ambient.upper_nether.additions",
+			"sound": "minecraft:ambient.soul_sand_valley.additions",
 			"tick_chance": 0.0015
 		},
-		"ambient_sound": "tfg:ambient.upper_nether_cave.loop",
+		"ambient_sound": "minecraft:ambient.soul_sand_valley.loop",
 		"mood_sound": {
 			"block_search_extent": 8,
 			"offset": 2,
-			"sound": "tfg:ambient.upper_nether.mood",
+			"sound": "minecraft:ambient.soul_sand_valley.mood",
 			"tick_delay": 6000
 		},
 		"music": {
@@ -21,7 +21,7 @@
 			"min_delay": 12000,
 			"replace_current_music": false,
 			"sound": {
-				"sound_id": "tfg:music.nether"
+				"sound_id": "minecraft:music.nether.soul_sand_valley"
 			}
 		},
 		"sky_color": 5799235,
@@ -32,48 +32,48 @@
 	"features": [
 		[],
 		[
-			"tfg:nether/terrain/lava_lake",
-			"tfg:nether/terrain/spring_water_lake"
+			"beneathoverhaul:nether/terrain/lava_lake",
+			"beneathoverhaul:nether/terrain/spring_water_lake"
 		],
 		[
 			"minecraft:basalt_pillar",
-			"tfg:earth/geode/amethyst"
+			"beneathoverhaul:nether/geode/amethyst"
 		],
 		[],
 		[
-			"tfg:nether/terrain/glowstone_ceiling",
+			"beneathoverhaul:nether/terrain/glowstone_ceiling",
 			"beneath:glowstone_spikes",
-			"tfg:nether/spikes/calcite",
-			"tfg:nether/spikes/mega_calcite"
+			"beneathoverhaul:nether/spikes/calcite",
+			"beneathoverhaul:nether/spikes/mega_calcite"
 		],
 		[],
-		"#tfg:nether_veins",
-		"#tfg:nether_underground_decoration",
+		"#beneathoverhaul:nether_veins",
+		"#beneathoverhaul:nether_underground_decoration",
 		[
-			"tfg:nether/terrain/spring_lava",
-			"tfg:nether/terrain/mossy_cobble"
+			"beneathoverhaul:nether/terrain/spring_lava",
+			"beneathoverhaul:nether/terrain/mossy_cobble"
 		],
 		[
 			"beneath:blackstone_boulders",
 			"beneath:blackstone_pebble_patch",
-			"tfg:nether/surface/loose_gneiss",
-			"tfg:nether/surface/bone_patch",
-			"tfg:nether/surface/rotten_flesh_patch",
-			"tfg:nether/surface/dead_bush_patch",
+			"beneathoverhaul:nether/surface/loose_gneiss",
+			"beneathoverhaul:nether/surface/bone_patch",
+			"beneathoverhaul:nether/surface/rotten_flesh_patch",
+			"beneathoverhaul:nether/surface/dead_bush_patch",
 			"beneath:burpflower_patch",
 			"beneath:gleamflower_patch",
 			"beneath:sulfur_patch",
-			"tfg:nether/surface/pumice_patch",
-			"tfg:nether/surface/beneath_mushrooms",
-			"tfg:nether/surface/guano_patch",
-			"tfg:nether/surface/stick_patch",
-			"tfg:glow_lichen"
+			"beneathoverhaul:nether/surface/pumice_patch",
+			"beneathoverhaul:nether/surface/beneath_mushrooms",
+			"beneathoverhaul:nether/surface/guano_patch",
+			"beneathoverhaul:nether/surface/stick_patch",
+			"beneathoverhaul:glow_lichen"
 		],
 		[
 			"beneath:glowstone_spikes",
-			"tfg:nether/spikes/blackstone_spikes",
-			"tfg:nether/spikes/gneiss_spikes",
-			"tfg:nether/hardening"
+			"beneathoverhaul:nether/spikes/blackstone_spikes",
+			"beneathoverhaul:nether/spikes/gneiss_spikes",
+			"beneathoverhaul:nether/hardening"
 		]
 	],
 	"has_precipitation": false,
@@ -164,30 +164,6 @@
 				"maxCount": 2,
 				"minCount": 1,
 				"weight": 10
-			},
-			{
-				"type": "endermanoverhaul:nether_wastes_enderman",
-				"maxCount": 1,
-				"minCount": 1,
-				"weight": 5
-			},
-			{
-				"type": "endermanoverhaul:swamp_enderman",
-				"maxCount": 1,
-				"minCount": 1,
-				"weight": 5
-			},
-			{
-				"type": "endermanoverhaul:dark_oak_enderman",
-				"maxCount": 1,
-				"minCount": 1,
-				"weight": 5
-			},
-			{
-				"type": "endermanoverhaul:mushroom_fields_enderman",
-				"maxCount": 1,
-				"minCount": 1,
-				"weight": 5
 			}
 		],
 		"underground_water_creature": [

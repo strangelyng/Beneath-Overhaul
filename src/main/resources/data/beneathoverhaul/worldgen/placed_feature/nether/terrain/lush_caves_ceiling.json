@@ -1,5 +1,5 @@
 {
-	"feature": "tfg:nether/terrain/lush_caves_ceiling",
+	"feature": "beneathoverhaul:nether/terrain/lush_caves_ceiling",
 	"placement": [
 		{
 			"type": "minecraft:count",

@@ -1,5 +1,5 @@
 {
-	"feature": "tfg:nether/terrain/lava_lake",
+	"feature": "beneathoverhaul:nether/terrain/lava_lake",
 	"placement": [
 		{
 			"type": "minecraft:rarity_filter",

@@ -1,5 +1,5 @@
 {
-	"feature": "tfg:nether/surface/loose_schist",
+	"feature": "beneathoverhaul:nether/surface/loose_schist",
 	"placement": [
 		{
 			"type": "minecraft:count",

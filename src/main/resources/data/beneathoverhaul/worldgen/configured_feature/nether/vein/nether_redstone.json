@@ -18,83 +18,31 @@
         ],
         "with": [
           {
-            "block": "gtceu:granite_redstone_ore",
-            "weight": 45
+            "block": "tfc:ore/cinnabar/granite",
+            "weight": 65
           },
           {
-            "block": "gtceu:raw_redstone_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:granite_ruby_ore",
+            "block": "tfc:ore/ruby/granite",
             "weight": 35
-          },
-          {
-            "block": "gtceu:raw_ruby_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:granite_cinnabar_ore",
-            "weight": 20
-          },
-          {
-            "block": "gtceu:raw_cinnabar_block",
-            "weight": 1
           }
         ]
       },
       {
         "replace": [
-          "minecraft:blackstone",
+          "beneathoverhaul:rock/raw/blackstone",
           "minecraft:magma_block"
         ],
         "with": [
           {
-            "block": "gtceu:pyroxenite_redstone_ore",
-            "weight": 45
+            "block": "beneathoverhaul:ore/cinnabar/blackstone",
+            "weight": 65
           },
           {
-            "block": "gtceu:raw_redstone_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:pyroxenite_ruby_ore",
+            "block": "beneathoverhaul:ore/ruby/blackstone",
             "weight": 35
-          },
-          {
-            "block": "gtceu:raw_ruby_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:pyroxenite_cinnabar_ore",
-            "weight": 20
-          },
-          {
-            "block": "gtceu:raw_cinnabar_block",
-            "weight": 1
           }
         ]
       }
-    ],
-    "indicator": {
-      "rarity": 15,
-      "depth": 1,
-      "underground_rarity": 40,
-      "underground_count": 150,
-      "blocks": [
-        {
-          "block": "gtceu:redstone_indicator",
-          "weight": 45
-        },
-        {
-          "block": "gtceu:ruby_bud_indicator",
-          "weight": 35
-        },
-        {
-          "block": "gtceu:cinnabar_bud_indicator",
-          "weight": 20
-        }
-      ]
-    }
+    ]
   }
 }

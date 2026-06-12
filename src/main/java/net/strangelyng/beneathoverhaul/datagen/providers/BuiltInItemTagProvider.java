@@ -1,7 +1,9 @@
 package net.strangelyng.beneathoverhaul.datagen.providers;
 
 import net.dries007.tfc.common.TFCTags;
+import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
+import net.dries007.tfc.util.registry.RegistryRock;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.tags.TagsProvider;
@@ -18,6 +20,7 @@ import net.strangelyng.beneathoverhaul.BeneathOverhaul;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulBlocks;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulRock;
 
+import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Stream;
 
@@ -31,6 +34,20 @@ public class BuiltInItemTagProvider extends TagsProvider<Item> {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+        // Ore Block Items
+        Stream.of(BeneathOverhaulRock.VALUES).forEach(rock -> {
+            Stream.of(Ore.values()).forEach(ore -> {
+                if (ore.hasBlock()) {
+                    if (ore.isGraded()) {
+                        addGradedOreTags(BeneathOverhaulBlocks.BENEATH_ROCK_TFC_GRADED_ORES, ore, rock);
+                    } else {
+                        addOreTags(BeneathOverhaulBlocks.BENEATH_ROCK_TFC_ORES, ore, rock);
+                    }
+                }
+            });
+        });
+
+        // Rock Block Items
         Stream.of(BeneathOverhaulRock.VALUES).forEach(rock -> {
             this.tag(Tags.Items.COBBLESTONES_NORMAL).add(getKey(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.COBBLE).get()));
             this.tag(Tags.Items.COBBLESTONES_MOSSY).add(getKey(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.MOSSY_COBBLE).get()));
@@ -98,6 +115,8 @@ public class BuiltInItemTagProvider extends TagsProvider<Item> {
         });
     }
 
+    // Helper Functions
+
     protected ResourceKey<Item> getKey(DeferredHolder<Block, ? extends Block> block ){
         return block.get().asItem().builtInRegistryHolder().key();
     }
@@ -108,5 +127,17 @@ public class BuiltInItemTagProvider extends TagsProvider<Item> {
 
     protected ResourceKey<Item> getKey(Item item){
         return item.builtInRegistryHolder().key();
+    }
+
+    private <T1 extends RegistryRock, T2> void addOreTags(Map<T1, Map<T2, BeneathOverhaulBlocks.Id<Block>>> map, T2 ore, T1 rock) {
+        DeferredHolder<Block, Block> block = map.get(rock).get(ore).holder();
+        this.tag(Tags.Items.ORES).add(getKey(block));
+    }
+
+    private <T1 extends RegistryRock, T2, T3 extends Ore.Grade> void addGradedOreTags(Map<T1, Map<T2, Map<T3, BeneathOverhaulBlocks.Id<Block>>>> map, T2 ore, T1 rock) {
+        for (Ore.Grade grade : Ore.Grade.values()) {
+            DeferredHolder<Block, Block> block = map.get(rock).get(ore).get(grade).holder();
+            this.tag(Tags.Items.ORES).add(getKey(block));
+        }
     }
 }

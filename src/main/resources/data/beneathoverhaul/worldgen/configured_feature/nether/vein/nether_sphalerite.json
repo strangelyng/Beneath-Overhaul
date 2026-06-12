@@ -14,38 +14,26 @@
     "blocks": [
       {
         "replace": [
-          "minecraft:deepslate",
-          "tfc:mud/silty_loam",
+          "beneathoverhaul:rock/raw/deepslate",
+          "tfc:mud/andisol",
           "beneath:soul_clay",
-          "tfc:dirt/loam",
-          "tfc:mud/loam",
+          "tfc:dirt/alfisol",
+          "tfc:mud/alfisol",
           "tfc:peat",
-          "tfc:dirt/silty_loam"
+          "tfc:dirt/andisol"
         ],
         "with": [
           {
-            "block": "gtceu:deepslate_sulfur_ore",
+            "block": "beneathoverhaul:ore/sulfur/deepslate",
             "weight": 35
           },
           {
-            "block": "gtceu:raw_sulfur_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:deepslate_sphalerite_ore",
+            "block": "beneathoverhaul:ore/normal_sphalerite/deepslate",
             "weight": 40
           },
           {
-            "block": "gtceu:raw_sphalerite_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:deepslate_pyrite_ore",
+            "block": "beneathoverhaul:ore/pyrite/deepslate",
             "weight": 25
-          },
-          {
-            "block": "gtceu:raw_pyrite_block",
-            "weight": 1
           }
         ]
       },
@@ -56,91 +44,55 @@
         ],
         "with": [
           {
-            "block": "gtceu:basalt_sulfur_ore",
+            "block": "tfc:ore/sulfur/basalt",
             "weight": 35
           },
           {
-            "block": "gtceu:raw_sulfur_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:basalt_sphalerite_ore",
+            "block": "tfc:ore/normal_sphalerite/basalt",
             "weight": 40
           },
           {
-            "block": "gtceu:raw_sphalerite_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:basalt_pyrite_ore",
+            "block": "tfc:ore/pyrite/basalt",
             "weight": 25
-          },
-          {
-            "block": "gtceu:raw_pyrite_block",
-            "weight": 1
           }
         ]
       },
       {
         "replace": [
-          "minecraft:blackstone",
+          "beneathoverhaul:rock/raw/blackstone",
           "minecraft:magma_block"
         ],
         "with": [
           {
-            "block": "gtceu:pyroxenite_sulfur_ore",
+            "block": "beneathoverhaul:ore/sulfur/blackstone",
             "weight": 35
           },
           {
-            "block": "gtceu:raw_sulfur_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:pyroxenite_sphalerite_ore",
+            "block": "beneathoverhaul:ore/normal_sphalerite/blackstone",
             "weight": 40
           },
           {
-            "block": "gtceu:raw_sphalerite_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:pyroxenite_pyrite_ore",
+            "block": "beneathoverhaul:ore/pyrite/blackstone",
             "weight": 25
-          },
-          {
-            "block": "gtceu:raw_pyrite_block",
-            "weight": 1
           }
         ]
       },
       {
         "replace": [
-          "minecraft:dripstone_block"
+          "beneathoverhaul:rock/raw/dripstone"
         ],
         "with": [
           {
-            "block": "gtceu:dripstone_sulfur_ore",
+            "block": "beneathoverhaul:ore/sulfur/dripstone",
             "weight": 35
           },
           {
-            "block": "gtceu:raw_sulfur_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:dripstone_sphalerite_ore",
+            "block": "beneathoverhaul:ore/normal_sphalerite/dripstone",
             "weight": 40
           },
           {
-            "block": "gtceu:raw_sphalerite_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:dripstone_pyrite_ore",
+            "block": "beneathoverhaul:ore/pyrite/dripstone",
             "weight": 25
-          },
-          {
-            "block": "gtceu:raw_pyrite_block",
-            "weight": 1
           }
         ]
       }
@@ -152,16 +104,7 @@
       "underground_count": 150,
       "blocks": [
         {
-          "block": "gtceu:sulfur_indicator",
-          "weight": 35
-        },
-        {
-          "block": "tfc:ore/small_sphalerite",
-          "weight": 40
-        },
-        {
-          "block": "gtceu:pyrite_indicator",
-          "weight": 25
+          "block": "tfc:ore/small_sphalerite"
         }
       ]
     }

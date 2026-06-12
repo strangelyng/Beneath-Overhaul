@@ -1,5 +1,5 @@
 {
-	"feature": "tfg:nether/terrain/glowstone_ceiling",
+	"feature": "beneathoverhaul:nether/terrain/glowstone_ceiling",
 	"placement": [
 		{
 			"type": "minecraft:count",

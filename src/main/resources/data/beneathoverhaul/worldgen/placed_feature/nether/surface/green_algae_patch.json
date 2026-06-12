@@ -1,5 +1,5 @@
 {
-	"feature": "tfg:nether/surface/green_algae_patch",
+	"feature": "beneathoverhaul:nether/surface/green_algae_patch",
 	"placement": [
 		{
 			"type": "minecraft:count_on_every_layer",

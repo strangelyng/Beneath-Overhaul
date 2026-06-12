@@ -18,28 +18,16 @@
         ],
         "with": [
           {
-            "block": "gtceu:gabbro_goethite_ore",
-            "weight": 5
+            "block": "tfc:ore/normal_limonite/gabbro",
+            "weight": 10
           },
           {
-            "block": "gtceu:gabbro_yellow_limonite_ore",
-            "weight": 5
-          },
-          {
-            "block": "gtceu:gabbro_hematite_ore",
+            "block": "tfc:ore/normal_hematite/gabbro",
             "weight": 15
           },
           {
-            "block": "gtceu:raw_hematite_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:gabbro_gold_ore",
+            "block": "tfc:ore/normal_native_gold/gabbro",
             "weight": 75
-          },
-          {
-            "block": "minecraft:raw_gold_block",
-            "weight": 2
           }
         ]
       },
@@ -49,28 +37,16 @@
         ],
         "with": [
           {
-            "block": "gtceu:diorite_goethite_ore",
-            "weight": 5
+            "block": "tfc:ore/normal_limonite/diorite",
+            "weight": 10
           },
           {
-            "block": "gtceu:diorite_yellow_limonite_ore",
-            "weight": 5
-          },
-          {
-            "block": "gtceu:diorite_hematite_ore",
+            "block": "tfc:ore/normal_hematite/diorite",
             "weight": 15
           },
           {
-            "block": "gtceu:raw_hematite_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:diorite_gold_ore",
+            "block": "tfc:ore/normal_native_gold/diorite",
             "weight": 75
-          },
-          {
-            "block": "minecraft:raw_gold_block",
-            "weight": 2
           }
         ]
       },
@@ -80,28 +56,16 @@
         ],
         "with": [
           {
-            "block": "gtceu:gneiss_goethite_ore",
-            "weight": 5
+            "block": "tfc:ore/normal_limonite/gneiss",
+            "weight": 10
           },
           {
-            "block": "gtceu:gneiss_yellow_limonite_ore",
-            "weight": 5
-          },
-          {
-            "block": "gtceu:gneiss_hematite_ore",
+            "block": "tfc:ore/normal_hematite/gneiss",
             "weight": 15
           },
           {
-            "block": "gtceu:raw_hematite_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:gneiss_gold_ore",
+            "block": "tfc:ore/normal_native_gold/gneiss",
             "weight": 75
-          },
-          {
-            "block": "minecraft:raw_gold_block",
-            "weight": 2
           }
         ]
       },
@@ -111,28 +75,16 @@
         ],
         "with": [
           {
-            "block": "gtceu:granite_goethite_ore",
-            "weight": 5
+            "block": "tfc:ore/normal_limonite/granite",
+            "weight": 10
           },
           {
-            "block": "gtceu:granite_yellow_limonite_ore",
-            "weight": 5
-          },
-          {
-            "block": "gtceu:granite_hematite_ore",
+            "block": "tfc:ore/normal_hematite/granite",
             "weight": 15
           },
           {
-            "block": "gtceu:raw_hematite_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:granite_gold_ore",
+            "block": "tfc:ore/normal_native_gold/granite",
             "weight": 75
-          },
-          {
-            "block": "minecraft:raw_gold_block",
-            "weight": 2
           }
         ]
       },
@@ -142,60 +94,36 @@
         ],
         "with": [
           {
-            "block": "gtceu:schist_goethite_ore",
-            "weight": 5
+            "block": "tfc:ore/normal_limonite/schist",
+            "weight": 10
           },
           {
-            "block": "gtceu:schist_yellow_limonite_ore",
-            "weight": 5
-          },
-          {
-            "block": "gtceu:schist_hematite_ore",
+            "block": "tfc:ore/normal_hematite/schist",
             "weight": 15
           },
           {
-            "block": "gtceu:raw_hematite_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:schist_gold_ore",
+            "block": "tfc:ore/normal_native_gold/schist",
             "weight": 75
-          },
-          {
-            "block": "minecraft:raw_gold_block",
-            "weight": 2
           }
         ]
       },
       {
         "replace": [
-          "minecraft:blackstone",
+          "beneathoverhaul:rock/raw/blackstone",
           "minecraft:magma_block"
         ],
         "with": [
           {
-            "block": "gtceu:pyroxenite_goethite_ore",
-            "weight": 5
+            "block": "beneathoverhaul:ore/normal_limonite/blackstone",
+            "weight": 10
           },
           {
-            "block": "gtceu:pyroxenite_yellow_limonite_ore",
-            "weight": 5
-          },
-          {
-            "block": "gtceu:pyroxenite_hematite_ore",
+            "block": "beneathoverhaul:ore/normal_hematite/blackstone",
             "weight": 15
           },
           {
-            "block": "gtceu:raw_hematite_block",
-            "weight": 1
-          },
-          {
-            "block": "gtceu:pyroxenite_gold_ore",
+            "block": "beneathoverhaul:ore/normal_native_gold/blackstone",
             "weight": 75
-          },
-          {
-            "block": "minecraft:raw_gold_block",
-            "weight": 2
           }
         ]
       }
@@ -207,12 +135,8 @@
       "underground_count": 150,
       "blocks": [
         {
-          "block": "gtceu:goethite_indicator",
-          "weight": 5
-        },
-        {
           "block": "tfc:ore/small_limonite",
-          "weight": 5
+          "weight": 10
         },
         {
           "block": "tfc:ore/small_hematite",

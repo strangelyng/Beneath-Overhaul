@@ -1,5 +1,5 @@
 {
-	"feature": "tfg:nether/terrain/dripstone_pool",
+	"feature": "beneathoverhaul:nether/terrain/dripstone_pool",
 	"placement": [
 		{
 			"type": "minecraft:count",

@@ -1,5 +1,5 @@
 {
-	"feature": "tfg:nether/surface/ash_pile_small",
+	"feature": "beneathoverhaul:nether/surface/ash_pile_small",
 	"placement": [
 		{
 			"type": "minecraft:count",

@@ -14,16 +14,14 @@
 		"surface": "floor",
 		"vegetation_chance": 0.6,
 		"vegetation_feature": {
-			"feature": "tfg:nether/terrain/moss_vegetation",
+			"feature": "beneathoverhaul:nether/terrain/moss_vegetation",
 			"placement": []
 		},
 		"vertical_range": 5,
 		"xz_radius": {
 			"type": "minecraft:uniform",
-			"value": {
-				"max_inclusive": 7,
-				"min_inclusive": 4
-			}
+			"max_inclusive": 7,
+			"min_inclusive": 4
 		}
 	}
 }

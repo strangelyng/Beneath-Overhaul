@@ -6,28 +6,28 @@
 				{
 					"target": {
 						"predicate_type": "minecraft:block_match",
-						"block": "minecraft:blackstone"
+						"block": "beneathoverhaul:rock/raw/blackstone"
 					},
 					"state": {
-						"Name": "tfg:rock/hardened_blackstone"
+						"Name": "beneathoverhaul:rock/hardened/blackstone"
 					}
 				},
 				{
 					"target": {
 						"predicate_type": "minecraft:block_match",
-						"block": "minecraft:deepslate"
+						"block": "beneathoverhaul:rock/raw/deepslate"
 					},
 					"state": {
-						"Name": "tfg:rock/hardened_deepslate"
+						"Name": "beneathoverhaul:rock/hardened/deepslate"
 					}
 				},
 				{
 					"target": {
 						"predicate_type": "minecraft:block_match",
-						"block": "minecraft:dripstone_block"
+						"block": "beneathoverhaul:rock/raw/dripstone"
 					},
 					"state": {
-						"Name": "tfg:rock/hardened_dripstone"
+						"Name": "beneathoverhaul:rock/hardened/dripstone"
 					}
 				},
 				{
@@ -90,7 +90,7 @@
 						"tag": "tfc:can_landslide"
 					},
 					"state": {
-						"Name": "tfg:rock/hardened_deepslate"
+						"Name": "beneathoverhaul:rock/hardened/deepslate"
 					}
 				}
 			]
