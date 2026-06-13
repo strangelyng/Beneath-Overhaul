@@ -33,11 +33,11 @@
 					"beneathoverhaul:rock/raw/deepslate",
 					"beneathoverhaul:rock/raw/blackstone",
 					"beneath:soul_clay",
+					"tfc:dirt/entisol",
 					"tfc:dirt/andisol",
-					"tfc:dirt/alfisol",
+					"tfc:mud/entisol",
 					"tfc:mud/andisol",
-					"tfc:mud/alfisol",
-					"tfc:muddy_roots/andisol",
+					"tfc:muddy_roots/entisol",
 					"tfc:peat",
 					"beneathoverhaul:rock/hardened/deepslate"
 				]

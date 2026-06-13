@@ -1,0 +1,19 @@
+{
+  "type":"beneath:nether_boulders",
+  "config":{
+    "blocks":[
+      {
+        "block":"beneathoverhaul:rock/raw/blackstone",
+        "weight":50
+      },
+      {
+        "block":"minecraft:basalt",
+        "weight":10
+      },
+      {
+        "block":"minecraft:gilded_blackstone",
+        "weight":1
+      }
+    ]
+  }
+}

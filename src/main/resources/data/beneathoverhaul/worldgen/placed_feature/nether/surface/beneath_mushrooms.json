@@ -2,10 +2,6 @@
 	"feature": "beneathoverhaul:nether/surface/beneath_mushrooms",
 	"placement": [
 		{
-			"type": "minecraft:count_on_every_layer",
-			"count": 1
-		},
-		{
 			"type": "minecraft:height_range",
 			"height": {
 				"type": "minecraft:uniform",

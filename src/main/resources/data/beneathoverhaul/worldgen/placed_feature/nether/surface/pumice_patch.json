@@ -7,10 +7,6 @@
 			"chance": 3
 		},
 		{
-			"type": "minecraft:count_on_every_layer",
-			"count": 10
-		},
-		{
 			"type": "minecraft:height_range",
 			"height": {
 				"type": "minecraft:uniform",

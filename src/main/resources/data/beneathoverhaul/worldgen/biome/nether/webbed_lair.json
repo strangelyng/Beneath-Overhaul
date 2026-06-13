@@ -46,8 +46,8 @@
 			"beneathoverhaul:nether/terrain/mossy_cobble"
 		],
 		[
-			"beneath:blackstone_boulders",
-			"beneath:blackstone_pebble_patch",
+			"beneathoverhaul:nether/surface/blackstone_boulders",
+			"beneathoverhaul:nether/surface/loose_blackstone_patch",
 			"beneathoverhaul:nether/surface/loose_deepslate",
 			"beneathoverhaul:nether/surface/loose_dripstone",
 			"beneathoverhaul:nether/surface/bone_patch",

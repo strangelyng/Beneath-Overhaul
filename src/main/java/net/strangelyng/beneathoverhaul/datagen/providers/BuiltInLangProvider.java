@@ -24,7 +24,7 @@ public class BuiltInLangProvider extends LanguageProvider {
     protected void addTranslations() {
         // Misc Lang
         addBlock(BeneathOverhaulBlocks.CHARRED_LOG, "Charred Log");
-        addBlock(BeneathOverhaulBlocks.MUSHROOM_ROOTS, "Mushroom ROots");
+        addBlock(BeneathOverhaulBlocks.MUSHROOM_ROOTS, "Mushroom Roots");
         addBlock(BeneathOverhaulBlocks.MUSHROOM_SPROUTS, "Mushroom Sprouts");
         addBlock(BeneathOverhaulBlocks.ASH_LAYER_BLOCK, "Ash Pile");
 

@@ -57,7 +57,7 @@
 			"beneathoverhaul:nether/terrain/mossy_cobble"
 		],
 		[
-			"beneath:blackstone_boulders",
+			"beneathoverhaul:nether/surface/blackstone_boulders",
 			"beneathoverhaul:nether/surface/loose_deepslate",
 			"beneathoverhaul:nether/surface/philodendron",
 			"beneathoverhaul:nether/surface/moss_patch_small",

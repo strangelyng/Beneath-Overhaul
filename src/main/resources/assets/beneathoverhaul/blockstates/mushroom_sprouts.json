@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"": [
+			{ "model": "beneathoverhaul:block/mushroom_sprouts" },
+			{ "model": "beneathoverhaul:block/mushroom_sprouts", "y": 90 },
+			{ "model": "beneathoverhaul:block/mushroom_sprouts", "y": 180 },
+			{ "model": "beneathoverhaul:block/mushroom_sprouts", "y": 270 }
+		]
+	}
+}

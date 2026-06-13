@@ -1,16 +1,16 @@
 {
     "replace": false,
     "values": [
-        "tfg:nether/lush_hollow",
-        "tfg:nether/decaying_caverns",
-        "tfg:nether/basalt_deltas",
-        "tfg:nether/ash_forest",
-        "tfg:nether/lava_floes",
-        "tfg:nether/webbed_lair",
-        "tfg:nether/gneiss_caves",
-        "tfg:nether/diorite_caves",
-        "tfg:nether/gabbro_caves",
-        "tfg:nether/granite_caves",
-        "tfg:nether/schist_caves"
+        "beneathoverhaul:nether/lush_hollow",
+        "beneathoverhaul:nether/decaying_caverns",
+        "beneathoverhaul:nether/basalt_deltas",
+        "beneathoverhaul:nether/ash_forest",
+        "beneathoverhaul:nether/lava_floes",
+        "beneathoverhaul:nether/webbed_lair",
+        "beneathoverhaul:nether/gneiss_caves",
+        "beneathoverhaul:nether/diorite_caves",
+        "beneathoverhaul:nether/gabbro_caves",
+        "beneathoverhaul:nether/granite_caves",
+        "beneathoverhaul:nether/schist_caves"
     ]
 }

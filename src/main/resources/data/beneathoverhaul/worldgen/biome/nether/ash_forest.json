@@ -58,8 +58,8 @@
 		[
 			"minecraft:spring_delta",
 			"minecraft:spring_closed_double",
-			"beneath:blackstone_boulders",
-			"beneath:blackstone_pebble_patch",
+			"beneathoverhaul:nether/surface/blackstone_boulders",
+			"beneathoverhaul:nether/surface/loose_blackstone_patch",
 			"beneathoverhaul:nether/surface/loose_deepslate",
 			"beneathoverhaul:nether/surface/bone_patch",
 			"beneathoverhaul:nether/surface/rotten_flesh_patch",

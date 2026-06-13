@@ -7,7 +7,7 @@
 		"ground_state": {
 			"type": "minecraft:simple_state_provider",
 			"state": {
-				"Name": "tfc:muddy_roots/andisol"
+				"Name": "tfc:muddy_roots/entisol"
 			}
 		},
 		"replaceable": "#minecraft:lush_ground_replaceable",

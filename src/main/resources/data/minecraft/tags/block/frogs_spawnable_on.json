@@ -4,8 +4,7 @@
         "beneathoverhaul:rock/raw/deepslate",
         "beneathoverhaul:rock/raw/blackstone",
         "beneathoverhaul:rock/raw/dripstone",
-        "#tfc:clay_grass",
-        "#tfc:clay",
+        "#tfc:clays",
         "#tfc:mud",
         "#tfc:dirt",
         "#minecraft:base_stone_nether"

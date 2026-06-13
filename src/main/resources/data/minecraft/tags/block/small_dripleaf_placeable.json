@@ -1,7 +1,6 @@
 {
     "replace": false,
     "values": [
-        "#tfc:clay_grass",
-        "#tfc:clay"
+        "#tfc:clays"
     ]
 }

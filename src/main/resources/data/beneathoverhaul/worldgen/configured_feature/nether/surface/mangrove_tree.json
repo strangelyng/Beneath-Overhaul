@@ -5,7 +5,7 @@
 		"dirt_provider": {
 			"type": "minecraft:simple_state_provider",
 			"state": {
-				"Name": "tfc:dirt/andisol"
+				"Name": "tfc:dirt/entisol"
 			}
 		},
 		"foliage_placer": {
@@ -58,7 +58,7 @@
 				"muddy_roots_provider": {
 					"type": "minecraft:simple_state_provider",
 					"state": {
-						"Name": "tfc:muddy_roots/andisol",
+						"Name": "tfc:muddy_roots/entisol",
 						"Properties": {
 							"axis": "y"
 						}

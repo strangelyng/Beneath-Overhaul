@@ -7,7 +7,7 @@
 		"ground_state": {
 			"type": "minecraft:simple_state_provider",
 			"state": {
-				"Name": "tfc:clay_grass/andisol"
+				"Name": "tfc:clay_grass/entisol"
 			}
 		},
 		"replaceable": "#beneathoverhaul:lush_ground_replaceable",

@@ -1,0 +1,6 @@
+{
+  "parent": "beneathoverhaul:block/layer_block/template_height4",
+  "textures": {
+    "texture": "beneathoverhaul:block/ash_block"
+  }
+}

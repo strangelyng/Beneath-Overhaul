@@ -3,6 +3,6 @@
     "values": [
         "minecraft:spring_open",
         "minecraft:spring_closed",
-        "tfg:nether/terrain/magma_blob"
+        "beneathoverhaul:nether/terrain/magma_blob"
     ]
 }

@@ -361,7 +361,7 @@
 								"then_run": {
 									"type": "minecraft:block",
 									"result_state": {
-										"Name": "tfc:mud/andisol"
+										"Name": "tfc:mud/entisol"
 									}
 								}
 							},
@@ -391,7 +391,7 @@
 								"then_run": {
 									"type": "minecraft:block",
 									"result_state": {
-										"Name": "tfc:dirt/alfisol"
+										"Name": "tfc:dirt/andisol"
 									}
 								}
 							},
@@ -406,7 +406,7 @@
 								"then_run": {
 									"type": "minecraft:block",
 									"result_state": {
-										"Name": "tfc:mud/alfisol"
+										"Name": "tfc:mud/andisol"
 									}
 								}
 							},
@@ -428,7 +428,7 @@
 							{
 								"type": "minecraft:block",
 								"result_state": {
-									"Name": "tfc:dirt/andisol"
+									"Name": "tfc:dirt/entisol"
 								}
 							}
 						]

@@ -16,6 +16,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.strangelyng.beneathoverhaul.BeneathOverhaul;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulBlocks;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulRock;
+import net.strangelyng.beneathoverhaul.common.blocks.SandLayerBlock;
 import net.strangelyng.beneathoverhaul.util.TextureUtils;
 import net.neoforged.neoforge.client.model.generators.*;
 
@@ -37,6 +38,9 @@ public class BuiltInBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+        // Misc Blocks
+        layerBlock(BeneathOverhaulBlocks.ASH_LAYER_BLOCK.holder(), ResourceLocation.parse(BeneathOverhaul.MOD_ID + ":block/ash_block"));
+
         // Ore Blocks
         Stream.of(BeneathOverhaulRock.VALUES).forEach(rock -> {
             Stream.of(Ore.values()).forEach(ore -> {
@@ -339,6 +343,67 @@ public class BuiltInBlockStateProvider extends BlockStateProvider {
             }
             default -> throw new AssertionError("No category found for rock: " + rock.getSerializedName());
         }
+    }
+
+    private String getLayerBlockModelParent(int height) {
+        switch (height) {
+            case 1 -> {
+                return "beneathoverhaul:block/layer_block/template_height2";
+            }
+            case 2 -> {
+                return "beneathoverhaul:block/layer_block/template_height4";
+            }
+            case 3 -> {
+                return "beneathoverhaul:block/layer_block/template_height6";
+            }
+            case 4 -> {
+                return "beneathoverhaul:block/layer_block/template_height8";
+            }
+            case 5 -> {
+                return "beneathoverhaul:block/layer_block/template_height10";
+            }
+            case 6 -> {
+                return "beneathoverhaul:block/layer_block/template_height12";
+            }
+            case 7 -> {
+                return "beneathoverhaul:block/layer_block/template_height14";
+            }
+            case 8 -> {
+                return "minecraft:block/cube_all";
+            }
+            default -> throw new AssertionError("No height found for layer count: " + height);
+        }
+    }
+
+    private void layerBlock(DeferredHolder<Block, ? extends SandLayerBlock> block, ResourceLocation texture) {
+        ModelFile model1 = createModel(getBlockModelString(block.getId()) + "_height2", getLayerBlockModelParent(1)).texture("texture", texture);
+        ModelFile model2 = createModel(getBlockModelString(block.getId()) + "_height4", getLayerBlockModelParent(2)).texture("texture", texture);
+        ModelFile model3 = createModel(getBlockModelString(block.getId()) + "_height6", getLayerBlockModelParent(3)).texture("texture", texture);
+        ModelFile model4 = createModel(getBlockModelString(block.getId()) + "_height8", getLayerBlockModelParent(4)).texture("texture", texture);
+        ModelFile model5 = createModel(getBlockModelString(block.getId()) + "_height10", getLayerBlockModelParent(5)).texture("texture", texture);
+        ModelFile model6 = createModel(getBlockModelString(block.getId()) + "_height12", getLayerBlockModelParent(6)).texture("texture", texture);
+        ModelFile model7 = createModel(getBlockModelString(block.getId()) + "_height14", getLayerBlockModelParent(7)).texture("texture", texture);
+        ModelFile model8 = createModel(getBlockModelString(block.getId()), getLayerBlockModelParent(8)).texture("all", texture);
+
+        VariantBlockStateBuilder builder = getVariantBuilder(block.get());
+
+        builder
+                .partialState().with(SandLayerBlock.LAYERS, 1).modelForState()
+                .modelFile(model1).addModel()
+                .partialState().with(SandLayerBlock.LAYERS, 2).modelForState()
+                .modelFile(model2).addModel()
+                .partialState().with(SandLayerBlock.LAYERS, 3).modelForState()
+                .modelFile(model3).addModel()
+                .partialState().with(SandLayerBlock.LAYERS, 4).modelForState()
+                .modelFile(model4).addModel()
+                .partialState().with(SandLayerBlock.LAYERS, 5).modelForState()
+                .modelFile(model5).addModel()
+                .partialState().with(SandLayerBlock.LAYERS, 6).modelForState()
+                .modelFile(model6).addModel()
+                .partialState().with(SandLayerBlock.LAYERS, 7).modelForState()
+                .modelFile(model7).addModel()
+                .partialState().with(SandLayerBlock.LAYERS, 8).modelForState()
+                .modelFile(model8).addModel();
     }
 
     private ResourceLocation getBlockModelLocation(ResourceLocation block) {

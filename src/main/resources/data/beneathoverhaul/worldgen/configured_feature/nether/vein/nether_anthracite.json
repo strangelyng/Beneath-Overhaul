@@ -16,12 +16,12 @@
       {
         "replace": [
           "beneathoverhaul:rock/raw/deepslate",
-          "tfc:mud/andisol",
+          "tfc:mud/entisol",
           "beneath:soul_clay",
-          "tfc:dirt/alfisol",
-          "tfc:mud/alfisol",
+          "tfc:dirt/andisol",
+          "tfc:mud/andisol",
           "tfc:peat",
-          "tfc:dirt/andisol"
+          "tfc:dirt/entisol"
         ],
         "with": [
           {
