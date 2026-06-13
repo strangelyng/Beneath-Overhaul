@@ -1,9 +1,9 @@
 {
   "parent": "beneathoverhaul:block/overlay_inner_stairs",
   "textures": {
-    "article": "beneathoverhaul:block/rock/cobble/blackstone",
     "bottom": "beneathoverhaul:block/rock/cobble/blackstone",
     "overlay": "beneathoverhaul:block/rock/mossy_cobble/overlay",
+    "particle": "beneathoverhaul:block/rock/cobble/blackstone",
     "side": "beneathoverhaul:block/rock/cobble/blackstone",
     "top": "beneathoverhaul:block/rock/cobble/blackstone"
   }

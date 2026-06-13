@@ -55,6 +55,7 @@ public class BuiltInItemModelProvider extends ItemModelProvider {
                     simpleBlock(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(type).holder());
                     simpleBlock(BeneathOverhaulBlocks.ROCK_DECORATIONS.get(rock).get(type).stair().holder());
                     simpleBlock(BeneathOverhaulBlocks.ROCK_DECORATIONS.get(rock).get(type).slab().holder());
+                    // TODO: mossyOverlay variants for wallInventory models
                     wallInventory(getItemModelString(BeneathOverhaulBlocks.ROCK_DECORATIONS.get(rock).get(type).wall().getId()), TextureUtils.getRockTexture(rock, type));
                 }
             });

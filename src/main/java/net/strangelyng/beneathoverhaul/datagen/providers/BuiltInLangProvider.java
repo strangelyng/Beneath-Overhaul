@@ -88,7 +88,7 @@ public class BuiltInLangProvider extends LanguageProvider {
                     case MOSSY_LOOSE -> addBlock(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(type), "Mossy Loose " + getName(rock) + " Rock");
                     case COBBLE -> addBlock(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(type), getName(rock) + " Cobblestone");
                     case MOSSY_COBBLE -> addBlock(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(type), getName(rock) + " Mossy Cobblestone");
-                    case CHISELED -> addBlock(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(type), "Chiseled " + getName(rock) + " Bricks");
+                    case CHISELED -> addBlock(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(type), getName(rock) + " Chiseled Bricks");
                     default -> addBlock(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(type), getName(rock) + " " + getName(type));
                 }
             });

@@ -1,9 +1,9 @@
 {
   "parent": "beneathoverhaul:block/overlay_inner_stairs",
   "textures": {
-    "article": "minecraft:block/deepslate_bricks",
     "bottom": "minecraft:block/deepslate_bricks",
-    "overlay": "beneathoverhaul:block/rock/mossy_cobble/overlay",
+    "overlay": "beneathoverhaul:block/rock/mossy_bricks/overlay",
+    "particle": "minecraft:block/deepslate_bricks",
     "side": "minecraft:block/deepslate_bricks",
     "top": "minecraft:block/deepslate_bricks"
   }

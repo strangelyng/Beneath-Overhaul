@@ -66,9 +66,13 @@ public final class BeneathOverhaulBlocks {
     public static final Id<DecorativePlantBlock> MUSHROOM_ROOTS = register("mushroom_roots", () -> new DecorativePlantBlock(ExtendedProperties.of().mapColor(MapColor.NONE).sound(SoundType.NETHER_WART).noCollission(), DecorativePlantBlock.DEFAULT_SHAPE, null));
     public static final Id<DecorativePlantBlock> MUSHROOM_SPROUTS = register("mushroom_sprouts", () -> new DecorativePlantBlock(ExtendedProperties.of().mapColor(MapColor.NONE).sound(SoundType.NETHER_WART).noCollission(), DecorativePlantBlock.DEFAULT_SHAPE, null));
 
-    public static final Id<SandLayerBlock> ASH_LAYER_BLOCK = register("ash_pile", () -> new SandLayerBlock(BlockBehaviour.Properties.ofFullCopy(TFCBlocks.SAND.get(SandBlockType.RED).get()).mapColor(MapColor.NONE)));
+    public static final Id<SandLayerBlock> ASH_LAYER_BLOCK = registerNoItem("ash_pile", () -> new SandLayerBlock(BlockBehaviour.Properties.ofFullCopy(TFCBlocks.SAND.get(SandBlockType.RED).get()).mapColor(MapColor.NONE)));
 
     // Helper Functions
+    private static <T extends Block> Id<T> registerNoItem(String name, Supplier<T> blockSupplier) {
+        return register(name, blockSupplier, (Function<T, ? extends BlockItem>) null);
+    }
+
     private static <T extends Block> Id<T> register(String name, Supplier<T> blockSupplier)
     {
         return register(name, blockSupplier, block -> new BlockItem(block, new Item.Properties()));

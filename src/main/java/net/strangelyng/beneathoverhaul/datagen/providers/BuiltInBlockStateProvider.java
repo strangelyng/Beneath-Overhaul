@@ -31,9 +31,6 @@ public class BuiltInBlockStateProvider extends BlockStateProvider {
     private final static ResourceLocation aqueductSouthParent = ResourceLocation.fromNamespaceAndPath("tfc", "block/aqueduct/south");
     private final static ResourceLocation aqueductEastParent = ResourceLocation.fromNamespaceAndPath("tfc", "block/aqueduct/east");
     private final static ResourceLocation aqueductWestParent = ResourceLocation.fromNamespaceAndPath("tfc", "block/aqueduct/west");
-    /*
-     * TODO: Use mossyCobbleOverlay for cobble variants
-     */
     private final static ResourceLocation mossyBrickOverlay = ResourceLocation.parse(BeneathOverhaul.MOD_ID + ":block/rock/mossy_bricks/overlay");
     private final static ResourceLocation mossyCobbleOverlay = ResourceLocation.parse(BeneathOverhaul.MOD_ID + ":block/rock/mossy_cobble/overlay");
 
@@ -124,7 +121,8 @@ public class BuiltInBlockStateProvider extends BlockStateProvider {
     }
 
     private void cubeMossOverlayAll(DeferredHolder<Block, Block> block, ResourceLocation texture) {
-        simpleBlock(block.get(), ConfiguredModel.builder().modelFile(createOverlayModel(block.getId().getPath(), texture.toString(), mossyCobbleOverlay.toString())).buildLast());
+        ResourceLocation mossyOverlay = getMossyOverlayType(block);
+        simpleBlock(block.get(), ConfiguredModel.builder().modelFile(createOverlayModel(block.getId().getPath(), texture.toString(), mossyOverlay.toString())).buildLast());
     }
 
     private void stairsBlock(DeferredHolder<Block, ? extends Block> block, ResourceLocation texture) {
@@ -156,24 +154,26 @@ public class BuiltInBlockStateProvider extends BlockStateProvider {
     }
 
     private void stairsMossOverlayBlock(DeferredHolder<Block, ? extends Block> block, ResourceLocation texture) {
+        ResourceLocation mossyOverlay = getMossyOverlayType(block);
+
         ModelFile stairs = createModel(getBlockModelString(block.getId()), "beneathoverhaul:block/overlay_stairs")
                 .texture("bottom", texture)
                 .texture("side", texture)
                 .texture("top", texture)
                 .texture("particle", texture)
-                .texture("overlay", mossyCobbleOverlay);
+                .texture("overlay", mossyOverlay);
         ModelFile stairsInner = createModel(getBlockModelString(block.getId()) + "_inner", "beneathoverhaul:block/overlay_inner_stairs")
                 .texture("bottom", texture)
                 .texture("side", texture)
                 .texture("top", texture)
-                .texture("article", texture)
-                .texture("overlay", mossyCobbleOverlay);
+                .texture("particle", texture)
+                .texture("overlay", mossyOverlay);
         ModelFile stairsOuter = createModel(getBlockModelString(block.getId()) + "_outer", "beneathoverhaul:block/overlay_outer_stairs")
                 .texture("bottom", texture)
                 .texture("side", texture)
                 .texture("top", texture)
                 .texture("particle", texture)
-                .texture("overlay", mossyCobbleOverlay);
+                .texture("overlay", mossyOverlay);
 
         getVariantBuilder(block.get())
                 .forAllStatesExcept(state -> {
@@ -210,18 +210,20 @@ public class BuiltInBlockStateProvider extends BlockStateProvider {
     }
 
     private void slabMossOverlayBlock(DeferredHolder<Block, ? extends Block> block, ResourceLocation texture, ResourceLocation doubleSlab) {
+        ResourceLocation mossyOverlay = getMossyOverlayType(block);
+
         ModelFile slabBottom = createModel(getBlockModelString(block.getId()), "beneathoverhaul:block/overlay_slab")
                 .texture("bottom", texture)
                 .texture("side", texture)
                 .texture("top", texture)
                 .texture("particle", texture)
-                .texture("overlay", mossyCobbleOverlay);
+                .texture("overlay", mossyOverlay);
         ModelFile slabTop = createModel(getBlockModelString(block.getId()) + "_top", "beneathoverhaul:block/overlay_slab_top")
                 .texture("bottom", texture)
                 .texture("side", texture)
                 .texture("top", texture)
                 .texture("particle", texture)
-                .texture("overlay", mossyCobbleOverlay);
+                .texture("overlay", mossyOverlay);
 
         ModelFile slabDouble = this.models().getExistingFile(doubleSlab);
 
@@ -315,19 +317,21 @@ public class BuiltInBlockStateProvider extends BlockStateProvider {
     }
 
     private void wallMossOverlayBlock(DeferredHolder<Block, ? extends WallBlock> block, String baseName, ResourceLocation texture) {
+        ResourceLocation mossyOverlay = getMossyOverlayType(block);
+
         this.wallBlock(block.get(),
                 createModel(baseName + "_post", "beneathoverhaul:block/overlay_template_wall_post")
                         .texture("wall", texture)
                         .texture("particle", texture)
-                        .texture("overlay", mossyCobbleOverlay),
+                        .texture("overlay", mossyOverlay),
                 createModel(baseName + "_side", "beneathoverhaul:block/overlay_template_wall_side")
                         .texture("wall", texture)
                         .texture("particle", texture)
-                        .texture("overlay", mossyCobbleOverlay),
+                        .texture("overlay", mossyOverlay),
                 createModel(baseName + "_side_tall", "beneathoverhaul:block/overlay_template_wall_side_tall")
                         .texture("wall", texture)
                         .texture("particle", texture)
-                        .texture("overlay", mossyCobbleOverlay)
+                        .texture("overlay", mossyOverlay)
         );
     }
 
@@ -396,6 +400,10 @@ public class BuiltInBlockStateProvider extends BlockStateProvider {
             }
             default -> throw new AssertionError("No height found for layer count: " + height);
         }
+    }
+
+    private ResourceLocation getMossyOverlayType(DeferredHolder<Block, ?> block) {
+        return block.getId().getPath().contains("bricks/") ? mossyBrickOverlay : mossyCobbleOverlay;
     }
 
     private void layerBlock(DeferredHolder<Block, ? extends SandLayerBlock> block, ResourceLocation texture) {
