@@ -40,6 +40,11 @@ public class BuiltInBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         // Misc Blocks
         layerBlock(BeneathOverhaulBlocks.ASH_LAYER_BLOCK.holder(), ResourceLocation.parse(BeneathOverhaul.MOD_ID + ":block/ash_block"));
+        rotatedPillarBlock(BeneathOverhaulBlocks.CHARRED_LOG.holder(),
+                ResourceLocation.parse(BeneathOverhaul.MOD_ID + ":block/charred_log"),
+                ResourceLocation.parse(BeneathOverhaul.MOD_ID + ":block/charred_log_top")
+        );
+
 
         // Ore Blocks
         Stream.of(BeneathOverhaulRock.VALUES).forEach(rock -> {
@@ -319,6 +324,19 @@ public class BuiltInBlockStateProvider extends BlockStateProvider {
                         .texture("particle", texture)
                         .texture("overlay", mossOverlay)
         );
+    }
+
+    private void rotatedPillarBlock(DeferredHolder<Block, ? extends RotatedPillarBlock> block, ResourceLocation side, ResourceLocation end) {
+        ModelFile vertical = createModel(getBlockModelString(block.getId()), "minecraft:block/cube_column").texture("end", end).texture("side", side);
+        ModelFile horizontal = createModel(getBlockModelString(block.getId()) + "_horizontal", "minecraft:block/cube_column_horizontal").texture("end", end).texture("side", side);
+
+        getVariantBuilder(block.get())
+                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.Y)
+                .modelForState().modelFile(vertical).addModel()
+                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.Z)
+                .modelForState().modelFile(horizontal).rotationX(90).addModel()
+                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.X)
+                .modelForState().modelFile(horizontal).rotationX(90).rotationY(90).addModel();
     }
 
     private String getBlockModelString(ResourceLocation block) {

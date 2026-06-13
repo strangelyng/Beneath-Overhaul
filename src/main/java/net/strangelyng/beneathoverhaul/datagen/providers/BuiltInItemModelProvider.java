@@ -27,6 +27,12 @@ public class BuiltInItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+        // Misc Blocks
+        simpleItem(BeneathOverhaulBlocks.MUSHROOM_ROOTS.asItem(), ResourceLocation.parse(BeneathOverhaul.MOD_ID + ":item/mushroom_roots"));
+        simpleItem(BeneathOverhaulBlocks.MUSHROOM_SPROUTS.asItem(), ResourceLocation.parse(BeneathOverhaul.MOD_ID + ":item/mushroom_sprouts"));
+
+        simpleBlock(BeneathOverhaulBlocks.CHARRED_LOG.holder());
+
         // Ore Blocks
         Stream.of(BeneathOverhaulRock.VALUES).forEach(rock -> {
             Stream.of(Ore.values()).forEach(ore -> {

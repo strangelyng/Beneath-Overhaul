@@ -19,6 +19,11 @@
 				"sound_id": "minecraft:music.nether.soul_sand_valley"
 			}
 		},
+		"additions_sound": {
+			"sound": "minecraft:ambient.soul_sand_valley.additions",
+			"tick_chance": 0.0015
+		},
+		"ambient_sound": "minecraft:ambient.soul_sand_valley.loop",
 		"sky_color": 5799235,
 		"water_color": 7255466,
 		"water_fog_color": 3169873,
