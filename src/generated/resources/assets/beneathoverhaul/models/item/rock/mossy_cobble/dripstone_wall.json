@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/wall_inventory",
   "textures": {
-    "wall": "beneathoverhaul:block/rock/mossy_cobble/dripstone"
+    "wall": "beneathoverhaul:block/rock/cobble/dripstone"
   }
 }

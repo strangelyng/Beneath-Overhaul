@@ -1,5 +1,6 @@
 package net.strangelyng.beneathoverhaul.datagen.providers;
 
+import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.common.blocks.rock.*;
 import net.dries007.tfc.util.registry.RegistryRock;
 import net.minecraft.core.Direction;
@@ -30,7 +31,11 @@ public class BuiltInBlockStateProvider extends BlockStateProvider {
     private final static ResourceLocation aqueductSouthParent = ResourceLocation.fromNamespaceAndPath("tfc", "block/aqueduct/south");
     private final static ResourceLocation aqueductEastParent = ResourceLocation.fromNamespaceAndPath("tfc", "block/aqueduct/east");
     private final static ResourceLocation aqueductWestParent = ResourceLocation.fromNamespaceAndPath("tfc", "block/aqueduct/west");
-    private final static ResourceLocation mossOverlay = ResourceLocation.parse(BeneathOverhaul.MOD_ID + ":block/rock/mossy_bricks/overlay");
+    /*
+     * TODO: Use mossyCobbleOverlay for cobble variants
+     */
+    private final static ResourceLocation mossyBrickOverlay = ResourceLocation.parse(BeneathOverhaul.MOD_ID + ":block/rock/mossy_bricks/overlay");
+    private final static ResourceLocation mossyCobbleOverlay = ResourceLocation.parse(BeneathOverhaul.MOD_ID + ":block/rock/mossy_cobble/overlay");
 
     protected BuiltInBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, BeneathOverhaul.MOD_ID, exFileHelper);
@@ -41,8 +46,8 @@ public class BuiltInBlockStateProvider extends BlockStateProvider {
         // Misc Blocks
         layerBlock(BeneathOverhaulBlocks.ASH_LAYER_BLOCK.holder(), ResourceLocation.parse(BeneathOverhaul.MOD_ID + ":block/ash_block"));
         rotatedPillarBlock(BeneathOverhaulBlocks.CHARRED_LOG.holder(),
-                ResourceLocation.parse(BeneathOverhaul.MOD_ID + ":block/charred_log"),
-                ResourceLocation.parse(BeneathOverhaul.MOD_ID + ":block/charred_log_top")
+                ResourceLocation.parse(TerraFirmaCraft.MOD_ID + ":block/charcoal_pile"),
+                ResourceLocation.parse(TerraFirmaCraft.MOD_ID + ":block/wood/stripped_log_top/blackwood")
         );
 
 
@@ -119,7 +124,7 @@ public class BuiltInBlockStateProvider extends BlockStateProvider {
     }
 
     private void cubeMossOverlayAll(DeferredHolder<Block, Block> block, ResourceLocation texture) {
-        simpleBlock(block.get(), ConfiguredModel.builder().modelFile(createOverlayModel(block.getId().getPath(), texture.toString(), mossOverlay.toString())).buildLast());
+        simpleBlock(block.get(), ConfiguredModel.builder().modelFile(createOverlayModel(block.getId().getPath(), texture.toString(), mossyCobbleOverlay.toString())).buildLast());
     }
 
     private void stairsBlock(DeferredHolder<Block, ? extends Block> block, ResourceLocation texture) {
@@ -156,19 +161,19 @@ public class BuiltInBlockStateProvider extends BlockStateProvider {
                 .texture("side", texture)
                 .texture("top", texture)
                 .texture("particle", texture)
-                .texture("overlay", mossOverlay);
+                .texture("overlay", mossyCobbleOverlay);
         ModelFile stairsInner = createModel(getBlockModelString(block.getId()) + "_inner", "beneathoverhaul:block/overlay_inner_stairs")
                 .texture("bottom", texture)
                 .texture("side", texture)
                 .texture("top", texture)
                 .texture("article", texture)
-                .texture("overlay", mossOverlay);
+                .texture("overlay", mossyCobbleOverlay);
         ModelFile stairsOuter = createModel(getBlockModelString(block.getId()) + "_outer", "beneathoverhaul:block/overlay_outer_stairs")
                 .texture("bottom", texture)
                 .texture("side", texture)
                 .texture("top", texture)
                 .texture("particle", texture)
-                .texture("overlay", mossOverlay);
+                .texture("overlay", mossyCobbleOverlay);
 
         getVariantBuilder(block.get())
                 .forAllStatesExcept(state -> {
@@ -210,13 +215,13 @@ public class BuiltInBlockStateProvider extends BlockStateProvider {
                 .texture("side", texture)
                 .texture("top", texture)
                 .texture("particle", texture)
-                .texture("overlay", mossOverlay);
+                .texture("overlay", mossyCobbleOverlay);
         ModelFile slabTop = createModel(getBlockModelString(block.getId()) + "_top", "beneathoverhaul:block/overlay_slab_top")
                 .texture("bottom", texture)
                 .texture("side", texture)
                 .texture("top", texture)
                 .texture("particle", texture)
-                .texture("overlay", mossOverlay);
+                .texture("overlay", mossyCobbleOverlay);
 
         ModelFile slabDouble = this.models().getExistingFile(doubleSlab);
 
@@ -314,15 +319,15 @@ public class BuiltInBlockStateProvider extends BlockStateProvider {
                 createModel(baseName + "_post", "beneathoverhaul:block/overlay_template_wall_post")
                         .texture("wall", texture)
                         .texture("particle", texture)
-                        .texture("overlay", mossOverlay),
+                        .texture("overlay", mossyCobbleOverlay),
                 createModel(baseName + "_side", "beneathoverhaul:block/overlay_template_wall_side")
                         .texture("wall", texture)
                         .texture("particle", texture)
-                        .texture("overlay", mossOverlay),
+                        .texture("overlay", mossyCobbleOverlay),
                 createModel(baseName + "_side_tall", "beneathoverhaul:block/overlay_template_wall_side_tall")
                         .texture("wall", texture)
                         .texture("particle", texture)
-                        .texture("overlay", mossOverlay)
+                        .texture("overlay", mossyCobbleOverlay)
         );
     }
 

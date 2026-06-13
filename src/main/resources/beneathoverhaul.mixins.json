@@ -3,10 +3,10 @@
   "package": "net.strangelyng.beneathoverhaul.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-
+    "common.minecraft.DripstoneUtilsAccessor"
   ],
   "client": [
-
+    "client.tfc.TFCColorsMixin"
   ],
   "injectors": {
     "defaultRequire": 1

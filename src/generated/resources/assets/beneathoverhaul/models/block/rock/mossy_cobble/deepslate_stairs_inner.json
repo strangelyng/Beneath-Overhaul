@@ -3,7 +3,7 @@
   "textures": {
     "article": "minecraft:block/cobbled_deepslate",
     "bottom": "minecraft:block/cobbled_deepslate",
-    "overlay": "beneathoverhaul:block/rock/mossy_bricks/overlay",
+    "overlay": "beneathoverhaul:block/rock/mossy_cobble/overlay",
     "side": "minecraft:block/cobbled_deepslate",
     "top": "minecraft:block/cobbled_deepslate"
   }

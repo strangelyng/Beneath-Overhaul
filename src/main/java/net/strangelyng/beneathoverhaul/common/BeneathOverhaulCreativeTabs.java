@@ -21,10 +21,7 @@ import java.util.function.Supplier;
 public final class BeneathOverhaulCreativeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, BeneathOverhaul.MOD_ID);
 
-    /* TODO:
-     * Make the ores tab not crash when opening inventory in Create
-     *     public static final Id ORES = register("ores", () -> new ItemStack(BeneathOverhaulBlocks.BENEATH_ROCK_TFC_ORES.get(BeneathOverhaulRock.DEEPSLATE).get(Ore.NATIVE_COPPER)), BeneathOverhaulCreativeTabs::fillOresTab);
-     */
+    public static final Id ORES = register("ores", () -> new ItemStack(BeneathOverhaulBlocks.BENEATH_ROCK_TFC_GRADED_ORES.get(BeneathOverhaulRock.DEEPSLATE).get(Ore.NATIVE_COPPER).get(Ore.Grade.NORMAL)), BeneathOverhaulCreativeTabs::fillOresTab);
     public static final Id ROCKS = register("rock", () -> new ItemStack(BeneathOverhaulBlocks.ROCK_BLOCKS.get(BeneathOverhaulRock.DEEPSLATE).get(Rock.BlockType.HARDENED)), BeneathOverhaulCreativeTabs::fillRocksTab);
 
     private static void fillOresTab(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out) {

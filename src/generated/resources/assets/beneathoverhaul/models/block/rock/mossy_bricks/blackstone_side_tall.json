@@ -1,7 +1,7 @@
 {
   "parent": "beneathoverhaul:block/overlay_template_wall_side_tall",
   "textures": {
-    "overlay": "beneathoverhaul:block/rock/mossy_bricks/overlay",
+    "overlay": "beneathoverhaul:block/rock/mossy_cobble/overlay",
     "particle": "minecraft:block/polished_blackstone_bricks",
     "wall": "minecraft:block/polished_blackstone_bricks"
   }

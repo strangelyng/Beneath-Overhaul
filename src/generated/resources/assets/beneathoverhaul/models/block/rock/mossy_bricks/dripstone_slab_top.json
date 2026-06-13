@@ -1,10 +1,10 @@
 {
   "parent": "beneathoverhaul:block/overlay_slab_top",
   "textures": {
-    "bottom": "beneathoverhaul:block/rock/mossy_bricks/dripstone",
-    "overlay": "beneathoverhaul:block/rock/mossy_bricks/overlay",
-    "particle": "beneathoverhaul:block/rock/mossy_bricks/dripstone",
-    "side": "beneathoverhaul:block/rock/mossy_bricks/dripstone",
-    "top": "beneathoverhaul:block/rock/mossy_bricks/dripstone"
+    "bottom": "beneathoverhaul:block/rock/bricks/dripstone",
+    "overlay": "beneathoverhaul:block/rock/mossy_cobble/overlay",
+    "particle": "beneathoverhaul:block/rock/bricks/dripstone",
+    "side": "beneathoverhaul:block/rock/bricks/dripstone",
+    "top": "beneathoverhaul:block/rock/bricks/dripstone"
   }
 }

@@ -49,7 +49,7 @@ public class TextureUtils {
                 return "minecraft:block/cobbled_deepslate";
             }
             case BLACKSTONE, DRIPSTONE -> {
-                return (BeneathOverhaul.MOD_ID + ":block/rock/mossy_cobble/" + rock.getSerializedName());
+                return (BeneathOverhaul.MOD_ID + ":block/rock/cobble/" + rock.getSerializedName());
             }
             case null, default -> throw new AssertionError("Invalid Rock to get texture for");
         }
@@ -79,7 +79,7 @@ public class TextureUtils {
                 return "minecraft:block/polished_blackstone_bricks";
             }
             case DRIPSTONE -> {
-                return (BeneathOverhaul.MOD_ID + ":block/rock/mossy_bricks/" + rock.getSerializedName());
+                return (BeneathOverhaul.MOD_ID + ":block/rock/bricks/" + rock.getSerializedName());
             }
             case null, default -> throw new AssertionError("Invalid Rock to get texture for");
         }
