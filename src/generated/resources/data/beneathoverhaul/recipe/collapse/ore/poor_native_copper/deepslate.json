@@ -1,0 +1,7 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "beneathoverhaul:ore/normal_native_copper/deepslate"
+  ],
+  "result": "beneathoverhaul:ore/poor_native_copper/deepslate"
+}

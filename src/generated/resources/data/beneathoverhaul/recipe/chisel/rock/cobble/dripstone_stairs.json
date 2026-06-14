@@ -1,0 +1,8 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": [
+    "beneathoverhaul:rock/cobble/dripstone"
+  ],
+  "mode": "tfc:stair",
+  "result": "beneathoverhaul:rock/cobble/dripstone_stairs"
+}

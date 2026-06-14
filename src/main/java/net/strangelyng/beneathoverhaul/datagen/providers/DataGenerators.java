@@ -32,5 +32,6 @@ public class DataGenerators {
         generator.addProvider(event.includeClient(), new BuiltInItemModelProvider(packOutput, existingFileHelper));
         generator.addProvider(event.includeServer(), new BuiltInBlockTagProvider(event, lookupProvider));
         generator.addProvider(event.includeServer(), new BuiltInItemTagProvider(event, lookupProvider));
+        generator.addProvider(event.includeServer(), new BuiltInRecipeProvider(packOutput, lookupProvider, CompletableFuture.allOf()));
     }
 }

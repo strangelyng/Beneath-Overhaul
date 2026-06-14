@@ -62,22 +62,29 @@ public class BuiltInBlockTagProvider extends TagsProvider<Block> {
                 }
             });
 
-            this.tag(TFCTags.Blocks.CAN_COLLAPSE)
-                    .add(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.SPIKE).key())
-                    .add(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.HARDENED).key())
-                    .add(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).key());
+            /*
+             * this.tag(TFCTags.Blocks.CAN_COLLAPSE)
+             *        .add(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.SPIKE).key())
+             *        .add(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.HARDENED).key())
+             *        .add(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).key());
+             */
 
             this.tag(Tags.Blocks.STONES)
                     .add(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.HARDENED).key())
                     .add(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).key());
 
             this.tag(TFCTags.Blocks.STONES_RAW).add(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).key());
-            this.tag(TFCTags.Blocks.BREAKS_WHEN_ISOLATED).add(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).key());
-            this.tag(TFCTags.Blocks.CAN_START_COLLAPSE).add(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).key());
 
-            this.tag(TFCTags.Blocks.CAN_TRIGGER_COLLAPSE)
-                    .add(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).key())
-                    .add(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.HARDENED).key());
+            /*
+             * this.tag(TFCTags.Blocks.BREAKS_WHEN_ISOLATED).add(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).key());
+             * this.tag(TFCTags.Blocks.CAN_START_COLLAPSE).add(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).key());
+             */
+
+            /*
+             * this.tag(TFCTags.Blocks.CAN_TRIGGER_COLLAPSE)
+             *        .add(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).key())
+             *        .add(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.HARDENED).key());
+             */
 
             this.tag(TFCTags.Blocks.STONES_SPIKE).add(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.SPIKE).key());
             this.tag(TFCTags.Blocks.STONES_HARDENED).add(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.HARDENED).key());

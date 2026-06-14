@@ -11,7 +11,28 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "beneathoverhaul:charred_log"
+          "name": "minecraft:charcoal"
+        }
+      ],
+      "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "chance": 0.5,
+              "condition": "minecraft:random_chance"
+            }
+          ],
+          "name": "tfc:soot"
         }
       ],
       "rolls": 1.0

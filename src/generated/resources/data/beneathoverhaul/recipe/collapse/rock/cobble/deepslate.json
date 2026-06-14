@@ -1,0 +1,10 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "beneathoverhaul:rock/raw/deepslate",
+    "beneathoverhaul:rock/hardened/deepslate",
+    "beneathoverhaul:rock/smooth/deepslate",
+    "beneathoverhaul:rock/cracked_bricks/deepslate"
+  ],
+  "result": "beneathoverhaul:rock/cobble/deepslate"
+}

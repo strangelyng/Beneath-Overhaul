@@ -1,0 +1,8 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": [
+    "beneathoverhaul:rock/mossy_cobble/deepslate"
+  ],
+  "mode": "tfc:stair",
+  "result": "beneathoverhaul:rock/mossy_cobble/deepslate_stairs"
+}

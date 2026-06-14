@@ -1,0 +1,8 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": [
+    "beneathoverhaul:rock/smooth/deepslate"
+  ],
+  "mode": "tfc:stair",
+  "result": "beneathoverhaul:rock/smooth/deepslate_stairs"
+}

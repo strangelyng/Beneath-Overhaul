@@ -1,0 +1,7 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "beneathoverhaul:ore/normal_sphalerite/deepslate"
+  ],
+  "result": "beneathoverhaul:ore/poor_sphalerite/deepslate"
+}

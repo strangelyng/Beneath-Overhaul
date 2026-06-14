@@ -1,0 +1,7 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "beneathoverhaul:ore/normal_tetrahedrite/dripstone"
+  ],
+  "result": "beneathoverhaul:ore/poor_tetrahedrite/dripstone"
+}

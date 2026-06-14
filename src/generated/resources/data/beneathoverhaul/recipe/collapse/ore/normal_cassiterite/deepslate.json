@@ -1,0 +1,7 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "beneathoverhaul:ore/rich_cassiterite/deepslate"
+  ],
+  "result": "beneathoverhaul:ore/normal_cassiterite/deepslate"
+}

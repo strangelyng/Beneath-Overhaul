@@ -1,0 +1,8 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": [
+    "beneathoverhaul:rock/bricks/dripstone"
+  ],
+  "mode": "tfc:smooth",
+  "result": "beneathoverhaul:rock/chiseled/dripstone"
+}

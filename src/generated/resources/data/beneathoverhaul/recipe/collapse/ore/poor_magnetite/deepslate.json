@@ -1,0 +1,7 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "beneathoverhaul:ore/normal_magnetite/deepslate"
+  ],
+  "result": "beneathoverhaul:ore/poor_magnetite/deepslate"
+}

@@ -1,0 +1,10 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "beneathoverhaul:rock/raw/blackstone",
+    "beneathoverhaul:rock/hardened/blackstone",
+    "beneathoverhaul:rock/smooth/blackstone",
+    "beneathoverhaul:rock/cracked_bricks/blackstone"
+  ],
+  "result": "beneathoverhaul:rock/cobble/blackstone"
+}

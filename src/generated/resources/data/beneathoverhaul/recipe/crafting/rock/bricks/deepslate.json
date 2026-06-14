@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "X": {
+      "item": "beneathoverhaul:brick/deepslate"
+    },
+    "Y": {
+      "item": "tfc:mortar"
+    }
+  },
+  "pattern": [
+    "XYX",
+    "YXY",
+    "XYX"
+  ],
+  "result": {
+    "count": 4,
+    "id": "beneathoverhaul:rock/bricks/deepslate"
+  }
+}
