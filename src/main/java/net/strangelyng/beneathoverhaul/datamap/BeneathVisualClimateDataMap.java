@@ -10,15 +10,15 @@ import net.neoforged.neoforge.registries.datamaps.RegisterDataMapTypesEvent;
 import net.strangelyng.beneathoverhaul.BeneathOverhaul;
 
 @EventBusSubscriber(modid = BeneathOverhaul.MOD_ID)
-public class BeneathClimateDataMap {
-    public static final DataMapType<Biome, BeneathClimateData> BENEATH_CLIMATE_DATA = DataMapType.builder(
-            ResourceLocation.fromNamespaceAndPath(BeneathOverhaul.MOD_ID, "beneath_climate_data"),
+public class BeneathVisualClimateDataMap {
+    public static final DataMapType<Biome, BeneathVisualClimateData> BENEATH_VISUAL_CLIMATE_DATA = DataMapType.builder(
+            ResourceLocation.fromNamespaceAndPath(BeneathOverhaul.MOD_ID, "beneath_visual_climate_data"),
             Registries.BIOME,
-            BeneathClimateData.CODEC
-    ).synced(BeneathClimateData.CODEC, false).build();
+            BeneathVisualClimateData.CODEC
+    ).synced(BeneathVisualClimateData.CODEC, false).build();
 
     @SubscribeEvent
     public static void register(RegisterDataMapTypesEvent event) {
-        event.register(BENEATH_CLIMATE_DATA);
+        event.register(BENEATH_VISUAL_CLIMATE_DATA);
     }
 }
