@@ -7,13 +7,13 @@ import net.minecraft.core.Holder;
 import net.minecraft.util.Mth;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.Biome;
-import net.strangelyng.beneathoverhaul.datamap.BeneathClimateData;
+import net.strangelyng.beneathoverhaul.datamap.BeneathVisualClimateData;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import static net.strangelyng.beneathoverhaul.datamap.BeneathClimateDataMap.BENEATH_CLIMATE_DATA;
+import static net.strangelyng.beneathoverhaul.datamap.BeneathVisualClimateDataMap.BENEATH_VISUAL_CLIMATE_DATA;
 
 @Mixin(value = TFCColors.class, remap = false)
 public abstract class TFCColorsMixin {
@@ -26,12 +26,15 @@ public abstract class TFCColorsMixin {
         if (level != null && level.dimension().equals(Level.NETHER)) {
             final Holder<Biome> biome = level.getBiome(pos);
 
-            BeneathClimateData climateData = biome.getData(BENEATH_CLIMATE_DATA);
+            BeneathVisualClimateData visualClimateData = biome.getData(BENEATH_VISUAL_CLIMATE_DATA);
 
-            if (climateData != null) {
-                float temperature = climateData.visualTemperature();
-                float groundwater = climateData.visualRainfall();
+            if (visualClimateData != null) {
+                float temperature = visualClimateData.temperature();
+                float groundwater = visualClimateData.rainfall();
                 cir.setReturnValue(beneathoverhaul$getVisualClimateColor(colorCache, temperature, groundwater));
+            } else {
+                // Forces warm & dry temps by default
+                cir.setReturnValue(beneathoverhaul$getVisualClimateColor(colorCache, 35, 0));
             }
         }
     }

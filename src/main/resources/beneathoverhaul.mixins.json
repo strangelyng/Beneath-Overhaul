@@ -3,7 +3,7 @@
   "package": "net.strangelyng.beneathoverhaul.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "common.beneath.NetherClimateModelMixin",
+    "common.beneath.ForgeEventsMixin",
     "common.minecraft.DripstoneUtilsAccessor"
   ],
   "client": [
