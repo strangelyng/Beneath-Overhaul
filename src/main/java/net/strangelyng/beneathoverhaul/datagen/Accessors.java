@@ -10,6 +10,11 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.common.crafting.CompoundIngredient;
 
+/*
+ * Special thanks to Gourmandd, much of the datagen code is based on their work for On-Ancient-Ground-Core
+ * https://github.com/Gourmandd/On-Ancient-Ground-Core/blob/main/src/main/java/net/gourmand/core/datagen/Accessors.java
+ */
+
 public interface Accessors {
     default Item itemOf(ResourceLocation name)
     {

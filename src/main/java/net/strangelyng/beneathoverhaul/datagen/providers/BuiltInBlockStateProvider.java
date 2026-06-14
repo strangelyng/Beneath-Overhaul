@@ -23,6 +23,11 @@ import net.neoforged.neoforge.client.model.generators.*;
 
 import java.util.stream.Stream;
 
+/*
+ * Special thanks to Gourmandd, much of the datagen code is based on their work for On-Ancient-Ground-Core
+ * https://github.com/Gourmandd/On-Ancient-Ground-Core/blob/main/src/main/java/net/gourmand/core/datagen/providers/BuiltinBlockStates.java
+ */
+
 public class BuiltInBlockStateProvider extends BlockStateProvider {
 
     private final static ResourceLocation oreParent = ResourceLocation.fromNamespaceAndPath("tfc", "block/ore");

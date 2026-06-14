@@ -21,6 +21,11 @@ import java.util.Locale;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
+/*
+ * Special thanks to Gourmandd, much of the datagen code is based on their work for On-Ancient-Ground-Core
+ * https://github.com/Gourmandd/On-Ancient-Ground-Core/blob/main/src/main/java/net/gourmand/core/datagen/providers/BuiltinRecipes.java
+ */
+
 public class BuiltInRecipeProvider extends RecipeProvider implements
         CraftingRecipes,
         ChiselRecipes,

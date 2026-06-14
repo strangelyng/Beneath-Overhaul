@@ -16,6 +16,11 @@ import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.pathfinder.PathComputationType;
 import org.jetbrains.annotations.Nullable;
 
+/*
+ * Special thanks to the TerraFirmaGreg Team, this Class is based on their work for the TerraFirmaGreg modpack
+ * https://github.com/TerraFirmaGreg-Team/Core-Modern/blob/dev/src/main/java/su/terrafirmagreg/core/common/block/AbstractLayerBlock.java
+ */
+
 public abstract class AbstractLayerBlock extends SnowLayerBlock {
 
     public AbstractLayerBlock(Properties properties) {

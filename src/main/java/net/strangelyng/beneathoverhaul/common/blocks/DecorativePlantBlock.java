@@ -33,6 +33,11 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
+/*
+ * Special thanks to the TerraFirmaGreg Team, this Class is based on their work for the TerraFirmaGreg modpack
+ * https://github.com/TerraFirmaGreg-Team/Core-Modern/blob/dev/src/main/java/su/terrafirmagreg/core/common/block/DecorativePlantBlock.java
+ */
+
 public class DecorativePlantBlock extends ExtendedBlock implements IFluidLoggable {
 
     public static final DirectionProperty FACING = BlockStateProperties.FACING;

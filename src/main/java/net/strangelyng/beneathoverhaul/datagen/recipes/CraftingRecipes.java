@@ -14,6 +14,11 @@ import java.util.stream.Stream;
 
 import static net.dries007.tfc.util.DataGenerationHelpers.Builder;
 
+/*
+ * Special thanks to Gourmandd, much of the datagen code is based on their work for On-Ancient-Ground-Core
+ * https://github.com/Gourmandd/On-Ancient-Ground-Core/blob/main/src/main/java/net/gourmand/core/datagen/recipes/CraftingRecipes.java
+ */
+
 public interface CraftingRecipes extends Recipes {
     default void craftingRecipes() {
         Stream.of(BeneathOverhaulRock.VALUES).forEach(rockType -> {

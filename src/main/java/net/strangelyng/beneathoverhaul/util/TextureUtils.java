@@ -12,6 +12,11 @@ import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulRock;
 import java.util.Locale;
 import java.util.Map;
 
+/*
+ * Special thanks to Gourmandd, much of this utility function library is based on their work for On-Ancient-Ground-Core
+ * https://github.com/Gourmandd/On-Ancient-Ground-Core/blob/main/src/main/java/net/gourmand/core/util/TextureUtil.java
+ */
+
 public class TextureUtils {
     public static String getRawRockTexture(RegistryRock rock) {
         if (rock instanceof Rock) {

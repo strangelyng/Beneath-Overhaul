@@ -7,6 +7,11 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.phys.Vec2;
 
+/*
+ * This climate model for the Beneath is based on the one implemented via KubeJS for the TerraFirmaGreg modpack
+ * https://github.com/TerraFirmaGreg-Team/Modpack-Modern/blob/dev/kubejs/startup_scripts/tfg/worldgen/register_climates.js
+ */
+
 public enum BeneathOverhaulClimateModel implements ClimateModel {
     INSTANCE;
 

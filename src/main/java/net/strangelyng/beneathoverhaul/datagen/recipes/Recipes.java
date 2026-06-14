@@ -7,6 +7,11 @@ import net.strangelyng.beneathoverhaul.datagen.Accessors;
 
 import java.util.Objects;
 
+/*
+ * Special thanks to Gourmandd, much of the datagen code is based on their work for On-Ancient-Ground-Core
+ * https://github.com/Gourmandd/On-Ancient-Ground-Core/blob/main/src/main/java/net/gourmand/core/datagen/recipes/Recipes.java
+ */
+
 public interface Recipes extends Accessors {
     HolderLookup.Provider lookup();
 

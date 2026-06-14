@@ -16,6 +16,11 @@ import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.strangelyng.beneathoverhaul.common.blocks.AbstractLayerBlock;
 
+/*
+ * Special thanks to Gourmandd, much of the datagen code is based on their work for On-Ancient-Ground-Core
+ * https://github.com/Gourmandd/On-Ancient-Ground-Core/blob/main/src/main/java/net/gourmand/core/datagen/providers/LootTableBuilders.java
+ */
+
 public class LootTableBuilders {
     public static LootTable.Builder createOreTable(Block oreBlock, Item oreItem) {
         return LootTable.lootTable()

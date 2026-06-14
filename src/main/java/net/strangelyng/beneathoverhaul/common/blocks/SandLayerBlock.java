@@ -17,6 +17,11 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.FluidState;
 import org.jetbrains.annotations.Nullable;
 
+/*
+ * Special thanks to the TerraFirmaGreg Team, this Class is based on their work for the TerraFirmaGreg modpack
+ * https://github.com/TerraFirmaGreg-Team/Core-Modern/blob/dev/src/main/java/su/terrafirmagreg/core/common/block/SandLayerBlock.java
+ */
+
 public class SandLayerBlock extends AbstractLayerBlock {
 
     public SandLayerBlock(Properties properties) {

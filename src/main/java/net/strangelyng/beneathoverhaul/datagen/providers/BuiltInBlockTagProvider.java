@@ -24,6 +24,11 @@ import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Stream;
 
+/*
+ * Special thanks to Gourmandd, much of the datagen code is based on their work for On-Ancient-Ground-Core
+ * https://github.com/Gourmandd/On-Ancient-Ground-Core/blob/main/src/main/java/net/gourmand/core/datagen/providers/BuiltinBlockTags.java
+ */
+
 public class BuiltInBlockTagProvider extends TagsProvider<Block> {
     private final ExistingFileHelper.IResourceType resourceType;
 

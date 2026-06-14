@@ -3,6 +3,11 @@ package net.strangelyng.beneathoverhaul.util;
 import java.util.Locale;
 import java.util.stream.Stream;
 
+/*
+ * Special thanks to Gourmandd, much of this utility function library is based on their work for On-Ancient-Ground-Core
+ * https://github.com/Gourmandd/On-Ancient-Ground-Core/blob/main/src/main/java/net/gourmand/core/util/TextUtil.java
+ */
+
 public class TextUtils {
 
     public static String getName(String string){
