@@ -1,0 +1,20 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "primitive_creatures"
+        }
+    ],
+    "type": "neoforge:add_spawns",
+    "biomes": [
+        "beneathoverhaul:nether/lush_hollow"
+    ],
+    "spawners": [
+        {
+            "type": "primitive_creatures:tfc",
+            "maxCount": 4,
+            "minCount": 1,
+            "weight": 100
+        }
+    ]
+}

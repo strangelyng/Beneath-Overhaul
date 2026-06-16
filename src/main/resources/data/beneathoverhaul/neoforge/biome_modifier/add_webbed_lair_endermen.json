@@ -1,0 +1,30 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "endermanoverhaul"
+        }
+    ],
+    "type": "neoforge:add_spawns",
+    "biomes": "beneathoverhaul:nether/webbed_lair",
+    "spawners": [
+        {
+            "type": "endermanoverhaul:scarab",
+            "maxCount": 4,
+            "minCount": 2,
+            "weight": 75
+        },
+        {
+            "type": "endermanoverhaul:nether_wastes_enderman",
+            "maxCount": 1,
+            "minCount": 1,
+            "weight": 75
+        },
+        {
+            "type": "endermanoverhaul:swamp_enderman",
+            "maxCount": 1,
+            "minCount": 1,
+            "weight": 10
+        }
+    ]
+}

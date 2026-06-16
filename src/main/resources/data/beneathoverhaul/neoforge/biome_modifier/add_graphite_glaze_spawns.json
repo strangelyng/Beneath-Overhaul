@@ -1,0 +1,22 @@
+{
+    "neoforge:conditions": [
+        {
+            "type": "neoforge:mod_loaded",
+            "modid": "primitive_creatures"
+        }
+    ],
+    "type": "neoforge:add_spawns",
+    "biomes": [
+        "beneathoverhaul:nether/ash_forest",
+        "beneathoverhaul:nether/basalt_deltas",
+        "beneathoverhaul:nether/lava_floes"
+    ],
+    "spawners": [
+        {
+            "type": "primitive_creatures:golem_2",
+            "maxCount": 3,
+            "minCount": 1,
+            "weight": 100
+        }
+    ]
+}
