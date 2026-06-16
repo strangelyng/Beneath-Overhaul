@@ -106,7 +106,9 @@ public class BuiltInBlockLootTableProvider extends BlockLootSubProvider {
                         .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f)).when(ExplosionCondition.survivesExplosion())
                                 .add(LootItem.lootTableItem(TFCItems.SOOT).when(LootItemRandomChanceCondition.randomChance(0.5f)))));
 
-        this.dropSelf(BeneathOverhaulBlocks.MUSHROOM_SPROUTS.get());
+        this.add(BeneathOverhaulBlocks.MUSHROOM_SPROUTS.get(),
+                LootTableBuilders.createShearableBlockDropTable(BeneathOverhaulBlocks.MUSHROOM_SPROUTS.get()));
+        this.dropSelf(BeneathOverhaulBlocks.MUSHROOM_ROOTS.get());
 
         this.dropSelf(BeneathOverhaulBlocks.ASH_LAYER_BLOCK.get());
 

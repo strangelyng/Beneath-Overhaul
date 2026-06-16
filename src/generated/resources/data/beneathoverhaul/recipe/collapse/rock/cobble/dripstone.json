@@ -4,7 +4,19 @@
     "beneathoverhaul:rock/raw/dripstone",
     "beneathoverhaul:rock/hardened/dripstone",
     "beneathoverhaul:rock/smooth/dripstone",
-    "beneathoverhaul:rock/cracked_bricks/dripstone"
+    "beneathoverhaul:rock/cracked_bricks/dripstone",
+    "beneathoverhaul:ore/poor_native_copper/dripstone",
+    "beneathoverhaul:ore/poor_native_gold/dripstone",
+    "beneathoverhaul:ore/poor_hematite/dripstone",
+    "beneathoverhaul:ore/poor_native_silver/dripstone",
+    "beneathoverhaul:ore/poor_cassiterite/dripstone",
+    "beneathoverhaul:ore/poor_bismuthinite/dripstone",
+    "beneathoverhaul:ore/poor_garnierite/dripstone",
+    "beneathoverhaul:ore/poor_malachite/dripstone",
+    "beneathoverhaul:ore/poor_magnetite/dripstone",
+    "beneathoverhaul:ore/poor_limonite/dripstone",
+    "beneathoverhaul:ore/poor_sphalerite/dripstone",
+    "beneathoverhaul:ore/poor_tetrahedrite/dripstone"
   ],
   "result": "beneathoverhaul:rock/cobble/dripstone"
 }

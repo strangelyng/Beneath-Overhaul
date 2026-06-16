@@ -66,8 +66,8 @@ public final class BeneathOverhaulBlocks {
 
     public static final Id<Block> FLY_AGARIC = registerNoItem("mushroom/fly_agaric", () -> new NFlowerBlock(ExtendedProperties.of(Blocks.CRIMSON_FUNGUS)));
 
-    public static final Id<DecorativePlantBlock> MUSHROOM_ROOTS = register("mushroom_roots", () -> new DecorativePlantBlock(ExtendedProperties.of().mapColor(MapColor.NONE).sound(SoundType.NETHER_WART).noCollission().noLootTable(), DecorativePlantBlock.DEFAULT_SHAPE, null));
     public static final Id<DecorativePlantBlock> MUSHROOM_SPROUTS = register("mushroom_sprouts", () -> new DecorativePlantBlock(ExtendedProperties.of().mapColor(MapColor.NONE).sound(SoundType.NETHER_WART).noCollission(), DecorativePlantBlock.DEFAULT_SHAPE, null));
+    public static final Id<DecorativePlantBlock> MUSHROOM_ROOTS = register("mushroom_roots", () -> new DecorativePlantBlock(ExtendedProperties.of().mapColor(MapColor.NONE).sound(SoundType.NETHER_WART).noCollission(), DecorativePlantBlock.DEFAULT_SHAPE, null));
 
     public static final Id<SandLayerBlock> ASH_LAYER_BLOCK = registerNoItem("ash_pile", () -> new SandLayerBlock(BlockBehaviour.Properties.ofFullCopy(TFCBlocks.SAND.get(SandBlockType.RED).get()).mapColor(MapColor.NONE)));
 

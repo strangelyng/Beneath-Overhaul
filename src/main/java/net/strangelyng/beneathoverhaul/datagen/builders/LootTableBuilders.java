@@ -2,6 +2,7 @@ package net.strangelyng.beneathoverhaul.datagen.builders;
 
 import net.dries007.tfc.common.blocks.rock.LooseRockBlock;
 import net.dries007.tfc.util.loot.IsIsolatedCondition;
+import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -12,8 +13,10 @@ import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.ExplosionCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
+import net.minecraft.world.level.storage.loot.predicates.MatchTool;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
+import net.neoforged.neoforge.common.Tags;
 import net.strangelyng.beneathoverhaul.common.blocks.AbstractLayerBlock;
 
 /*
@@ -62,6 +65,13 @@ public class LootTableBuilders {
                                                 .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(LooseRockBlock.COUNT, 3))
                                         )
                         )
+                );
+    }
+
+    public static LootTable.Builder createShearableBlockDropTable(Block block) {
+        return LootTable.lootTable()
+                .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
+                        .add(LootItem.lootTableItem(block).when(MatchTool.toolMatches(ItemPredicate.Builder.item().of(Tags.Items.TOOLS_SHEAR))))
                 );
     }
 
