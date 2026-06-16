@@ -8,6 +8,10 @@ import net.minecraft.util.valueproviders.IntProvider;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
 
+/*
+ * Mostly copied from vanilla with the addition of a block_state field
+ */
+
 public record CustomLargeDripstoneConfig(BlockState block, int floorToCeilingSearchRange, IntProvider columnRadius, FloatProvider heightScale, float maxColumnRadiusToCaveHeightRatio,
                                          FloatProvider stalactiteBluntness, FloatProvider stalagmiteBluntness, FloatProvider windSpeed, int minRadiusForWind, float minBluntnessForWind) implements FeatureConfiguration {
 

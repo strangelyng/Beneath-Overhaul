@@ -21,6 +21,10 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
 
+/*
+ * Mostly copied from vanilla, with the added ability to set a custom block
+ */
+
 public class CustomLargeDripstoneFeature extends Feature<CustomLargeDripstoneConfig> {
     public CustomLargeDripstoneFeature(Codec<CustomLargeDripstoneConfig> codec) {
         super(codec);

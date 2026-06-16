@@ -3,6 +3,9 @@ package net.strangelyng.beneathoverhaul.common.items;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.registry.RegistryHolder;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -20,6 +23,10 @@ public class BeneathOverhaulItems {
     public static final Map<BeneathOverhaulRock, ItemId> BRICKS = Helpers.mapOf(BeneathOverhaulRock.class, type ->
             register("brick/" + type.name(), type.createItemProperties())
     );
+
+    public static final ItemId FLY_AGARIC = register("food/fly_agaric", () -> new Item(new Item.Properties().food(
+            new FoodProperties.Builder().effect(() -> new MobEffectInstance(MobEffects.POISON, 1200, 1), 1.0F).build()
+    )));
 
     private static ItemId register(String name)
     {

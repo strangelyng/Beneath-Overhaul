@@ -1,0 +1,77 @@
+{
+  "type": "tfc:cluster_vein",
+  "config": {
+    "size": 50,
+    "rarity": 210,
+    "density": 0.4,
+    "min_y": 32,
+    "max_y": 128,
+    "random_name": "saltpeter",
+    "project": false,
+    "project_offset": false,
+    "near_lava": false,
+    "blocks": [
+      {
+        "replace": [
+          "tfc:rock/raw/granite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/saltpeter/granite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/diorite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/saltpeter/diorite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gabbro"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/saltpeter/gabbro"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/schist"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/saltpeter/schist"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gneiss"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/saltpeter/gneiss"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "beneathoverhaul:rock/raw/blackstone",
+          "minecraft:magma_block"
+        ],
+        "with": [
+          {
+            "block": "beneathoverhaul:ore/saltpeter/blackstone"
+          }
+        ]
+      }
+    ]
+  }
+}

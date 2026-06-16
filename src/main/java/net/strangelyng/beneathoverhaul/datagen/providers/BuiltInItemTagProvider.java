@@ -10,6 +10,7 @@ import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.Tags;
@@ -19,7 +20,9 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.strangelyng.beneathoverhaul.BeneathOverhaul;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulBlocks;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulRock;
+import net.strangelyng.beneathoverhaul.common.items.BeneathOverhaulItems;
 
+import java.util.Locale;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Stream;
@@ -88,6 +91,10 @@ public class BuiltInItemTagProvider extends TagsProvider<Item> {
                     .add(getKey(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.LOOSE).get()))
                     .add(getKey(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.MOSSY_LOOSE).get()));
 
+            this.tag(getLooseStoneCategory(rock))
+                            .add(getKey(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.LOOSE).get()))
+                            .add(getKey(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.MOSSY_LOOSE).get()));
+
             this.tag(ItemTags.STONE_BRICKS)
                     .add(getKey(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.BRICKS).get()))
                     .add(getKey(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.CRACKED_BRICKS).get()))
@@ -118,6 +125,10 @@ public class BuiltInItemTagProvider extends TagsProvider<Item> {
             this.tag(ItemTags.STONE_BUTTONS).add(getKey(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.BUTTON).get()));
             this.tag(ItemTags.BUTTONS).add(getKey(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.BUTTON).get()));
         });
+
+        // Misc Items
+        this.tag(Tags.Items.MUSHROOMS).add(getKey(BeneathOverhaulItems.FLY_AGARIC.get()));
+        this.tag(Tags.Items.FOODS_VEGETABLE).add(getKey(BeneathOverhaulItems.FLY_AGARIC.get()));
     }
 
     // Helper Functions
@@ -132,6 +143,10 @@ public class BuiltInItemTagProvider extends TagsProvider<Item> {
 
     protected ResourceKey<Item> getKey(Item item){
         return item.builtInRegistryHolder().key();
+    }
+
+    protected TagKey<Item> getLooseStoneCategory(BeneathOverhaulRock rock) {
+        return TFCTags.Items.STONES_LOOSE_CATEGORY.get(BeneathOverhaulRock.valueOf(rock.getSerializedName().toUpperCase(Locale.ROOT)).category());
     }
 
     private <T1 extends RegistryRock, T2> void addOreTags(Map<T1, Map<T2, BeneathOverhaulBlocks.Id<Block>>> map, T2 ore, T1 rock) {

@@ -1,22 +1,19 @@
 {
     "replace": false,
     "values": [
-        "beneathoverhaul:nether/vein/nether_anthracite",
-        "beneathoverhaul:nether/vein/nether_cassiterite",
-        "beneathoverhaul:nether/vein/nether_copper",
-        "beneathoverhaul:nether/vein/nether_garnierite",
-        "beneathoverhaul:nether/vein/nether_gold",
-        "beneathoverhaul:nether/vein/nether_graphite",
-        "beneathoverhaul:nether/vein/nether_gypsum",
-        "beneathoverhaul:nether/vein/nether_hematite",
-        "beneathoverhaul:nether/vein/nether_lapis",
-        "beneathoverhaul:nether/vein/nether_limonite",
-        "beneathoverhaul:nether/vein/nether_magnetite",
-        "beneathoverhaul:nether/vein/nether_redstone",
-        "beneathoverhaul:nether/vein/nether_saltpeter",
-        "beneathoverhaul:nether/vein/nether_silver",
-        "beneathoverhaul:nether/vein/nether_sphalerite",
-        "beneathoverhaul:nether/vein/nether_sulfur",
-        "beneathoverhaul:nether/vein/nether_tetrahedrite"
+        "beneathoverhaul:nether/vein/cassiterite",
+        "beneathoverhaul:nether/vein/cinnabar",
+        "beneathoverhaul:nether/vein/garnierite",
+        "beneathoverhaul:nether/vein/graphite",
+        "beneathoverhaul:nether/vein/gypsum",
+        "beneathoverhaul:nether/vein/hematite",
+        "beneathoverhaul:nether/vein/lapis_lazuli",
+        "beneathoverhaul:nether/vein/magnetite",
+        "beneathoverhaul:nether/vein/native_gold",
+        "beneathoverhaul:nether/vein/native_silver",
+        "beneathoverhaul:nether/vein/saltpeter",
+        "beneathoverhaul:nether/vein/sphalerite",
+        "beneathoverhaul:nether/vein/sulfur",
+        "beneathoverhaul:nether/vein/tetrahedrite"
     ]
 }

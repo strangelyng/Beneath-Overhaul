@@ -1,6 +1,7 @@
 {
   "block.beneathoverhaul.ash_pile": "Ash Pile",
   "block.beneathoverhaul.charred_log": "Charred Log",
+  "block.beneathoverhaul.mushroom.fly_agaric": "Fly Agaric",
   "block.beneathoverhaul.mushroom_roots": "Mushroom Roots",
   "block.beneathoverhaul.mushroom_sprouts": "Mushroom Sprouts",
   "block.beneathoverhaul.ore.amethyst.blackstone": "Blackstone Amethyst",
@@ -434,5 +435,6 @@
   "block.beneathoverhaul.rock.spike.dripstone": "Dripstone Spike",
   "item.beneathoverhaul.brick.blackstone": "Blackstone Brick",
   "item.beneathoverhaul.brick.deepslate": "Deepslate Brick",
-  "item.beneathoverhaul.brick.dripstone": "Dripstone Brick"
+  "item.beneathoverhaul.brick.dripstone": "Dripstone Brick",
+  "item.beneathoverhaul.food.fly_agaric": "Fly Agaric Mushroom"
 }

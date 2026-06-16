@@ -1,0 +1,148 @@
+{
+  "type": "tfc:cluster_vein",
+  "config": {
+    "size": 39,
+    "rarity": 205,
+    "density": 0.4,
+    "min_y": 0,
+    "max_y": 128,
+    "random_name": "magnetite",
+    "project": false,
+    "project_offset": false,
+    "near_lava": false,
+    "blocks": [
+      {
+        "replace": [
+          "beneathoverhaul:rock/raw/deepslate",
+          "tfc:mud/entisol",
+          "beneath:soul_clay",
+          "tfc:dirt/andisol",
+          "tfc:mud/andisol",
+          "tfc:peat",
+          "tfc:dirt/entisol"
+        ],
+        "with": [
+          {
+            "block": "beneathoverhaul:ore/poor_magnetite/deepslate",
+            "weight": 35
+          },
+          {
+            "block": "beneathoverhaul:ore/normal_magnetite/deepslate",
+            "weight": 40
+          },
+          {
+            "block": "beneathoverhaul:ore/rich_magnetite/deepslate",
+            "weight": 25
+          },
+          {
+            "block": "beneathoverhaul:ore/normal_native_gold/deepslate",
+            "weight": 10
+          },
+          {
+            "block": "beneathoverhaul:ore/sapphire/deepslate",
+            "weight": 5
+          }
+        ]
+      },
+      {
+        "replace": [
+          "beneathoverhaul:rock/raw/blackstone",
+          "minecraft:magma_block"
+        ],
+        "with": [
+          {
+            "block": "beneathoverhaul:ore/poor_magnetite/blackstone",
+            "weight": 35
+          },
+          {
+            "block": "beneathoverhaul:ore/normal_magnetite/blackstone",
+            "weight": 40
+          },
+          {
+            "block": "beneathoverhaul:ore/rich_magnetite/blackstone",
+            "weight": 25
+          },
+          {
+            "block": "beneathoverhaul:ore/normal_native_gold/blackstone",
+            "weight": 10
+          },
+          {
+            "block": "beneathoverhaul:ore/sapphire/blackstone",
+            "weight": 5
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/basalt",
+          "minecraft:basalt"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/poor_magnetite/basalt",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_magnetite/basalt",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_magnetite/basalt",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/normal_native_gold/basalt",
+            "weight": 10
+          },
+          {
+            "block": "tfc:ore/sapphire/basalt",
+            "weight": 5
+          }
+        ]
+      },
+      {
+        "replace": [
+          "beneathoverhaul:rock/raw/dripstone"
+        ],
+        "with": [
+          {
+            "block": "beneathoverhaul:ore/poor_magnetite/dripstone",
+            "weight": 35
+          },
+          {
+            "block": "beneathoverhaul:ore/normal_magnetite/dripstone",
+            "weight": 40
+          },
+          {
+            "block": "beneathoverhaul:ore/rich_magnetite/dripstone",
+            "weight": 25
+          },
+          {
+            "block": "beneathoverhaul:ore/normal_native_gold/dripstone",
+            "weight": 10
+          },
+          {
+            "block": "beneathoverhaul:ore/sapphire/dripstone",
+            "weight": 5
+          }
+        ]
+      }
+    ],
+    "indicator": {
+      "rarity": 15,
+      "depth": 1,
+      "underground_rarity": 40,
+      "underground_count": 150,
+      "blocks": [
+        {
+          "block": "tfc:ore/small_magnetite",
+          "weight": 35
+        },
+        {
+          "block": "tfc:ore/small_native_gold",
+          "weight": 15
+        }
+      ]
+    }
+  }
+}

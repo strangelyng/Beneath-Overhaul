@@ -1,0 +1,194 @@
+{
+  "type": "tfc:cluster_vein",
+  "config": {
+    "size": 45,
+    "rarity": 170,
+    "density": 0.5,
+    "min_y": 32,
+    "max_y": 128,
+    "random_name": "tetrahedrite",
+    "project": false,
+    "project_offset": false,
+    "near_lava": false,
+    "blocks": [
+      {
+        "replace": [
+          "beneathoverhaul:rock/raw/deepslate",
+          "tfc:mud/entisol",
+          "beneath:soul_clay",
+          "tfc:dirt/andisol",
+          "tfc:mud/andisol",
+          "tfc:peat",
+          "tfc:dirt/entisol"
+        ],
+        "with": [
+          {
+            "block": "beneathoverhaul:ore/poor_tetrahedrite/deepslate",
+            "weight": 35
+          },
+          {
+            "block": "beneathoverhaul:ore/normal_tetrahedrite/deepslate",
+            "weight": 40
+          },
+          {
+            "block": "beneathoverhaul:ore/rich_tetrahedrite/deepslate",
+            "weight": 25
+          },
+          {
+            "block": "beneathoverhaul:ore/normal_native_copper/deepslate",
+            "weight": 15
+          },
+          {
+            "block": "beneathoverhaul:ore/poor_native_copper/deepslate",
+            "weight": 10
+          },
+          {
+            "block": "beneathoverhaul:ore/rich_native_copper/deepslate",
+            "weight": 5
+          }
+        ]
+      },
+      {
+        "replace": [
+          "beneathoverhaul:rock/raw/dripstone"
+        ],
+        "with": [
+          {
+            "block": "beneathoverhaul:ore/poor_tetrahedrite/dripstone",
+            "weight": 35
+          },
+          {
+            "block": "beneathoverhaul:ore/normal_tetrahedrite/dripstone",
+            "weight": 40
+          },
+          {
+            "block": "beneathoverhaul:ore/rich_tetrahedrite/dripstone",
+            "weight": 25
+          },
+          {
+            "block": "beneathoverhaul:ore/normal_native_copper/dripstone",
+            "weight": 15
+          },
+          {
+            "block": "beneathoverhaul:ore/poor_native_copper/dripstone",
+            "weight": 10
+          },
+          {
+            "block": "beneathoverhaul:ore/rich_native_copper/dripstone",
+            "weight": 5
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/schist"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/poor_tetrahedrite/schist",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_tetrahedrite/schist",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_tetrahedrite/schist",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/normal_native_copper/schist",
+            "weight": 15
+          },
+          {
+            "block": "tfc:ore/poor_native_copper/schist",
+            "weight": 10
+          },
+          {
+            "block": "tfc:ore/rich_native_copper/schist",
+            "weight": 5
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gneiss"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/poor_tetrahedrite/gneiss",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_tetrahedrite/gneiss",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_tetrahedrite/gneiss",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/normal_native_copper/gneiss",
+            "weight": 15
+          },
+          {
+            "block": "tfc:ore/poor_native_copper/gneiss",
+            "weight": 10
+          },
+          {
+            "block": "tfc:ore/rich_native_copper/gneiss",
+            "weight": 5
+          }
+        ]
+      },
+      {
+        "replace": [
+          "beneathoverhaul:rock/raw/blackstone",
+          "minecraft:magma_block"
+        ],
+        "with": [
+          {
+            "block": "beneathoverhaul:ore/poor_tetrahedrite/blackstone",
+            "weight": 35
+          },
+          {
+            "block": "beneathoverhaul:ore/normal_tetrahedrite/blackstone",
+            "weight": 40
+          },
+          {
+            "block": "beneathoverhaul:ore/rich_tetrahedrite/blackstone",
+            "weight": 25
+          },
+          {
+            "block": "beneathoverhaul:ore/normal_native_copper/blackstone",
+            "weight": 15
+          },
+          {
+            "block": "beneathoverhaul:ore/poor_native_copper/blackstone",
+            "weight": 10
+          },
+          {
+            "block": "beneathoverhaul:ore/rich_native_copper/blackstone",
+            "weight": 5
+          }
+        ]
+      }
+    ],
+    "indicator": {
+      "rarity": 15,
+      "depth": 1,
+      "underground_rarity": 40,
+      "underground_count": 150,
+      "blocks": [
+        {
+          "block": "tfc:ore/small_tetrahedrite",
+          "weight": 50
+        },
+        {
+          "block": "tfc:ore/small_native_copper",
+          "weight": 30
+        }
+      ]
+    }
+  }
+}

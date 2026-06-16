@@ -1,5 +1,6 @@
 package net.strangelyng.beneathoverhaul.common.blocks;
 
+import com.eerussianguy.beneath.common.blocks.NFlowerBlock;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.rock.Ore;
@@ -63,7 +64,9 @@ public final class BeneathOverhaulBlocks {
     // Misc Blocks
     public static final Id<RotatedPillarBlock> CHARRED_LOG = register("charred_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of().strength(8.0f).sound(SoundType.WOOD).instrument(NoteBlockInstrument.BASS).requiresCorrectToolForDrops().mapColor(MapColor.COLOR_BLACK)));
 
-    public static final Id<DecorativePlantBlock> MUSHROOM_ROOTS = register("mushroom_roots", () -> new DecorativePlantBlock(ExtendedProperties.of().mapColor(MapColor.NONE).sound(SoundType.NETHER_WART).noCollission(), DecorativePlantBlock.DEFAULT_SHAPE, null));
+    public static final Id<Block> FLY_AGARIC = registerNoItem("mushroom/fly_agaric", () -> new NFlowerBlock(ExtendedProperties.of(Blocks.CRIMSON_FUNGUS)));
+
+    public static final Id<DecorativePlantBlock> MUSHROOM_ROOTS = register("mushroom_roots", () -> new DecorativePlantBlock(ExtendedProperties.of().mapColor(MapColor.NONE).sound(SoundType.NETHER_WART).noCollission().noLootTable(), DecorativePlantBlock.DEFAULT_SHAPE, null));
     public static final Id<DecorativePlantBlock> MUSHROOM_SPROUTS = register("mushroom_sprouts", () -> new DecorativePlantBlock(ExtendedProperties.of().mapColor(MapColor.NONE).sound(SoundType.NETHER_WART).noCollission(), DecorativePlantBlock.DEFAULT_SHAPE, null));
 
     public static final Id<SandLayerBlock> ASH_LAYER_BLOCK = registerNoItem("ash_pile", () -> new SandLayerBlock(BlockBehaviour.Properties.ofFullCopy(TFCBlocks.SAND.get(SandBlockType.RED).get()).mapColor(MapColor.NONE)));

@@ -18,6 +18,7 @@ import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCon
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulBlocks;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulRock;
+import net.strangelyng.beneathoverhaul.common.items.BeneathOverhaulItems;
 import net.strangelyng.beneathoverhaul.datagen.builders.LootTableBuilders;
 
 import java.util.Set;
@@ -105,13 +106,14 @@ public class BuiltInBlockLootTableProvider extends BlockLootSubProvider {
                         .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f)).when(ExplosionCondition.survivesExplosion())
                                 .add(LootItem.lootTableItem(TFCItems.SOOT).when(LootItemRandomChanceCondition.randomChance(0.5f)))));
 
-        this.dropSelf(BeneathOverhaulBlocks.MUSHROOM_ROOTS.get());
         this.dropSelf(BeneathOverhaulBlocks.MUSHROOM_SPROUTS.get());
 
         this.dropSelf(BeneathOverhaulBlocks.ASH_LAYER_BLOCK.get());
 
         this.add(BeneathOverhaulBlocks.ASH_LAYER_BLOCK.get(),
                 LootTableBuilders.createLayerBlockDropTable(BeneathOverhaulBlocks.ASH_LAYER_BLOCK.get(), TFCItems.POWDERS.get(Powder.WOOD_ASH).get()));
+
+        this.dropOther(BeneathOverhaulBlocks.FLY_AGARIC.get(), BeneathOverhaulItems.FLY_AGARIC.get());
     }
 
     public static Ore.Grade getTFCGrade(Ore.Grade grade) {

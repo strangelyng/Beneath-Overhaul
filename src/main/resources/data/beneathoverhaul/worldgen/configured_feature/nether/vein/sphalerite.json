@@ -1,0 +1,148 @@
+{
+  "type": "tfc:cluster_vein",
+  "config": {
+    "size": 45,
+    "rarity": 170,
+    "density": 0.5,
+    "min_y": 32,
+    "max_y": 128,
+    "random_name": "sphalerite",
+    "project": false,
+    "project_offset": false,
+    "near_lava": false,
+    "blocks": [
+      {
+        "replace": [
+          "beneathoverhaul:rock/raw/deepslate",
+          "tfc:mud/entisol",
+          "beneath:soul_clay",
+          "tfc:dirt/andisol",
+          "tfc:mud/andisol",
+          "tfc:peat",
+          "tfc:dirt/entisol"
+        ],
+        "with": [
+          {
+            "block": "beneathoverhaul:ore/poor_sphalerite/deepslate",
+            "weight": 35
+          },
+          {
+            "block": "beneathoverhaul:ore/normal_sphalerite/deepslate",
+            "weight": 40
+          },
+          {
+            "block": "beneathoverhaul:ore/rich_sphalerite/deepslate",
+            "weight": 25
+          },
+          {
+            "block": "beneathoverhaul:ore/sulfur/deepslate",
+            "weight": 15
+          },
+          {
+            "block": "beneathoverhaul:ore/pyrite/deepslate",
+            "weight": 10
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/basalt",
+          "minecraft:basalt"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/poor_sphalerite/basalt",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_sphalerite/basalt",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_sphalerite/basalt",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/sulfur/basalt",
+            "weight": 15
+          },
+          {
+            "block": "tfc:ore/pyrite/basalt",
+            "weight": 10
+          }
+        ]
+      },
+      {
+        "replace": [
+          "beneathoverhaul:rock/raw/blackstone",
+          "minecraft:magma_block"
+        ],
+        "with": [
+          {
+            "block": "beneathoverhaul:ore/poor_sphalerite/blackstone",
+            "weight": 35
+          },
+          {
+            "block": "beneathoverhaul:ore/normal_sphalerite/blackstone",
+            "weight": 40
+          },
+          {
+            "block": "beneathoverhaul:ore/rich_sphalerite/blackstone",
+            "weight": 25
+          },
+          {
+            "block": "beneathoverhaul:ore/sulfur/blackstone",
+            "weight": 15
+          },
+          {
+            "block": "beneathoverhaul:ore/pyrite/blackstone",
+            "weight": 10
+          }
+        ]
+      },
+      {
+        "replace": [
+          "beneathoverhaul:rock/raw/dripstone"
+        ],
+        "with": [
+          {
+            "block": "beneathoverhaul:ore/poor_sphalerite/dripstone",
+            "weight": 35
+          },
+          {
+            "block": "beneathoverhaul:ore/normal_sphalerite/dripstone",
+            "weight": 40
+          },
+          {
+            "block": "beneathoverhaul:ore/rich_sphalerite/dripstone",
+            "weight": 25
+          },
+          {
+            "block": "beneathoverhaul:ore/sulfur/dripstone",
+            "weight": 15
+          },
+          {
+            "block": "beneathoverhaul:ore/pyrite/dripstone",
+            "weight": 10
+          }
+        ]
+      }
+    ],
+    "indicator": {
+      "rarity": 15,
+      "depth": 1,
+      "underground_rarity": 40,
+      "underground_count": 150,
+      "blocks": [
+        {
+          "block": "beneath:sulfur",
+          "weight": 35
+        },
+        {
+          "block": "tfc:ore/small_sphalerite",
+          "weight": 40
+        }
+      ]
+    }
+  }
+}

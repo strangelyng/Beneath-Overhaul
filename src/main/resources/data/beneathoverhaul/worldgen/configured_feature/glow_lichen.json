@@ -3,7 +3,6 @@
 	"config": {
 		"block": "minecraft:glow_lichen",
 		"can_be_placed_on": [
-			"minecraft:calcite",
 			"tfc:rock/raw/gabbro",
 			"tfc:rock/hardened/gabbro",
 			"tfc:rock/raw/schist",

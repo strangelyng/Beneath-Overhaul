@@ -31,7 +31,10 @@ public class BuiltInLangProvider extends LanguageProvider {
         addBlock(BeneathOverhaulBlocks.CHARRED_LOG, "Charred Log");
         addBlock(BeneathOverhaulBlocks.MUSHROOM_ROOTS, "Mushroom Roots");
         addBlock(BeneathOverhaulBlocks.MUSHROOM_SPROUTS, "Mushroom Sprouts");
+        addBlock(BeneathOverhaulBlocks.FLY_AGARIC, "Fly Agaric");
         addBlock(BeneathOverhaulBlocks.ASH_LAYER_BLOCK, "Ash Pile");
+
+        addItem(BeneathOverhaulItems.FLY_AGARIC, "Fly Agaric Mushroom");
 
         // Ore Blocks
         Stream.of(Ore.values()).forEach(ore -> {

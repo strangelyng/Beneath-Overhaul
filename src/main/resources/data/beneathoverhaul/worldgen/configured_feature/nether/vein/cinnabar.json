@@ -1,0 +1,47 @@
+{
+  "type": "tfc:cluster_vein",
+  "config": {
+    "size": 45,
+    "rarity": 160,
+    "density": 0.5,
+    "min_y": 0,
+    "max_y": 128,
+    "random_name": "cinnabar",
+    "project": false,
+    "project_offset": false,
+    "near_lava": false,
+    "blocks": [
+      {
+        "replace": [
+          "tfc:rock/raw/granite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/cinnabar/granite",
+            "weight": 90
+          },
+          {
+            "block": "tfc:ore/ruby/granite",
+            "weight": 10
+          }
+        ]
+      },
+      {
+        "replace": [
+          "beneathoverhaul:rock/raw/blackstone",
+          "minecraft:magma_block"
+        ],
+        "with": [
+          {
+            "block": "beneathoverhaul:ore/cinnabar/blackstone",
+            "weight": 90
+          },
+          {
+            "block": "beneathoverhaul:ore/ruby/blackstone",
+            "weight": 10
+          }
+        ]
+      }
+    ]
+  }
+}

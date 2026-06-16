@@ -18,7 +18,7 @@
 		"blocks": [
 			{
 				"replace": [
-					"minecraft:deepslate",
+					"beneathoverhaul:rock/raw/deepslate",
 					"beneathoverhaul:rock/hardened/deepslate",
 					"tfc:mud/entisol",
 					"beneath:soul_clay",
@@ -26,7 +26,7 @@
 					"tfc:mud/andisol",
 					"tfc:peat",
 					"tfc:dirt/entisol",
-					"minecraft:blackstone",
+					"beneathoverhaul:rock/raw/blackstone",
 					"beneathoverhaul:rock/hardened/blackstone",
 					"tfc:rock/raw/schist",
 					"tfc:rock/hardened/schist",

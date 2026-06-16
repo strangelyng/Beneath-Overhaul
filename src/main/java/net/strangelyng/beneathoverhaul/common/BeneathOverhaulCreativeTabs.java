@@ -23,6 +23,7 @@ public final class BeneathOverhaulCreativeTabs {
 
     public static final Id ORES = register("ores", () -> new ItemStack(BeneathOverhaulBlocks.BENEATH_ROCK_TFC_GRADED_ORES.get(BeneathOverhaulRock.DEEPSLATE).get(Ore.NATIVE_COPPER).get(Ore.Grade.NORMAL)), BeneathOverhaulCreativeTabs::fillOresTab);
     public static final Id ROCKS = register("rock", () -> new ItemStack(BeneathOverhaulBlocks.ROCK_BLOCKS.get(BeneathOverhaulRock.DEEPSLATE).get(Rock.BlockType.HARDENED)), BeneathOverhaulCreativeTabs::fillRocksTab);
+    public static final Id MISC = register("misc", () -> new ItemStack(BeneathOverhaulBlocks.MUSHROOM_SPROUTS.get()), BeneathOverhaulCreativeTabs::fillMiscTab);
 
     private static void fillOresTab(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out) {
         for (Ore ore : Ore.values()) {
@@ -65,6 +66,12 @@ public final class BeneathOverhaulCreativeTabs {
             }
             accept(out, BeneathOverhaulItems.BRICKS, rock);
         }
+    }
+
+    private static void fillMiscTab(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out) {
+        out.accept(BeneathOverhaulBlocks.MUSHROOM_SPROUTS.asItem());
+        out.accept(BeneathOverhaulBlocks.MUSHROOM_ROOTS.asItem());
+        out.accept(BeneathOverhaulItems.FLY_AGARIC);
     }
 
     // Helpers

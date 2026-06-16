@@ -1,0 +1,199 @@
+{
+  "type": "tfc:cluster_vein",
+  "config": {
+    "size": 37,
+    "rarity": 260,
+    "density": 0.55,
+    "min_y": 0,
+    "max_y": 128,
+    "random_name": "native_gold",
+    "project": false,
+    "project_offset": false,
+    "near_lava": false,
+    "blocks": [
+      {
+        "replace": [
+          "tfc:rock/raw/gabbro"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/poor_native_gold/gabbro",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_native_gold/gabbro",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_native_gold/gabbro",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/normal_hematite/gabbro",
+            "weight": 15
+          },
+          {
+            "block": "tfc:ore/normal_limonite/gabbro",
+            "weight": 5
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/diorite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/poor_native_gold/diorite",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_native_gold/diorite",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_native_gold/diorite",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/normal_hematite/diorite",
+            "weight": 15
+          },
+          {
+            "block": "tfc:ore/normal_limonite/diorite",
+            "weight": 5
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gneiss"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/poor_native_gold/gneiss",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_native_gold/gneiss",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_native_gold/gneiss",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/normal_hematite/gneiss",
+            "weight": 15
+          },
+          {
+            "block": "tfc:ore/normal_limonite/gneiss",
+            "weight": 5
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/granite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/poor_native_gold/granite",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_native_gold/granite",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_native_gold/granite",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/normal_hematite/granite",
+            "weight": 15
+          },
+          {
+            "block": "tfc:ore/normal_limonite/granite",
+            "weight": 5
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/schist"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/poor_native_gold/schist",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_native_gold/schist",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_native_gold/schist",
+            "weight": 25
+          },
+          {
+            "block": "tfc:ore/normal_hematite/schist",
+            "weight": 15
+          },
+          {
+            "block": "tfc:ore/normal_limonite/schist",
+            "weight": 5
+          }
+        ]
+      },
+      {
+        "replace": [
+          "beneathoverhaul:rock/raw/blackstone",
+          "minecraft:magma_block"
+        ],
+        "with": [
+          {
+            "block": "beneathoverhaul:ore/poor_native_gold/blackstone",
+            "weight": 35
+          },
+          {
+            "block": "beneathoverhaul:ore/normal_native_gold/blackstone",
+            "weight": 40
+          },
+          {
+            "block": "beneathoverhaul:ore/rich_native_gold/blackstone",
+            "weight": 25
+          },
+          {
+            "block": "beneathoverhaul:ore/normal_hematite/blackstone",
+            "weight": 15
+          },
+          {
+            "block": "beneathoverhaul:ore/normal_limonite/blackstone",
+            "weight": 5
+          }
+        ]
+      }
+    ],
+    "indicator": {
+      "rarity": 15,
+      "depth": 1,
+      "underground_rarity": 40,
+      "underground_count": 150,
+      "blocks": [
+        {
+          "block": "tfc:ore/small_limonite",
+          "weight": 5
+        },
+        {
+          "block": "tfc:ore/small_hematite",
+          "weight": 15
+        },
+        {
+          "block": "tfc:ore/small_native_gold",
+          "weight": 75
+        }
+      ]
+    }
+  }
+}

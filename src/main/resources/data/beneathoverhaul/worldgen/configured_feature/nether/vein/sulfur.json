@@ -1,0 +1,110 @@
+{
+  "type": "tfc:cluster_vein",
+  "config": {
+    "size": 50,
+    "rarity": 165,
+    "density": 0.3,
+    "min_y": 0,
+    "max_y": 128,
+    "random_name": "sulfur",
+    "project": false,
+    "project_offset": false,
+    "near_lava": false,
+    "blocks": [
+      {
+        "replace": [
+          "tfc:rock/raw/diorite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/sulfur/diorite",
+            "weight": 50
+          },
+          {
+            "block": "tfc:ore/pyrite/diorite",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_sphalerite/diorite",
+            "weight": 15
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/basalt",
+          "minecraft:basalt"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/sulfur/basalt",
+            "weight": 50
+          },
+          {
+            "block": "tfc:ore/pyrite/basalt",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_sphalerite/basalt",
+            "weight": 15
+          }
+        ]
+      },
+      {
+        "replace": [
+          "beneathoverhaul:rock/raw/blackstone",
+          "minecraft:magma_block"
+        ],
+        "with": [
+          {
+            "block": "beneathoverhaul:ore/sulfur/blackstone",
+            "weight": 50
+          },
+          {
+            "block": "beneathoverhaul:ore/pyrite/blackstone",
+            "weight": 35
+          },
+          {
+            "block": "beneathoverhaul:ore/normal_sphalerite/blackstone",
+            "weight": 15
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/schist"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/sulfur/schist",
+            "weight": 50
+          },
+          {
+            "block": "tfc:ore/pyrite/schist",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_sphalerite/schist",
+            "weight": 15
+          }
+        ]
+      }
+    ],
+    "indicator": {
+      "rarity": 15,
+      "depth": 1,
+      "underground_rarity": 40,
+      "underground_count": 150,
+      "blocks": [
+        {
+          "block": "beneath:sulfur",
+          "weight": 50
+        },
+        {
+          "block": "tfc:ore/small_sphalerite",
+          "weight": 15
+        }
+      ]
+    }
+  }
+}

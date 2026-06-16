@@ -1,5 +1,6 @@
 package net.strangelyng.beneathoverhaul.datagen.providers;
 
+import com.eerussianguy.beneath.common.blocks.BeneathBlockTags;
 import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
@@ -163,6 +164,10 @@ public class BuiltInBlockTagProvider extends TagsProvider<Block> {
             this.tag(BlockTags.STONE_BUTTONS).add(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.BUTTON).key());
             this.tag(BlockTags.BUTTONS).add(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.BUTTON).key());
         });
+
+        // Mushrooms
+
+        this.tag(BeneathBlockTags.MUSHROOMS).add(BeneathOverhaulBlocks.FLY_AGARIC.key());
     }
 
     private <T1 extends RegistryRock, T2 extends Enum> void addOreTags(Map<T1, Map<T2, BeneathOverhaulBlocks.Id<Block>>> map, T2 ore, T1 rock) {
