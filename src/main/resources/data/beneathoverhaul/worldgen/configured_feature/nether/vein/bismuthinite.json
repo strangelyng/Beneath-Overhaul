@@ -1,12 +1,12 @@
 {
   "type": "tfc:cluster_vein",
   "config": {
-    "size": 30,
-    "rarity": 160,
+    "size": 40,
+    "rarity": 170,
     "density": 0.5,
-    "min_y": 16,
+    "min_y": 0,
     "max_y": 128,
-    "random_name": "garnierite",
+    "random_name": "bismuthinite",
     "project": false,
     "project_offset": false,
     "near_lava": false,
@@ -17,15 +17,15 @@
         ],
         "with": [
           {
-            "block": "tfc:ore/poor_garnierite/granite",
+            "block": "tfc:ore/poor_bismuthinite/granite",
             "weight": 35
           },
           {
-            "block": "tfc:ore/normal_garnierite/granite",
+            "block": "tfc:ore/normal_bismuthinite/granite",
             "weight": 40
           },
           {
-            "block": "tfc:ore/rich_garnierite/granite",
+            "block": "tfc:ore/rich_bismuthinite/granite",
             "weight": 25
           }
         ]
@@ -36,15 +36,15 @@
         ],
         "with": [
           {
-            "block": "tfc:ore/poor_garnierite/diorite",
+            "block": "tfc:ore/poor_bismuthinite/diorite",
             "weight": 35
           },
           {
-            "block": "tfc:ore/normal_garnierite/diorite",
+            "block": "tfc:ore/normal_bismuthinite/diorite",
             "weight": 40
           },
           {
-            "block": "tfc:ore/rich_garnierite/diorite",
+            "block": "tfc:ore/rich_bismuthinite/diorite",
             "weight": 25
           }
         ]
@@ -55,15 +55,15 @@
         ],
         "with": [
           {
-            "block": "tfc:ore/poor_garnierite/gabbro",
+            "block": "tfc:ore/poor_bismuthinite/gabbro",
             "weight": 35
           },
           {
-            "block": "tfc:ore/normal_garnierite/gabbro",
+            "block": "tfc:ore/normal_bismuthinite/gabbro",
             "weight": 40
           },
           {
-            "block": "tfc:ore/rich_garnierite/gabbro",
+            "block": "tfc:ore/rich_bismuthinite/gabbro",
             "weight": 25
           }
         ]
@@ -75,15 +75,15 @@
         ],
         "with": [
           {
-            "block": "beneathoverhaul:ore/poor_garnierite/blackstone",
+            "block": "beneathoverhaul:ore/poor_bismuthinite/blackstone",
             "weight": 35
           },
           {
-            "block": "beneathoverhaul:ore/normal_garnierite/blackstone",
+            "block": "beneathoverhaul:ore/normal_bismuthinite/blackstone",
             "weight": 40
           },
           {
-            "block": "beneathoverhaul:ore/rich_garnierite/blackstone",
+            "block": "beneathoverhaul:ore/rich_bismuthinite/blackstone",
             "weight": 25
           }
         ]
@@ -96,7 +96,7 @@
       "underground_count": 150,
       "blocks": [
         {
-          "block": "tfc:ore/small_garnierite"
+          "block": "tfc:ore/small_bismuthinite"
         }
       ]
     }

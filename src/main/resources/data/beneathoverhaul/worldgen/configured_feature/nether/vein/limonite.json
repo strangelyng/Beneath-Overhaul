@@ -2,11 +2,11 @@
   "type": "tfc:cluster_vein",
   "config": {
     "size": 30,
-    "rarity": 205,
+    "rarity": 240,
     "density": 0.45,
     "min_y": 0,
     "max_y": 128,
-    "random_name": "magnetite",
+    "random_name": "limonite",
     "project": false,
     "project_offset": false,
     "near_lava": false,
@@ -23,15 +23,15 @@
         ],
         "with": [
           {
-            "block": "beneathoverhaul:ore/poor_magnetite/deepslate",
+            "block": "beneathoverhaul:ore/poor_limonite/deepslate",
             "weight": 35
           },
           {
-            "block": "beneathoverhaul:ore/normal_magnetite/deepslate",
+            "block": "beneathoverhaul:ore/normal_limonite/deepslate",
             "weight": 40
           },
           {
-            "block": "beneathoverhaul:ore/rich_magnetite/deepslate",
+            "block": "beneathoverhaul:ore/rich_limonite/deepslate",
             "weight": 25
           }
         ]
@@ -42,15 +42,15 @@
         ],
         "with": [
           {
-            "block": "beneathoverhaul:ore/poor_magnetite/dripstone",
+            "block": "beneathoverhaul:ore/poor_limonite/dripstone",
             "weight": 35
           },
           {
-            "block": "beneathoverhaul:ore/normal_magnetite/dripstone",
+            "block": "beneathoverhaul:ore/normal_limonite/dripstone",
             "weight": 40
           },
           {
-            "block": "beneathoverhaul:ore/rich_magnetite/dripstone",
+            "block": "beneathoverhaul:ore/rich_limonite/dripstone",
             "weight": 25
           }
         ]
@@ -63,7 +63,7 @@
       "underground_count": 150,
       "blocks": [
         {
-          "block": "tfc:ore/small_magnetite"
+          "block": "tfc:ore/small_limonite"
         }
       ]
     }

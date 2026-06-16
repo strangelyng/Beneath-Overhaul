@@ -1,7 +1,7 @@
 {
   "type": "tfc:cluster_vein",
   "config": {
-    "size": 40,
+    "size": 30,
     "rarity": 220,
     "density": 0.35,
     "min_y": 32,
@@ -39,22 +39,6 @@
         "with": [
           {
             "block": "beneathoverhaul:ore/lapis_lazuli/dripstone",
-            "weight": 90
-          },
-          {
-            "block": "minecraft:calcite",
-            "weight": 10
-          }
-        ]
-      },
-      {
-        "replace": [
-          "beneathoverhaul:rock/raw/blackstone",
-          "minecraft:magma_block"
-        ],
-        "with": [
-          {
-            "block": "beneathoverhaul:ore/lapis_lazuli/blackstone",
             "weight": 90
           },
           {

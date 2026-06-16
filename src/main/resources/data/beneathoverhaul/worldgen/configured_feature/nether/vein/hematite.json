@@ -1,7 +1,7 @@
 {
   "type": "tfc:cluster_vein",
   "config": {
-    "size": 35,
+    "size": 30,
     "rarity": 220,
     "density": 0.45,
     "min_y": 0,
@@ -13,77 +13,7 @@
     "blocks": [
       {
         "replace": [
-          "beneathoverhaul:rock/raw/deepslate",
-          "tfc:mud/entisol",
-          "beneath:soul_clay",
-          "tfc:dirt/andisol",
-          "tfc:mud/andisol",
-          "tfc:peat",
-          "tfc:dirt/entisol"
-        ],
-        "with": [
-          {
-            "block": "beneathoverhaul:ore/poor_hematite/deepslate",
-            "weight": 35
-          },
-          {
-            "block": "beneathoverhaul:ore/normal_hematite/deepslate",
-            "weight": 40
-          },
-          {
-            "block": "beneathoverhaul:ore/rich_hematite/deepslate",
-            "weight": 25
-          },
-          {
-            "block": "beneathoverhaul:ore/normal_limonite/deepslate",
-            "weight": 15
-          },
-          {
-            "block": "beneathoverhaul:ore/ruby/deepslate",
-            "weight": 10
-          },
-          {
-            "block": "beneathoverhaul:ore/normal_native_gold/deepslate",
-            "weight": 5
-          }
-        ]
-      },
-      {
-        "replace": [
-          "beneathoverhaul:rock/raw/blackstone",
-          "minecraft:magma_block"
-        ],
-        "with": [
-          {
-            "block": "beneathoverhaul:ore/poor_hematite/blackstone",
-            "weight": 35
-          },
-          {
-            "block": "beneathoverhaul:ore/normal_hematite/blackstone",
-            "weight": 40
-          },
-          {
-            "block": "beneathoverhaul:ore/rich_hematite/blackstone",
-            "weight": 25
-          },
-          {
-            "block": "beneathoverhaul:ore/normal_limonite/blackstone",
-            "weight": 15
-          },
-          {
-            "block": "beneathoverhaul:ore/ruby/blackstone",
-            "weight": 10
-          },
-          {
-            "block": "beneathoverhaul:ore/normal_native_gold/blackstone",
-            "weight": 5
-          }
-        ]
-      },
-      {
-        "replace": [
-          "tfc:rock/raw/basalt",
-          "minecraft:basalt"
+          "tfc:rock/raw/basalt"
         ],
         "with": [
           {
@@ -97,49 +27,6 @@
           {
             "block": "tfc:ore/rich_hematite/basalt",
             "weight": 25
-          },
-          {
-            "block": "tfc:ore/normal_limonite/basalt",
-            "weight": 15
-          },
-          {
-            "block": "tfc:ore/ruby/basalt",
-            "weight": 10
-          },
-          {
-            "block": "tfc:ore/normal_native_gold/basalt",
-            "weight": 5
-          }
-        ]
-      },
-      {
-        "replace": [
-          "beneathoverhaul:rock/raw/dripstone"
-        ],
-        "with": [
-          {
-            "block": "beneathoverhaul:ore/poor_hematite/dripstone",
-            "weight": 35
-          },
-          {
-            "block": "beneathoverhaul:ore/normal_hematite/dripstone",
-            "weight": 40
-          },
-          {
-            "block": "beneathoverhaul:ore/rich_hematite/dripstone",
-            "weight": 25
-          },
-          {
-            "block": "beneathoverhaul:ore/normal_limonite/dripstone",
-            "weight": 15
-          },
-          {
-            "block": "beneathoverhaul:ore/ruby/dripstone",
-            "weight": 10
-          },
-          {
-            "block": "beneathoverhaul:ore/normal_native_gold/dripstone",
-            "weight": 5
           }
         ]
       }
@@ -151,16 +38,7 @@
       "underground_count": 150,
       "blocks": [
         {
-          "block": "tfc:ore/small_limonite",
-          "weight": 15
-        },
-        {
-          "block": "tfc:ore/small_hematite",
-          "weight": 35
-        },
-        {
-          "block": "tfc:ore/small_native_gold",
-          "weight": 5
+          "block": "tfc:ore/small_hematite"
         }
       ]
     }
