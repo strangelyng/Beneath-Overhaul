@@ -25,7 +25,12 @@ public class BeneathOverhaulItems {
     );
 
     public static final ItemId FLY_AGARIC = register("food/fly_agaric", () -> new Item(new Item.Properties().food(
-            new FoodProperties.Builder().effect(() -> new MobEffectInstance(MobEffects.POISON, 1200, 1), 1.0F).build()
+            new FoodProperties.Builder()
+                    .nutrition(4)
+                    .saturationModifier(0.3f)
+                    .effect(new MobEffectInstance(MobEffects.POISON, 600, 0), 0.6F)
+                    .effect(new MobEffectInstance(MobEffects.CONFUSION, 300, 0), 0.5F)
+                    .build()
     )));
 
     private static ItemId register(String name)

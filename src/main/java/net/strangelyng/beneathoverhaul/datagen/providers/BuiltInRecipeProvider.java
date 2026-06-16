@@ -76,7 +76,7 @@ public class BuiltInRecipeProvider extends RecipeProvider implements
 
     @Override
     public void add(String prefix, String name, Recipe<?> recipe) {
-        output.accept(ResourceLocation.fromNamespaceAndPath(BeneathOverhaul.MOD_ID, (prefix + "/" + name).toLowerCase(Locale.ROOT)), recipe, null);
+        output.accept(BeneathOverhaul.rl((prefix + "/" + name).toLowerCase(Locale.ROOT)), recipe, null);
     }
 
     @Override

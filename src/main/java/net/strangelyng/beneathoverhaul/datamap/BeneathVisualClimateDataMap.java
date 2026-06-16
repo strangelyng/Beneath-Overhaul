@@ -12,7 +12,7 @@ import net.strangelyng.beneathoverhaul.BeneathOverhaul;
 @EventBusSubscriber(modid = BeneathOverhaul.MOD_ID)
 public class BeneathVisualClimateDataMap {
     public static final DataMapType<Biome, BeneathVisualClimateData> BENEATH_VISUAL_CLIMATE_DATA = DataMapType.builder(
-            ResourceLocation.fromNamespaceAndPath(BeneathOverhaul.MOD_ID, "beneath_visual_climate_data"),
+            BeneathOverhaul.rl("beneath_visual_climate_data"),
             Registries.BIOME,
             BeneathVisualClimateData.CODEC
     ).synced(BeneathVisualClimateData.CODEC, false).build();
