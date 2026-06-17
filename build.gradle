@@ -176,10 +176,6 @@ dependencies {
 
     // Beneath
     implementation("curse.maven:beneath-1113980:$beneath_version")
-
-    // Mobs
-    // implementation("curse.maven:enderman-overhaul-574409:$enderman_overhaul_version")
-    // implementation("curse.maven:primitive-creatures-1218288:$primitive_creatures_version")
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

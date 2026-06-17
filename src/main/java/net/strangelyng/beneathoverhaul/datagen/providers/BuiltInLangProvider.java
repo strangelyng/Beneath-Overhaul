@@ -27,7 +27,25 @@ public class BuiltInLangProvider extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
-        // Misc Lang
+        // Creative Tabs
+        add("beneathoverhaul.creative_tab.ores", "Beneath Overhaul Ores");
+        add("beneathoverhaul.creative_tab.rock", "Beneath Overhaul Rock Stuff");
+        add("beneathoverhaul.creative_tab.misc", "Beneath Overahul Miscellaneous");
+
+        // Biomes
+        add("biome.beneathoverhaul.nether/ash_forest", "Ash Forest");
+        add("biome.beneathoverhaul.nether/basalt_deltas", "Basalt Deltas");
+        add("biome.beneathoverhaul.nether/decaying_caverns", "Decaying Caverns");
+        add("biome.beneathoverhaul.nether/diorite_caves", "Diorite Caves");
+        add("biome.beneathoverhaul.nether/gabbro_caves", "Gabbro Caves");
+        add("biome.beneathoverhaul.nether/gneiss_caves", "Gneiss Caves");
+        add("biome.beneathoverhaul.nether/granite_caves", "Granite Caves");
+        add("biome.beneathoverhaul.nether/lava_floes", "Lava Floes");
+        add("biome.beneathoverhaul.nether/lush_hollow", "Lush Hollow");
+        add("biome.beneathoverhaul.nether/schist_caves", "Schist Caves");
+        add("biome.beneathoverhaul.nether/webbed_lair", "Webbed Lair");
+
+        // Blocks & Items
         addBlock(BeneathOverhaulBlocks.CHARRED_LOG, "Charred Log");
         addBlock(BeneathOverhaulBlocks.MUSHROOM_ROOTS, "Mushroom Roots");
         addBlock(BeneathOverhaulBlocks.MUSHROOM_SPROUTS, "Mushroom Sprouts");
@@ -45,7 +63,9 @@ public class BuiltInLangProvider extends LanguageProvider {
                             createOreKey(BeneathOverhaulBlocks.BENEATH_ROCK_TFC_GRADED_ORES.get(rock).get(ore).get(grade), getName(grade.name()) + " " + getName(rock), getName(ore.name()));
                         });
                     } else {
-                        createOreKey(BeneathOverhaulBlocks.BENEATH_ROCK_TFC_ORES.get(rock).get(ore), getName(rock), getName(ore.name()));
+                        String oreName = ore != Ore.DIAMOND ? ore.name() : "KIMBERLITE";
+
+                        createOreKey(BeneathOverhaulBlocks.BENEATH_ROCK_TFC_ORES.get(rock).get(ore), getName(rock), getName(oreName));
                     }
                 });
             }

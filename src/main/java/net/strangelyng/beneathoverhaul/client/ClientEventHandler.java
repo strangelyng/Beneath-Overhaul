@@ -6,11 +6,15 @@ import net.minecraft.client.renderer.RenderType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.neoforge.client.event.RegisterDimensionSpecialEffectsEvent;
+import net.strangelyng.beneathoverhaul.BeneathOverhaul;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulBlocks;
+import net.strangelyng.beneathoverhaul.world.BeneathEffects;
 
 public class ClientEventHandler {
     public static void init(IEventBus bus, ModContainer mod) {
         bus.addListener(ClientEventHandler::clientSetup);
+        bus.addListener(ClientEventHandler::registerDimensionEffects);
     }
 
     @SuppressWarnings("deprecation")
@@ -39,5 +43,11 @@ public class ClientEventHandler {
                 inner.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout))));
 
         ItemBlockRenderTypes.setRenderLayer(BeneathOverhaulBlocks.FLY_AGARIC.get(), cutout);
+
+
+    }
+
+    public static void registerDimensionEffects(RegisterDimensionSpecialEffectsEvent event) {
+        event.register(BeneathOverhaul.rl("beneath_effects"), new BeneathEffects());
     }
 }
