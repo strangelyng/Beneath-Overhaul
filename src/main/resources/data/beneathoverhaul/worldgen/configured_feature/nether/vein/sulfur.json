@@ -1,16 +1,16 @@
 {
   "type": "tfc:disc_vein",
   "config": {
-    "height": 9,
-    "size": 27,
-    "rarity": 165,
+    "height": 5,
+    "size": 18,
+    "rarity": 120,
     "density": 0.3,
     "min_y": 0,
-    "max_y": 128,
+    "max_y": 64,
     "random_name": "sulfur",
     "project": false,
     "project_offset": false,
-    "near_lava": true,
+    "near_lava": false,
     "blocks": [
       {
         "replace": [

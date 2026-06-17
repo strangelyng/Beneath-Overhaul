@@ -46,17 +46,6 @@
             "block": "tfc:ore/graphite/schist"
           }
         ]
-      },
-      {
-        "replace": [
-          "beneathoverhaul:rock/raw/blackstone",
-          "minecraft:magma_block"
-        ],
-        "with": [
-          {
-            "block": "beneathoverhaul:ore/diamond/blackstone"
-          }
-        ]
       }
     ]
   }
