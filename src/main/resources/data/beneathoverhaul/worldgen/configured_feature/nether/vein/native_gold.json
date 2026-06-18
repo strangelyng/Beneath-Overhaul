@@ -2,10 +2,10 @@
   "type": "tfc:cluster_vein",
   "config": {
     "size": 30,
-    "rarity": 100,
-    "density": 0.55,
+    "rarity": 60,
+    "density": 0.5,
     "min_y": 0,
-    "max_y": 128,
+    "max_y": 80,
     "random_name": "native_gold",
     "project": false,
     "project_offset": false,
