@@ -1,0 +1,12 @@
+{
+    "replace": false,
+    "values": [
+        "beneathoverhaul:rock/raw/blackstone",
+        "beneathoverhaul:rock/raw/deepslate",
+        "beneathoverhaul:rock/raw/dripstone",
+        "beneathoverhaul:rock/hardened/deepslate",
+        "beneathoverhaul:rock/hardened/blackstone",
+        "beneathoverhaul:rock/hardened/dripstone",
+        "#minecraft:base_stone_nether"
+    ]
+}

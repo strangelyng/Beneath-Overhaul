@@ -1,0 +1,16 @@
+{
+    "replace": false,
+    "values": [
+        "beneathoverhaul:nether/lush_hollow",
+        "beneathoverhaul:nether/decaying_caverns",
+        "beneathoverhaul:nether/basalt_deltas",
+        "beneathoverhaul:nether/ash_forest",
+        "beneathoverhaul:nether/lava_floes",
+        "beneathoverhaul:nether/webbed_lair",
+        "beneathoverhaul:nether/gneiss_caves",
+        "beneathoverhaul:nether/diorite_caves",
+        "beneathoverhaul:nether/gabbro_caves",
+        "beneathoverhaul:nether/granite_caves",
+        "beneathoverhaul:nether/schist_caves"
+    ]
+}

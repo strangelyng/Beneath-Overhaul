@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "beneathoverhaul:rock/smooth/dripstone"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## "
+  ],
+  "result": {
+    "count": 4,
+    "id": "beneathoverhaul:rock/smooth/dripstone_stairs"
+  }
+}

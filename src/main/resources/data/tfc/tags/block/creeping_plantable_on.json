@@ -1,0 +1,10 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:moss_block",
+        "beneathoverhaul:rock/raw/deepslate",
+        "beneathoverhaul:rock/raw/blackstone",
+        "beneathoverhaul:rock/hardened/deepslate",
+        "beneathoverhaul:rock/hardened/blackstone"
+    ]
+}

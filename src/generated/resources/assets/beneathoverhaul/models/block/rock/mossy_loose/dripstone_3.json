@@ -1,7 +1,7 @@
 {
   "parent": "tfc:block/rock/loose_sedimentary_3",
   "textures": {
-    "particle": "beneathoverhaul:block/rock/mossy_cobble/dripstone",
-    "texture": "beneathoverhaul:block/rock/mossy_cobble/dripstone"
+    "particle": "beneathoverhaul:block/rock/cobble/dripstone",
+    "texture": "beneathoverhaul:block/rock/cobble/dripstone"
   }
 }

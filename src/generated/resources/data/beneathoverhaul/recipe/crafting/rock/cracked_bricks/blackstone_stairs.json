@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "beneathoverhaul:rock/cracked_bricks/blackstone"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## "
+  ],
+  "result": {
+    "count": 4,
+    "id": "beneathoverhaul:rock/cracked_bricks/blackstone_stairs"
+  }
+}

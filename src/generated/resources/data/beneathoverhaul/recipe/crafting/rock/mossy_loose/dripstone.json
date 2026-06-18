@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "beneathoverhaul:rock/mossy_cobble/dripstone"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "beneathoverhaul:rock/mossy_loose/dripstone"
+  }
+}

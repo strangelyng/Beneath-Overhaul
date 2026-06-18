@@ -1,0 +1,23 @@
+{
+	"feature": "beneathoverhaul:nether/surface/beneath_mushrooms",
+	"placement": [
+		{
+			"type": "minecraft:height_range",
+			"height": {
+				"type": "minecraft:uniform",
+				"max_inclusive": {
+					"absolute": 120
+				},
+				"min_inclusive": {
+					"above_bottom": 36
+				}
+			}
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"type": "minecraft:biome"
+		}
+	]
+}

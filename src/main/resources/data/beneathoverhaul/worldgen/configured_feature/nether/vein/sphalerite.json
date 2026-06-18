@@ -1,0 +1,124 @@
+{
+  "type": "tfc:cluster_vein",
+  "config": {
+    "size": 30,
+    "rarity": 60,
+    "density": 0.5,
+    "min_y": 24,
+    "max_y": 128,
+    "random_name": "sphalerite",
+    "project": false,
+    "project_offset": false,
+    "near_lava": false,
+    "blocks": [
+      {
+        "replace": [
+          "tfc:rock/raw/granite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/poor_sphalerite/granite",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_sphalerite/granite",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_sphalerite/granite",
+            "weight": 25
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/diorite"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/poor_sphalerite/diorite",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_sphalerite/diorite",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_sphalerite/diorite",
+            "weight": 25
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gabbro"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/poor_sphalerite/gabbro",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_sphalerite/gabbro",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_sphalerite/gabbro",
+            "weight": 25
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/basalt",
+          "minecraft:basalt"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/poor_sphalerite/basalt",
+            "weight": 35
+          },
+          {
+            "block": "tfc:ore/normal_sphalerite/basalt",
+            "weight": 40
+          },
+          {
+            "block": "tfc:ore/rich_sphalerite/basalt",
+            "weight": 25
+          }
+        ]
+      },
+      {
+        "replace": [
+          "beneathoverhaul:rock/raw/blackstone",
+          "minecraft:magma_block"
+        ],
+        "with": [
+          {
+            "block": "beneathoverhaul:ore/poor_sphalerite/blackstone",
+            "weight": 35
+          },
+          {
+            "block": "beneathoverhaul:ore/normal_sphalerite/blackstone",
+            "weight": 40
+          },
+          {
+            "block": "beneathoverhaul:ore/rich_sphalerite/blackstone",
+            "weight": 25
+          }
+        ]
+      }
+    ],
+    "indicator": {
+      "rarity": 15,
+      "depth": 1,
+      "underground_rarity": 40,
+      "underground_count": 150,
+      "blocks": [
+        {
+          "block": "tfc:ore/small_sphalerite"
+        }
+      ]
+    }
+  }
+}

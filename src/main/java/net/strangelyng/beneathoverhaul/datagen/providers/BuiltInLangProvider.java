@@ -1,8 +1,10 @@
 package net.strangelyng.beneathoverhaul.datagen.providers;
 
+import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.minecraft.data.PackOutput;
 import net.minecraft.util.StringRepresentable;
+import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.LanguageProvider;
 import net.strangelyng.beneathoverhaul.BeneathOverhaul;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulBlocks;
@@ -10,7 +12,13 @@ import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulRock;
 import net.strangelyng.beneathoverhaul.common.items.BeneathOverhaulItems;
 import net.strangelyng.beneathoverhaul.util.TextUtils;
 
+import java.util.function.Supplier;
 import java.util.stream.Stream;
+
+/*
+ * Special thanks to Gourmandd, much of the datagen code is based on their work for On-Ancient-Ground-Core
+ * https://github.com/Gourmandd/On-Ancient-Ground-Core/blob/main/src/main/java/net/gourmand/core/datagen/providers/CoreLanguageProvider.java
+ */
 
 public class BuiltInLangProvider extends LanguageProvider {
     protected BuiltInLangProvider(PackOutput output) {
@@ -19,6 +27,51 @@ public class BuiltInLangProvider extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
+        // Creative Tabs
+        add("beneathoverhaul.creative_tab.ores", "Beneath Overhaul Ores");
+        add("beneathoverhaul.creative_tab.rock", "Beneath Overhaul Rock Stuff");
+        add("beneathoverhaul.creative_tab.misc", "Beneath Overahul Miscellaneous");
+
+        // Biomes
+        add("biome.beneathoverhaul.nether/ash_forest", "Ash Forest");
+        add("biome.beneathoverhaul.nether/basalt_deltas", "Basalt Deltas");
+        add("biome.beneathoverhaul.nether/decaying_caverns", "Decaying Caverns");
+        add("biome.beneathoverhaul.nether/diorite_caves", "Diorite Caves");
+        add("biome.beneathoverhaul.nether/gabbro_caves", "Gabbro Caves");
+        add("biome.beneathoverhaul.nether/gneiss_caves", "Gneiss Caves");
+        add("biome.beneathoverhaul.nether/granite_caves", "Granite Caves");
+        add("biome.beneathoverhaul.nether/lava_floes", "Lava Floes");
+        add("biome.beneathoverhaul.nether/lush_hollow", "Lush Hollow");
+        add("biome.beneathoverhaul.nether/schist_caves", "Schist Caves");
+        add("biome.beneathoverhaul.nether/webbed_lair", "Webbed Lair");
+
+        // Blocks & Items
+        addBlock(BeneathOverhaulBlocks.CHARRED_LOG, "Charred Log");
+        addBlock(BeneathOverhaulBlocks.MUSHROOM_ROOTS, "Mushroom Roots");
+        addBlock(BeneathOverhaulBlocks.MUSHROOM_SPROUTS, "Mushroom Sprouts");
+        addBlock(BeneathOverhaulBlocks.FLY_AGARIC, "Fly Agaric");
+        addBlock(BeneathOverhaulBlocks.ASH_LAYER_BLOCK, "Ash Pile");
+
+        addItem(BeneathOverhaulItems.FLY_AGARIC, "Fly Agaric Mushroom");
+
+        // Ore Blocks
+        Stream.of(Ore.values()).forEach(ore -> {
+            if (ore.hasBlock()) {
+                Stream.of(BeneathOverhaulRock.VALUES).forEach(rock -> {
+                    if (ore.isGraded()) {
+                        Stream.of(Ore.Grade.values()).forEach(grade -> {
+                            createOreKey(BeneathOverhaulBlocks.BENEATH_ROCK_TFC_GRADED_ORES.get(rock).get(ore).get(grade), getName(grade.name()) + " " + getName(rock), getName(ore.name()));
+                        });
+                    } else {
+                        String oreName = ore != Ore.DIAMOND ? ore.name() : "KIMBERLITE";
+
+                        createOreKey(BeneathOverhaulBlocks.BENEATH_ROCK_TFC_ORES.get(rock).get(ore), getName(rock), getName(oreName));
+                    }
+                });
+            }
+        });
+
+        // Rock Blocks
         Stream.of(BeneathOverhaulRock.VALUES).forEach(rock -> {
             Stream.of(Rock.BlockType.values()).forEach(type -> {
                 if (type.hasVariants()) {
@@ -63,13 +116,29 @@ public class BuiltInLangProvider extends LanguageProvider {
                     case MOSSY_LOOSE -> addBlock(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(type), "Mossy Loose " + getName(rock) + " Rock");
                     case COBBLE -> addBlock(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(type), getName(rock) + " Cobblestone");
                     case MOSSY_COBBLE -> addBlock(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(type), getName(rock) + " Mossy Cobblestone");
-                    case CHISELED -> addBlock(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(type), "Chiseled " + getName(rock) + " Bricks");
+                    case CHISELED -> addBlock(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(type), getName(rock) + " Chiseled Bricks");
                     default -> addBlock(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(type), getName(rock) + " " + getName(type));
                 }
             });
 
             addItem(BeneathOverhaulItems.BRICKS.get(rock), getName(rock) + " Brick");
         });
+    }
+
+    private void createOreKey(Supplier<Block> block, String rock, String ore) {
+        addBlock(block, rock + " " + ore);
+
+        if (ore.equals("Pyrite")) {
+            ore = "Native Gold?";
+        }
+
+        add(block.get().getDescriptionId() + ".prospected", ore);
+    }
+
+    private void createOreKey(Supplier<Block> block, String ore) {
+        addBlock(block, ore);
+
+        add(block.get().getDescriptionId() + ".prospected", ore);
     }
 
     private String getName(String string){

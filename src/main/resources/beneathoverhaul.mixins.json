@@ -3,10 +3,13 @@
   "package": "net.strangelyng.beneathoverhaul.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-
+    "common.beneath.ForgeEventsMixin",
+    "common.beneath.NetherPreyMixin",
+    "common.minecraft.DripstoneUtilsAccessor",
+    "common.minecraft.entities.SlimeMixin"
   ],
   "client": [
-
+    "client.tfc.TFCColorsMixin"
   ],
   "injectors": {
     "defaultRequire": 1

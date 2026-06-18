@@ -2,13 +2,20 @@ package net.strangelyng.beneathoverhaul.util;
 
 import com.google.common.collect.ImmutableMap;
 import net.dries007.tfc.TerraFirmaCraft;
+import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.util.registry.RegistryRock;
 import net.minecraft.resources.ResourceLocation;
 import net.strangelyng.beneathoverhaul.BeneathOverhaul;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulRock;
 
+import java.util.Locale;
 import java.util.Map;
+
+/*
+ * Special thanks to Gourmandd, much of this utility function library is based on their work for On-Ancient-Ground-Core
+ * https://github.com/Gourmandd/On-Ancient-Ground-Core/blob/main/src/main/java/net/gourmand/core/util/TextureUtil.java
+ */
 
 public class TextureUtils {
     public static String getRawRockTexture(RegistryRock rock) {
@@ -47,7 +54,7 @@ public class TextureUtils {
                 return "minecraft:block/cobbled_deepslate";
             }
             case BLACKSTONE, DRIPSTONE -> {
-                return (BeneathOverhaul.MOD_ID + ":block/rock/mossy_cobble/" + rock.getSerializedName());
+                return (BeneathOverhaul.MOD_ID + ":block/rock/cobble/" + rock.getSerializedName());
             }
             case null, default -> throw new AssertionError("Invalid Rock to get texture for");
         }
@@ -77,7 +84,7 @@ public class TextureUtils {
                 return "minecraft:block/polished_blackstone_bricks";
             }
             case DRIPSTONE -> {
-                return (BeneathOverhaul.MOD_ID + ":block/rock/mossy_bricks/" + rock.getSerializedName());
+                return (BeneathOverhaul.MOD_ID + ":block/rock/bricks/" + rock.getSerializedName());
             }
             case null, default -> throw new AssertionError("Invalid Rock to get texture for");
         }
@@ -136,6 +143,25 @@ public class TextureUtils {
 
     private static String getRawRockTexture(Rock rock) {
         return TerraFirmaCraft.MOD_ID + ":block/rock/raw/" + rock.getSerializedName();
+    }
+
+    public static String getOreTexture(Ore ore) {
+        return TerraFirmaCraft.MOD_ID + ":block/ore/" + ore.name().toLowerCase(Locale.ROOT);
+    }
+
+    public static String getOreTexture(Ore ore, Ore.Grade grade) {
+        switch (grade) {
+            case RICH -> {
+                return TerraFirmaCraft.MOD_ID + ":block/ore/rich_" + ore.name().toLowerCase(Locale.ROOT);
+            }
+            case NORMAL -> {
+                return TerraFirmaCraft.MOD_ID + ":block/ore/normal_" + ore.name().toLowerCase(Locale.ROOT);
+            }
+            case POOR -> {
+                return TerraFirmaCraft.MOD_ID + ":block/ore/poor_" + ore.name().toLowerCase(Locale.ROOT);
+            }
+            case null -> throw new AssertionError("Invalid grade");
+        }
     }
 
     public static ResourceLocation getRockTexture(BeneathOverhaulRock rock, Rock.BlockType type) {

@@ -7,6 +7,8 @@ import net.strangelyng.beneathoverhaul.client.ClientEventHandler;
 import net.strangelyng.beneathoverhaul.common.BeneathOverhaulCreativeTabs;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulBlocks;
 import net.strangelyng.beneathoverhaul.common.items.BeneathOverhaulItems;
+import net.strangelyng.beneathoverhaul.misc.BeneathOverhaulClimateModels;
+import net.strangelyng.beneathoverhaul.world.BeneathOverhaulFeatures;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -33,6 +35,8 @@ public class BeneathOverhaul {
         BeneathOverhaulBlocks.BLOCKS.register(bus);
         BeneathOverhaulItems.ITEMS.register(bus);
         BeneathOverhaulCreativeTabs.CREATIVE_TABS.register(bus);
+        BeneathOverhaulFeatures.FEATURES.register(bus);
+        BeneathOverhaulClimateModels.TYPES.register(bus);
 
         mod.registerConfig(ModConfig.Type.COMMON, BeneathOverhaulConfig.SPEC);
 
@@ -42,6 +46,8 @@ public class BeneathOverhaul {
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
-
+        event.enqueueWork(() -> {
+            BeneathOverhaulClimateModels.registerModels();
+        });
     }
 }

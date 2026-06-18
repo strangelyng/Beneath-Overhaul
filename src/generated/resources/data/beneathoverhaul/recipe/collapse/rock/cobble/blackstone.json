@@ -1,0 +1,22 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "beneathoverhaul:rock/raw/blackstone",
+    "beneathoverhaul:rock/hardened/blackstone",
+    "beneathoverhaul:rock/smooth/blackstone",
+    "beneathoverhaul:rock/cracked_bricks/blackstone",
+    "beneathoverhaul:ore/poor_native_copper/blackstone",
+    "beneathoverhaul:ore/poor_native_gold/blackstone",
+    "beneathoverhaul:ore/poor_hematite/blackstone",
+    "beneathoverhaul:ore/poor_native_silver/blackstone",
+    "beneathoverhaul:ore/poor_cassiterite/blackstone",
+    "beneathoverhaul:ore/poor_bismuthinite/blackstone",
+    "beneathoverhaul:ore/poor_garnierite/blackstone",
+    "beneathoverhaul:ore/poor_malachite/blackstone",
+    "beneathoverhaul:ore/poor_magnetite/blackstone",
+    "beneathoverhaul:ore/poor_limonite/blackstone",
+    "beneathoverhaul:ore/poor_sphalerite/blackstone",
+    "beneathoverhaul:ore/poor_tetrahedrite/blackstone"
+  ],
+  "result": "beneathoverhaul:rock/cobble/blackstone"
+}

@@ -1,0 +1,36 @@
+{
+  "type": "tfc:cluster_vein",
+  "config": {
+    "size": 18,
+    "rarity": 14,
+    "density": 0.6,
+    "min_y": 0,
+    "max_y": 80,
+    "random_name": "cinnabar",
+    "project": false,
+    "project_offset": false,
+    "near_lava": false,
+    "blocks": [
+      {
+        "replace": [
+          "tfc:rock/raw/gneiss"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/cinnabar/gneiss"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/schist"
+        ],
+        "with": [
+          {
+            "block": "tfc:ore/cinnabar/schist"
+          }
+        ]
+      }
+    ]
+  }
+}

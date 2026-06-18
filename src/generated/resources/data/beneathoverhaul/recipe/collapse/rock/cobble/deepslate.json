@@ -1,0 +1,22 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "beneathoverhaul:rock/raw/deepslate",
+    "beneathoverhaul:rock/hardened/deepslate",
+    "beneathoverhaul:rock/smooth/deepslate",
+    "beneathoverhaul:rock/cracked_bricks/deepslate",
+    "beneathoverhaul:ore/poor_native_copper/deepslate",
+    "beneathoverhaul:ore/poor_native_gold/deepslate",
+    "beneathoverhaul:ore/poor_hematite/deepslate",
+    "beneathoverhaul:ore/poor_native_silver/deepslate",
+    "beneathoverhaul:ore/poor_cassiterite/deepslate",
+    "beneathoverhaul:ore/poor_bismuthinite/deepslate",
+    "beneathoverhaul:ore/poor_garnierite/deepslate",
+    "beneathoverhaul:ore/poor_malachite/deepslate",
+    "beneathoverhaul:ore/poor_magnetite/deepslate",
+    "beneathoverhaul:ore/poor_limonite/deepslate",
+    "beneathoverhaul:ore/poor_sphalerite/deepslate",
+    "beneathoverhaul:ore/poor_tetrahedrite/deepslate"
+  ],
+  "result": "beneathoverhaul:rock/cobble/deepslate"
+}

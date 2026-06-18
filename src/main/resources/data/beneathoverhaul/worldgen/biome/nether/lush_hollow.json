@@ -1,0 +1,174 @@
+{
+	"carvers": {
+		"air": "minecraft:nether_cave"
+	},
+	"downfall": 0.5,
+	"effects": {
+		"fog_color": 5799235,
+		"mood_sound": {
+			"block_search_extent": 8,
+			"offset": 2,
+			"sound": "minecraft:ambient.warped_forest.mood",
+			"tick_delay": 6000
+		},
+		"ambient_sound": "minecraft:ambient.warped_forest.loop",
+		"additions_sound": {
+			"sound": "minecraft:ambient.warped_forest.additions",
+			"tick_chance": 0.0015
+		},
+		"music": {
+			"max_delay": 24000,
+			"min_delay": 12000,
+			"replace_current_music": false,
+			"sound": {
+				"sound_id": "minecraft:music.nether.warped_forest"
+			}
+		},
+		"sky_color": 5799235,
+		"water_color": 7255466,
+		"water_fog_color": 3169873,
+		"grass_color": 12568641,
+		"foliage_color": 12568641,
+		"particle": {
+			"options": {
+				"type": "minecraft:falling_water"
+			},
+			"probability": 0.002
+		}
+	},
+	"features": [
+		[],
+		[
+			"beneathoverhaul:nether/terrain/lava_lake",
+			"beneathoverhaul:nether/terrain/spring_water_lake"
+		],
+		[
+			"minecraft:basalt_pillar",
+			"beneathoverhaul:nether/geode/amethyst"
+		],
+		[],
+		[
+			"beneathoverhaul:nether/terrain/glowstone_ceiling"
+		],
+		[],
+		"#beneathoverhaul:nether_veins",
+		"#beneathoverhaul:nether_underground_decoration",
+		[
+			"beneathoverhaul:nether/terrain/mossy_cobble"
+		],
+		[
+			"beneathoverhaul:nether/surface/blackstone_boulders",
+			"beneathoverhaul:nether/surface/loose_deepslate",
+			"beneathoverhaul:nether/surface/philodendron",
+			"beneathoverhaul:nether/surface/moss_patch_small",
+			"beneathoverhaul:nether/surface/mangrove_tree",
+			"beneathoverhaul:nether/terrain/lush_caves_ceiling",
+			"beneathoverhaul:nether/terrain/lush_caves_clay",
+			"beneathoverhaul:nether/terrain/lush_caves_vegetation",
+			"minecraft:spore_blossom",
+			"beneath:burpflower_patch",
+			"beneath:gleamflower_patch",
+			"beneath:sulfur_patch",
+			"beneathoverhaul:nether/surface/pumice_patch",
+			"beneathoverhaul:nether/surface/beneath_mushrooms",
+			"beneathoverhaul:nether/surface/guano_patch",
+			"beneathoverhaul:nether/surface/stick_patch",
+			"beneathoverhaul:glow_lichen"
+		],
+		[
+			"beneath:glowstone_spikes",
+			"beneathoverhaul:nether/spikes/deepslate_spikes",
+			"beneathoverhaul:nether/spikes/blackstone_spikes",
+			"beneathoverhaul:nether/hardening"
+		]
+	],
+	"has_precipitation": false,
+	"spawn_costs": {
+		"tfc:octopoteuthis": {
+			"energy_budget": 0.12,
+			"charge": 1.0
+		}
+	},
+	"spawners": {
+		"water_ambient": [],
+		"ambient": [
+			{
+				"type": "minecraft:bat",
+				"maxCount": 8,
+				"minCount": 8,
+				"weight": 10
+			}
+		],
+		"axolotls": [
+			{
+				"type": "minecraft:axolotl",
+				"maxCount": 6,
+				"minCount": 4,
+				"weight": 10
+			}
+		],
+		"creature": [
+			{
+				"type": "beneath:red_elk",
+				"maxCount": 3,
+				"minCount": 2,
+				"weight": 100
+			}
+		],
+		"misc": [],
+		"monster": [
+			{
+				"type": "minecraft:piglin",
+				"maxCount": 4,
+				"minCount": 3,
+				"weight": 50
+			},
+			{
+				"type": "minecraft:zombified_piglin",
+				"maxCount": 3,
+				"minCount": 2,
+				"weight": 50
+			},
+			{
+				"type": "minecraft:zombie",
+				"maxCount": 4,
+				"minCount": 1,
+				"weight": 95
+			},
+			{
+				"type": "minecraft:creeper",
+				"maxCount": 4,
+				"minCount": 1,
+				"weight": 100
+			},
+			{
+				"type": "minecraft:slime",
+				"maxCount": 4,
+				"minCount": 1,
+				"weight": 100
+			},
+			{
+				"type": "minecraft:phantom",
+				"maxCount": 1,
+				"minCount": 1,
+				"weight": 10
+			},
+			{
+				"type": "minecraft:enderman",
+				"maxCount": 2,
+				"minCount": 1,
+				"weight": 10
+			}
+		],
+		"underground_water_creature": [
+			{
+				"type": "tfc:octopoteuthis",
+				"maxCount": 3,
+				"minCount": 1,
+				"weight": 10
+			}
+		],
+		"water_creature": []
+	},
+	"temperature": 0.8
+}

@@ -1,11 +1,13 @@
 package net.strangelyng.beneathoverhaul.datagen.providers;
 
 import net.dries007.tfc.TerraFirmaCraft;
+import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.WallBlock;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -18,6 +20,11 @@ import net.strangelyng.beneathoverhaul.util.TextureUtils;
 
 import java.util.stream.Stream;
 
+/*
+ * Special thanks to Gourmandd, much of the datagen code is based on their work for On-Ancient-Ground-Core
+ * https://github.com/Gourmandd/On-Ancient-Ground-Core/blob/main/src/main/java/net/gourmand/core/datagen/providers/BuiltinItemModels.java
+ */
+
 public class BuiltInItemModelProvider extends ItemModelProvider {
 
     protected BuiltInItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
@@ -26,6 +33,27 @@ public class BuiltInItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+        // Misc Blocks
+        simpleItem(BeneathOverhaulBlocks.MUSHROOM_ROOTS.asItem(), ResourceLocation.parse(BeneathOverhaul.MOD_ID + ":item/mushroom_roots"));
+        simpleItem(BeneathOverhaulBlocks.MUSHROOM_SPROUTS.asItem(), ResourceLocation.parse(BeneathOverhaul.MOD_ID + ":item/mushroom_sprouts"));
+
+        simpleBlock(BeneathOverhaulBlocks.CHARRED_LOG.holder());
+
+        // Ore Blocks
+        Stream.of(BeneathOverhaulRock.VALUES).forEach(rock -> {
+            Stream.of(Ore.values()).forEach(ore -> {
+                if (!ore.isGraded() && ore.hasBlock()) {
+                    simpleBlock(BeneathOverhaulBlocks.BENEATH_ROCK_TFC_ORES.get(rock).get(ore).holder());
+                }
+
+                Stream.of(Ore.Grade.values()).forEach(grade -> {
+                    if (ore.isGraded()) {
+                        simpleBlock(BeneathOverhaulBlocks.BENEATH_ROCK_TFC_GRADED_ORES.get(rock).get(ore).get(grade).holder());
+                    }
+                });
+            });
+        });
+
         // Rock Blocks
         Stream.of(BeneathOverhaulRock.VALUES).forEach(rock -> {
             Stream.of(Rock.BlockType.values()).forEach(type -> {
@@ -33,7 +61,12 @@ public class BuiltInItemModelProvider extends ItemModelProvider {
                     simpleBlock(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(type).holder());
                     simpleBlock(BeneathOverhaulBlocks.ROCK_DECORATIONS.get(rock).get(type).stair().holder());
                     simpleBlock(BeneathOverhaulBlocks.ROCK_DECORATIONS.get(rock).get(type).slab().holder());
-                    wallInventory(getItemModelString(BeneathOverhaulBlocks.ROCK_DECORATIONS.get(rock).get(type).wall().getId()), TextureUtils.getRockTexture(rock, type));
+                    if (isMossyVariant(type, rock)) {
+                        mossyWallInventory(BeneathOverhaulBlocks.ROCK_DECORATIONS.get(rock).get(type).wall().holder(),
+                                getItemModelString(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(type).getId()), TextureUtils.getRockTexture(rock, type));
+                    } else {
+                        wallInventory(getItemModelString(BeneathOverhaulBlocks.ROCK_DECORATIONS.get(rock).get(type).wall().getId()), TextureUtils.getRockTexture(rock, type));
+                    }
                 }
             });
 
@@ -57,7 +90,7 @@ public class BuiltInItemModelProvider extends ItemModelProvider {
         });
     }
 
-
+    // Helper Functions
     private void simpleBlock(DeferredHolder<Block, ? extends Block> block) {
         withExistingParent(getItemModelString(block.getId()), getBlockModelLocation(block.getId()));
     }
@@ -88,6 +121,15 @@ public class BuiltInItemModelProvider extends ItemModelProvider {
         this.getBuilder(getItemModelString(block.getId())).parent(new ModelFile.UncheckedModelFile("item/generated")).texture("layer0", textureBase).texture("layer1", textureMossy);
     }
 
+    private void mossyWallInventory(DeferredHolder<Block, ? extends WallBlock> block, String baseName, ResourceLocation texture) {
+        ResourceLocation mossyBrickOverlay = ResourceLocation.parse(BeneathOverhaul.MOD_ID + ":block/rock/mossy_bricks/overlay");
+        ResourceLocation mossyCobbleOverlay = ResourceLocation.parse(BeneathOverhaul.MOD_ID + ":block/rock/mossy_cobble/overlay");
+
+        ResourceLocation mossyOverlay = (block.getId().getPath().contains("bricks/") ? mossyBrickOverlay : mossyCobbleOverlay);
+
+        this.getBuilder(getItemModelString(block.getId())).parent(new ModelFile.UncheckedModelFile("beneathoverhaul:block/overlay_template_wall_inventory")).texture("wall", texture).texture("overlay", mossyOverlay);
+    }
+
     private String getItemModelString(ResourceLocation block) {
         return block.getNamespace() + ":item/" + block.getPath();
     }
@@ -110,5 +152,9 @@ public class BuiltInItemModelProvider extends ItemModelProvider {
 
     private String getBlockModelString(ResourceLocation block) {
         return block.getNamespace() + ":block/" + block.getPath();
+    }
+
+    private boolean isMossyVariant(Rock.BlockType type, BeneathOverhaulRock rock) {
+        return type == Rock.BlockType.MOSSY_BRICKS || type == Rock.BlockType.MOSSY_COBBLE || type == Rock.BlockType.MOSSY_LOOSE;
     }
 }

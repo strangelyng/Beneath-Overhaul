@@ -1,0 +1,7 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "beneathoverhaul:ore/rich_limonite/dripstone"
+  ],
+  "result": "beneathoverhaul:ore/normal_limonite/dripstone"
+}

@@ -1,0 +1,8 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": [
+    "beneathoverhaul:rock/bricks/blackstone"
+  ],
+  "mode": "tfc:stair",
+  "result": "beneathoverhaul:rock/bricks/blackstone_stairs"
+}

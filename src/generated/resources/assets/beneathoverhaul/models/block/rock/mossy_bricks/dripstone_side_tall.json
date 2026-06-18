@@ -2,7 +2,7 @@
   "parent": "beneathoverhaul:block/overlay_template_wall_side_tall",
   "textures": {
     "overlay": "beneathoverhaul:block/rock/mossy_bricks/overlay",
-    "particle": "beneathoverhaul:block/rock/mossy_bricks/dripstone",
-    "wall": "beneathoverhaul:block/rock/mossy_bricks/dripstone"
+    "particle": "beneathoverhaul:block/rock/bricks/dripstone",
+    "wall": "beneathoverhaul:block/rock/bricks/dripstone"
   }
 }

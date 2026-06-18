@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": [
+    "beneathoverhaul:rock/raw/deepslate",
+    "beneathoverhaul:rock/hardened/deepslate"
+  ],
+  "mode": "tfc:smooth",
+  "result": "beneathoverhaul:rock/smooth/deepslate"
+}

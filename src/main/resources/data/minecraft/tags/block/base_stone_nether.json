@@ -1,0 +1,17 @@
+{
+    "replace": false,
+    "values": [
+        "beneathoverhaul:rock/raw/deepslate",
+        "beneathoverhaul:rock/raw/blackstone",
+        "beneathoverhaul:rock/raw/dripstone",
+        "tfc:rock/raw/gneiss",
+        "tfc:rock/raw/schist",
+        "tfc:rock/raw/diorite",
+        "tfc:rock/raw/granite",
+        "tfc:rock/raw/gabbro",
+        "tfc:rock/raw/basalt",
+        "beneathoverhaul:rock/hardened/deepslate",
+        "beneathoverhaul:rock/hardened/blackstone",
+        "beneathoverhaul:rock/hardened/dripstone"
+    ]
+}

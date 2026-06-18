@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:random_boolean_selector",
+	"config": {
+		"feature_false": {
+			"feature": "beneathoverhaul:nether/surface/big_red_mushroom",
+			"placement": []
+		},
+		"feature_true": {
+			"feature": "beneathoverhaul:nether/surface/big_brown_mushroom",
+			"placement": []
+		}
+	}
+}

@@ -1,0 +1,7 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "beneathoverhaul:ore/rich_hematite/dripstone"
+  ],
+  "result": "beneathoverhaul:ore/normal_hematite/dripstone"
+}

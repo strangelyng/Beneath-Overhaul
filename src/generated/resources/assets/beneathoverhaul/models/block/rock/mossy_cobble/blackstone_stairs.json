@@ -1,10 +1,10 @@
 {
   "parent": "beneathoverhaul:block/overlay_stairs",
   "textures": {
-    "bottom": "beneathoverhaul:block/rock/mossy_cobble/blackstone",
-    "overlay": "beneathoverhaul:block/rock/mossy_bricks/overlay",
-    "particle": "beneathoverhaul:block/rock/mossy_cobble/blackstone",
-    "side": "beneathoverhaul:block/rock/mossy_cobble/blackstone",
-    "top": "beneathoverhaul:block/rock/mossy_cobble/blackstone"
+    "bottom": "beneathoverhaul:block/rock/cobble/blackstone",
+    "overlay": "beneathoverhaul:block/rock/mossy_cobble/overlay",
+    "particle": "beneathoverhaul:block/rock/cobble/blackstone",
+    "side": "beneathoverhaul:block/rock/cobble/blackstone",
+    "top": "beneathoverhaul:block/rock/cobble/blackstone"
   }
 }

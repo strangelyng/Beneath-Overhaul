@@ -1,6 +1,8 @@
 package net.strangelyng.beneathoverhaul.datagen.providers;
 
+import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.common.blocks.rock.*;
+import net.dries007.tfc.util.registry.RegistryRock;
 import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -15,10 +17,16 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.strangelyng.beneathoverhaul.BeneathOverhaul;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulBlocks;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulRock;
+import net.strangelyng.beneathoverhaul.common.blocks.SandLayerBlock;
 import net.strangelyng.beneathoverhaul.util.TextureUtils;
 import net.neoforged.neoforge.client.model.generators.*;
 
 import java.util.stream.Stream;
+
+/*
+ * Special thanks to Gourmandd, much of the datagen code is based on their work for On-Ancient-Ground-Core
+ * https://github.com/Gourmandd/On-Ancient-Ground-Core/blob/main/src/main/java/net/gourmand/core/datagen/providers/BuiltinBlockStates.java
+ */
 
 public class BuiltInBlockStateProvider extends BlockStateProvider {
 
@@ -28,7 +36,8 @@ public class BuiltInBlockStateProvider extends BlockStateProvider {
     private final static ResourceLocation aqueductSouthParent = ResourceLocation.fromNamespaceAndPath("tfc", "block/aqueduct/south");
     private final static ResourceLocation aqueductEastParent = ResourceLocation.fromNamespaceAndPath("tfc", "block/aqueduct/east");
     private final static ResourceLocation aqueductWestParent = ResourceLocation.fromNamespaceAndPath("tfc", "block/aqueduct/west");
-    private final static ResourceLocation mossOverlay = ResourceLocation.parse(BeneathOverhaul.MOD_ID + ":block/rock/mossy_bricks/overlay");
+    private final static ResourceLocation mossyBrickOverlay = ResourceLocation.parse(BeneathOverhaul.MOD_ID + ":block/rock/mossy_bricks/overlay");
+    private final static ResourceLocation mossyCobbleOverlay = ResourceLocation.parse(BeneathOverhaul.MOD_ID + ":block/rock/mossy_cobble/overlay");
 
     protected BuiltInBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, BeneathOverhaul.MOD_ID, exFileHelper);
@@ -36,6 +45,29 @@ public class BuiltInBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+        // Misc Blocks
+        layerBlock(BeneathOverhaulBlocks.ASH_LAYER_BLOCK.holder(), ResourceLocation.parse(BeneathOverhaul.MOD_ID + ":block/ash_block"));
+        rotatedPillarBlock(BeneathOverhaulBlocks.CHARRED_LOG.holder(),
+                ResourceLocation.parse(TerraFirmaCraft.MOD_ID + ":block/charcoal_pile"),
+                ResourceLocation.parse(TerraFirmaCraft.MOD_ID + ":block/wood/stripped_log_top/blackwood")
+        );
+
+
+        // Ore Blocks
+        Stream.of(BeneathOverhaulRock.VALUES).forEach(rock -> {
+            Stream.of(Ore.values()).forEach(ore -> {
+                if (!ore.isGraded() && ore.hasBlock()) {
+                    simpleOre(BeneathOverhaulBlocks.BENEATH_ROCK_TFC_ORES.get(rock).get(ore).holder(), rock, ore);
+                }
+
+                Stream.of(Ore.Grade.values()).forEach(grade -> {
+                    if (ore.isGraded()) {
+                        simpleOre(BeneathOverhaulBlocks.BENEATH_ROCK_TFC_GRADED_ORES.get(rock).get(ore).get(grade).holder(), rock, ore, grade);
+                    }
+                });
+            });
+        });
+
         // Rock Blocks
         Stream.of(BeneathOverhaulRock.VALUES).forEach(rock -> {
             Stream.of(Rock.BlockType.values()).forEach(type -> {
@@ -73,6 +105,18 @@ public class BuiltInBlockStateProvider extends BlockStateProvider {
         });
     }
 
+    private void simpleOre(DeferredHolder<Block, Block> block, RegistryRock rock, Ore ore) {
+        String allTexture = TextureUtils.getRawRockTexture(rock);
+        String oreTexture = TextureUtils.getOreTexture(ore);
+        simpleBlock(block.get(), ConfiguredModel.builder().modelFile(createOverlayModel(block.getId().getPath(), allTexture, oreTexture)).buildLast());
+    }
+
+    private void simpleOre(DeferredHolder<Block, Block> block, RegistryRock rock, Ore ore, Ore.Grade grade) {
+        String allTexture = TextureUtils.getRawRockTexture(rock);
+        String oreTexture = TextureUtils.getOreTexture(ore, grade);
+        simpleBlock(block.get(), ConfiguredModel.builder().modelFile(createOverlayModel(block.getId().getPath(), allTexture, oreTexture)).buildLast());
+    }
+
     private BlockModelBuilder createOverlayModel(String name, String allTexture, String overlayTexture) {
         return models().withExistingParent("block/" + name, oreParent).texture("all", allTexture).texture("overlay", overlayTexture);
     }
@@ -82,7 +126,8 @@ public class BuiltInBlockStateProvider extends BlockStateProvider {
     }
 
     private void cubeMossOverlayAll(DeferredHolder<Block, Block> block, ResourceLocation texture) {
-        simpleBlock(block.get(), ConfiguredModel.builder().modelFile(createOverlayModel(block.getId().getPath(), texture.toString(), mossOverlay.toString())).buildLast());
+        ResourceLocation mossyOverlay = getMossyOverlayType(block);
+        simpleBlock(block.get(), ConfiguredModel.builder().modelFile(createOverlayModel(block.getId().getPath(), texture.toString(), mossyOverlay.toString())).buildLast());
     }
 
     private void stairsBlock(DeferredHolder<Block, ? extends Block> block, ResourceLocation texture) {
@@ -114,24 +159,26 @@ public class BuiltInBlockStateProvider extends BlockStateProvider {
     }
 
     private void stairsMossOverlayBlock(DeferredHolder<Block, ? extends Block> block, ResourceLocation texture) {
+        ResourceLocation mossyOverlay = getMossyOverlayType(block);
+
         ModelFile stairs = createModel(getBlockModelString(block.getId()), "beneathoverhaul:block/overlay_stairs")
                 .texture("bottom", texture)
                 .texture("side", texture)
                 .texture("top", texture)
                 .texture("particle", texture)
-                .texture("overlay", mossOverlay);
+                .texture("overlay", mossyOverlay);
         ModelFile stairsInner = createModel(getBlockModelString(block.getId()) + "_inner", "beneathoverhaul:block/overlay_inner_stairs")
                 .texture("bottom", texture)
                 .texture("side", texture)
                 .texture("top", texture)
-                .texture("article", texture)
-                .texture("overlay", mossOverlay);
+                .texture("particle", texture)
+                .texture("overlay", mossyOverlay);
         ModelFile stairsOuter = createModel(getBlockModelString(block.getId()) + "_outer", "beneathoverhaul:block/overlay_outer_stairs")
                 .texture("bottom", texture)
                 .texture("side", texture)
                 .texture("top", texture)
                 .texture("particle", texture)
-                .texture("overlay", mossOverlay);
+                .texture("overlay", mossyOverlay);
 
         getVariantBuilder(block.get())
                 .forAllStatesExcept(state -> {
@@ -168,18 +215,20 @@ public class BuiltInBlockStateProvider extends BlockStateProvider {
     }
 
     private void slabMossOverlayBlock(DeferredHolder<Block, ? extends Block> block, ResourceLocation texture, ResourceLocation doubleSlab) {
+        ResourceLocation mossyOverlay = getMossyOverlayType(block);
+
         ModelFile slabBottom = createModel(getBlockModelString(block.getId()), "beneathoverhaul:block/overlay_slab")
                 .texture("bottom", texture)
                 .texture("side", texture)
                 .texture("top", texture)
                 .texture("particle", texture)
-                .texture("overlay", mossOverlay);
+                .texture("overlay", mossyOverlay);
         ModelFile slabTop = createModel(getBlockModelString(block.getId()) + "_top", "beneathoverhaul:block/overlay_slab_top")
                 .texture("bottom", texture)
                 .texture("side", texture)
                 .texture("top", texture)
                 .texture("particle", texture)
-                .texture("overlay", mossOverlay);
+                .texture("overlay", mossyOverlay);
 
         ModelFile slabDouble = this.models().getExistingFile(doubleSlab);
 
@@ -273,20 +322,35 @@ public class BuiltInBlockStateProvider extends BlockStateProvider {
     }
 
     private void wallMossOverlayBlock(DeferredHolder<Block, ? extends WallBlock> block, String baseName, ResourceLocation texture) {
+        ResourceLocation mossyOverlay = getMossyOverlayType(block);
+
         this.wallBlock(block.get(),
                 createModel(baseName + "_post", "beneathoverhaul:block/overlay_template_wall_post")
                         .texture("wall", texture)
                         .texture("particle", texture)
-                        .texture("overlay", mossOverlay),
+                        .texture("overlay", mossyOverlay),
                 createModel(baseName + "_side", "beneathoverhaul:block/overlay_template_wall_side")
                         .texture("wall", texture)
                         .texture("particle", texture)
-                        .texture("overlay", mossOverlay),
+                        .texture("overlay", mossyOverlay),
                 createModel(baseName + "_side_tall", "beneathoverhaul:block/overlay_template_wall_side_tall")
                         .texture("wall", texture)
                         .texture("particle", texture)
-                        .texture("overlay", mossOverlay)
+                        .texture("overlay", mossyOverlay)
         );
+    }
+
+    private void rotatedPillarBlock(DeferredHolder<Block, ? extends RotatedPillarBlock> block, ResourceLocation side, ResourceLocation end) {
+        ModelFile vertical = createModel(getBlockModelString(block.getId()), "minecraft:block/cube_column").texture("end", end).texture("side", side);
+        ModelFile horizontal = createModel(getBlockModelString(block.getId()) + "_horizontal", "minecraft:block/cube_column_horizontal").texture("end", end).texture("side", side);
+
+        getVariantBuilder(block.get())
+                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.Y)
+                .modelForState().modelFile(vertical).addModel()
+                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.Z)
+                .modelForState().modelFile(horizontal).rotationX(90).addModel()
+                .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.X)
+                .modelForState().modelFile(horizontal).rotationX(90).rotationY(90).addModel();
     }
 
     private String getBlockModelString(ResourceLocation block) {
@@ -311,6 +375,71 @@ public class BuiltInBlockStateProvider extends BlockStateProvider {
             }
             default -> throw new AssertionError("No category found for rock: " + rock.getSerializedName());
         }
+    }
+
+    private String getLayerBlockModelParent(int height) {
+        switch (height) {
+            case 1 -> {
+                return "beneathoverhaul:block/layer_block/template_height2";
+            }
+            case 2 -> {
+                return "beneathoverhaul:block/layer_block/template_height4";
+            }
+            case 3 -> {
+                return "beneathoverhaul:block/layer_block/template_height6";
+            }
+            case 4 -> {
+                return "beneathoverhaul:block/layer_block/template_height8";
+            }
+            case 5 -> {
+                return "beneathoverhaul:block/layer_block/template_height10";
+            }
+            case 6 -> {
+                return "beneathoverhaul:block/layer_block/template_height12";
+            }
+            case 7 -> {
+                return "beneathoverhaul:block/layer_block/template_height14";
+            }
+            case 8 -> {
+                return "minecraft:block/cube_all";
+            }
+            default -> throw new AssertionError("No height found for layer count: " + height);
+        }
+    }
+
+    private ResourceLocation getMossyOverlayType(DeferredHolder<Block, ?> block) {
+        return block.getId().getPath().contains("bricks/") ? mossyBrickOverlay : mossyCobbleOverlay;
+    }
+
+    private void layerBlock(DeferredHolder<Block, ? extends SandLayerBlock> block, ResourceLocation texture) {
+        ModelFile model1 = createModel(getBlockModelString(block.getId()) + "_height2", getLayerBlockModelParent(1)).texture("texture", texture);
+        ModelFile model2 = createModel(getBlockModelString(block.getId()) + "_height4", getLayerBlockModelParent(2)).texture("texture", texture);
+        ModelFile model3 = createModel(getBlockModelString(block.getId()) + "_height6", getLayerBlockModelParent(3)).texture("texture", texture);
+        ModelFile model4 = createModel(getBlockModelString(block.getId()) + "_height8", getLayerBlockModelParent(4)).texture("texture", texture);
+        ModelFile model5 = createModel(getBlockModelString(block.getId()) + "_height10", getLayerBlockModelParent(5)).texture("texture", texture);
+        ModelFile model6 = createModel(getBlockModelString(block.getId()) + "_height12", getLayerBlockModelParent(6)).texture("texture", texture);
+        ModelFile model7 = createModel(getBlockModelString(block.getId()) + "_height14", getLayerBlockModelParent(7)).texture("texture", texture);
+        ModelFile model8 = createModel(getBlockModelString(block.getId()), getLayerBlockModelParent(8)).texture("all", texture);
+
+        VariantBlockStateBuilder builder = getVariantBuilder(block.get());
+
+        builder
+                .partialState().with(SandLayerBlock.LAYERS, 1).modelForState()
+                .modelFile(model1).addModel()
+                .partialState().with(SandLayerBlock.LAYERS, 2).modelForState()
+                .modelFile(model2).addModel()
+                .partialState().with(SandLayerBlock.LAYERS, 3).modelForState()
+                .modelFile(model3).addModel()
+                .partialState().with(SandLayerBlock.LAYERS, 4).modelForState()
+                .modelFile(model4).addModel()
+                .partialState().with(SandLayerBlock.LAYERS, 5).modelForState()
+                .modelFile(model5).addModel()
+                .partialState().with(SandLayerBlock.LAYERS, 6).modelForState()
+                .modelFile(model6).addModel()
+                .partialState().with(SandLayerBlock.LAYERS, 7).modelForState()
+                .modelFile(model7).addModel()
+                .partialState().with(SandLayerBlock.LAYERS, 8).modelForState()
+                .modelFile(model8).addModel();
     }
 
     private ResourceLocation getBlockModelLocation(ResourceLocation block) {

@@ -1,0 +1,7 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "beneathoverhaul:ore/normal_limonite/deepslate"
+  ],
+  "result": "beneathoverhaul:ore/poor_limonite/deepslate"
+}

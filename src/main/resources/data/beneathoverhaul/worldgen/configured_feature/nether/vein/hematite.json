@@ -1,0 +1,52 @@
+{
+  "type": "tfc:cluster_vein",
+  "config": {
+    "size": 20,
+    "rarity": 60,
+    "density": 0.4,
+    "min_y": 32,
+    "max_y": 128,
+    "random_name": "hematite",
+    "project": false,
+    "project_offset": false,
+    "near_lava": false,
+    "blocks": [
+      {
+        "replace": [
+          "beneathoverhaul:rock/raw/deepslate",
+          "tfc:mud/entisol",
+          "beneath:soul_clay",
+          "tfc:dirt/andisol",
+          "tfc:mud/andisol",
+          "tfc:peat",
+          "tfc:dirt/entisol"
+        ],
+        "with": [
+          {
+            "block": "beneathoverhaul:ore/poor_hematite/deepslate",
+            "weight": 35
+          },
+          {
+            "block": "beneathoverhaul:ore/normal_hematite/deepslate",
+            "weight": 40
+          },
+          {
+            "block": "beneathoverhaul:ore/rich_hematite/deepslate",
+            "weight": 25
+          }
+        ]
+      }
+    ],
+    "indicator": {
+      "rarity": 15,
+      "depth": 1,
+      "underground_rarity": 40,
+      "underground_count": 150,
+      "blocks": [
+        {
+          "block": "tfc:ore/small_hematite"
+        }
+      ]
+    }
+  }
+}

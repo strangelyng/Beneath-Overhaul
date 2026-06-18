@@ -1,0 +1,35 @@
+{
+	"feature": "beneathoverhaul:nether/surface/pumice_patch",
+	"placement": [
+
+		{
+			"type": "minecraft:rarity_filter",
+			"chance": 3
+		},
+		{
+			"type": "minecraft:height_range",
+			"height": {
+				"type": "minecraft:uniform",
+				"max_inclusive": {
+					"above_bottom": 50
+				},
+				"min_inclusive": {
+					"above_bottom": 30
+				}
+			}
+		},
+		{
+			"type": "tfc:near_fluid",
+			"fluids": [
+				"minecraft:lava"
+			],
+			"radius": 5
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"type": "minecraft:biome"
+		}
+	]
+}

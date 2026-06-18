@@ -1,0 +1,7 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "beneathoverhaul:ore/normal_cassiterite/blackstone"
+  ],
+  "result": "beneathoverhaul:ore/poor_cassiterite/blackstone"
+}

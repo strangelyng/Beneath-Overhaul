@@ -1,0 +1,7 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "beneathoverhaul:ore/normal_bismuthinite/dripstone"
+  ],
+  "result": "beneathoverhaul:ore/poor_bismuthinite/dripstone"
+}

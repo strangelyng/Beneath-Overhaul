@@ -1,0 +1,7 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "beneathoverhaul:ore/normal_native_gold/blackstone"
+  ],
+  "result": "beneathoverhaul:ore/poor_native_gold/blackstone"
+}

@@ -1,0 +1,15 @@
+{
+    "replace": false,
+    "values": [
+        "beneathoverhaul:rock/raw/blackstone",
+        "beneathoverhaul:rock/raw/deepslate",
+        "beneathoverhaul:rock/raw/dripstone",
+        "minecraft:moss_block",
+        "beneathoverhaul:rock/hardened/blackstone",
+        "beneathoverhaul:rock/hardened/deepslate",
+        "beneathoverhaul:rock/hardened/dripstone",
+        "#tfc:clays",
+        "#tfc:mud",
+        "#tfc:dirt"
+    ]
+}

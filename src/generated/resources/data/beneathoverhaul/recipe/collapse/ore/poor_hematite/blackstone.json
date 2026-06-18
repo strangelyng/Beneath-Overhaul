@@ -1,0 +1,7 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "beneathoverhaul:ore/normal_hematite/blackstone"
+  ],
+  "result": "beneathoverhaul:ore/poor_hematite/blackstone"
+}

@@ -1,0 +1,25 @@
+{
+  "values": [
+    "beneathoverhaul:ore/poor_garnierite/deepslate",
+    "beneathoverhaul:ore/normal_garnierite/deepslate",
+    "beneathoverhaul:ore/rich_garnierite/deepslate",
+    "beneathoverhaul:ore/cinnabar/deepslate",
+    "beneathoverhaul:ore/cryolite/deepslate",
+    "beneathoverhaul:ore/lapis_lazuli/deepslate",
+    "beneathoverhaul:ore/opal/deepslate",
+    "beneathoverhaul:ore/poor_garnierite/blackstone",
+    "beneathoverhaul:ore/normal_garnierite/blackstone",
+    "beneathoverhaul:ore/rich_garnierite/blackstone",
+    "beneathoverhaul:ore/cinnabar/blackstone",
+    "beneathoverhaul:ore/cryolite/blackstone",
+    "beneathoverhaul:ore/lapis_lazuli/blackstone",
+    "beneathoverhaul:ore/opal/blackstone",
+    "beneathoverhaul:ore/poor_garnierite/dripstone",
+    "beneathoverhaul:ore/normal_garnierite/dripstone",
+    "beneathoverhaul:ore/rich_garnierite/dripstone",
+    "beneathoverhaul:ore/cinnabar/dripstone",
+    "beneathoverhaul:ore/cryolite/dripstone",
+    "beneathoverhaul:ore/lapis_lazuli/dripstone",
+    "beneathoverhaul:ore/opal/dripstone"
+  ]
+}

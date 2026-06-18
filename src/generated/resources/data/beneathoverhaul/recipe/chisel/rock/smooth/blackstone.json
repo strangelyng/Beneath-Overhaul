@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": [
+    "beneathoverhaul:rock/raw/blackstone",
+    "beneathoverhaul:rock/hardened/blackstone"
+  ],
+  "mode": "tfc:smooth",
+  "result": "beneathoverhaul:rock/smooth/blackstone"
+}

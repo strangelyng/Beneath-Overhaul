@@ -1,0 +1,12 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": [
+    "beneathoverhaul:rock/cobble/blackstone"
+  ],
+  "item_output": {
+    "count": 1,
+    "id": "beneathoverhaul:rock/cobble/blackstone_slab"
+  },
+  "mode": "tfc:slab",
+  "result": "beneathoverhaul:rock/cobble/blackstone_slab"
+}

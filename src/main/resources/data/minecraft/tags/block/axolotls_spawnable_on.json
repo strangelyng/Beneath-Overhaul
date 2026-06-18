@@ -1,0 +1,8 @@
+{
+    "replace": false,
+    "values": [
+        "beneathoverhaul:rock/raw/deepslate",
+        "beneathoverhaul:rock/raw/dripstone",
+        "#tfc:clays"
+    ]
+}

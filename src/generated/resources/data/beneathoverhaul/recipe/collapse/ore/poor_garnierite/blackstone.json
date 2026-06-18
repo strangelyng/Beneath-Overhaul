@@ -1,0 +1,7 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "beneathoverhaul:ore/normal_garnierite/blackstone"
+  ],
+  "result": "beneathoverhaul:ore/poor_garnierite/blackstone"
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "X": {
+      "item": "beneathoverhaul:rock/raw/dripstone"
+    },
+    "Y": {
+      "item": "tfc:mortar"
+    }
+  },
+  "pattern": [
+    "XYX",
+    "YXY",
+    "XYX"
+  ],
+  "result": {
+    "count": 2,
+    "id": "beneathoverhaul:rock/hardened/dripstone"
+  }
+}

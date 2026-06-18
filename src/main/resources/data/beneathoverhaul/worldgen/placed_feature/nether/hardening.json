@@ -1,0 +1,123 @@
+{
+	"feature": {
+		"type": "minecraft:replace_single_block",
+		"config": {
+			"targets": [
+				{
+					"target": {
+						"predicate_type": "minecraft:block_match",
+						"block": "beneathoverhaul:rock/raw/blackstone"
+					},
+					"state": {
+						"Name": "beneathoverhaul:rock/hardened/blackstone"
+					}
+				},
+				{
+					"target": {
+						"predicate_type": "minecraft:block_match",
+						"block": "beneathoverhaul:rock/raw/deepslate"
+					},
+					"state": {
+						"Name": "beneathoverhaul:rock/hardened/deepslate"
+					}
+				},
+				{
+					"target": {
+						"predicate_type": "minecraft:block_match",
+						"block": "beneathoverhaul:rock/raw/dripstone"
+					},
+					"state": {
+						"Name": "beneathoverhaul:rock/hardened/dripstone"
+					}
+				},
+				{
+					"target": {
+						"predicate_type": "minecraft:block_match",
+						"block": "tfc:rock/raw/gneiss"
+					},
+					"state": {
+						"Name": "tfc:rock/hardened/gneiss"
+					}
+				},
+				{
+					"target": {
+						"predicate_type": "minecraft:block_match",
+						"block": "tfc:rock/raw/schist"
+					},
+					"state": {
+						"Name": "tfc:rock/hardened/schist"
+					}
+				},
+				{
+					"target": {
+						"predicate_type": "minecraft:block_match",
+						"block": "tfc:rock/raw/diorite"
+					},
+					"state": {
+						"Name": "tfc:rock/hardened/diorite"
+					}
+				},
+				{
+					"target": {
+						"predicate_type": "minecraft:block_match",
+						"block": "tfc:rock/raw/granite"
+					},
+					"state": {
+						"Name": "tfc:rock/hardened/granite"
+					}
+				},
+				{
+					"target": {
+						"predicate_type": "minecraft:block_match",
+						"block": "tfc:rock/raw/gabbro"
+					},
+					"state": {
+						"Name": "tfc:rock/hardened/gabbro"
+					}
+				},
+				{
+					"target": {
+						"predicate_type": "minecraft:block_match",
+						"block": "tfc:rock/raw/basalt"
+					},
+					"state": {
+						"Name": "tfc:rock/hardened/basalt"
+					}
+				},
+				{
+					"target": {
+						"predicate_type": "minecraft:tag_match",
+						"tag": "tfc:can_landslide"
+					},
+					"state": {
+						"Name": "beneathoverhaul:rock/hardened/deepslate"
+					}
+				}
+			]
+		}
+	},
+	"placement": [
+		{
+			"type": "minecraft:carving_mask",
+			"step": "air"
+		},
+		{
+			"type": "minecraft:environment_scan",
+			"direction_of_search": "up",
+			"max_steps": 1,
+			"target_condition": {
+				"type": "minecraft:any_of",
+				"predicates": [
+					{
+						"type": "minecraft:matching_block_tag",
+						"tag": "minecraft:base_stone_nether"
+					},
+					{
+						"type": "minecraft:matching_block_tag",
+						"tag": "tfc:can_landslide"
+					}
+				]
+			}
+		}
+	]
+}

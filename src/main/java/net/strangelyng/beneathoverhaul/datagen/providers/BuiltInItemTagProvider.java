@@ -1,13 +1,16 @@
 package net.strangelyng.beneathoverhaul.datagen.providers;
 
 import net.dries007.tfc.common.TFCTags;
+import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
+import net.dries007.tfc.util.registry.RegistryRock;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.Tags;
@@ -17,9 +20,17 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.strangelyng.beneathoverhaul.BeneathOverhaul;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulBlocks;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulRock;
+import net.strangelyng.beneathoverhaul.common.items.BeneathOverhaulItems;
 
+import java.util.Locale;
+import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Stream;
+
+/*
+ * Special thanks to Gourmandd, much of the datagen code is based on their work for On-Ancient-Ground-Core
+ * https://github.com/Gourmandd/On-Ancient-Ground-Core/blob/main/src/main/java/net/gourmand/core/datagen/providers/BuiltinItemTags.java
+ */
 
 public class BuiltInItemTagProvider extends TagsProvider<Item> {
     private final ExistingFileHelper.IResourceType resourceType;
@@ -31,6 +42,20 @@ public class BuiltInItemTagProvider extends TagsProvider<Item> {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+        // Ore Block Items
+        Stream.of(BeneathOverhaulRock.VALUES).forEach(rock -> {
+            Stream.of(Ore.values()).forEach(ore -> {
+                if (ore.hasBlock()) {
+                    if (ore.isGraded()) {
+                        addGradedOreTags(BeneathOverhaulBlocks.BENEATH_ROCK_TFC_GRADED_ORES, ore, rock);
+                    } else {
+                        addOreTags(BeneathOverhaulBlocks.BENEATH_ROCK_TFC_ORES, ore, rock);
+                    }
+                }
+            });
+        });
+
+        // Rock Block Items
         Stream.of(BeneathOverhaulRock.VALUES).forEach(rock -> {
             this.tag(Tags.Items.COBBLESTONES_NORMAL).add(getKey(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.COBBLE).get()));
             this.tag(Tags.Items.COBBLESTONES_MOSSY).add(getKey(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.MOSSY_COBBLE).get()));
@@ -66,6 +91,10 @@ public class BuiltInItemTagProvider extends TagsProvider<Item> {
                     .add(getKey(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.LOOSE).get()))
                     .add(getKey(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.MOSSY_LOOSE).get()));
 
+            this.tag(getLooseStoneCategory(rock))
+                            .add(getKey(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.LOOSE).get()))
+                            .add(getKey(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.MOSSY_LOOSE).get()));
+
             this.tag(ItemTags.STONE_BRICKS)
                     .add(getKey(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.BRICKS).get()))
                     .add(getKey(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.CRACKED_BRICKS).get()))
@@ -96,7 +125,12 @@ public class BuiltInItemTagProvider extends TagsProvider<Item> {
             this.tag(ItemTags.STONE_BUTTONS).add(getKey(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.BUTTON).get()));
             this.tag(ItemTags.BUTTONS).add(getKey(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.BUTTON).get()));
         });
+
+        // Misc Items
+        this.tag(Tags.Items.MUSHROOMS).add(getKey(BeneathOverhaulItems.FLY_AGARIC.get()));
     }
+
+    // Helper Functions
 
     protected ResourceKey<Item> getKey(DeferredHolder<Block, ? extends Block> block ){
         return block.get().asItem().builtInRegistryHolder().key();
@@ -108,5 +142,21 @@ public class BuiltInItemTagProvider extends TagsProvider<Item> {
 
     protected ResourceKey<Item> getKey(Item item){
         return item.builtInRegistryHolder().key();
+    }
+
+    protected TagKey<Item> getLooseStoneCategory(BeneathOverhaulRock rock) {
+        return TFCTags.Items.STONES_LOOSE_CATEGORY.get(BeneathOverhaulRock.valueOf(rock.getSerializedName().toUpperCase(Locale.ROOT)).category());
+    }
+
+    private <T1 extends RegistryRock, T2> void addOreTags(Map<T1, Map<T2, BeneathOverhaulBlocks.Id<Block>>> map, T2 ore, T1 rock) {
+        DeferredHolder<Block, Block> block = map.get(rock).get(ore).holder();
+        this.tag(Tags.Items.ORES).add(getKey(block));
+    }
+
+    private <T1 extends RegistryRock, T2, T3 extends Ore.Grade> void addGradedOreTags(Map<T1, Map<T2, Map<T3, BeneathOverhaulBlocks.Id<Block>>>> map, T2 ore, T1 rock) {
+        for (Ore.Grade grade : Ore.Grade.values()) {
+            DeferredHolder<Block, Block> block = map.get(rock).get(ore).get(grade).holder();
+            this.tag(Tags.Items.ORES).add(getKey(block));
+        }
     }
 }

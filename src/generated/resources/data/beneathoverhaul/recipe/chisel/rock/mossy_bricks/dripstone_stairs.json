@@ -1,0 +1,8 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": [
+    "beneathoverhaul:rock/mossy_bricks/dripstone"
+  ],
+  "mode": "tfc:stair",
+  "result": "beneathoverhaul:rock/mossy_bricks/dripstone_stairs"
+}

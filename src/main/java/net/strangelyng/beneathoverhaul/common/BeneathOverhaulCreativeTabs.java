@@ -1,5 +1,6 @@
 package net.strangelyng.beneathoverhaul.common;
 
+import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -20,7 +21,23 @@ import java.util.function.Supplier;
 public final class BeneathOverhaulCreativeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, BeneathOverhaul.MOD_ID);
 
+    public static final Id ORES = register("ores", () -> new ItemStack(BeneathOverhaulBlocks.BENEATH_ROCK_TFC_GRADED_ORES.get(BeneathOverhaulRock.DEEPSLATE).get(Ore.NATIVE_COPPER).get(Ore.Grade.NORMAL)), BeneathOverhaulCreativeTabs::fillOresTab);
     public static final Id ROCKS = register("rock", () -> new ItemStack(BeneathOverhaulBlocks.ROCK_BLOCKS.get(BeneathOverhaulRock.DEEPSLATE).get(Rock.BlockType.HARDENED)), BeneathOverhaulCreativeTabs::fillRocksTab);
+    public static final Id MISC = register("misc", () -> new ItemStack(BeneathOverhaulBlocks.MUSHROOM_SPROUTS.get()), BeneathOverhaulCreativeTabs::fillMiscTab);
+
+    private static void fillOresTab(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out) {
+        for (Ore ore : Ore.values()) {
+            if (ore.isGraded()) {
+                BeneathOverhaulBlocks.BENEATH_ROCK_TFC_GRADED_ORES.values().forEach(map -> {
+                    accept(out, map, ore, Ore.Grade.POOR);
+                    accept(out, map, ore, Ore.Grade.NORMAL);
+                    accept(out, map, ore, Ore.Grade.RICH);
+                });
+            } else {
+                BeneathOverhaulBlocks.BENEATH_ROCK_TFC_ORES.values().forEach(map -> accept(out, map, ore));
+            }
+        }
+    }
 
     private static void fillRocksTab(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out) {
         for (BeneathOverhaulRock rock : BeneathOverhaulRock.VALUES) {
@@ -49,6 +66,12 @@ public final class BeneathOverhaulCreativeTabs {
             }
             accept(out, BeneathOverhaulItems.BRICKS, rock);
         }
+    }
+
+    private static void fillMiscTab(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output out) {
+        out.accept(BeneathOverhaulBlocks.MUSHROOM_SPROUTS.asItem());
+        out.accept(BeneathOverhaulBlocks.MUSHROOM_ROOTS.asItem());
+        out.accept(BeneathOverhaulItems.FLY_AGARIC);
     }
 
     // Helpers

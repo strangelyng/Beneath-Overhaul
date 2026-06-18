@@ -1,0 +1,145 @@
+{
+	"carvers": {
+		"air": "minecraft:nether_cave"
+	},
+	"downfall": 0,
+	"effects": {
+		"additions_sound": {
+			"sound": "minecraft:ambient.basalt_deltas.additions",
+			"tick_chance": 0.0015
+		},
+		"ambient_sound": "minecraft:ambient.basalt_deltas.loop",
+		"fog_color": 6840176,
+		"mood_sound": {
+			"block_search_extent": 8,
+			"offset": 2,
+			"sound": "minecraft:ambient.basalt_deltas.mood",
+			"tick_delay": 6000
+		},
+		"music": {
+			"max_delay": 24000,
+			"min_delay": 12000,
+			"replace_current_music": false,
+			"sound": {
+				"sound_id": "minecraft:music.nether.basalt_deltas"
+			}
+		},
+		"particle": {
+			"options": {
+				"type": "minecraft:white_ash"
+			},
+			"probability": 0.118093334
+		},
+		"sky_color": 7254527,
+		"water_color": 4159204,
+		"water_fog_color": 329011
+	},
+	"features": [
+		[],
+		[
+			"beneathoverhaul:nether/terrain/lava_lake"
+		],
+		[
+			"minecraft:basalt_pillar",
+			"beneathoverhaul:nether/geode/amethyst"
+		],
+		[],
+		[
+			"beneathoverhaul:nether/terrain/glowstone_ceiling",
+			"beneath:delta",
+			"minecraft:small_basalt_columns",
+			"minecraft:large_basalt_columns"
+		],
+		[],
+		"#beneathoverhaul:nether_veins",
+		"#beneathoverhaul:nether_underground_decoration",
+		[
+			"beneathoverhaul:nether/terrain/spring_lava",
+			"beneathoverhaul:nether/terrain/mossy_cobble"
+		],
+		[
+			"minecraft:spring_delta",
+			"minecraft:spring_closed_double",
+			"beneathoverhaul:nether/surface/blackstone_boulders",
+			"beneathoverhaul:nether/surface/loose_blackstone_patch",
+			"beneathoverhaul:nether/surface/loose_basalt",
+			"beneath:burpflower_patch",
+			"beneath:sulfur_patch",
+			"beneathoverhaul:nether/surface/pumice_patch",
+			"beneathoverhaul:nether/surface/beneath_mushrooms",
+			"beneathoverhaul:nether/surface/guano_patch",
+			"beneathoverhaul:nether/surface/stick_patch",
+			"beneathoverhaul:glow_lichen"
+		],
+		[
+			"beneath:glowstone_spikes",
+			"beneathoverhaul:nether/spikes/basalt_spikes",
+			"beneathoverhaul:nether/spikes/blackstone_spikes",
+			"beneathoverhaul:nether/hardening"
+		]
+	],
+	"has_precipitation": false,
+	"spawn_costs": {},
+	"spawners": {
+		"ambient": [
+			{
+				"type": "minecraft:bat",
+				"maxCount": 8,
+				"minCount": 8,
+				"weight": 10
+			}
+		],
+		"axolotls": [],
+		"creature": [
+			{
+				"type": "beneath:red_elk",
+				"maxCount": 8,
+				"minCount": 4,
+				"weight": 100
+			}
+		],
+		"misc": [],
+		"monster": [
+			{
+				"type": "minecraft:zombified_piglin",
+				"maxCount": 3,
+				"minCount": 2,
+				"weight": 50
+			},
+			{
+				"type": "minecraft:magma_cube",
+				"maxCount": 3,
+				"minCount": 2,
+				"weight": 100
+			},
+			{
+				"type": "minecraft:skeleton",
+				"maxCount": 4,
+				"minCount": 1,
+				"weight": 20
+			},
+			{
+				"type": "minecraft:wither_skeleton",
+				"maxCount": 1,
+				"minCount": 1,
+				"weight": 20
+			},
+			{
+				"type": "minecraft:enderman",
+				"maxCount": 2,
+				"minCount": 1,
+				"weight": 10
+			},
+			{
+				"type": "minecraft:phantom",
+				"maxCount": 1,
+				"minCount": 1,
+				"weight": 10
+			}
+		],
+		"underground_water_creature": [],
+		"water_ambient": [],
+		"water_creature": []
+	},
+	"temperature": 2
+}
