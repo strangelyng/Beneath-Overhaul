@@ -30,7 +30,7 @@ public class BuiltInLangProvider extends LanguageProvider {
         // Creative Tabs
         add("beneathoverhaul.creative_tab.ores", "Beneath Overhaul Ores");
         add("beneathoverhaul.creative_tab.rock", "Beneath Overhaul Rock Stuff");
-        add("beneathoverhaul.creative_tab.misc", "Beneath Overahul Miscellaneous");
+        add("beneathoverhaul.creative_tab.misc", "Beneath Overhaul Miscellaneous");
 
         // Biomes
         add("biome.beneathoverhaul.nether/ash_forest", "Ash Forest");
@@ -60,12 +60,10 @@ public class BuiltInLangProvider extends LanguageProvider {
                 Stream.of(BeneathOverhaulRock.VALUES).forEach(rock -> {
                     if (ore.isGraded()) {
                         Stream.of(Ore.Grade.values()).forEach(grade -> {
-                            createOreKey(BeneathOverhaulBlocks.BENEATH_ROCK_TFC_GRADED_ORES.get(rock).get(ore).get(grade), getName(grade.name()) + " " + getName(rock), getName(ore.name()));
+                            createOreKey(BeneathOverhaulBlocks.BENEATH_ROCK_TFC_GRADED_ORES.get(rock).get(ore).get(grade), getName(grade.name()) + " " + getName(rock), getName(ore));
                         });
                     } else {
-                        String oreName = ore != Ore.DIAMOND ? ore.name() : "KIMBERLITE";
-
-                        createOreKey(BeneathOverhaulBlocks.BENEATH_ROCK_TFC_ORES.get(rock).get(ore), getName(rock), getName(oreName));
+                        createOreKey(BeneathOverhaulBlocks.BENEATH_ROCK_TFC_ORES.get(rock).get(ore), getName(rock), getName(ore));
                     }
                 });
             }
@@ -141,11 +139,40 @@ public class BuiltInLangProvider extends LanguageProvider {
         add(block.get().getDescriptionId() + ".prospected", ore);
     }
 
-    private String getName(String string){
-        return TextUtils.getName(string);
+    private String getName(Ore ore) {
+        // Using switch in case it needs expanding for anything
+        switch (ore) {
+            case DIAMOND -> {
+                return "Kimberlite";
+            }
+            default -> {
+                return getName(ore.name());
+            }
+        }
+    }
+
+    private String getName(BeneathOverhaulRock rock) {
+        switch (rock) {
+            case BeneathOverhaulRock.BLACKSTONE -> {
+                return "Pyroxenite";
+            }
+            case BeneathOverhaulRock.DEEPSLATE -> {
+                return "Migmatite";
+            }
+            case BeneathOverhaulRock.DRIPSTONE -> {
+                return "Travertine";
+            }
+            default -> {
+                return getName(rock.getSerializedName());
+            }
+        }
     }
 
     private String getName(StringRepresentable entry){
         return TextUtils.getName(entry.getSerializedName());
+    }
+
+    private String getName(String string){
+        return TextUtils.getName(string);
     }
 }
