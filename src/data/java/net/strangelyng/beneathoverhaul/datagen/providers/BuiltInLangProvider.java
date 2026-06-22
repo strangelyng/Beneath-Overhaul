@@ -52,6 +52,8 @@ public class BuiltInLangProvider extends LanguageProvider {
         addBlock(BeneathOverhaulBlocks.FLY_AGARIC, "Fly Agaric");
         addBlock(BeneathOverhaulBlocks.ASH_LAYER_BLOCK, "Ash Pile");
 
+        addBlock(BeneathOverhaulBlocks.PIGLIN_MASK, "Piglin Mask");
+
         addItem(BeneathOverhaulItems.FLY_AGARIC, "Fly Agaric Mushroom");
 
         // Ore Blocks

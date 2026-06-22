@@ -116,6 +116,8 @@ public class BuiltInBlockLootTableProvider extends BlockLootSubProvider {
                 LootTableBuilders.createLayerBlockDropTable(BeneathOverhaulBlocks.ASH_LAYER_BLOCK.get(), TFCItems.POWDERS.get(Powder.WOOD_ASH).get()));
 
         this.dropOther(BeneathOverhaulBlocks.FLY_AGARIC.get(), BeneathOverhaulItems.FLY_AGARIC.get());
+
+        this.dropOther(BeneathOverhaulBlocks.PIGLIN_MASK.get(), BeneathOverhaulItems.PIGLIN_MASK.get());
     }
 
     public static Ore.Grade getTFCGrade(Ore.Grade grade) {

@@ -71,6 +71,8 @@ public final class BeneathOverhaulBlocks {
 
     public static final Id<SandLayerBlock> ASH_LAYER_BLOCK = registerNoItem("ash_pile", () -> new SandLayerBlock(BlockBehaviour.Properties.ofFullCopy(TFCBlocks.SAND.get(SandBlockType.RED).get()).mapColor(MapColor.NONE)));
 
+    public static final Id<PiglinMaskBlock> PIGLIN_MASK = registerNoItem("piglin_mask", () -> new PiglinMaskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PUMPKIN)));
+
     // Helper Functions
     private static <T extends Block> Id<T> registerNoItem(String name, Supplier<T> blockSupplier) {
         return register(name, blockSupplier, (Function<T, ? extends BlockItem>) null);

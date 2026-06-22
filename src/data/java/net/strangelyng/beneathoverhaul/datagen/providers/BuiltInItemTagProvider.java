@@ -128,6 +128,8 @@ public class BuiltInItemTagProvider extends TagsProvider<Item> {
 
         // Misc Items
         this.tag(Tags.Items.MUSHROOMS).add(getKey(BeneathOverhaulItems.FLY_AGARIC.get()));
+
+        this.tag(ItemTags.PIGLIN_LOVED).add(getKey(BeneathOverhaulItems.PIGLIN_MASK.get()));
     }
 
     // Helper Functions

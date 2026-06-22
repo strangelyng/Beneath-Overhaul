@@ -6,6 +6,7 @@
     "common.beneath.ForgeEventsMixin",
     "common.beneath.NetherPreyMixin",
     "common.minecraft.DripstoneUtilsAccessor",
+    "common.minecraft.LivingEntityMixin",
     "common.minecraft.entities.SlimeMixin"
   ],
   "client": [

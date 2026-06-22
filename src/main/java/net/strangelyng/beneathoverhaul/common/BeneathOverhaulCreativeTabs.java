@@ -72,6 +72,7 @@ public final class BeneathOverhaulCreativeTabs {
         out.accept(BeneathOverhaulBlocks.MUSHROOM_SPROUTS.asItem());
         out.accept(BeneathOverhaulBlocks.MUSHROOM_ROOTS.asItem());
         out.accept(BeneathOverhaulItems.FLY_AGARIC);
+        out.accept(BeneathOverhaulItems.PIGLIN_MASK);
     }
 
     // Helpers

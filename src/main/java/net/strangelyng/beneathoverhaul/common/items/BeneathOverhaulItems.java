@@ -11,6 +11,7 @@ import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.strangelyng.beneathoverhaul.BeneathOverhaul;
+import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulBlocks;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulRock;
 
 import java.util.Locale;
@@ -32,6 +33,8 @@ public class BeneathOverhaulItems {
                     .effect(new MobEffectInstance(MobEffects.CONFUSION, 300, 0), 0.5F)
                     .build()
     )));
+
+    public static final ItemId PIGLIN_MASK = register("piglin_mask", () -> new PiglinMaskItem(BeneathOverhaulBlocks.PIGLIN_MASK.get(), new Item.Properties()));
 
     private static ItemId register(String name)
     {

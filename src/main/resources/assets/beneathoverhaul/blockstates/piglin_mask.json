@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "beneathoverhaul:block/piglin_mask",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "beneathoverhaul:block/piglin_mask"
+    },
+    "facing=south": {
+      "model": "beneathoverhaul:block/piglin_mask",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "beneathoverhaul:block/piglin_mask",
+      "y": 270
+    }
+  }
+}
