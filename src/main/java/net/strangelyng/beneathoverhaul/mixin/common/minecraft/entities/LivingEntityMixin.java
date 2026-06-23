@@ -1,4 +1,4 @@
-package net.strangelyng.beneathoverhaul.mixin.common.minecraft;
+package net.strangelyng.beneathoverhaul.mixin.common.minecraft.entities;
 
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;

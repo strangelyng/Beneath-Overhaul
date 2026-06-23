@@ -56,6 +56,10 @@ public class BuiltInLangProvider extends LanguageProvider {
 
         addItem(BeneathOverhaulItems.FLY_AGARIC, "Fly Agaric Mushroom");
 
+        // Tooltips
+        add("beneathoverhaul.tooltip.hold_shift", "Hold (Shift) for Item Info");
+        add("beneathoverhaul.tooltip.piglin_mask", "Makes piglins neutral and reduces \nthe detection range of piglin brutes");
+
         // Ore Blocks
         Stream.of(Ore.values()).forEach(ore -> {
             if (ore.hasBlock()) {
