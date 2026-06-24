@@ -6,17 +6,26 @@ import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.soil.SandBlockType;
+import net.dries007.tfc.common.items.Powder;
+import net.dries007.tfc.common.items.TFCItems;
 import net.dries007.tfc.util.Helpers;
+import net.dries007.tfc.util.Metal;
 import net.dries007.tfc.util.registry.RegistrationHelpers;
 import net.dries007.tfc.util.registry.RegistryHolder;
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.phys.HitResult;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.strangelyng.beneathoverhaul.BeneathOverhaul;
@@ -64,15 +73,40 @@ public final class BeneathOverhaulBlocks {
     // Misc Blocks
     public static final Id<RotatedPillarBlock> CHARRED_LOG = register("charred_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of().strength(8.0f).sound(SoundType.WOOD).instrument(NoteBlockInstrument.BASS).requiresCorrectToolForDrops().mapColor(MapColor.COLOR_BLACK)));
 
-    public static final Id<Block> FLY_AGARIC = registerNoItem("mushroom/fly_agaric", () -> new NFlowerBlock(ExtendedProperties.of(Blocks.CRIMSON_FUNGUS)));
+    public static final Id<Block> FLY_AGARIC = registerNoItem("mushroom/fly_agaric", () -> new NFlowerBlock(ExtendedProperties.of(Blocks.CRIMSON_FUNGUS)) {
+        @Override
+        public ItemStack getCloneItemStack(BlockState state, HitResult target, LevelReader level, BlockPos pos, Player player) {
+            if (this == BeneathOverhaulBlocks.FLY_AGARIC.get()) {
+                return new ItemStack(BeneathOverhaulItems.FLY_AGARIC.get());
+            }
+            return super.getCloneItemStack(state, target, level, pos, player);
+        }
+    });
 
     public static final Id<DecorativePlantBlock> MUSHROOM_SPROUTS = register("mushroom_sprouts", () -> new DecorativePlantBlock(ExtendedProperties.of().mapColor(MapColor.NONE).sound(SoundType.NETHER_WART).noCollission(), DecorativePlantBlock.DEFAULT_SHAPE, null));
     public static final Id<DecorativePlantBlock> MUSHROOM_ROOTS = register("mushroom_roots", () -> new DecorativePlantBlock(ExtendedProperties.of().mapColor(MapColor.NONE).sound(SoundType.NETHER_WART).noCollission(), DecorativePlantBlock.DEFAULT_SHAPE, null));
 
-    public static final Id<SandLayerBlock> ASH_LAYER_BLOCK = registerNoItem("ash_pile", () -> new SandLayerBlock(BlockBehaviour.Properties.ofFullCopy(TFCBlocks.SAND.get(SandBlockType.RED).get()).mapColor(MapColor.NONE)));
+    public static final Id<SandLayerBlock> ASH_LAYER_BLOCK = registerNoItem("ash_pile", () -> new SandLayerBlock(BlockBehaviour.Properties.ofFullCopy(TFCBlocks.SAND.get(SandBlockType.RED).get()).mapColor(MapColor.NONE)) {
+        @Override
+        public ItemStack getCloneItemStack(BlockState state, HitResult target, LevelReader level, BlockPos pos, Player player) {
+            if (this == BeneathOverhaulBlocks.ASH_LAYER_BLOCK.get()) {
+                return new ItemStack(TFCItems.POWDERS.get(Powder.WOOD_ASH).get());
+            }
+            return super.getCloneItemStack(state, target, level, pos, player);
+        }
+    });
 
-    // TODO: update block properties of PIGLIN_MASK
-    public static final Id<PiglinMaskBlock> PIGLIN_MASK = registerNoItem("piglin_mask", () -> new PiglinMaskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PUMPKIN)));
+    public static final Id<PiglinMaskBlock> PIGLIN_MASK = registerNoItem("piglin_mask", () -> new PiglinMaskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PIGLIN_HEAD)));
+
+    public static final Id<LanternBlock> BASTION_LAMP = registerNoItem("bastion_lamp", () -> new LanternBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LANTERN)) {
+        @Override
+        public ItemStack getCloneItemStack(BlockState state, HitResult target, LevelReader level, BlockPos pos, Player player) {
+            if (this == BeneathOverhaulBlocks.BASTION_LAMP.get()) {
+                return new ItemStack(TFCBlocks.METALS.get(Metal.BLACK_BRONZE).get(Metal.BlockType.LAMP).get());
+            }
+            return super.getCloneItemStack(state, target, level, pos, player);
+        }
+    });
 
     // Helper Functions
     private static <T extends Block> Id<T> registerNoItem(String name, Supplier<T> blockSupplier) {

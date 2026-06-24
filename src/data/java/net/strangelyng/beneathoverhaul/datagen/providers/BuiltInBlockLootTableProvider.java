@@ -1,9 +1,11 @@
 package net.strangelyng.beneathoverhaul.datagen.providers;
 
+import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.items.Powder;
 import net.dries007.tfc.common.items.TFCItems;
+import net.dries007.tfc.util.Metal;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
@@ -118,6 +120,8 @@ public class BuiltInBlockLootTableProvider extends BlockLootSubProvider {
         this.dropOther(BeneathOverhaulBlocks.FLY_AGARIC.get(), BeneathOverhaulItems.FLY_AGARIC.get());
 
         this.dropOther(BeneathOverhaulBlocks.PIGLIN_MASK.get(), BeneathOverhaulItems.PIGLIN_MASK.get());
+
+        this.dropOther(BeneathOverhaulBlocks.BASTION_LAMP.get(), TFCBlocks.METALS.get(Metal.BLACK_BRONZE).get(Metal.BlockType.LAMP).get());
     }
 
     public static Ore.Grade getTFCGrade(Ore.Grade grade) {

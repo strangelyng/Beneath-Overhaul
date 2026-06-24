@@ -54,6 +54,8 @@ public class BuiltInLangProvider extends LanguageProvider {
 
         addBlock(BeneathOverhaulBlocks.PIGLIN_MASK, "Piglin Mask");
 
+        addBlock(BeneathOverhaulBlocks.BASTION_LAMP, "Black Bronze Lamp");
+
         addItem(BeneathOverhaulItems.FLY_AGARIC, "Fly Agaric Mushroom");
 
         // Tooltips

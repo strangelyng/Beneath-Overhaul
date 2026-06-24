@@ -44,6 +44,7 @@ public class ClientEventHandler {
 
         ItemBlockRenderTypes.setRenderLayer(BeneathOverhaulBlocks.FLY_AGARIC.get(), cutout);
 
+        ItemBlockRenderTypes.setRenderLayer(BeneathOverhaulBlocks.BASTION_LAMP.get(), cutout);
 
     }
 

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "tfc:block/metal/lamp/black_bronze_on"
+    },
+    "hanging=true": {
+      "model": "tfc:block/metal/lamp/black_bronze_hanging_on"
+    }
+  }
+}
