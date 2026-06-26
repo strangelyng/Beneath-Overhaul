@@ -16,6 +16,7 @@ import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.strangelyng.beneathoverhaul.BeneathOverhaul;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulBlocks;
+import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulOres;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulRock;
 import net.strangelyng.beneathoverhaul.common.blocks.SandLayerBlock;
 import net.strangelyng.beneathoverhaul.util.TextureUtils;
@@ -66,6 +67,12 @@ public class BuiltInBlockStateProvider extends BlockStateProvider {
                     }
                 });
             });
+
+            Stream.of(BeneathOverhaulOres.values()).forEach(ore -> {
+                if (!ore.isGraded() && ore.hasBlock()) {
+                    simpleOre(BeneathOverhaulBlocks.BENEATH_ROCK_CUSTOM_ORES.get(rock).get(ore).holder(), rock, ore);
+                }
+            });
         });
 
         // Rock Blocks
@@ -106,6 +113,12 @@ public class BuiltInBlockStateProvider extends BlockStateProvider {
     }
 
     private void simpleOre(DeferredHolder<Block, Block> block, RegistryRock rock, Ore ore) {
+        String allTexture = TextureUtils.getRawRockTexture(rock);
+        String oreTexture = TextureUtils.getOreTexture(ore);
+        simpleBlock(block.get(), ConfiguredModel.builder().modelFile(createOverlayModel(block.getId().getPath(), allTexture, oreTexture)).buildLast());
+    }
+
+    private void simpleOre(DeferredHolder<Block, Block> block, RegistryRock rock, BeneathOverhaulOres ore) {
         String allTexture = TextureUtils.getRawRockTexture(rock);
         String oreTexture = TextureUtils.getOreTexture(ore);
         simpleBlock(block.get(), ConfiguredModel.builder().modelFile(createOverlayModel(block.getId().getPath(), allTexture, oreTexture)).buildLast());

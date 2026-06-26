@@ -14,6 +14,7 @@ import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.strangelyng.beneathoverhaul.BeneathOverhaul;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulBlocks;
+import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulOres;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulRock;
 import net.strangelyng.beneathoverhaul.common.items.BeneathOverhaulItems;
 import net.strangelyng.beneathoverhaul.util.TextureUtils;
@@ -52,6 +53,12 @@ public class BuiltInItemModelProvider extends ItemModelProvider {
                     }
                 });
             });
+
+            Stream.of(BeneathOverhaulOres.values()).forEach(ore -> {
+                if (!ore.isGraded() && ore.hasBlock()) {
+                    simpleBlock(BeneathOverhaulBlocks.BENEATH_ROCK_CUSTOM_ORES.get(rock).get(ore).holder());
+                }
+            });
         });
 
         // Rock Blocks
@@ -87,6 +94,10 @@ public class BuiltInItemModelProvider extends ItemModelProvider {
                     TextureUtils.getRockTexture(rock, Rock.BlockType.BUTTON));
 
             simpleItem(BeneathOverhaulItems.BRICKS.get(rock).get(), getItemModelLocation(BeneathOverhaulItems.BRICKS.get(rock).getId()));
+        });
+
+        Stream.of(BeneathOverhaulOres.values()).forEach(ore -> {
+            simpleItem(BeneathOverhaulItems.ORES.get(ore).get(), getItemModelLocation(BeneathOverhaulItems.ORES.get(ore).getId()));
         });
     }
 

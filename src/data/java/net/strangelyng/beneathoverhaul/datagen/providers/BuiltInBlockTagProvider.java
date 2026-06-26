@@ -18,6 +18,7 @@ import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.strangelyng.beneathoverhaul.BeneathOverhaul;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulBlocks;
+import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulOres;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulRock;
 import net.strangelyng.beneathoverhaul.util.CategoryUtils;
 
@@ -48,6 +49,16 @@ public class BuiltInBlockTagProvider extends TagsProvider<Block> {
                         addGradedOreTags(BeneathOverhaulBlocks.BENEATH_ROCK_TFC_GRADED_ORES, ore, rock);
                     } else {
                         addOreTags(BeneathOverhaulBlocks.BENEATH_ROCK_TFC_ORES, ore, rock);
+                    }
+                }
+            });
+
+            Stream.of(BeneathOverhaulOres.values()).forEach(ore -> {
+                if (ore.hasBlock()) {
+                    if (ore.isGraded()) {
+
+                    } else {
+                        addOreTags(BeneathOverhaulBlocks.BENEATH_ROCK_CUSTOM_ORES, ore, rock);
                     }
                 }
             });
@@ -191,6 +202,8 @@ public class BuiltInBlockTagProvider extends TagsProvider<Block> {
     private TagKey<Block> getOreTierTag(Enum ore) {
         if (ore instanceof Ore) {
             return CategoryUtils.Ores.TFC_ORES_TO_MINING_TIER_TAG.get(ore);
+        } else if (ore instanceof BeneathOverhaulOres) {
+            return CategoryUtils.Ores.CUSTOM_ORES_TO_MINING_TIER_TAG.get(ore);
         }
 
         return null;

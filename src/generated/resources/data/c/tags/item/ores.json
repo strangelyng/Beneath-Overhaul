@@ -53,6 +53,7 @@
     "beneathoverhaul:ore/ruby/deepslate",
     "beneathoverhaul:ore/sapphire/deepslate",
     "beneathoverhaul:ore/topaz/deepslate",
+    "beneathoverhaul:ore/quartz/deepslate",
     "beneathoverhaul:ore/poor_native_copper/blackstone",
     "beneathoverhaul:ore/normal_native_copper/blackstone",
     "beneathoverhaul:ore/rich_native_copper/blackstone",
@@ -106,6 +107,7 @@
     "beneathoverhaul:ore/ruby/blackstone",
     "beneathoverhaul:ore/sapphire/blackstone",
     "beneathoverhaul:ore/topaz/blackstone",
+    "beneathoverhaul:ore/quartz/blackstone",
     "beneathoverhaul:ore/poor_native_copper/dripstone",
     "beneathoverhaul:ore/normal_native_copper/dripstone",
     "beneathoverhaul:ore/rich_native_copper/dripstone",
@@ -158,6 +160,7 @@
     "beneathoverhaul:ore/pyrite/dripstone",
     "beneathoverhaul:ore/ruby/dripstone",
     "beneathoverhaul:ore/sapphire/dripstone",
-    "beneathoverhaul:ore/topaz/dripstone"
+    "beneathoverhaul:ore/topaz/dripstone",
+    "beneathoverhaul:ore/quartz/dripstone"
   ]
 }

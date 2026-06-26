@@ -231,6 +231,12 @@
   "block.beneathoverhaul.ore.pyrite.deepslate.prospected": "Native Gold?",
   "block.beneathoverhaul.ore.pyrite.dripstone": "Travertine Pyrite",
   "block.beneathoverhaul.ore.pyrite.dripstone.prospected": "Native Gold?",
+  "block.beneathoverhaul.ore.quartz.blackstone": "Pyroxenite Quartz",
+  "block.beneathoverhaul.ore.quartz.blackstone.prospected": "Quartz",
+  "block.beneathoverhaul.ore.quartz.deepslate": "Migmatite Quartz",
+  "block.beneathoverhaul.ore.quartz.deepslate.prospected": "Quartz",
+  "block.beneathoverhaul.ore.quartz.dripstone": "Travertine Quartz",
+  "block.beneathoverhaul.ore.quartz.dripstone.prospected": "Quartz",
   "block.beneathoverhaul.ore.rich_bismuthinite.blackstone": "Rich Pyroxenite Bismuthinite",
   "block.beneathoverhaul.ore.rich_bismuthinite.blackstone.prospected": "Bismuthinite",
   "block.beneathoverhaul.ore.rich_bismuthinite.deepslate": "Rich Migmatite Bismuthinite",
@@ -454,5 +460,6 @@
   "item.beneathoverhaul.brick.blackstone": "Pyroxenite Brick",
   "item.beneathoverhaul.brick.deepslate": "Migmatite Brick",
   "item.beneathoverhaul.brick.dripstone": "Travertine Brick",
-  "item.beneathoverhaul.food.fly_agaric": "Fly Agaric Mushroom"
+  "item.beneathoverhaul.food.fly_agaric": "Fly Agaric Mushroom",
+  "item.beneathoverhaul.ore.quartz": "Quartz"
 }

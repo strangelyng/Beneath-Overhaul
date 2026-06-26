@@ -12,6 +12,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import net.strangelyng.beneathoverhaul.BeneathOverhaul;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulBlocks;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulDecoBlockHolder;
+import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulOres;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulRock;
 import net.strangelyng.beneathoverhaul.common.items.BeneathOverhaulItems;
 
@@ -35,6 +36,15 @@ public final class BeneathOverhaulCreativeTabs {
                 });
             } else {
                 BeneathOverhaulBlocks.BENEATH_ROCK_TFC_ORES.values().forEach(map -> accept(out, map, ore));
+            }
+        }
+
+        for (BeneathOverhaulOres ore : BeneathOverhaulOres.values()) {
+            if (ore.isGraded()) {
+
+            } else {
+                BeneathOverhaulBlocks.BENEATH_ROCK_CUSTOM_ORES.values().forEach(map -> accept(out, map, ore));
+                accept(out, BeneathOverhaulItems.ORES, ore);
             }
         }
     }

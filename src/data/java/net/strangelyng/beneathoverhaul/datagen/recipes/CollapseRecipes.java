@@ -7,6 +7,7 @@ import net.dries007.tfc.common.recipes.ingredients.BlockIngredient;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulBlocks;
+import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulOres;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulRock;
 
 import java.util.ArrayList;
@@ -49,8 +50,22 @@ public interface CollapseRecipes extends Recipes {
         collapsesToCobble.add(BLOCK_MAP.get(Rock.BlockType.CRACKED_BRICKS).get());
 
         Stream.of(Ore.values()).forEach(ore -> {
-            if (ore.isGraded()) {
-                collapsesToCobble.add(BeneathOverhaulBlocks.BENEATH_ROCK_TFC_GRADED_ORES.get(rockType).get(ore).get(Ore.Grade.POOR).get());
+            if (ore.hasBlock()) {
+                if (ore.isGraded()) {
+                    collapsesToCobble.add(BeneathOverhaulBlocks.BENEATH_ROCK_TFC_GRADED_ORES.get(rockType).get(ore).get(Ore.Grade.POOR).get());
+                } else {
+                    collapsesToCobble.add(BeneathOverhaulBlocks.BENEATH_ROCK_TFC_ORES.get(rockType).get(ore).get());
+                }
+            }
+        });
+
+        Stream.of(BeneathOverhaulOres.values()).forEach(ore -> {
+            if (ore.hasBlock()) {
+                if (ore.isGraded()) {
+
+                } else {
+                    collapsesToCobble.add(BeneathOverhaulBlocks.BENEATH_ROCK_CUSTOM_ORES.get(rockType).get(ore).get());
+                }
             }
         });
 

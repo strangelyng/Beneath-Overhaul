@@ -16,7 +16,25 @@
     "beneathoverhaul:ore/poor_magnetite/deepslate",
     "beneathoverhaul:ore/poor_limonite/deepslate",
     "beneathoverhaul:ore/poor_sphalerite/deepslate",
-    "beneathoverhaul:ore/poor_tetrahedrite/deepslate"
+    "beneathoverhaul:ore/poor_tetrahedrite/deepslate",
+    "beneathoverhaul:ore/gypsum/deepslate",
+    "beneathoverhaul:ore/cinnabar/deepslate",
+    "beneathoverhaul:ore/cryolite/deepslate",
+    "beneathoverhaul:ore/borax/deepslate",
+    "beneathoverhaul:ore/graphite/deepslate",
+    "beneathoverhaul:ore/saltpeter/deepslate",
+    "beneathoverhaul:ore/sulfur/deepslate",
+    "beneathoverhaul:ore/sylvite/deepslate",
+    "beneathoverhaul:ore/amethyst/deepslate",
+    "beneathoverhaul:ore/diamond/deepslate",
+    "beneathoverhaul:ore/emerald/deepslate",
+    "beneathoverhaul:ore/lapis_lazuli/deepslate",
+    "beneathoverhaul:ore/opal/deepslate",
+    "beneathoverhaul:ore/pyrite/deepslate",
+    "beneathoverhaul:ore/ruby/deepslate",
+    "beneathoverhaul:ore/sapphire/deepslate",
+    "beneathoverhaul:ore/topaz/deepslate",
+    "beneathoverhaul:ore/quartz/deepslate"
   ],
   "result": "beneathoverhaul:rock/cobble/deepslate"
 }

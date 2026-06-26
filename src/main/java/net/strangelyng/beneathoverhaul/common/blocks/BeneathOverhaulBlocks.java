@@ -70,6 +70,12 @@ public final class BeneathOverhaulBlocks {
             )
     );
 
+    public static final Map<BeneathOverhaulRock, Map<BeneathOverhaulOres, Id<Block>>> BENEATH_ROCK_CUSTOM_ORES = Helpers.mapOf(BeneathOverhaulRock.class, rock ->
+            Helpers.mapOf(BeneathOverhaulOres.class, ore -> (!ore.isGraded() && ore.hasBlock()), ore ->
+                    register(("ore/" + ore.name() + "/" + rock.name()), () -> ore.create(rock))
+            )
+    );
+
     // Misc Blocks
     public static final Id<RotatedPillarBlock> CHARRED_LOG = register("charred_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of().strength(8.0f).sound(SoundType.WOOD).instrument(NoteBlockInstrument.BASS).requiresCorrectToolForDrops().mapColor(MapColor.COLOR_BLACK)));
 

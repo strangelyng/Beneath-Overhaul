@@ -16,7 +16,25 @@
     "beneathoverhaul:ore/poor_magnetite/dripstone",
     "beneathoverhaul:ore/poor_limonite/dripstone",
     "beneathoverhaul:ore/poor_sphalerite/dripstone",
-    "beneathoverhaul:ore/poor_tetrahedrite/dripstone"
+    "beneathoverhaul:ore/poor_tetrahedrite/dripstone",
+    "beneathoverhaul:ore/gypsum/dripstone",
+    "beneathoverhaul:ore/cinnabar/dripstone",
+    "beneathoverhaul:ore/cryolite/dripstone",
+    "beneathoverhaul:ore/borax/dripstone",
+    "beneathoverhaul:ore/graphite/dripstone",
+    "beneathoverhaul:ore/saltpeter/dripstone",
+    "beneathoverhaul:ore/sulfur/dripstone",
+    "beneathoverhaul:ore/sylvite/dripstone",
+    "beneathoverhaul:ore/amethyst/dripstone",
+    "beneathoverhaul:ore/diamond/dripstone",
+    "beneathoverhaul:ore/emerald/dripstone",
+    "beneathoverhaul:ore/lapis_lazuli/dripstone",
+    "beneathoverhaul:ore/opal/dripstone",
+    "beneathoverhaul:ore/pyrite/dripstone",
+    "beneathoverhaul:ore/ruby/dripstone",
+    "beneathoverhaul:ore/sapphire/dripstone",
+    "beneathoverhaul:ore/topaz/dripstone",
+    "beneathoverhaul:ore/quartz/dripstone"
   ],
   "result": "beneathoverhaul:rock/cobble/dripstone"
 }

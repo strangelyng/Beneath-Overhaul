@@ -12,6 +12,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.strangelyng.beneathoverhaul.BeneathOverhaul;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulBlocks;
+import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulOres;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulRock;
 
 import java.util.Locale;
@@ -23,6 +24,10 @@ public class BeneathOverhaulItems {
 
     public static final Map<BeneathOverhaulRock, ItemId> BRICKS = Helpers.mapOf(BeneathOverhaulRock.class, type ->
             register("brick/" + type.name(), type.createItemProperties())
+    );
+
+    public static final Map<BeneathOverhaulOres, ItemId> ORES = Helpers.mapOf(BeneathOverhaulOres.class, ore -> !ore.isGraded(), type ->
+            register("ore/" + type.name())
     );
 
     public static final ItemId FLY_AGARIC = register("food/fly_agaric", () -> new Item(new Item.Properties().food(

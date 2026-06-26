@@ -19,6 +19,7 @@ import net.minecraft.world.level.storage.loot.predicates.ExplosionCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulBlocks;
+import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulOres;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulRock;
 import net.strangelyng.beneathoverhaul.common.items.BeneathOverhaulItems;
 import net.strangelyng.beneathoverhaul.datagen.builders.LootTableBuilders;
@@ -83,6 +84,14 @@ public class BuiltInBlockLootTableProvider extends BlockLootSubProvider {
                         addOreTable(map.get(ore).get(grade).get(), TFCItems.GRADED_ORES.get(ore).get(getTFCGrade(grade)).get());
                     }
                 });
+            });
+        });
+
+        BeneathOverhaulBlocks.BENEATH_ROCK_CUSTOM_ORES.values().forEach(map -> {
+            Stream.of(BeneathOverhaulOres.values()).forEach(ore -> {
+                if (!ore.isGraded() && ore.hasBlock()) {
+                    addOreTable(map.get(ore).get(), BeneathOverhaulItems.ORES.get(ore).get());
+                }
             });
         });
     }

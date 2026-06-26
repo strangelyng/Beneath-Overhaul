@@ -8,6 +8,7 @@ import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.LanguageProvider;
 import net.strangelyng.beneathoverhaul.BeneathOverhaul;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulBlocks;
+import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulOres;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulRock;
 import net.strangelyng.beneathoverhaul.common.items.BeneathOverhaulItems;
 import net.strangelyng.beneathoverhaul.util.TextUtils;
@@ -63,9 +64,9 @@ public class BuiltInLangProvider extends LanguageProvider {
         add("beneathoverhaul.tooltip.piglin_mask", "Makes piglins neutral and reduces \nthe detection range of piglin brutes");
 
         // Ore Blocks
-        Stream.of(Ore.values()).forEach(ore -> {
-            if (ore.hasBlock()) {
-                Stream.of(BeneathOverhaulRock.VALUES).forEach(rock -> {
+        Stream.of(BeneathOverhaulRock.VALUES).forEach(rock -> {
+            Stream.of(Ore.values()).forEach(ore -> {
+                if (ore.hasBlock()) {
                     if (ore.isGraded()) {
                         Stream.of(Ore.Grade.values()).forEach(grade -> {
                             createOreKey(BeneathOverhaulBlocks.BENEATH_ROCK_TFC_GRADED_ORES.get(rock).get(ore).get(grade), getName(grade.name()) + " " + getName(rock), getName(ore));
@@ -73,7 +74,25 @@ public class BuiltInLangProvider extends LanguageProvider {
                     } else {
                         createOreKey(BeneathOverhaulBlocks.BENEATH_ROCK_TFC_ORES.get(rock).get(ore), getName(rock), getName(ore));
                     }
-                });
+                }
+            });
+
+            Stream.of(BeneathOverhaulOres.values()).forEach(ore -> {
+                if (ore.hasBlock()) {
+                    if (ore.isGraded()) {
+
+                    } else {
+                        createOreKey(BeneathOverhaulBlocks.BENEATH_ROCK_CUSTOM_ORES.get(rock).get(ore), getName(rock), getName(ore));
+                    }
+                }
+            });
+        });
+
+        Stream.of(BeneathOverhaulOres.values()).forEach(ore -> {
+            if (ore.isGraded()) {
+
+            } else {
+                addItem(BeneathOverhaulItems.ORES.get(ore), getName(ore));
             }
         });
 
@@ -157,6 +176,10 @@ public class BuiltInLangProvider extends LanguageProvider {
                 return getName(ore.name());
             }
         }
+    }
+
+    private String getName(BeneathOverhaulOres ore) {
+        return getName(ore.name());
     }
 
     private String getName(BeneathOverhaulRock rock) {

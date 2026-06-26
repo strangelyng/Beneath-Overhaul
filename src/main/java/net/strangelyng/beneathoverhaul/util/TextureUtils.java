@@ -7,6 +7,7 @@ import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.util.registry.RegistryRock;
 import net.minecraft.resources.ResourceLocation;
 import net.strangelyng.beneathoverhaul.BeneathOverhaul;
+import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulOres;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulRock;
 
 import java.util.Locale;
@@ -149,6 +150,10 @@ public class TextureUtils {
         return TerraFirmaCraft.MOD_ID + ":block/ore/" + ore.name().toLowerCase(Locale.ROOT);
     }
 
+    public static String getOreTexture(BeneathOverhaulOres ore) {
+        return BeneathOverhaul.MOD_ID + ":block/ore/" + ore.name().toLowerCase(Locale.ROOT);
+    }
+
     public static String getOreTexture(Ore ore, Ore.Grade grade) {
         switch (grade) {
             case RICH -> {
@@ -159,6 +164,21 @@ public class TextureUtils {
             }
             case POOR -> {
                 return TerraFirmaCraft.MOD_ID + ":block/ore/poor_" + ore.name().toLowerCase(Locale.ROOT);
+            }
+            case null -> throw new AssertionError("Invalid grade");
+        }
+    }
+
+    public static String getOreTexture(BeneathOverhaulOres ore, Ore.Grade grade) {
+        switch (grade) {
+            case RICH -> {
+                return BeneathOverhaul.MOD_ID + ":block/ore/rich_" + ore.name().toLowerCase(Locale.ROOT);
+            }
+            case NORMAL -> {
+                return BeneathOverhaul.MOD_ID + ":block/ore/normal_" + ore.name().toLowerCase(Locale.ROOT);
+            }
+            case POOR -> {
+                return BeneathOverhaul.MOD_ID + ":block/ore/poor_" + ore.name().toLowerCase(Locale.ROOT);
             }
             case null -> throw new AssertionError("Invalid grade");
         }

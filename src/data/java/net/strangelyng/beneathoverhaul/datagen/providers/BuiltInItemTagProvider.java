@@ -19,6 +19,7 @@ import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.strangelyng.beneathoverhaul.BeneathOverhaul;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulBlocks;
+import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulOres;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulRock;
 import net.strangelyng.beneathoverhaul.common.items.BeneathOverhaulItems;
 
@@ -50,6 +51,16 @@ public class BuiltInItemTagProvider extends TagsProvider<Item> {
                         addGradedOreTags(BeneathOverhaulBlocks.BENEATH_ROCK_TFC_GRADED_ORES, ore, rock);
                     } else {
                         addOreTags(BeneathOverhaulBlocks.BENEATH_ROCK_TFC_ORES, ore, rock);
+                    }
+                }
+            });
+
+            Stream.of(BeneathOverhaulOres.values()).forEach(ore -> {
+                if (ore.hasBlock()) {
+                    if (ore.isGraded()) {
+
+                    } else {
+                        addOreTags(BeneathOverhaulBlocks.BENEATH_ROCK_CUSTOM_ORES, ore, rock);
                     }
                 }
             });

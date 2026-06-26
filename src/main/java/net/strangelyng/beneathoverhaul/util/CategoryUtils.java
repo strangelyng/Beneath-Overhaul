@@ -6,6 +6,7 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.Tags;
+import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulOres;
 
 import java.util.Map;
 
@@ -44,6 +45,10 @@ public class CategoryUtils {
                 .put(Ore.BITUMINOUS_COAL, BlockTags.NEEDS_STONE_TOOL)
                 .put(Ore.LIGNITE, BlockTags.NEEDS_STONE_TOOL)
                 .put(Ore.HALITE, BlockTags.NEEDS_STONE_TOOL)
+                .build();
+
+        public static final Map<BeneathOverhaulOres, TagKey<Block>> CUSTOM_ORES_TO_MINING_TIER_TAG = ImmutableMap.<BeneathOverhaulOres, TagKey<Block>>builder()
+                .put(BeneathOverhaulOres.QUARTZ, BlockTags.NEEDS_DIAMOND_TOOL)
                 .build();
     }
 }

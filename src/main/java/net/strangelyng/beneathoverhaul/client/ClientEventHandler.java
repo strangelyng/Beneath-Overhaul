@@ -41,6 +41,8 @@ public class ClientEventHandler {
                 ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout)));
         BeneathOverhaulBlocks.BENEATH_ROCK_TFC_GRADED_ORES.values().forEach(map -> map.values().forEach(inner ->
                 inner.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout))));
+        BeneathOverhaulBlocks.BENEATH_ROCK_CUSTOM_ORES.values().forEach(map -> map.values().forEach(reg ->
+                ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout)));
 
         ItemBlockRenderTypes.setRenderLayer(BeneathOverhaulBlocks.FLY_AGARIC.get(), cutout);
 

@@ -16,7 +16,25 @@
     "beneathoverhaul:ore/poor_magnetite/blackstone",
     "beneathoverhaul:ore/poor_limonite/blackstone",
     "beneathoverhaul:ore/poor_sphalerite/blackstone",
-    "beneathoverhaul:ore/poor_tetrahedrite/blackstone"
+    "beneathoverhaul:ore/poor_tetrahedrite/blackstone",
+    "beneathoverhaul:ore/gypsum/blackstone",
+    "beneathoverhaul:ore/cinnabar/blackstone",
+    "beneathoverhaul:ore/cryolite/blackstone",
+    "beneathoverhaul:ore/borax/blackstone",
+    "beneathoverhaul:ore/graphite/blackstone",
+    "beneathoverhaul:ore/saltpeter/blackstone",
+    "beneathoverhaul:ore/sulfur/blackstone",
+    "beneathoverhaul:ore/sylvite/blackstone",
+    "beneathoverhaul:ore/amethyst/blackstone",
+    "beneathoverhaul:ore/diamond/blackstone",
+    "beneathoverhaul:ore/emerald/blackstone",
+    "beneathoverhaul:ore/lapis_lazuli/blackstone",
+    "beneathoverhaul:ore/opal/blackstone",
+    "beneathoverhaul:ore/pyrite/blackstone",
+    "beneathoverhaul:ore/ruby/blackstone",
+    "beneathoverhaul:ore/sapphire/blackstone",
+    "beneathoverhaul:ore/topaz/blackstone",
+    "beneathoverhaul:ore/quartz/blackstone"
   ],
   "result": "beneathoverhaul:rock/cobble/blackstone"
 }
