@@ -98,6 +98,14 @@ public class BuiltInItemModelProvider extends ItemModelProvider {
 
         Stream.of(BeneathOverhaulOres.values()).forEach(ore -> {
             simpleItem(BeneathOverhaulItems.ORES.get(ore).get(), getItemModelLocation(BeneathOverhaulItems.ORES.get(ore).getId()));
+
+            if (ore.isGem()) {
+                simpleItem(BeneathOverhaulItems.GEMS.get(ore).get(), getItemModelLocation(BeneathOverhaulItems.GEMS.get(ore).getId()));
+            }
+
+            if (ore.hasPowder()) {
+                simpleItem(BeneathOverhaulItems.ORE_POWDERS.get(ore).get(), getItemModelLocation(BeneathOverhaulItems.ORE_POWDERS.get(ore).getId()));
+            }
         });
     }
 

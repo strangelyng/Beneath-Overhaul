@@ -94,6 +94,14 @@ public class BuiltInLangProvider extends LanguageProvider {
             } else {
                 addItem(BeneathOverhaulItems.ORES.get(ore), getName(ore));
             }
+
+            if (ore.isGem()) {
+                addItem(BeneathOverhaulItems.GEMS.get(ore), "Cut " + getName(ore));
+            }
+
+            if (ore.hasPowder()) {
+                addItem(BeneathOverhaulItems.ORE_POWDERS.get(ore), getName(ore) + " Powder");
+            }
         });
 
         // Rock Blocks

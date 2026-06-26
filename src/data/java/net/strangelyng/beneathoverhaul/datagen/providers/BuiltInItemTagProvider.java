@@ -66,6 +66,17 @@ public class BuiltInItemTagProvider extends TagsProvider<Item> {
             });
         });
 
+        // Ore Items
+        BeneathOverhaulItems.ORES.values().forEach(ore -> {
+            this.tag(TFCTags.Items.ORE_PIECES).add(getKey(ore.get()));
+        });
+
+        BeneathOverhaulItems.GEMS.values().forEach(gem -> {
+            this.tag(Tags.Items.GEMS).add(getKey(gem.get()));
+        });
+
+        this.tag(Tags.Items.GEMS_QUARTZ).add(getKey(BeneathOverhaulItems.GEMS.get(BeneathOverhaulOres.QUARTZ).get()));
+
         // Rock Block Items
         Stream.of(BeneathOverhaulRock.VALUES).forEach(rock -> {
             this.tag(Tags.Items.COBBLESTONES_NORMAL).add(getKey(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.COBBLE).get()));

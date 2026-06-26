@@ -7,6 +7,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulBlocks;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulDecoBlockHolder;
+import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulOres;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulRock;
 import net.strangelyng.beneathoverhaul.common.items.BeneathOverhaulItems;
 
@@ -65,6 +66,16 @@ public interface CraftingRecipes extends Recipes {
                     .damageInputs()
                     .source(0, 1)
                     .shaped(MAP.get(Rock.BlockType.PRESSURE_PLATE).get());
+        });
+
+        Stream.of(BeneathOverhaulOres.values()).forEach(ore -> {
+            if (ore.isGem()) {
+                recipe()
+                        .inputIsPrimary(TFCItems.SANDPAPER)
+                        .input(Ingredient.of(BeneathOverhaulItems.ORES.get(ore).get()))
+                        .damageInputs()
+                        .shapeless(BeneathOverhaulItems.GEMS.get(ore));
+            }
         });
     }
 

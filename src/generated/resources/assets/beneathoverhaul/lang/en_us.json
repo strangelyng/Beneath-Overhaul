@@ -461,5 +461,7 @@
   "item.beneathoverhaul.brick.deepslate": "Migmatite Brick",
   "item.beneathoverhaul.brick.dripstone": "Travertine Brick",
   "item.beneathoverhaul.food.fly_agaric": "Fly Agaric Mushroom",
-  "item.beneathoverhaul.ore.quartz": "Quartz"
+  "item.beneathoverhaul.gem.quartz": "Cut Quartz",
+  "item.beneathoverhaul.ore.quartz": "Quartz",
+  "item.beneathoverhaul.powder.quartz": "Quartz Powder"
 }

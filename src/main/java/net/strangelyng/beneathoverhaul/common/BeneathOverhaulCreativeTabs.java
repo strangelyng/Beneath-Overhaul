@@ -46,6 +46,14 @@ public final class BeneathOverhaulCreativeTabs {
                 BeneathOverhaulBlocks.BENEATH_ROCK_CUSTOM_ORES.values().forEach(map -> accept(out, map, ore));
                 accept(out, BeneathOverhaulItems.ORES, ore);
             }
+
+            if (ore.isGem()) {
+                accept(out, BeneathOverhaulItems.GEMS, ore);
+            }
+
+            if (ore.hasPowder()) {
+                accept(out, BeneathOverhaulItems.ORE_POWDERS, ore);
+            }
         }
     }
 

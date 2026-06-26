@@ -30,6 +30,14 @@ public class BeneathOverhaulItems {
             register("ore/" + type.name())
     );
 
+    public static final Map<BeneathOverhaulOres, ItemId> GEMS = Helpers.mapOf(BeneathOverhaulOres.class, BeneathOverhaulOres::isGem, ore ->
+            register("gem/" + ore.name())
+    );
+
+    public static final Map<BeneathOverhaulOres, ItemId> ORE_POWDERS = Helpers.mapOf(BeneathOverhaulOres.class, BeneathOverhaulOres::hasPowder, ore ->
+            register("powder/" + ore.name())
+    );
+
     public static final ItemId FLY_AGARIC = register("food/fly_agaric", () -> new Item(new Item.Properties().food(
             new FoodProperties.Builder()
                     .nutrition(4)

@@ -14,6 +14,7 @@ import net.strangelyng.beneathoverhaul.BeneathOverhaul;
 import net.strangelyng.beneathoverhaul.datagen.recipes.ChiselRecipes;
 import net.strangelyng.beneathoverhaul.datagen.recipes.CollapseRecipes;
 import net.strangelyng.beneathoverhaul.datagen.recipes.CraftingRecipes;
+import net.strangelyng.beneathoverhaul.datagen.recipes.QuernRecipes;
 
 import java.util.HashSet;
 import java.util.List;
@@ -29,7 +30,8 @@ import java.util.concurrent.CompletableFuture;
 public class BuiltInRecipeProvider extends RecipeProvider implements
         CraftingRecipes,
         ChiselRecipes,
-        CollapseRecipes {
+        CollapseRecipes,
+        QuernRecipes {
 
     final Set<ResourceLocation> removedRecipes = new HashSet<>();
     private final CompletableFuture<?> before;
@@ -55,6 +57,7 @@ public class BuiltInRecipeProvider extends RecipeProvider implements
         craftingRecipes();
         chiselRecipes();
         collapseRecipes();
+        quernRecipes();
     }
 
     @Override

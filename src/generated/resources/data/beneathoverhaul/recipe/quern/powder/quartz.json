@@ -1,0 +1,15 @@
+{
+  "type": "tfc:quern",
+  "ingredient": [
+    {
+      "item": "beneathoverhaul:gem/quartz"
+    },
+    {
+      "item": "beneathoverhaul:ore/quartz"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "beneathoverhaul:powder/quartz"
+  }
+}

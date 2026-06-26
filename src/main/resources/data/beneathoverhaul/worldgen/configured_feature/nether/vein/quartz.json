@@ -1,0 +1,42 @@
+{
+  "type": "tfc:cluster_vein",
+  "config": {
+    "size": 18,
+    "rarity": 14,
+    "density": 0.6,
+    "min_y": 0,
+    "max_y": 128,
+    "random_name": "quartz",
+    "project": false,
+    "project_offset": false,
+    "near_lava": false,
+    "blocks": [
+      {
+        "replace": [
+          "beneathoverhaul:rock/raw/deepslate",
+          "tfc:mud/entisol",
+          "beneath:soul_clay",
+          "tfc:dirt/andisol",
+          "tfc:mud/andisol",
+          "tfc:peat",
+          "tfc:dirt/entisol"
+        ],
+        "with": [
+          {
+            "block": "beneathoverhaul:ore/quartz/deepslate"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "beneathoverhaul:rock/raw/blackstone"
+        ],
+        "with": [
+          {
+            "block": "beneathoverhaul:ore/quartz/blackstone"
+          }
+        ]
+      }
+    ]
+  }
+}
