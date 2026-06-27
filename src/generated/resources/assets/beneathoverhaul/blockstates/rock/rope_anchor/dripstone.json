@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "beneathoverhaul:block/rock/rope_anchor/dripstone",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "beneathoverhaul:block/rock/rope_anchor/dripstone"
+    },
+    "facing=south": {
+      "model": "beneathoverhaul:block/rock/rope_anchor/dripstone",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "beneathoverhaul:block/rock/rope_anchor/dripstone",
+      "y": 270
+    }
+  }
+}

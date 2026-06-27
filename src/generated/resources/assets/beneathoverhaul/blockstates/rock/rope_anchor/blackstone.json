@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "beneathoverhaul:block/rock/rope_anchor/blackstone",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "beneathoverhaul:block/rock/rope_anchor/blackstone"
+    },
+    "facing=south": {
+      "model": "beneathoverhaul:block/rock/rope_anchor/blackstone",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "beneathoverhaul:block/rock/rope_anchor/blackstone",
+      "y": 270
+    }
+  }
+}

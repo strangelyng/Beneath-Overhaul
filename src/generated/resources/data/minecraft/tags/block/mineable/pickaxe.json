@@ -198,6 +198,7 @@
     "beneathoverhaul:rock/pressure_plate/deepslate",
     "beneathoverhaul:rock/button/deepslate",
     "beneathoverhaul:rock/aqueduct/deepslate",
+    "beneathoverhaul:rock/rope_anchor/deepslate",
     "beneathoverhaul:rock/raw/blackstone_stairs",
     "beneathoverhaul:rock/raw/blackstone_slab",
     "beneathoverhaul:rock/raw/blackstone_wall",
@@ -234,6 +235,7 @@
     "beneathoverhaul:rock/pressure_plate/blackstone",
     "beneathoverhaul:rock/button/blackstone",
     "beneathoverhaul:rock/aqueduct/blackstone",
+    "beneathoverhaul:rock/rope_anchor/blackstone",
     "beneathoverhaul:rock/raw/dripstone_stairs",
     "beneathoverhaul:rock/raw/dripstone_slab",
     "beneathoverhaul:rock/raw/dripstone_wall",
@@ -269,6 +271,7 @@
     "beneathoverhaul:rock/mossy_loose/dripstone",
     "beneathoverhaul:rock/pressure_plate/dripstone",
     "beneathoverhaul:rock/button/dripstone",
-    "beneathoverhaul:rock/aqueduct/dripstone"
+    "beneathoverhaul:rock/aqueduct/dripstone",
+    "beneathoverhaul:rock/rope_anchor/dripstone"
   ]
 }

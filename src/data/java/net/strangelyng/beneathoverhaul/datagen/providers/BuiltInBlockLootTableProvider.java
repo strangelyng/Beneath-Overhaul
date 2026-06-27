@@ -51,7 +51,7 @@ public class BuiltInBlockLootTableProvider extends BlockLootSubProvider {
     private void addRockBlockLootTable(BeneathOverhaulRock rock, Rock.BlockType type) {
         switch (type) {
             case LOOSE, MOSSY_LOOSE -> this.add(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(type).get(), LootTableBuilders.createLooseRockDropTable(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(type).get()));
-            case SPIKE -> this.add(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(type).get(), LootTableBuilders.createRockDropTable(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.LOOSE).get(), 1, 2));
+            case SPIKE, ROPE_ANCHOR -> this.add(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(type).get(), LootTableBuilders.createRockDropTable(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.LOOSE).get(), 1, 2));
             case RAW, HARDENED ->
                     this.add(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(type).get(), LootTableBuilders.createRawRockDropTable(
                         BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(type).get(),
@@ -94,6 +94,8 @@ public class BuiltInBlockLootTableProvider extends BlockLootSubProvider {
                 }
             });
         });
+
+        // TODO: Custom Graded Ores
     }
 
     private void generateRocks() {

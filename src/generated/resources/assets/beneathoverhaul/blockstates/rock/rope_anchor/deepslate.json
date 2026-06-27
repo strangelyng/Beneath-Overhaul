@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "beneathoverhaul:block/rock/rope_anchor/deepslate",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "beneathoverhaul:block/rock/rope_anchor/deepslate"
+    },
+    "facing=south": {
+      "model": "beneathoverhaul:block/rock/rope_anchor/deepslate",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "beneathoverhaul:block/rock/rope_anchor/deepslate",
+      "y": 270
+    }
+  }
+}

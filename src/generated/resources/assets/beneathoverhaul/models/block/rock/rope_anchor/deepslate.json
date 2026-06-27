@@ -1,0 +1,6 @@
+{
+  "parent": "tfc:block/horizontal_rope_anchored",
+  "textures": {
+    "texture": "minecraft:block/deepslate"
+  }
+}

@@ -1,16 +1,14 @@
 package net.strangelyng.beneathoverhaul.datagen.providers;
 
 import net.dries007.tfc.TerraFirmaCraft;
+import net.dries007.tfc.common.blocks.RopeAnchorBlock;
 import net.dries007.tfc.common.blocks.rock.*;
 import net.dries007.tfc.util.registry.RegistryRock;
 import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.state.properties.AttachFace;
-import net.minecraft.world.level.block.state.properties.Half;
-import net.minecraft.world.level.block.state.properties.SlabType;
-import net.minecraft.world.level.block.state.properties.StairsShape;
+import net.minecraft.world.level.block.state.properties.*;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -72,6 +70,8 @@ public class BuiltInBlockStateProvider extends BlockStateProvider {
                 if (!ore.isGraded() && ore.hasBlock()) {
                     simpleOre(BeneathOverhaulBlocks.BENEATH_ROCK_CUSTOM_ORES.get(rock).get(ore).holder(), rock, ore);
                 }
+
+                // TODO: Custom Graded Ores
             });
         });
 
@@ -105,6 +105,7 @@ public class BuiltInBlockStateProvider extends BlockStateProvider {
             looseRockBlock(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.LOOSE).holder(), TextureUtils.getRockTexture(rock, Rock.BlockType.LOOSE), rock);
             looseRockBlock(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.MOSSY_LOOSE).holder(), TextureUtils.getRockTexture(rock, Rock.BlockType.MOSSY_LOOSE), rock);
             rockSpikeBlock(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.SPIKE).holder(), TextureUtils.getRockTexture(rock, Rock.BlockType.SPIKE));
+            ropeAnchorBlock(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.ROPE_ANCHOR).holder(), TextureUtils.getRockTexture(rock, Rock.BlockType.SPIKE));
 
             cubeAll(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.CHISELED).holder(), TextureUtils.getRockTexture(rock, Rock.BlockType.CHISELED));
             pressurePlateBlock(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.PRESSURE_PLATE).holder(), TextureUtils.getRockTexture(rock, Rock.BlockType.PRESSURE_PLATE));
@@ -278,6 +279,18 @@ public class BuiltInBlockStateProvider extends BlockStateProvider {
                 .partialState().with(RockSpikeBlock.PART, RockSpikeBlock.Part.BASE).modelForState().modelFile(modelBase).addModel()
                 .partialState().with(RockSpikeBlock.PART, RockSpikeBlock.Part.MIDDLE).modelForState().modelFile(modelMiddle).addModel()
                 .partialState().with(RockSpikeBlock.PART, RockSpikeBlock.Part.TIP).modelForState().modelFile(modelTip).addModel();
+    }
+
+    private void ropeAnchorBlock(DeferredHolder<Block, Block> block, ResourceLocation texture) {
+        ModelFile model = createModel(getBlockModelString(block.getId()), "tfc:block/horizontal_rope_anchored").texture("texture", texture);
+
+        this.getVariantBuilder(block.get()).forAllStatesExcept((state) -> {
+            Direction facing = state.getValue(RopeAnchorBlock.FACING);
+            return ConfiguredModel.builder()
+                    .modelFile(model)
+                    .rotationY((int) facing.getOpposite().toYRot())
+                    .build();
+        }, RopeAnchorBlock.FLUID);
     }
 
     private void looseRockBlock(DeferredHolder<Block, Block> block, ResourceLocation texture, BeneathOverhaulRock rock) {
