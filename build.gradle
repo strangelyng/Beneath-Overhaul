@@ -75,6 +75,11 @@ repositories {
             includeGroup "com.github.rtyley"
         }
     }
+    maven {
+        // For Immersive Engineering (TFC_IE_Addon Compat)
+        name = "BlameJared"
+        url = "https://maven.blamejared.com/"
+    }
 }
 
 base {
@@ -139,7 +144,7 @@ neoForge {
             // gameDirectory = project.file('run-data')
 
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
-            programArguments.addAll '--mod', "beneathoverhaul", '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath(), '--existing-mod', 'tfc', '--existing-mod', 'firmalife'
+            programArguments.addAll '--mod', "beneathoverhaul", '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath(), '--existing-mod', 'tfc', '--existing-mod', 'firmalife', '--existing-mod', 'tfc_ie_addon'
         }
 
         // applies to all the run configs above
@@ -195,6 +200,13 @@ dependencies {
     // Optional Addons
     implementation("curse.maven:firmalife-453394:${firmalife_version}")
     dataImplementation("curse.maven:firmalife-453394:$firmalife_version")
+
+    implementation("blusunrize.immersiveengineering:ImmersiveEngineering:$ie_version")
+    "dataImplementation"("blusunrize.immersiveengineering:ImmersiveEngineering:$ie_version")
+    "dataImplementation"("blusunrize.immersiveengineering:ImmersiveEngineering:$ie_version:datagen")
+
+    implementation("curse.maven:tfc-ie-crossover-830886:${tfc_ie_addon_version}")
+    dataImplementation("curse.maven:tfc-ie-crossover-830886:$tfc_ie_addon_version")
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

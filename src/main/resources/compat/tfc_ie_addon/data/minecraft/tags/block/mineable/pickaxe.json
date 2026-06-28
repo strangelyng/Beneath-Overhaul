@@ -1,0 +1,32 @@
+{
+  "replace": false,
+  "values": [
+    "beneathoverhaul:ore/poor_bauxite/deepslate",
+    "beneathoverhaul:ore/normal_bauxite/deepslate",
+    "beneathoverhaul:ore/rich_bauxite/deepslate",
+    "beneathoverhaul:ore/poor_bauxite/blackstone",
+    "beneathoverhaul:ore/normal_bauxite/blackstone",
+    "beneathoverhaul:ore/rich_bauxite/blackstone",
+    "beneathoverhaul:ore/poor_bauxite/dripstone",
+    "beneathoverhaul:ore/normal_bauxite/dripstone",
+    "beneathoverhaul:ore/rich_bauxite/dripstone",
+    "beneathoverhaul:ore/poor_galena/deepslate",
+    "beneathoverhaul:ore/normal_galena/deepslate",
+    "beneathoverhaul:ore/rich_galena/deepslate",
+    "beneathoverhaul:ore/poor_galena/blackstone",
+    "beneathoverhaul:ore/normal_galena/blackstone",
+    "beneathoverhaul:ore/rich_galena/blackstone",
+    "beneathoverhaul:ore/poor_galena/dripstone",
+    "beneathoverhaul:ore/normal_galena/dripstone",
+    "beneathoverhaul:ore/rich_galena/dripstone",
+    "beneathoverhaul:ore/poor_uraninite/deepslate",
+    "beneathoverhaul:ore/normal_uraninite/deepslate",
+    "beneathoverhaul:ore/rich_uraninite/deepslate",
+    "beneathoverhaul:ore/poor_uraninite/blackstone",
+    "beneathoverhaul:ore/normal_uraninite/blackstone",
+    "beneathoverhaul:ore/rich_uraninite/blackstone",
+    "beneathoverhaul:ore/poor_uraninite/dripstone",
+    "beneathoverhaul:ore/normal_uraninite/dripstone",
+    "beneathoverhaul:ore/rich_uraninite/dripstone"
+  ]
+}

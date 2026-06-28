@@ -1,5 +1,6 @@
 package net.strangelyng.beneathoverhaul.datagen.providers;
 
+import com.nmagpie.tfc_ie_addon.util.IEOre;
 import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.common.blocks.RopeAnchorBlock;
 import net.dries007.tfc.common.blocks.rock.*;
@@ -74,8 +75,13 @@ public class BuiltInBlockStateProvider extends BlockStateProvider {
                 // TODO: Custom Graded Ores
             });
 
+            // Compat Ores
             Stream.of(Ore.Grade.values()).forEach(grade -> {
-                simpleOre(BeneathOverhaulBlocks.BENEATH_ROCK_FIRMALIFE_ORES.get(rock).get(grade).holder(), rock, "firmalife:chromite", grade);
+                simpleOre(BeneathOverhaulBlocks.BENEATH_ROCK_CHROMITE_ORES.get(rock).get(grade).holder(), rock, "firmalife:chromite", grade);
+
+                simpleOre(BeneathOverhaulBlocks.BENEATH_ROCK_BAUXITE_ORES.get(rock).get(grade).holder(), rock, "tfc_ie_addon:bauxite", grade);
+                simpleOre(BeneathOverhaulBlocks.BENEATH_ROCK_GALENA_ORES.get(rock).get(grade).holder(), rock, "tfc_ie_addon:galena", grade);
+                simpleOre(BeneathOverhaulBlocks.BENEATH_ROCK_URANINITE_ORES.get(rock).get(grade).holder(), rock, "tfc_ie_addon:uraninite", grade);
             });
         });
 
@@ -135,9 +141,15 @@ public class BuiltInBlockStateProvider extends BlockStateProvider {
         simpleBlock(block.get(), ConfiguredModel.builder().modelFile(createOverlayModel(block.getId().getPath(), allTexture, oreTexture)).buildLast());
     }
 
-    private void simpleOre(DeferredHolder<Block, Block> block, RegistryRock rock, String oreRl, Ore.Grade grade) {
-        String modid = oreRl.substring(0, oreRl.indexOf(":"));
-        String ore = oreRl.substring(oreRl.indexOf(":") + 1);
+    private void simpleOre(DeferredHolder<Block, Block> block, RegistryRock rock, IEOre ore, Ore.Grade grade) {
+        String allTexture = TextureUtils.getRawRockTexture(rock);
+        String oreTexture = TextureUtils.getOreTexture(ore, grade);
+        simpleBlock(block.get(), ConfiguredModel.builder().modelFile(createOverlayModel(block.getId().getPath(), allTexture, oreTexture)).buildLast());
+    }
+
+    private void simpleOre(DeferredHolder<Block, Block> block, RegistryRock rock, String oreResLoc, Ore.Grade grade) {
+        String modid = oreResLoc.substring(0, oreResLoc.indexOf(":"));
+        String ore = oreResLoc.substring(oreResLoc.indexOf(":") + 1);
         String allTexture = TextureUtils.getRawRockTexture(rock);
         String oreTexture = TextureUtils.getOreTexture(modid, ore, grade);
         simpleBlock(block.get(), ConfiguredModel.builder().modelFile(createOverlayModel(block.getId().getPath(), allTexture, oreTexture)).buildLast());

@@ -1,0 +1,122 @@
+{
+  "type": "tfc:cluster_vein",
+  "config": {
+    "size": 20,
+    "rarity": 45,
+    "density": 0.3,
+    "min_y": 0,
+    "max_y": 128,
+    "random_name": "galena",
+    "project": false,
+    "project_offset": false,
+    "near_lava": false,
+    "blocks": [
+      {
+        "replace": [
+          "tfc:rock/raw/schist"
+        ],
+        "with": [
+          {
+            "block": "tfc_ie_addon:ore/poor_galena/schist",
+            "weight": 35
+          },
+          {
+            "block": "tfc_ie_addon:ore/normal_galena/schist",
+            "weight": 40
+          },
+          {
+            "block": "tfc_ie_addon:ore/rich_galena/schist",
+            "weight": 25
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gneiss"
+        ],
+        "with": [
+          {
+            "block": "tfc_ie_addon:ore/poor_galena/gneiss",
+            "weight": 35
+          },
+          {
+            "block": "tfc_ie_addon:ore/normal_galena/gneiss",
+            "weight": 40
+          },
+          {
+            "block": "tfc_ie_addon:ore/rich_galena/gneiss",
+            "weight": 25
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/granite"
+        ],
+        "with": [
+          {
+            "block": "tfc_ie_addon:ore/poor_galena/granite",
+            "weight": 35
+          },
+          {
+            "block": "tfc_ie_addon:ore/normal_galena/granite",
+            "weight": 40
+          },
+          {
+            "block": "tfc_ie_addon:ore/rich_galena/granite",
+            "weight": 25
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/diorite"
+        ],
+        "with": [
+          {
+            "block": "tfc_ie_addon:ore/poor_galena/diorite",
+            "weight": 35
+          },
+          {
+            "block": "tfc_ie_addon:ore/normal_galena/diorite",
+            "weight": 40
+          },
+          {
+            "block": "tfc_ie_addon:ore/rich_galena/diorite",
+            "weight": 25
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gabbro"
+        ],
+        "with": [
+          {
+            "block": "tfc_ie_addon:ore/poor_galena/gabbro",
+            "weight": 35
+          },
+          {
+            "block": "tfc_ie_addon:ore/normal_galena/gabbro",
+            "weight": 40
+          },
+          {
+            "block": "tfc_ie_addon:ore/rich_galena/gabbro",
+            "weight": 25
+          }
+        ]
+      }
+    ],
+    "indicator": {
+      "rarity": 15,
+      "depth": 1,
+      "underground_rarity": 40,
+      "underground_count": 150,
+      "blocks": [
+        {
+          "block": "tfc_ie_addon:ore/small_galena"
+        }
+      ]
+    }
+  }
+}

@@ -77,9 +77,32 @@ public final class BeneathOverhaulBlocks {
     );
 
     // Compat Ores
-    public static final Map<BeneathOverhaulRock, Map<Ore.Grade, Id<Block>>> BENEATH_ROCK_FIRMALIFE_ORES = Helpers.mapOf(BeneathOverhaulRock.class, rock ->
+
+    // Firmalife Chromite
+    public static final Map<BeneathOverhaulRock, Map<Ore.Grade, Id<Block>>> BENEATH_ROCK_CHROMITE_ORES = Helpers.mapOf(BeneathOverhaulRock.class, rock ->
             Helpers.mapOf(Ore.Grade.class, grade ->
                     register(("ore/" + grade.name() + "_chromite" + "/" + rock.name()), () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.STONE).strength(3, 10).requiresCorrectToolForDrops()))
+            )
+    );
+
+    // TFC_IE_Addon Bauxite
+    public static final Map<BeneathOverhaulRock, Map<Ore.Grade, Id<Block>>> BENEATH_ROCK_BAUXITE_ORES = Helpers.mapOf(BeneathOverhaulRock.class, rock ->
+            Helpers.mapOf(Ore.Grade.class, grade ->
+                    register(("ore/" + grade.name() + "_bauxite" + "/" + rock.name()), () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.STONE).strength(3, 10).requiresCorrectToolForDrops()))
+            )
+    );
+
+    // TFC_IE_Addon Bauxite
+    public static final Map<BeneathOverhaulRock, Map<Ore.Grade, Id<Block>>> BENEATH_ROCK_GALENA_ORES = Helpers.mapOf(BeneathOverhaulRock.class, rock ->
+            Helpers.mapOf(Ore.Grade.class, grade ->
+                    register(("ore/" + grade.name() + "_galena" + "/" + rock.name()), () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.STONE).strength(3, 10).requiresCorrectToolForDrops()))
+            )
+    );
+
+    // TFC_IE_Addon Bauxite
+    public static final Map<BeneathOverhaulRock, Map<Ore.Grade, Id<Block>>> BENEATH_ROCK_URANINITE_ORES = Helpers.mapOf(BeneathOverhaulRock.class, rock ->
+            Helpers.mapOf(Ore.Grade.class, grade ->
+                    register(("ore/" + grade.name() + "_uraninite" + "/" + rock.name()), () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.STONE).strength(3, 10).requiresCorrectToolForDrops()))
             )
     );
 

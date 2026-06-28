@@ -1,0 +1,7 @@
+{
+    "replace": false,
+    "values": [
+        "beneathoverhaul:nether/vein/galena",
+        "beneathoverhaul:nether/vein/uraninite"
+    ]
+}

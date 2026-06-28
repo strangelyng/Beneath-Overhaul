@@ -1,6 +1,8 @@
 package net.strangelyng.beneathoverhaul.util;
 
 import com.google.common.collect.ImmutableMap;
+import com.nmagpie.tfc_ie_addon.TFC_IE_Addon;
+import com.nmagpie.tfc_ie_addon.util.IEOre;
 import net.dries007.tfc.TerraFirmaCraft;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
@@ -179,6 +181,21 @@ public class TextureUtils {
             }
             case POOR -> {
                 return BeneathOverhaul.MOD_ID + ":block/ore/poor_" + ore.name().toLowerCase(Locale.ROOT);
+            }
+            case null -> throw new AssertionError("Invalid grade");
+        }
+    }
+
+    public static String getOreTexture(IEOre ore, Ore.Grade grade) {
+        switch (grade) {
+            case RICH -> {
+                return TFC_IE_Addon.MOD_ID + ":block/ore/rich_" + ore.name().toLowerCase(Locale.ROOT);
+            }
+            case NORMAL -> {
+                return TFC_IE_Addon.MOD_ID + ":block/ore/normal_" + ore.name().toLowerCase(Locale.ROOT);
+            }
+            case POOR -> {
+                return TFC_IE_Addon.MOD_ID + ":block/ore/poor_" + ore.name().toLowerCase(Locale.ROOT);
             }
             case null -> throw new AssertionError("Invalid grade");
         }

@@ -62,16 +62,6 @@ public class BuiltInBlockTagProvider extends TagsProvider<Block> {
                     }
                 }
             });
-
-//            Stream.of(Ore.Grade.values()).forEach(grade -> {
-//                Stream.of(BeneathOverhaulBlocks.BENEATH_ROCK_FIRMALIFE_ORES).forEach(map -> {
-//                    ResourceKey<Block> key = map.get(rock).get(grade).key();
-//                    this.tag(BlockTags.NEEDS_STONE_TOOL).add(key);
-//                    this.tag(Tags.Blocks.ORES).add(key);
-//                    this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(key);
-//                    this.tag(TFCTags.Blocks.PROSPECTABLE).add(key);
-//                });
-//            });
         });
 
         // Rock Blocks

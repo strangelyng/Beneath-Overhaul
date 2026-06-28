@@ -1,5 +1,6 @@
 package net.strangelyng.beneathoverhaul.datagen.providers;
 
+import com.nmagpie.tfc_ie_addon.util.IEOre;
 import net.dries007.tfc.common.blocks.rock.Ore;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.minecraft.data.PackOutput;
@@ -87,8 +88,13 @@ public class BuiltInLangProvider extends LanguageProvider {
                 }
             });
 
+            // Compat Ores
             Stream.of(Ore.Grade.values()).forEach(grade -> {
-                createOreKey(BeneathOverhaulBlocks.BENEATH_ROCK_FIRMALIFE_ORES.get(rock).get(grade), getName(grade.name()) + " " + getName(rock), "Chromite");
+                createOreKey(BeneathOverhaulBlocks.BENEATH_ROCK_CHROMITE_ORES.get(rock).get(grade), getName(grade.name()) + " " + getName(rock), "Chromite");
+
+                createOreKey(BeneathOverhaulBlocks.BENEATH_ROCK_BAUXITE_ORES.get(rock).get(grade), getName(grade.name()) + " " + getName(rock), "Bauxite");
+                createOreKey(BeneathOverhaulBlocks.BENEATH_ROCK_GALENA_ORES.get(rock).get(grade), getName(grade.name()) + " " + getName(rock), "Galena");
+                createOreKey(BeneathOverhaulBlocks.BENEATH_ROCK_URANINITE_ORES.get(rock).get(grade), getName(grade.name()) + " " + getName(rock), "Uraninite");
             });
         });
 
@@ -209,6 +215,10 @@ public class BuiltInLangProvider extends LanguageProvider {
                 return getName(rock.getSerializedName());
             }
         }
+    }
+
+    private String getName(IEOre ore) {
+        return getName(ore.name());
     }
 
     private String getName(StringRepresentable entry){

@@ -27,5 +27,16 @@ public class BeneathOverhaulEvents {
                     Pack.Position.TOP
             );
         }
+
+        if (event.getPackType() == PackType.SERVER_DATA && ModList.get().isLoaded("tfc_ie_addon")) {
+            event.addPackFinders(
+                    ResourceLocation.fromNamespaceAndPath(BeneathOverhaul.MOD_ID, "compat/tfc_ie_addon"),
+                    PackType.SERVER_DATA,
+                    Component.literal("TFC-IE-Crossover Compat"),
+                    PackSource.BUILT_IN,
+                    true,
+                    Pack.Position.TOP
+            );
+        }
     }
 }

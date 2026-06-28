@@ -1,0 +1,65 @@
+{
+  "type": "tfc:cluster_vein",
+  "config": {
+    "size": 20,
+    "rarity": 60,
+    "density": 0.3,
+    "min_y": 0,
+    "max_y": 80,
+    "random_name": "uraninite",
+    "project": false,
+    "project_offset": false,
+    "near_lava": false,
+    "blocks": [
+      {
+        "replace": [
+          "tfc:rock/raw/schist"
+        ],
+        "with": [
+          {
+            "block": "tfc_ie_addon:ore/poor_uraninite/schist",
+            "weight": 35
+          },
+          {
+            "block": "tfc_ie_addon:ore/normal_uraninite/schist",
+            "weight": 40
+          },
+          {
+            "block": "tfc_ie_addon:ore/rich_uraninite/schist",
+            "weight": 25
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gneiss"
+        ],
+        "with": [
+          {
+            "block": "tfc_ie_addon:ore/poor_uraninite/gneiss",
+            "weight": 35
+          },
+          {
+            "block": "tfc_ie_addon:ore/normal_uraninite/gneiss",
+            "weight": 40
+          },
+          {
+            "block": "tfc_ie_addon:ore/rich_uraninite/gneiss",
+            "weight": 25
+          }
+        ]
+      }
+    ],
+    "indicator": {
+      "rarity": 15,
+      "depth": 1,
+      "underground_rarity": 40,
+      "underground_count": 150,
+      "blocks": [
+        {
+          "block": "tfc_ie_addon:ore/small_uraninite"
+        }
+      ]
+    }
+  }
+}

@@ -58,7 +58,25 @@ public final class BeneathOverhaulCreativeTabs {
         }
 
         if (ModList.get().isLoaded("firmalife")) {
-            BeneathOverhaulBlocks.BENEATH_ROCK_FIRMALIFE_ORES.values().forEach(map -> {
+            BeneathOverhaulBlocks.BENEATH_ROCK_CHROMITE_ORES.values().forEach(map -> {
+                accept(out, map, Ore.Grade.POOR);
+                accept(out, map, Ore.Grade.NORMAL);
+                accept(out, map, Ore.Grade.RICH);
+            });
+        }
+
+        if(ModList.get().isLoaded("tfc_ie_addon")) {
+            BeneathOverhaulBlocks.BENEATH_ROCK_BAUXITE_ORES.values().forEach(map -> {
+                accept(out, map, Ore.Grade.POOR);
+                accept(out, map, Ore.Grade.NORMAL);
+                accept(out, map, Ore.Grade.RICH);
+            });
+            BeneathOverhaulBlocks.BENEATH_ROCK_GALENA_ORES.values().forEach(map -> {
+                accept(out, map, Ore.Grade.POOR);
+                accept(out, map, Ore.Grade.NORMAL);
+                accept(out, map, Ore.Grade.RICH);
+            });
+            BeneathOverhaulBlocks.BENEATH_ROCK_URANINITE_ORES.values().forEach(map -> {
                 accept(out, map, Ore.Grade.POOR);
                 accept(out, map, Ore.Grade.NORMAL);
                 accept(out, map, Ore.Grade.RICH);

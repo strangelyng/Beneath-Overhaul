@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "minecraft:block/blackstone",
+    "overlay": "tfc_ie_addon:block/ore/normal_galena"
+  }
+}

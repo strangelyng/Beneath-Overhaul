@@ -62,8 +62,13 @@ public class BuiltInItemModelProvider extends ItemModelProvider {
                 // TODO: Custom Graded Ores
             });
 
+            // Compat Ores
             Stream.of(Ore.Grade.values()).forEach(grade -> {
-                simpleBlock(BeneathOverhaulBlocks.BENEATH_ROCK_FIRMALIFE_ORES.get(rock).get(grade).holder());
+                simpleBlock(BeneathOverhaulBlocks.BENEATH_ROCK_CHROMITE_ORES.get(rock).get(grade).holder());
+
+                simpleBlock(BeneathOverhaulBlocks.BENEATH_ROCK_BAUXITE_ORES.get(rock).get(grade).holder());
+                simpleBlock(BeneathOverhaulBlocks.BENEATH_ROCK_GALENA_ORES.get(rock).get(grade).holder());
+                simpleBlock(BeneathOverhaulBlocks.BENEATH_ROCK_URANINITE_ORES.get(rock).get(grade).holder());
             });
         });
 

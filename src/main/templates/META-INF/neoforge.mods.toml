@@ -89,14 +89,28 @@ config="${mod_id}.mixins.json"
 [[dependencies.${mod_id}]]
     modId="tfc"
     type="required"
-    versionRange="[4.1.0,)"
+    versionRange="[4.1.4,)"
     ordering="AFTER"
     side="BOTH"
 
 [[dependencies.${mod_id}]]
     modId="beneath"
     type="required"
-    versionRange="[2.0.1,)"
+    versionRange="[2.0.2,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="firmalife"
+    type="optional"
+    versionRange="[3.0.10,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="tfc_ie_addon"
+    type="optional"
+    versionRange="[2.1.0,)"
     ordering="AFTER"
     side="BOTH"
 
