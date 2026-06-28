@@ -56,7 +56,7 @@ public class BuiltInBlockTagProvider extends TagsProvider<Block> {
             Stream.of(BeneathOverhaulOres.values()).forEach(ore -> {
                 if (ore.hasBlock()) {
                     if (ore.isGraded()) {
-
+                        // TODO: Custom Graded Ores
                     } else {
                         addOreTags(BeneathOverhaulBlocks.BENEATH_ROCK_CUSTOM_ORES, ore, rock);
                     }

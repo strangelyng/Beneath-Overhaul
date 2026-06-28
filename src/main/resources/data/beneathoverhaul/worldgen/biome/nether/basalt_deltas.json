@@ -54,8 +54,7 @@
 		"#beneathoverhaul:nether_veins",
 		"#beneathoverhaul:nether_underground_decoration",
 		[
-			"beneathoverhaul:nether/terrain/spring_lava",
-			"beneathoverhaul:nether/terrain/mossy_cobble"
+			"beneathoverhaul:nether/terrain/spring_lava"
 		],
 		[
 			"minecraft:spring_delta",

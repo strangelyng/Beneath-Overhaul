@@ -43,6 +43,7 @@ public class ClientEventHandler {
                 inner.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout))));
         BeneathOverhaulBlocks.BENEATH_ROCK_CUSTOM_ORES.values().forEach(map -> map.values().forEach(reg ->
                 ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout)));
+        // TODO: Custom Graded Ores
 
         ItemBlockRenderTypes.setRenderLayer(BeneathOverhaulBlocks.FLY_AGARIC.get(), cutout);
 

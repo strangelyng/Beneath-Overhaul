@@ -58,6 +58,8 @@ public class BuiltInItemModelProvider extends ItemModelProvider {
                 if (!ore.isGraded() && ore.hasBlock()) {
                     simpleBlock(BeneathOverhaulBlocks.BENEATH_ROCK_CUSTOM_ORES.get(rock).get(ore).holder());
                 }
+
+                // TODO: Custom Graded Ores
             });
         });
 

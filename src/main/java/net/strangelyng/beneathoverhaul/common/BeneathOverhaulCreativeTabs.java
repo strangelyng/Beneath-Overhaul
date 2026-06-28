@@ -41,7 +41,7 @@ public final class BeneathOverhaulCreativeTabs {
 
         for (BeneathOverhaulOres ore : BeneathOverhaulOres.values()) {
             if (ore.isGraded()) {
-
+                // TODO: Custom Graded Ores
             } else {
                 BeneathOverhaulBlocks.BENEATH_ROCK_CUSTOM_ORES.values().forEach(map -> accept(out, map, ore));
                 accept(out, BeneathOverhaulItems.ORES, ore);

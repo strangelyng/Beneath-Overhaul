@@ -80,7 +80,7 @@ public class BuiltInLangProvider extends LanguageProvider {
             Stream.of(BeneathOverhaulOres.values()).forEach(ore -> {
                 if (ore.hasBlock()) {
                     if (ore.isGraded()) {
-
+                        // TODO: Custom Graded Ores
                     } else {
                         createOreKey(BeneathOverhaulBlocks.BENEATH_ROCK_CUSTOM_ORES.get(rock).get(ore), getName(rock), getName(ore));
                     }

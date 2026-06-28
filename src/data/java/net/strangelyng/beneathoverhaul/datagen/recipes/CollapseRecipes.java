@@ -36,6 +36,8 @@ public interface CollapseRecipes extends Recipes {
                     );
                 }
             });
+
+            // TODO: Custom Graded Ores
         });
     }
 
@@ -62,7 +64,7 @@ public interface CollapseRecipes extends Recipes {
         Stream.of(BeneathOverhaulOres.values()).forEach(ore -> {
             if (ore.hasBlock()) {
                 if (ore.isGraded()) {
-
+                    // TODO: Custom Graded Ores
                 } else {
                     collapsesToCobble.add(BeneathOverhaulBlocks.BENEATH_ROCK_CUSTOM_ORES.get(rockType).get(ore).get());
                 }
