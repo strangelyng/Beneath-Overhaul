@@ -89,7 +89,14 @@ config="${mod_id}.mixins.json"
 [[dependencies.${mod_id}]]
     modId="tfc"
     type="required"
-    versionRange="[4.1.4,)"
+    versionRange="[4.2.0,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="kubejs_tfc"
+    type="required"
+    versionRange="[2.0.1,)"
     ordering="AFTER"
     side="BOTH"
 
