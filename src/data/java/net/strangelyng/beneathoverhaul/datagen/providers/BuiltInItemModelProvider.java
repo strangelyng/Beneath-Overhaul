@@ -61,6 +61,10 @@ public class BuiltInItemModelProvider extends ItemModelProvider {
 
                 // TODO: Custom Graded Ores
             });
+
+            Stream.of(Ore.Grade.values()).forEach(grade -> {
+                simpleBlock(BeneathOverhaulBlocks.BENEATH_ROCK_FIRMALIFE_ORES.get(rock).get(grade).holder());
+            });
         });
 
         // Rock Blocks

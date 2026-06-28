@@ -7,6 +7,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ItemLike;
+import net.neoforged.fml.ModList;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.strangelyng.beneathoverhaul.BeneathOverhaul;
@@ -54,6 +55,14 @@ public final class BeneathOverhaulCreativeTabs {
             if (ore.hasPowder()) {
                 accept(out, BeneathOverhaulItems.ORE_POWDERS, ore);
             }
+        }
+
+        if (ModList.get().isLoaded("firmalife")) {
+            BeneathOverhaulBlocks.BENEATH_ROCK_FIRMALIFE_ORES.values().forEach(map -> {
+                accept(out, map, Ore.Grade.POOR);
+                accept(out, map, Ore.Grade.NORMAL);
+                accept(out, map, Ore.Grade.RICH);
+            });
         }
     }
 

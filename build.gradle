@@ -139,7 +139,7 @@ neoForge {
             // gameDirectory = project.file('run-data')
 
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
-            programArguments.addAll '--mod', "beneathoverhaul", '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath(), '--existing-mod', 'tfc'
+            programArguments.addAll '--mod', "beneathoverhaul", '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath(), '--existing-mod', 'tfc', '--existing-mod', 'firmalife'
         }
 
         // applies to all the run configs above
@@ -191,6 +191,10 @@ dependencies {
     // Datagen SourceSet
     dataImplementation("curse.maven:terrafirmacraft-302973:${tfc_version}")
     dataImplementation("curse.maven:beneath-1113980:$beneath_version")
+
+    // Optional Addons
+    implementation("curse.maven:firmalife-453394:${firmalife_version}")
+    dataImplementation("curse.maven:firmalife-453394:$firmalife_version")
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

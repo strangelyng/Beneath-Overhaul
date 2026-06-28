@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "minecraft:block/blackstone",
+    "overlay": "firmalife:block/ore/rich_chromite"
+  }
+}

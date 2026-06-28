@@ -5,6 +5,7 @@ import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.loading.FMLEnvironment;
 import net.strangelyng.beneathoverhaul.client.ClientEventHandler;
 import net.strangelyng.beneathoverhaul.common.BeneathOverhaulCreativeTabs;
+import net.strangelyng.beneathoverhaul.common.BeneathOverhaulEvents;
 import net.strangelyng.beneathoverhaul.common.blocks.BeneathOverhaulBlocks;
 import net.strangelyng.beneathoverhaul.common.items.BeneathOverhaulItems;
 import net.strangelyng.beneathoverhaul.misc.BeneathOverhaulClimateModels;
@@ -43,6 +44,8 @@ public class BeneathOverhaul {
         if (FMLEnvironment.dist == Dist.CLIENT) {
             ClientEventHandler.init(bus, mod);
         }
+
+        BeneathOverhaulEvents.init(bus, mod);
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {

@@ -64,6 +64,13 @@ public class BuiltInItemTagProvider extends TagsProvider<Item> {
                     }
                 }
             });
+
+//            Stream.of(Ore.Grade.values()).forEach(grade -> {
+//                Stream.of(BeneathOverhaulBlocks.BENEATH_ROCK_FIRMALIFE_ORES).forEach(map -> {
+//                    DeferredHolder<Block, Block> block = map.get(rock).get(grade).holder();
+//                    this.tag(Tags.Items.ORES).add(getKey(block));
+//                });
+//            });
         });
 
         // Ore Items

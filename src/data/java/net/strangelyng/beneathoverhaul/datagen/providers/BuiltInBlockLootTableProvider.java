@@ -96,6 +96,13 @@ public class BuiltInBlockLootTableProvider extends BlockLootSubProvider {
         });
 
         // TODO: Custom Graded Ores
+
+        Stream.of(Ore.Grade.values()).forEach(grade -> {
+            BeneathOverhaulBlocks.BENEATH_ROCK_FIRMALIFE_ORES.values().forEach(map -> {
+                dropSelf(map.get(grade).get());
+//                addOreTable(map.get(grade).get(), FLItems.CHROMIUM_ORES.get(getTFCGrade(grade)).get());
+            });
+        });
     }
 
     private void generateRocks() {

@@ -76,6 +76,13 @@ public final class BeneathOverhaulBlocks {
             )
     );
 
+    // Compat Ores
+    public static final Map<BeneathOverhaulRock, Map<Ore.Grade, Id<Block>>> BENEATH_ROCK_FIRMALIFE_ORES = Helpers.mapOf(BeneathOverhaulRock.class, rock ->
+            Helpers.mapOf(Ore.Grade.class, grade ->
+                    register(("ore/" + grade.name() + "_chromite" + "/" + rock.name()), () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.STONE).strength(3, 10).requiresCorrectToolForDrops()))
+            )
+    );
+
     // Misc Blocks
     public static final Id<RotatedPillarBlock> CHARRED_LOG = register("charred_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of().strength(8.0f).sound(SoundType.WOOD).instrument(NoteBlockInstrument.BASS).requiresCorrectToolForDrops().mapColor(MapColor.COLOR_BLACK)));
 

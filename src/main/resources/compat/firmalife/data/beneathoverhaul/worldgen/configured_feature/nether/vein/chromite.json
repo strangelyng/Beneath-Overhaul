@@ -1,0 +1,122 @@
+{
+  "type": "tfc:cluster_vein",
+  "config": {
+    "size": 18,
+    "rarity": 50,
+    "density": 0.3,
+    "min_y": 0,
+    "max_y": 80,
+    "random_name": "chromite",
+    "project": false,
+    "project_offset": false,
+    "near_lava": false,
+    "blocks": [
+      {
+        "replace": [
+          "tfc:rock/raw/granite"
+        ],
+        "with": [
+          {
+            "block": "firmalife:ore/poor_chromite/granite",
+            "weight": 35
+          },
+          {
+            "block": "firmalife:ore/normal_chromite/granite",
+            "weight": 40
+          },
+          {
+            "block": "firmalife:ore/rich_chromite/granite",
+            "weight": 25
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/diorite"
+        ],
+        "with": [
+          {
+            "block": "firmalife:ore/poor_chromite/diorite",
+            "weight": 35
+          },
+          {
+            "block": "firmalife:ore/normal_chromite/diorite",
+            "weight": 40
+          },
+          {
+            "block": "firmalife:ore/rich_chromite/diorite",
+            "weight": 25
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gabbro"
+        ],
+        "with": [
+          {
+            "block": "firmalife:ore/poor_chromite/gabbro",
+            "weight": 35
+          },
+          {
+            "block": "firmalife:ore/normal_chromite/gabbro",
+            "weight": 40
+          },
+          {
+            "block": "firmalife:ore/rich_chromite/gabbro",
+            "weight": 25
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gneiss"
+        ],
+        "with": [
+          {
+            "block": "firmalife:ore/poor_chromite/gneiss",
+            "weight": 35
+          },
+          {
+            "block": "firmalife:ore/normal_chromite/gneiss",
+            "weight": 40
+          },
+          {
+            "block": "firmalife:ore/rich_chromite/gneiss",
+            "weight": 25
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/schist"
+        ],
+        "with": [
+          {
+            "block": "firmalife:ore/poor_chromite/schist",
+            "weight": 35
+          },
+          {
+            "block": "firmalife:ore/normal_chromite/schist",
+            "weight": 40
+          },
+          {
+            "block": "firmalife:ore/rich_chromite/schist",
+            "weight": 25
+          }
+        ]
+      }
+    ],
+    "indicator": {
+      "rarity": 15,
+      "depth": 1,
+      "underground_rarity": 40,
+      "underground_count": 150,
+      "blocks": [
+        {
+          "block": "firmalife:ore/small_chromite"
+        }
+      ]
+    }
+  }
+}

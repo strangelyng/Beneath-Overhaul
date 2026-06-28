@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "beneathoverhaul:ore/poor_chromite/deepslate",
+    "beneathoverhaul:ore/normal_chromite/deepslate",
+    "beneathoverhaul:ore/rich_chromite/deepslate",
+    "beneathoverhaul:ore/poor_chromite/blackstone",
+    "beneathoverhaul:ore/normal_chromite/blackstone",
+    "beneathoverhaul:ore/rich_chromite/blackstone",
+    "beneathoverhaul:ore/poor_chromite/dripstone",
+    "beneathoverhaul:ore/normal_chromite/dripstone",
+    "beneathoverhaul:ore/rich_chromite/dripstone"
+  ]
+}

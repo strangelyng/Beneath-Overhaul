@@ -73,6 +73,10 @@ public class BuiltInBlockStateProvider extends BlockStateProvider {
 
                 // TODO: Custom Graded Ores
             });
+
+            Stream.of(Ore.Grade.values()).forEach(grade -> {
+                simpleOre(BeneathOverhaulBlocks.BENEATH_ROCK_FIRMALIFE_ORES.get(rock).get(grade).holder(), rock, "firmalife:chromite", grade);
+            });
         });
 
         // Rock Blocks
@@ -128,6 +132,14 @@ public class BuiltInBlockStateProvider extends BlockStateProvider {
     private void simpleOre(DeferredHolder<Block, Block> block, RegistryRock rock, Ore ore, Ore.Grade grade) {
         String allTexture = TextureUtils.getRawRockTexture(rock);
         String oreTexture = TextureUtils.getOreTexture(ore, grade);
+        simpleBlock(block.get(), ConfiguredModel.builder().modelFile(createOverlayModel(block.getId().getPath(), allTexture, oreTexture)).buildLast());
+    }
+
+    private void simpleOre(DeferredHolder<Block, Block> block, RegistryRock rock, String oreRl, Ore.Grade grade) {
+        String modid = oreRl.substring(0, oreRl.indexOf(":"));
+        String ore = oreRl.substring(oreRl.indexOf(":") + 1);
+        String allTexture = TextureUtils.getRawRockTexture(rock);
+        String oreTexture = TextureUtils.getOreTexture(modid, ore, grade);
         simpleBlock(block.get(), ConfiguredModel.builder().modelFile(createOverlayModel(block.getId().getPath(), allTexture, oreTexture)).buildLast());
     }
 

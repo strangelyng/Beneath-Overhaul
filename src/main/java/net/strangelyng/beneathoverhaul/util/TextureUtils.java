@@ -184,6 +184,21 @@ public class TextureUtils {
         }
     }
 
+    public static String getOreTexture(String modid, String oreName, Ore.Grade grade) {
+        switch (grade) {
+            case RICH -> {
+                return modid + ":block/ore/rich_" + oreName.toLowerCase(Locale.ROOT);
+            }
+            case NORMAL -> {
+                return modid + ":block/ore/normal_" + oreName.toLowerCase(Locale.ROOT);
+            }
+            case POOR -> {
+                return modid + ":block/ore/poor_" + oreName.toLowerCase(Locale.ROOT);
+            }
+            case null -> throw new AssertionError("Invalid grade");
+        }
+    }
+
     public static ResourceLocation getRockTexture(BeneathOverhaulRock rock, Rock.BlockType type) {
         switch (type) {
             case RAW, HARDENED, SPIKE -> {

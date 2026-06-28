@@ -86,6 +86,10 @@ public class BuiltInLangProvider extends LanguageProvider {
                     }
                 }
             });
+
+            Stream.of(Ore.Grade.values()).forEach(grade -> {
+                createOreKey(BeneathOverhaulBlocks.BENEATH_ROCK_FIRMALIFE_ORES.get(rock).get(grade), getName(grade.name()) + " " + getName(rock), "Chromite");
+            });
         });
 
         Stream.of(BeneathOverhaulOres.values()).forEach(ore -> {
