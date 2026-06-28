@@ -2,9 +2,9 @@
   "type": "tfc:cluster_vein",
   "config": {
     "size": 20,
-    "rarity": 45,
+    "rarity": 40,
     "density": 0.3,
-    "min_y": 0,
+    "min_y": 16,
     "max_y": 128,
     "random_name": "galena",
     "project": false,
@@ -89,6 +89,26 @@
       },
       {
         "replace": [
+          "tfc:rock/raw/basalt",
+          "minecraft:basalt"
+        ],
+        "with": [
+          {
+            "block": "tfc_ie_addon:ore/poor_galena/basalt",
+            "weight": 35
+          },
+          {
+            "block": "tfc_ie_addon:ore/normal_galena/basalt",
+            "weight": 40
+          },
+          {
+            "block": "tfc_ie_addon:ore/rich_galena/basalt",
+            "weight": 25
+          }
+        ]
+      },
+      {
+        "replace": [
           "tfc:rock/raw/gabbro"
         ],
         "with": [
@@ -102,6 +122,26 @@
           },
           {
             "block": "tfc_ie_addon:ore/rich_galena/gabbro",
+            "weight": 25
+          }
+        ]
+      },
+      {
+        "replace": [
+          "beneathoverhaul:rock/raw/blackstone",
+          "minecraft:magma_block"
+        ],
+        "with": [
+          {
+            "block": "beneathoverhaul:ore/poor_galena/blackstone",
+            "weight": 35
+          },
+          {
+            "block": "beneathoverhaul:ore/normal_galena/blackstone",
+            "weight": 40
+          },
+          {
+            "block": "beneathoverhaul:ore/rich_galena/blackstone",
             "weight": 25
           }
         ]

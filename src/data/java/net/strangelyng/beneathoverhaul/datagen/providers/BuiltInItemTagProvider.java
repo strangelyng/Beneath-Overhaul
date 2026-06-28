@@ -85,6 +85,7 @@ public class BuiltInItemTagProvider extends TagsProvider<Item> {
             this.tag(TFCTags.Items.STONES_HARDENED).add(getKey(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.HARDENED).get()));
 
             this.tag(Tags.Items.STONES).add(getKey(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).get()));
+            this.tag(TFCTags.Items.STONES_RAW).add(getKey(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.RAW).get()));
 
             this.tag(Tags.Items.COBBLESTONES)
                     .add(getKey(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(Rock.BlockType.COBBLE).get()))

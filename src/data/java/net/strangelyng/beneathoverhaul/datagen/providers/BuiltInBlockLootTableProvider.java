@@ -48,6 +48,10 @@ public class BuiltInBlockLootTableProvider extends BlockLootSubProvider {
         this.add(oreBlock, LootTableBuilders.createOreTable(oreBlock, oreItem));
     }
 
+    private void addEmptyTable(Block block) {
+        this.add(block, LootTableBuilders.createEmptyDropTable(block));
+    }
+
     private void addRockBlockLootTable(BeneathOverhaulRock rock, Rock.BlockType type) {
         switch (type) {
             case LOOSE, MOSSY_LOOSE -> this.add(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(type).get(), LootTableBuilders.createLooseRockDropTable(BeneathOverhaulBlocks.ROCK_BLOCKS.get(rock).get(type).get()));
@@ -100,22 +104,22 @@ public class BuiltInBlockLootTableProvider extends BlockLootSubProvider {
         // Compat Ores
         Stream.of(Ore.Grade.values()).forEach(grade -> {
             BeneathOverhaulBlocks.BENEATH_ROCK_CHROMITE_ORES.values().forEach(map -> {
-                dropSelf(map.get(grade).get());
+                addEmptyTable(map.get(grade).get());
 //                addOreTable(map.get(grade).get(), FLItems.CHROMIUM_ORES.get(getTFCGrade(grade)).get());
             });
 
             BeneathOverhaulBlocks.BENEATH_ROCK_BAUXITE_ORES.values().forEach(map -> {
-                dropSelf(map.get(grade).get());
+                addEmptyTable(map.get(grade).get());
 //                addOreTable(map.get(grade).get(), com.nmagpie.tfc_ie_addon.common.items.Items.ORES.get(IEOre.BAUXITE).get(getTFCGrade(grade)).get());
             });
 
             BeneathOverhaulBlocks.BENEATH_ROCK_GALENA_ORES.values().forEach(map -> {
-                dropSelf(map.get(grade).get());
+                addEmptyTable(map.get(grade).get());
 //                addOreTable(map.get(grade).get(), com.nmagpie.tfc_ie_addon.common.items.Items.ORES.get(IEOre.GALENA).get(getTFCGrade(grade)).get());
             });
 
             BeneathOverhaulBlocks.BENEATH_ROCK_URANINITE_ORES.values().forEach(map -> {
-                dropSelf(map.get(grade).get());
+                addEmptyTable(map.get(grade).get());
 //                addOreTable(map.get(grade).get(), com.nmagpie.tfc_ie_addon.common.items.Items.ORES.get(IEOre.URANINITE).get(getTFCGrade(grade)).get());
             });
         });

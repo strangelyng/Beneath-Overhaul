@@ -26,6 +26,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.phys.HitResult;
+import net.neoforged.fml.ModList;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.strangelyng.beneathoverhaul.BeneathOverhaul;
@@ -38,6 +39,11 @@ import java.util.function.Supplier;
 
 public final class BeneathOverhaulBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(Registries.BLOCK, BeneathOverhaul.MOD_ID);
+
+    public static Map<BeneathOverhaulRock, Map<Ore.Grade, Id<Block>>> BENEATH_ROCK_CHROMITE_ORES;
+    public static Map<BeneathOverhaulRock, Map<Ore.Grade, Id<Block>>> BENEATH_ROCK_BAUXITE_ORES;
+    public static Map<BeneathOverhaulRock, Map<Ore.Grade, Id<Block>>> BENEATH_ROCK_GALENA_ORES;
+    public static Map<BeneathOverhaulRock, Map<Ore.Grade, Id<Block>>> BENEATH_ROCK_URANINITE_ORES;
 
     // Rock Blocks
     public static final Map<BeneathOverhaulRock, Map<Rock.BlockType, Id<Block>>> ROCK_BLOCKS = Helpers.mapOf(BeneathOverhaulRock.class, rock ->
@@ -77,34 +83,33 @@ public final class BeneathOverhaulBlocks {
     );
 
     // Compat Ores
+    static {
+        if (ModList.get().isLoaded("firmalife")) {
+            BENEATH_ROCK_CHROMITE_ORES = Helpers.mapOf(BeneathOverhaulRock.class, rock ->
+                    Helpers.mapOf(Ore.Grade.class, grade ->
+                            register(("ore/" + grade.name() + "_chromite" + "/" + rock.name()), () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.STONE).strength(3, 10).requiresCorrectToolForDrops()))
+                    )
+            );
+        }
 
-    // Firmalife Chromite
-    public static final Map<BeneathOverhaulRock, Map<Ore.Grade, Id<Block>>> BENEATH_ROCK_CHROMITE_ORES = Helpers.mapOf(BeneathOverhaulRock.class, rock ->
-            Helpers.mapOf(Ore.Grade.class, grade ->
-                    register(("ore/" + grade.name() + "_chromite" + "/" + rock.name()), () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.STONE).strength(3, 10).requiresCorrectToolForDrops()))
-            )
-    );
-
-    // TFC_IE_Addon Bauxite
-    public static final Map<BeneathOverhaulRock, Map<Ore.Grade, Id<Block>>> BENEATH_ROCK_BAUXITE_ORES = Helpers.mapOf(BeneathOverhaulRock.class, rock ->
-            Helpers.mapOf(Ore.Grade.class, grade ->
-                    register(("ore/" + grade.name() + "_bauxite" + "/" + rock.name()), () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.STONE).strength(3, 10).requiresCorrectToolForDrops()))
-            )
-    );
-
-    // TFC_IE_Addon Bauxite
-    public static final Map<BeneathOverhaulRock, Map<Ore.Grade, Id<Block>>> BENEATH_ROCK_GALENA_ORES = Helpers.mapOf(BeneathOverhaulRock.class, rock ->
-            Helpers.mapOf(Ore.Grade.class, grade ->
-                    register(("ore/" + grade.name() + "_galena" + "/" + rock.name()), () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.STONE).strength(3, 10).requiresCorrectToolForDrops()))
-            )
-    );
-
-    // TFC_IE_Addon Bauxite
-    public static final Map<BeneathOverhaulRock, Map<Ore.Grade, Id<Block>>> BENEATH_ROCK_URANINITE_ORES = Helpers.mapOf(BeneathOverhaulRock.class, rock ->
-            Helpers.mapOf(Ore.Grade.class, grade ->
-                    register(("ore/" + grade.name() + "_uraninite" + "/" + rock.name()), () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.STONE).strength(3, 10).requiresCorrectToolForDrops()))
-            )
-    );
+        if (ModList.get().isLoaded("tfc_ie_addon")) {
+            BENEATH_ROCK_BAUXITE_ORES = Helpers.mapOf(BeneathOverhaulRock.class, rock ->
+                    Helpers.mapOf(Ore.Grade.class, grade ->
+                            register(("ore/" + grade.name() + "_bauxite" + "/" + rock.name()), () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.STONE).strength(3, 10).requiresCorrectToolForDrops()))
+                    )
+            );
+            BENEATH_ROCK_GALENA_ORES = Helpers.mapOf(BeneathOverhaulRock.class, rock ->
+                    Helpers.mapOf(Ore.Grade.class, grade ->
+                            register(("ore/" + grade.name() + "_galena" + "/" + rock.name()), () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.STONE).strength(3, 10).requiresCorrectToolForDrops()))
+                    )
+            );
+            BENEATH_ROCK_URANINITE_ORES = Helpers.mapOf(BeneathOverhaulRock.class, rock ->
+                    Helpers.mapOf(Ore.Grade.class, grade ->
+                            register(("ore/" + grade.name() + "_uraninite" + "/" + rock.name()), () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.STONE).strength(3, 10).requiresCorrectToolForDrops()))
+                    )
+            );
+        }
+    }
 
     // Misc Blocks
     public static final Id<RotatedPillarBlock> CHARRED_LOG = register("charred_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of().strength(8.0f).sound(SoundType.WOOD).instrument(NoteBlockInstrument.BASS).requiresCorrectToolForDrops().mapColor(MapColor.COLOR_BLACK)));

@@ -13,6 +13,31 @@
     "blocks": [
       {
         "replace": [
+          "beneathoverhaul:rock/raw/deepslate",
+          "tfc:mud/entisol",
+          "beneath:soul_clay",
+          "tfc:dirt/andisol",
+          "tfc:mud/andisol",
+          "tfc:peat",
+          "tfc:dirt/entisol"
+        ],
+        "with": [
+          {
+            "block": "beneathoverhaul:ore/poor_uraninite/deepslate",
+            "weight": 35
+          },
+          {
+            "block": "beneathoverhaul:ore/normal_uraninite/deepslate",
+            "weight": 40
+          },
+          {
+            "block": "beneathoverhaul:ore/rich_uraninite/deepslate",
+            "weight": 25
+          }
+        ]
+      },
+      {
+        "replace": [
           "tfc:rock/raw/schist"
         ],
         "with": [
@@ -45,6 +70,26 @@
           },
           {
             "block": "tfc_ie_addon:ore/rich_uraninite/gneiss",
+            "weight": 25
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/basalt",
+          "minecraft:basalt"
+        ],
+        "with": [
+          {
+            "block": "tfc_ie_addon:ore/poor_uraninite/basalt",
+            "weight": 35
+          },
+          {
+            "block": "tfc_ie_addon:ore/normal_uraninite/basalt",
+            "weight": 40
+          },
+          {
+            "block": "tfc_ie_addon:ore/rich_uraninite/basalt",
             "weight": 25
           }
         ]

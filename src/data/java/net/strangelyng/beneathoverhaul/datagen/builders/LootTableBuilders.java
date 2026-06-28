@@ -9,6 +9,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.AlternativesEntry;
+import net.minecraft.world.level.storage.loot.entries.EmptyLootItem;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.ExplosionCondition;
@@ -31,6 +32,13 @@ public class LootTableBuilders {
                         .add(LootItem.lootTableItem(oreBlock).when(() -> IsIsolatedCondition.INSTANCE)
                                 .otherwise(LootItem.lootTableItem(oreItem))
                         )
+                );
+    }
+
+    public static LootTable.Builder createEmptyDropTable(Block block) {
+        return LootTable.lootTable()
+                .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f)).when(ExplosionCondition.survivesExplosion())
+                        .add(EmptyLootItem.emptyItem())
                 );
     }
 

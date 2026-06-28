@@ -10,8 +10,7 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "beneathoverhaul:ore/rich_bauxite/deepslate"
+          "type": "minecraft:empty"
         }
       ],
       "rolls": 1.0

@@ -10,8 +10,7 @@
       ],
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "beneathoverhaul:ore/poor_bauxite/dripstone"
+          "type": "minecraft:empty"
         }
       ],
       "rolls": 1.0
