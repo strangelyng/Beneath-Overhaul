@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "beneathoverhaul:block/rock/cobble/netherrack",
+    "overlay": "beneathoverhaul:block/rock/mossy_cobble/overlay"
+  }
+}

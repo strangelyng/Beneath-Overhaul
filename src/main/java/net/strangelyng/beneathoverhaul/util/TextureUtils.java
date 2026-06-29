@@ -37,6 +37,7 @@ public class TextureUtils {
             .put(BeneathOverhaulRock.DEEPSLATE, "minecraft:block/deepslate")
             .put(BeneathOverhaulRock.BLACKSTONE, "minecraft:block/blackstone")
             .put(BeneathOverhaulRock.DRIPSTONE, "minecraft:block/dripstone_block")
+            .put(BeneathOverhaulRock.NETHERRACK, "beneathoverhaul:block/rock/raw/netherrack")
             .build();
 
     private static String getCobbleTexture(BeneathOverhaulRock rock) {
@@ -44,7 +45,7 @@ public class TextureUtils {
             case DEEPSLATE -> {
                 return "minecraft:block/cobbled_deepslate";
             }
-            case BLACKSTONE, DRIPSTONE -> {
+            case BLACKSTONE, DRIPSTONE, NETHERRACK -> {
                 return (BeneathOverhaul.MOD_ID + ":block/rock/cobble/" + rock.getSerializedName());
             }
             case null, default -> throw new AssertionError("Invalid Rock to get texture for");
@@ -56,7 +57,7 @@ public class TextureUtils {
             case DEEPSLATE -> {
                 return "minecraft:block/cobbled_deepslate";
             }
-            case BLACKSTONE, DRIPSTONE -> {
+            case BLACKSTONE, DRIPSTONE, NETHERRACK -> {
                 return (BeneathOverhaul.MOD_ID + ":block/rock/cobble/" + rock.getSerializedName());
             }
             case null, default -> throw new AssertionError("Invalid Rock to get texture for");
@@ -71,7 +72,7 @@ public class TextureUtils {
             case BLACKSTONE -> {
                 return "minecraft:block/polished_blackstone_bricks";
             }
-            case DRIPSTONE -> {
+            case DRIPSTONE, NETHERRACK -> {
                 return (BeneathOverhaul.MOD_ID + ":block/rock/bricks/" + rock.getSerializedName());
             }
             case null, default -> throw new AssertionError("Invalid Rock to get texture for");
@@ -86,7 +87,7 @@ public class TextureUtils {
             case BLACKSTONE -> {
                 return "minecraft:block/polished_blackstone_bricks";
             }
-            case DRIPSTONE -> {
+            case DRIPSTONE, NETHERRACK -> {
                 return (BeneathOverhaul.MOD_ID + ":block/rock/bricks/" + rock.getSerializedName());
             }
             case null, default -> throw new AssertionError("Invalid Rock to get texture for");
@@ -101,7 +102,7 @@ public class TextureUtils {
             case BLACKSTONE -> {
                 return "minecraft:block/cracked_polished_blackstone_bricks";
             }
-            case DRIPSTONE -> {
+            case DRIPSTONE, NETHERRACK -> {
                 return (BeneathOverhaul.MOD_ID + ":block/rock/cracked_bricks/" + rock.getSerializedName());
             }
             case null, default -> throw new AssertionError("Invalid Rock to get texture for");

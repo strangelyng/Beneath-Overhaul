@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "beneathoverhaul:rock/mossy_cobble/netherrack"
+    }
+  },
+  "pattern": [
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "id": "beneathoverhaul:rock/mossy_cobble/netherrack_slab"
+  }
+}

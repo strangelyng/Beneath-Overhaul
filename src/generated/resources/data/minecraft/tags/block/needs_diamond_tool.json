@@ -11,6 +11,10 @@
     "beneathoverhaul:ore/amethyst/dripstone",
     "beneathoverhaul:ore/emerald/dripstone",
     "beneathoverhaul:ore/topaz/dripstone",
-    "beneathoverhaul:ore/quartz/dripstone"
+    "beneathoverhaul:ore/quartz/dripstone",
+    "beneathoverhaul:ore/amethyst/netherrack",
+    "beneathoverhaul:ore/emerald/netherrack",
+    "beneathoverhaul:ore/topaz/netherrack",
+    "beneathoverhaul:ore/quartz/netherrack"
   ]
 }

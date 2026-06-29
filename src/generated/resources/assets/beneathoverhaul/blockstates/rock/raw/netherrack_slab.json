@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "beneathoverhaul:block/rock/raw/netherrack_slab"
+    },
+    "type=double": {
+      "model": "beneathoverhaul:block/rock/raw/netherrack"
+    },
+    "type=top": {
+      "model": "beneathoverhaul:block/rock/raw/netherrack_slab_top"
+    }
+  }
+}

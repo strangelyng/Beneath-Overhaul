@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "beneathoverhaul:block/rock/rope_anchor/netherrack",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "beneathoverhaul:block/rock/rope_anchor/netherrack"
+    },
+    "facing=south": {
+      "model": "beneathoverhaul:block/rock/rope_anchor/netherrack",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "beneathoverhaul:block/rock/rope_anchor/netherrack",
+      "y": 270
+    }
+  }
+}

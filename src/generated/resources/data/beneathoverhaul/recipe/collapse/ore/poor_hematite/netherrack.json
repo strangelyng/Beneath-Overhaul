@@ -1,0 +1,7 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "beneathoverhaul:ore/normal_hematite/netherrack"
+  ],
+  "result": "beneathoverhaul:ore/poor_hematite/netherrack"
+}

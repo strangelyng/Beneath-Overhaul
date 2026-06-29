@@ -211,6 +211,9 @@ public class BuiltInLangProvider extends LanguageProvider {
             case BeneathOverhaulRock.DRIPSTONE -> {
                 return "Travertine";
             }
+            case BeneathOverhaulRock.NETHERRACK -> {
+                return "Scoria";
+            }
             default -> {
                 return getName(rock.getSerializedName());
             }

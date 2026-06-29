@@ -1,0 +1,41 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "beneathoverhaul:block/rock/aqueduct/netherrack/base"
+      }
+    },
+    {
+      "apply": {
+        "model": "beneathoverhaul:block/rock/aqueduct/netherrack/north"
+      },
+      "when": {
+        "north": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "beneathoverhaul:block/rock/aqueduct/netherrack/south"
+      },
+      "when": {
+        "south": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "beneathoverhaul:block/rock/aqueduct/netherrack/east"
+      },
+      "when": {
+        "east": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "beneathoverhaul:block/rock/aqueduct/netherrack/west"
+      },
+      "when": {
+        "west": "false"
+      }
+    }
+  ]
+}

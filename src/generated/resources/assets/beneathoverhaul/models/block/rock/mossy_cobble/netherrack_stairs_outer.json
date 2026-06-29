@@ -1,0 +1,10 @@
+{
+  "parent": "beneathoverhaul:block/overlay_outer_stairs",
+  "textures": {
+    "bottom": "beneathoverhaul:block/rock/cobble/netherrack",
+    "overlay": "beneathoverhaul:block/rock/mossy_cobble/overlay",
+    "particle": "beneathoverhaul:block/rock/cobble/netherrack",
+    "side": "beneathoverhaul:block/rock/cobble/netherrack",
+    "top": "beneathoverhaul:block/rock/cobble/netherrack"
+  }
+}

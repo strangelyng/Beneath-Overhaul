@@ -38,5 +38,16 @@ public class BeneathOverhaulEvents {
                     Pack.Position.TOP
             );
         }
+
+        if (event.getPackType() == PackType.CLIENT_RESOURCES && ModList.get().isLoaded("create")) {
+            event.addPackFinders(
+                    ResourceLocation.fromNamespaceAndPath(BeneathOverhaul.MOD_ID, "compat/create"),
+                    PackType.CLIENT_RESOURCES,
+                    Component.literal("Create Compat"),
+                    PackSource.BUILT_IN,
+                    false,
+                    Pack.Position.TOP
+            );
+        }
     }
 }

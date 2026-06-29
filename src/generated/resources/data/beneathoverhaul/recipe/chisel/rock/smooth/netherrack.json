@@ -1,0 +1,9 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": [
+    "beneathoverhaul:rock/raw/netherrack",
+    "beneathoverhaul:rock/hardened/netherrack"
+  ],
+  "mode": "tfc:smooth",
+  "result": "beneathoverhaul:rock/smooth/netherrack"
+}

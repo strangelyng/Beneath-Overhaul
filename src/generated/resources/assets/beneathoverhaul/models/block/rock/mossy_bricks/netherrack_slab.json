@@ -1,0 +1,10 @@
+{
+  "parent": "beneathoverhaul:block/overlay_slab",
+  "textures": {
+    "bottom": "beneathoverhaul:block/rock/bricks/netherrack",
+    "overlay": "beneathoverhaul:block/rock/mossy_bricks/overlay",
+    "particle": "beneathoverhaul:block/rock/bricks/netherrack",
+    "side": "beneathoverhaul:block/rock/bricks/netherrack",
+    "top": "beneathoverhaul:block/rock/bricks/netherrack"
+  }
+}

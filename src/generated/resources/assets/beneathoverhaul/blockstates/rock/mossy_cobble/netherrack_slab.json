@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "beneathoverhaul:block/rock/mossy_cobble/netherrack_slab"
+    },
+    "type=double": {
+      "model": "beneathoverhaul:block/rock/mossy_cobble/netherrack"
+    },
+    "type=top": {
+      "model": "beneathoverhaul:block/rock/mossy_cobble/netherrack_slab_top"
+    }
+  }
+}

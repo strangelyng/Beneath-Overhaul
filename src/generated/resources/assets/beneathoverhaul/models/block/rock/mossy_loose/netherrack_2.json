@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/rock/loose_igneous_extrusive_2",
+  "textures": {
+    "particle": "beneathoverhaul:block/rock/cobble/netherrack",
+    "texture": "beneathoverhaul:block/rock/cobble/netherrack"
+  }
+}

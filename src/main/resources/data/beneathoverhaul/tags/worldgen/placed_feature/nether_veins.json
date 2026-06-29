@@ -18,6 +18,7 @@
         "beneathoverhaul:nether/vein/saltpeter",
         "beneathoverhaul:nether/vein/sphalerite",
         "beneathoverhaul:nether/vein/sulfur",
-        "beneathoverhaul:nether/vein/tetrahedrite"
+        "beneathoverhaul:nether/vein/tetrahedrite",
+        "beneathoverhaul:nether/vein/netherrack_pipe"
     ]
 }

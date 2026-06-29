@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/rock/spike_tip",
+  "textures": {
+    "particle": "beneathoverhaul:block/rock/raw/netherrack",
+    "texture": "beneathoverhaul:block/rock/raw/netherrack"
+  }
+}

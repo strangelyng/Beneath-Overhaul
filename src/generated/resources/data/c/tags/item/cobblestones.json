@@ -5,6 +5,8 @@
     "beneathoverhaul:rock/cobble/blackstone",
     "beneathoverhaul:rock/mossy_cobble/blackstone",
     "beneathoverhaul:rock/cobble/dripstone",
-    "beneathoverhaul:rock/mossy_cobble/dripstone"
+    "beneathoverhaul:rock/mossy_cobble/dripstone",
+    "beneathoverhaul:rock/cobble/netherrack",
+    "beneathoverhaul:rock/mossy_cobble/netherrack"
   ]
 }

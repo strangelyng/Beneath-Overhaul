@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/aqueduct/base",
+  "textures": {
+    "particle": "beneathoverhaul:block/rock/bricks/netherrack",
+    "texture": "beneathoverhaul:block/rock/bricks/netherrack"
+  }
+}

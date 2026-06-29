@@ -8,6 +8,9 @@
     "beneathoverhaul:ore/sapphire/blackstone",
     "beneathoverhaul:ore/diamond/dripstone",
     "beneathoverhaul:ore/ruby/dripstone",
-    "beneathoverhaul:ore/sapphire/dripstone"
+    "beneathoverhaul:ore/sapphire/dripstone",
+    "beneathoverhaul:ore/diamond/netherrack",
+    "beneathoverhaul:ore/ruby/netherrack",
+    "beneathoverhaul:ore/sapphire/netherrack"
   ]
 }

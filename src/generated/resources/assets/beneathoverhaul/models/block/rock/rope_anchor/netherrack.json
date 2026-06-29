@@ -1,0 +1,6 @@
+{
+  "parent": "tfc:block/horizontal_rope_anchored",
+  "textures": {
+    "texture": "beneathoverhaul:block/rock/raw/netherrack"
+  }
+}

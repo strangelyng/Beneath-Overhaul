@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "beneathoverhaul:block/rock/pressure_plate/netherrack"
+    },
+    "powered=true": {
+      "model": "beneathoverhaul:block/rock/pressure_plate/netherrack_down"
+    }
+  }
+}

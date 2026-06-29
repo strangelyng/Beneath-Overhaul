@@ -20,6 +20,13 @@
     "beneathoverhaul:rock/raw/dripstone_slab",
     "beneathoverhaul:rock/bricks/dripstone_slab",
     "beneathoverhaul:rock/cracked_bricks/dripstone_slab",
-    "beneathoverhaul:rock/smooth/dripstone_slab"
+    "beneathoverhaul:rock/smooth/dripstone_slab",
+    "beneathoverhaul:rock/cobble/netherrack_slab",
+    "beneathoverhaul:rock/mossy_cobble/netherrack_slab",
+    "beneathoverhaul:rock/mossy_bricks/netherrack_slab",
+    "beneathoverhaul:rock/raw/netherrack_slab",
+    "beneathoverhaul:rock/bricks/netherrack_slab",
+    "beneathoverhaul:rock/cracked_bricks/netherrack_slab",
+    "beneathoverhaul:rock/smooth/netherrack_slab"
   ]
 }

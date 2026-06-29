@@ -11,6 +11,10 @@
     "beneathoverhaul:rock/mossy_bricks/dripstone",
     "beneathoverhaul:rock/bricks/dripstone",
     "beneathoverhaul:rock/cracked_bricks/dripstone",
-    "beneathoverhaul:rock/chiseled/dripstone"
+    "beneathoverhaul:rock/chiseled/dripstone",
+    "beneathoverhaul:rock/mossy_bricks/netherrack",
+    "beneathoverhaul:rock/bricks/netherrack",
+    "beneathoverhaul:rock/cracked_bricks/netherrack",
+    "beneathoverhaul:rock/chiseled/netherrack"
   ]
 }

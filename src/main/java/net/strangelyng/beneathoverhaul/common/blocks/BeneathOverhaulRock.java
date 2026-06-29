@@ -17,8 +17,8 @@ import java.util.function.Supplier;
 public enum BeneathOverhaulRock implements RegistryRock {
     DEEPSLATE(RockDisplayCategory.METAMORPHIC, MapColor.DEEPSLATE), // Migmatite
     BLACKSTONE(RockDisplayCategory.MAFIC_IGNEOUS_INTRUSIVE, MapColor.COLOR_BLACK), // Pyroxenite
-    DRIPSTONE(RockDisplayCategory.SEDIMENTARY, MapColor.TERRACOTTA_BROWN); // Travertine
-//    NETHERRACK(RockDisplayCategory.INTERMEDIATE_IGNEOUS_EXTRUSIVE, MapColor.NETHER); // Scoria
+    DRIPSTONE(RockDisplayCategory.SEDIMENTARY, MapColor.TERRACOTTA_BROWN), // Travertine
+    NETHERRACK(RockDisplayCategory.INTERMEDIATE_IGNEOUS_EXTRUSIVE, MapColor.NETHER); // Scoria
 
     public static final BeneathOverhaulRock[] VALUES = values();
 

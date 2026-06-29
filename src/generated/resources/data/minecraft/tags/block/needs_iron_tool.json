@@ -20,6 +20,13 @@
     "beneathoverhaul:ore/cinnabar/dripstone",
     "beneathoverhaul:ore/cryolite/dripstone",
     "beneathoverhaul:ore/lapis_lazuli/dripstone",
-    "beneathoverhaul:ore/opal/dripstone"
+    "beneathoverhaul:ore/opal/dripstone",
+    "beneathoverhaul:ore/poor_garnierite/netherrack",
+    "beneathoverhaul:ore/normal_garnierite/netherrack",
+    "beneathoverhaul:ore/rich_garnierite/netherrack",
+    "beneathoverhaul:ore/cinnabar/netherrack",
+    "beneathoverhaul:ore/cryolite/netherrack",
+    "beneathoverhaul:ore/lapis_lazuli/netherrack",
+    "beneathoverhaul:ore/opal/netherrack"
   ]
 }

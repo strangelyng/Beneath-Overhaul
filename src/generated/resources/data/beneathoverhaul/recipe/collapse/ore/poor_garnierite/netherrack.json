@@ -1,0 +1,7 @@
+{
+  "type": "tfc:collapse",
+  "ingredient": [
+    "beneathoverhaul:ore/normal_garnierite/netherrack"
+  ],
+  "result": "beneathoverhaul:ore/poor_garnierite/netherrack"
+}
